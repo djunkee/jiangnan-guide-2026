@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#17202B">
+<title>Jiangnan Guide</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Jiangnan">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+:root{
+  --paper:#F1F2EE;--surface:#FBFBF8;--ink:#17202B;--muted:#5A6472;--line:#D6DAD8;
+  --cobalt:#2443A0;--jade:#2B7764;--jade-soft:#DDEDE7;--amber:#A35C14;--amber-soft:#F4E6D6;--plum:#6A4896;
+  --seal:#C1352A;--seal-ink:#FFF6F2;--seal-soft:#F6E1DD;
+  --c-sh:var(--cobalt);--c-sz:var(--jade);--c-nj:var(--amber);--c-hz:var(--plum);
+  --f-display:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",Georgia,"Times New Roman",serif;
+  --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+  --f-mono:ui-monospace,"SF Mono",Menlo,Consolas,"Roboto Mono",monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#10151D;--surface:#171F2A;--ink:#E6E9EE;--muted:#99A3B1;--line:#2A3443;
+  --cobalt:#86A0F0;--jade:#5DC4A6;--jade-soft:#15302A;--amber:#E2A158;--amber-soft:#382717;--plum:#B79EE8;
+  --seal:#E86A5E;--seal-ink:#1A0D0B;--seal-soft:#3A1F1C;color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--f-body);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--cobalt)}
+p{margin:0}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+.wrap{max-width:640px;margin:0 auto;padding-left:max(14px,env(safe-area-inset-left,0px));padding-right:max(14px,env(safe-area-inset-right,0px))}
+.muted{color:var(--muted);font-size:14px}
+/* header */
+.masthead{padding-top:calc(env(safe-area-inset-top,0px) + 18px);padding-bottom:14px}
+.masthead .k{font:600 11px/1.2 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.masthead h1{font:900 32px/1.05 var(--f-display);margin-top:6px}
+.masthead h1 .ar{color:var(--seal);font-weight:600}
+.stamp{display:inline-block;margin-top:8px;font:500 11.5px/1 var(--f-mono);color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 9px}
+/* nav */
+nav.days{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav.days .in{display:flex;gap:6px;overflow-x:auto;padding:8px max(14px,env(safe-area-inset-left,0px));scrollbar-width:none;max-width:640px;margin:0 auto}
+nav.days .in::-webkit-scrollbar{display:none}
+nav.days a{flex:none;text-decoration:none;color:var(--ink);display:grid;justify-items:center;gap:1px;min-width:44px;padding:6px 8px;border-radius:10px;border:1px solid var(--line);background:var(--surface);font:500 10.5px/1.1 var(--f-mono);text-transform:uppercase}
+nav.days a b{font:700 16px/1.1 var(--f-body);color:var(--cc,var(--ink))}
+nav.days a.sec{font:600 12px/1 var(--f-body);text-transform:none;display:flex;align-items:center}
+nav.days a.today{border-color:var(--seal);box-shadow:inset 0 0 0 1px var(--seal)}
+/* quick facts */
+.quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0 4px}
+.quick a{display:grid;gap:2px;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px}
+.quick a b{font-size:15px}
+.quick a span{color:var(--muted);font:500 11px/1.2 var(--f-mono);text-transform:uppercase;letter-spacing:.05em}
+/* day */
+.day{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.dh{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:14px 14px 12px;border-bottom:3px solid var(--cc)}
+.date{display:grid;justify-items:center;align-content:start;background:var(--cc);color:var(--surface);border-radius:10px;padding:6px 8px;min-width:56px}
+.date .wd{font:600 11px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em}
+.date .dn{font:900 18px/1.15 var(--f-display);white-space:nowrap}
+.city{font:600 11px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--cc)}
+.dh h3{font:900 20px/1.2 var(--f-display);margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.chip{font:600 11px/1 var(--f-mono);padding:5px 7px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.chip.ok{border-color:var(--jade);color:var(--jade);background:var(--jade-soft)}
+.chip.must{border-color:var(--seal);color:var(--seal);background:var(--seal-soft)}
+.chip.reserve{border-color:var(--amber);color:var(--amber);background:var(--amber-soft)}
+.chip.adv{border-color:var(--cobalt);color:var(--cobalt)}
+.chip.warn{border-color:var(--amber);color:var(--amber)}
+.chip.hb{background:var(--seal);border-color:var(--seal);color:var(--seal-ink)}
+.items{list-style:none;margin:0;padding:6px 14px 4px}
+.it{display:grid;grid-template-columns:50px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.it:first-child{border-top:0}
+.it .t{font:600 13px/1.5 var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.it .c{min-width:0;display:grid;gap:6px}
+.it h4{font:700 17px/1.3 var(--f-body)}
+.it h4 .zh{font:600 14px/1.3 var(--f-display);color:var(--muted)}
+.it.opt h4{color:var(--muted)}
+.it .chips{margin-top:0}
+.go{font-size:14px;color:var(--muted)}
+.go b{color:var(--ink);font-weight:600}
+.go.bike b{color:var(--jade)}
+.mv .c{border:1px dashed var(--line);border-radius:10px;padding:9px 10px}
+.mvl{display:flex;gap:8px;align-items:flex-start;font-weight:600;font-size:15px}
+.mvl svg{width:18px;height:18px;flex:none;color:var(--cobalt);margin-top:2px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.dur{font:600 12px/1 var(--f-mono);color:var(--cobalt)}
+.note p{font-size:15px}
+.rain{margin:0 14px 12px;font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+.tonight{margin:0 14px 12px;padding:10px 12px;border-radius:10px;background:var(--paper);font-size:14px;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.tonight .lbl,.hh .lbl{font:600 11px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.top{display:block;text-align:right;font-size:13px;padding:0 14px 12px;color:var(--muted);text-decoration:none}
+/* details */
+details summary{cursor:pointer;list-style:none;-webkit-user-select:none;user-select:none}
+details summary::-webkit-details-marker{display:none}
+details.more summary,details.taxi summary{display:inline-flex;align-items:center;gap:6px;font:600 13px/1 var(--f-body);color:var(--cobalt);padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+details.more summary::before{content:"＋";font-weight:700}
+details.more[open] summary::before{content:"－"}
+details.taxi summary::before{content:"🚕";font-size:14px}
+details.more dl{margin:8px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 12px;font-size:14px}
+details.more dt{font:600 11px/1.6 var(--f-mono);text-transform:uppercase;color:var(--muted)}
+details.more dd{margin:0}
+.it .c details{justify-self:start;max-width:100%}
+.it .c details[open]{justify-self:stretch}
+/* taxi card */
+.card{margin-top:8px;background:#FFFDF8;color:#111;border:2px solid var(--seal);border-radius:14px;padding:16px;text-align:center}
+.card .say{font:600 18px/1.3 var(--f-display);color:#666}
+.card .big{font:900 34px/1.25 var(--f-display);margin:6px 0;word-break:break-all}
+.card .addr{font:600 20px/1.35 var(--f-display);word-break:break-all}
+.card .en{font-size:13px;color:#666;margin-top:6px}
+.maps{display:flex;gap:10px;justify-content:center;margin-top:10px}
+.maps a{font:600 14px/1 var(--f-body);text-decoration:none;padding:10px 14px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--cobalt)}
+/* sections */
+.sec{margin-top:30px}
+.sec>h2{font:900 26px/1.15 var(--f-display);margin-bottom:10px}
+.hotel{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--cc);border-radius:14px;padding:14px;display:grid;gap:8px;margin-top:12px}
+.hotel h3{font:700 18px/1.3 var(--f-body)}
+.hh{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.hotel .maps{justify-content:flex-start}
+.hotel .card{margin-top:0}
+.list{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.list li{padding:11px 14px;border-top:1px solid var(--line);display:grid;gap:3px;font-size:14px}
+.list li:first-child{border-top:0}
+.list .row{display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
+.list .row b{font-size:15px}
+.list .cat{font:600 11px/1.2 var(--f-mono);text-transform:uppercase;color:var(--muted)}
+.list li.ok b{color:var(--muted);text-decoration:line-through;font-weight:500}
+.steps{margin:0;padding-left:22px;display:grid;gap:8px;font-size:15px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:12px}
+.box h3{font:900 18px/1.2 var(--f-display);margin-bottom:8px}
+.box ul{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
+.ph{display:grid;gap:2px;padding:10px 14px;border-top:1px solid var(--line)}
+.ph:first-child{border-top:0}
+.ph .zh{font:900 24px/1.3 var(--f-display)}
+.ph .py{font:500 13px/1.3 var(--f-mono);color:var(--muted)}
+.ph .en{font-size:14px}
+.sos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.sos div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.sos b{display:block;font:900 26px/1.1 var(--f-display);color:var(--seal)}
+.sos span{font-size:13px;color:var(--muted)}
+.num{font:600 16px/1.3 var(--f-mono);font-variant-numeric:tabular-nums;user-select:all;-webkit-user-select:all}
+.pp{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:10px}
+.inp{width:100%;font:16px var(--f-body);padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}
+.btn{font:600 15px var(--f-body);padding:10px 14px;border:0;border-radius:9px;background:var(--ink);color:var(--surface)}
+.pp h3{font:900 18px/1.2 var(--f-display);margin-bottom:8px}
+.pp dl,.contact dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 12px;font-size:15px}
+.pp dt,.contact dt{font:600 11px/1.8 var(--f-mono);text-transform:uppercase;color:var(--muted)}
+.pp dd,.contact dd{margin:0;user-select:all;-webkit-user-select:all}
+footer{margin:34px 0 40px;font-size:12.5px;color:var(--muted);display:grid;gap:6px}
+@media (min-width:600px){.quick{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media print{nav.days{position:static}details{display:block}}
+</style>
+</head>
+<body>
+<div class="wrap masthead" id="top">
+  <p class="k">Sat 31 Oct – Mon 9 Nov 2026 · Moritz &amp; Lisa</p>
+  <h1>Shanghai <span class="ar">→</span> Suzhou <span class="ar">→</span> Hangzhou</h1>
+  <p class="stamp">Updated <time datetime="2026-10-30T00:26+08:00">Fri 30 Oct 2026, 00:26</time> (SGT)</p>
+  <div class="quick">
+    <a href="#d0"><span>Fly in · Sat 31</span><b>9C 7678</b>SIN 17:40 → PVG 22:55</a>
+    <a href="#d9"><span>Fly out · Mon 9</span><b>MF 8703</b>HGH T4 08:15 → SIN 13:40</a>
+    <a href="#hotels"><span>Hotels</span><b>Taxi cards</b>Addresses in Chinese</a>
+    <a href="#help"><span>Help</span><b>110 · 120</b>Police · ambulance</a>
+  </div>
+</div>
+<nav class="days" aria-label="Days and sections"><div class="in" id="nav"><a href="#d0" data-i="0" style="--cc:var(--c-sh)"><span>Sat</span><b>31</b></a><a href="#d1" data-i="1" style="--cc:var(--c-sh)"><span>Sun</span><b>1</b></a><a href="#d2" data-i="2" style="--cc:var(--c-sh)"><span>Mon</span><b>2</b></a><a href="#d3" data-i="3" style="--cc:var(--c-sz)"><span>Tue</span><b>3</b></a><a href="#d4" data-i="4" style="--cc:var(--c-hz)"><span>Wed</span><b>4</b></a><a href="#d5" data-i="5" style="--cc:var(--c-hz)"><span>Thu</span><b>5</b></a><a href="#d6" data-i="6" style="--cc:var(--c-hz)"><span>Fri</span><b>6</b></a><a href="#d7" data-i="7" style="--cc:var(--c-hz)"><span>Sat</span><b>7</b></a><a href="#d8" data-i="8" style="--cc:var(--c-hz)"><span>Sun</span><b>8</b></a><a href="#d9" data-i="9" style="--cc:var(--c-hz)"><span>Mon</span><b>9</b></a><a class="sec" href="#hotels">Hotels</a><a class="sec" href="#bookings">Bookings</a><a class="sec" href="#metro">Metro</a><a class="sec" href="#phrases">Phrases</a><a class="sec" href="#help">Help</a><a class="sec" href="#docs">Passports</a></div></nav>
+<main class="wrap">
+<section class="day" id="d0" data-date="2026-10-31" style="--cc:var(--c-sh)">
+    <header class="dh"><div class="date"><span class="wd">Sat</span><span class="dn">31 Oct</span></div><div><span class="city">Shanghai 上海</span><h3>Fly in, straight to bed</h3></div></header>
+    <ol class="items"><li class="it mv"><span class="t">17:40</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z"/></svg><span>Flight 9C 7678 Singapore Changi → Shanghai Pudong</span></div><div class="meta"><span class="dur">5 h 15</span></div></div></li><li class="it note"><span class="t">22:55</span><div class="c"><p>Land at Pudong. Immigration (online arrival cards done), then bags. Allow 45–75 min.</p></div></li><li class="it mv"><span class="t">~23:45</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Your pre-booked car to the hotel. The Maglev and metro have stopped by now.</span></div><div class="meta"><span class="dur">about 50–60 min</span><span class="chip ok">✓ booked</span></div></div></li><li class="it note"><span class="t">~00:45</span><div class="c"><p>Check in at Metropolo YMCA. Tell the hotel in advance you arrive after midnight so the room is held.</p></div></li></ol>
+    
+    <div class="tonight"><span class="lbl">Tonight</span> <b>Metropolo Classiq YMCA, People’s Square</b> <span class="chip ok">✓ booked</span> <a href="#hotel-sh">hotel card ↓</a></div>
+    <a class="top" href="#top">↑ Days</a>
+  </section>
+<section class="day" id="d1" data-date="2026-11-01" style="--cc:var(--c-sh)">
+    <header class="dh"><div class="date"><span class="wd">Sun</span><span class="dn">1 Nov</span></div><div><span class="city">Shanghai 上海</span><h3>Old Shanghai and the skyline</h3></div></header>
+    <ol class="items"><li class="it stop"><span class="t">08:45</span><div class="c">
+      <h4>Yu Garden and the Old City <span class="zh">豫园</span></h4>
+      <div class="chips"><span class="chip adv">Buy online</span></div>
+      <p>Yu Garden at opening (about 09:00), before the Sunday crowds, then the Old City lanes.</p>
+      <p class="go"><b>Get there:</b> Metro Line 8 one stop to Laoximen, change to Line 10, one stop to Yuyuan Garden (exit 1). Or walk 20 min east.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 40 RMB (S$7.7)</dd><dt>Open</dt><dd>About 09:00–16:30, last entry 16:00. Closed Mondays.</dd>
+        <dt>Booking</dt><dd>Trip.com (“Yu Garden ticket”), with each passport number. Any time; book a day or two ahead for a weekend. Bring the physical passport, it is scanned at the gate.</dd>
+        <dt>What it is</dt><dd>A Ming-dynasty private garden of rockeries, ponds and pavilions, inside a busy bazaar of upturned roofs. The bazaar is touristy; the garden itself is lovely and a good first look at a Chinese garden. Soup dumplings next door.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">豫园</p><p class="en">“Please take me to Yu Garden and the Old City”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E8%B1%AB%E5%9B%AD&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E8%B1%AB%E5%9B%AD">Apple Maps</a></p></div></details>
+    </div></li><li class="it note"><span class="t">11:00</span><div class="c"><p>Soup dumplings for an early lunch around the Old City.</p></div></li><li class="it stop"><span class="t">12:15</span><div class="c">
+      <h4>The Bund, by day and by night <span class="zh">外滩</span></h4>
+      <div class="chips"></div>
+      <p>Walk the Bund north towards Waibaidu Bridge for the 1920s banks in daylight.</p>
+      <p class="go"><b>Get there:</b> Walk 15 min north-east from Yu Garden to the riverfront.</p>
+      <p class="go bike"><b>By bike:</b> About 15 min from the hotel on a shared bike via Fuzhou Road; park outside the promenade, which is pedestrian.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Always open. Building and skyline lights usually until about 22:00.</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>The riverside promenade of 1920s banks and trading houses, facing the Pudong skyscrapers across the Huangpu. Go once in daylight for the architecture and once after dark when everything is lit.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">外滩</p><p class="en">“Please take me to The Bund, by day and by night”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E5%A4%96%E6%BB%A9&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E5%A4%96%E6%BB%A9">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop opt"><span class="t">13:30</span><div class="c">
+      <h4>Shanghai Museum, People’s Square <span class="zh">上海博物馆（人民广场馆）</span></h4>
+      <div class="chips"><span class="chip">Maybe</span></div>
+      <p>Optional: the Shanghai Museum (open Sundays), or a rest at the hotel. Both are 10 min from the Bund.</p>
+      <p class="go"><b>Get there:</b> Metro Line 2 from East Nanjing Road one stop to People’s Square.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>09:00–17:00, last entry 16:00. Closed Mondays.</dd>
+        <dt>Booking</dt><dd>No booking needed. Walk-in since September 2025 with a passport; reservations only around national holidays and for some special exhibitions.</dd>
+        <dt>What it is</dt><dd>One of China’s best collections of bronzes, ceramics, jade and calligraphy, ten minutes on foot from your hotel. Free, and a good rainy-day plan.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">上海博物馆（人民广场馆）</p><p class="en">“Please take me to Shanghai Museum, People’s Square”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E5%8D%9A%E7%89%A9%E9%A6%86&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E4%B8%8A%E6%B5%B7%E5%8D%9A%E7%89%A9%E9%A6%86">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">15:45</span><div class="c">
+      <h4>Huangpu public ferry <span class="zh">金陵东路轮渡站</span></h4>
+      <div class="chips"></div>
+      <p>Cross the river for 2 RMB (S$0.4).</p>
+      <p class="go"><b>Get there:</b> Walk 10 min back to the Jinling East Road pier on the Bund.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 2 RMB (S$0.4)</dd><dt>Open</dt><dd>Runs from early morning to late evening, every 10–20 min</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>The commuter ferry across the river. Same skyline view as the tourist cruises, for the price of a bus ticket, in about 10 minutes.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">金陵东路轮渡站</p><p class="en">“Please take me to Huangpu public ferry”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E9%87%91%E9%99%B5%E4%B8%9C%E8%B7%AF%E8%BD%AE%E6%B8%A1%E7%AB%99&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E9%87%91%E9%99%B5%E4%B8%9C%E8%B7%AF%E8%BD%AE%E6%B8%A1%E7%AB%99">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">16:30</span><div class="c">
+      <h4>Shanghai Tower observation deck <span class="zh">上海中心大厦 上海之巅观光厅</span></h4>
+      <div class="chips"><span class="chip adv">Buy online</span></div>
+      <p>Up the tower for sunset at about 17:05 and the lights coming on.</p>
+      <p class="go"><b>Get there:</b> From Dongchang Road pier, walk 15 min to the tower; entrance on B1–B2.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 180 RMB (S$35)</dd><dt>Open</dt><dd>08:30–22:00, last entry 21:30</dd>
+        <dt>Booking</dt><dd>Trip.com (“Shanghai Tower 118th floor”). Any time; a sunset slot on a weekend can fill up. Pick an entry time around 16:30 for sunset.</dd>
+        <dt>What it is</dt><dd>China’s tallest building, with a glass-walled deck on the 118th floor. Time it for sunset (about 17:05) and watch the city light up below you.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">上海中心大厦 上海之巅观光厅</p><p class="en">“Please take me to Shanghai Tower observation deck”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E4%B8%AD%E5%BF%83%E5%A4%A7%E5%8E%A6%20%E4%B8%8A%E6%B5%B7%E4%B9%8B%E5%B7%85%E8%A7%82%E5%85%89%E5%8E%85&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E4%B8%8A%E6%B5%B7%E4%B8%AD%E5%BF%83%E5%A4%A7%E5%8E%A6%20%E4%B8%8A%E6%B5%B7%E4%B9%8B%E5%B7%85%E8%A7%82%E5%85%89%E5%8E%85">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">18:30</span><div class="c">
+      <h4>Nanjing Road East <span class="zh">南京东路步行街</span></h4>
+      <div class="chips"></div>
+      <p>Dinner, and a look at Nanjing Road East in its neon.</p>
+      <p class="go"><b>Get there:</b> Metro Line 2 from Lujiazui one stop to East Nanjing Road.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Shops roughly 10:00–22:00</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>Shanghai’s neon shopping street, running from People’s Square to the Bund. Loud and crowded; worth 30 minutes on your way to the river, not a destination.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">南京东路步行街</p><p class="en">“Please take me to Nanjing Road East”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E5%8D%97%E4%BA%AC%E4%B8%9C%E8%B7%AF%E6%AD%A5%E8%A1%8C%E8%A1%97&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E5%8D%97%E4%BA%AC%E4%B8%9C%E8%B7%AF%E6%AD%A5%E8%A1%8C%E8%A1%97">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">20:00</span><div class="c">
+      <h4>Huangpu night river cruise <span class="zh">黄浦江游览 十六铺码头</span></h4>
+      <div class="chips"><span class="chip adv">Buy online</span></div>
+      <p>The night river cruise past both lit riverfronts (lights until about 22:00).</p>
+      <p class="go"><b>Get there:</b> Walk 15 min south along the Bund to Shiliupu pier, or Didi 5 min.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 100–150 RMB (S$19–29)</dd><dt>Open</dt><dd>Evening departures roughly 18:30–21:00</dd>
+        <dt>Booking</dt><dd>Trip.com (“Huangpu River night cruise”) or the ticket office at the pier. A day or two ahead.</dd>
+        <dt>What it is</dt><dd>A 45–60 minute boat ride past both lit-up riverfronts. Touristy but pleasant, and easy on tired legs. The public ferry gives you a taste for 2 RMB (S$0.4) if you’d rather skip it.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">黄浦江游览 十六铺码头</p><p class="en">“Please take me to Huangpu night river cruise”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E9%BB%84%E6%B5%A6%E6%B1%9F%E6%B8%B8%E8%A7%88%20%E5%8D%81%E5%85%AD%E9%93%BA%E7%A0%81%E5%A4%B4&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E9%BB%84%E6%B5%A6%E6%B1%9F%E6%B8%B8%E8%A7%88%20%E5%8D%81%E5%85%AD%E9%93%BA%E7%A0%81%E5%A4%B4">Apple Maps</a></p></div></details>
+    </div></li><li class="it note"><span class="t">21:15</span><div class="c"><p>Home: Didi 10 min, or walk 25 min.</p></div></li></ol>
+    <p class="rain">Rain plan: Shanghai Museum, 10 min from the hotel, instead of the Bund walk in the afternoon.</p>
+    <div class="tonight"><span class="lbl">Tonight</span> <b>Metropolo Classiq YMCA, People’s Square</b> <span class="chip ok">✓ booked</span> <a href="#hotel-sh">hotel card ↓</a></div>
+    <a class="top" href="#top">↑ Days</a>
+  </section>
+<section class="day" id="d2" data-date="2026-11-02" style="--cc:var(--c-sh)">
+    <header class="dh"><div class="date"><span class="wd">Mon</span><span class="dn">2 Nov</span></div><div><span class="city">Shanghai 上海</span><h3>French Concession, posters, and your Jing’an citywalk</h3><div class="chips"><span class="chip warn">Museums closed</span></div></div></header>
+    <ol class="items"><li class="it stop"><span class="t">09:30</span><div class="c">
+      <h4>Former French Concession walk <span class="zh">武康大楼</span></h4>
+      <div class="chips"></div>
+      <p>Wukang Mansion before the photo crowds, then Wukang Road and Anfu Road under the plane trees.</p>
+      <p class="go"><b>Get there:</b> Metro Line 8 one stop to Laoximen, change to Line 10 west, 4 stops to Jiaotong University, walk 5 min. Or Didi 20 min.</p>
+      <p class="go bike"><b>By bike:</b> Ideal on a bike: the plane-tree streets are flat with bike lanes. From the hotel about 25 min west along Yan’an Road’s side streets, or take the metro out and ride locally between Wukang Road, Anfu Road and the poster centre (5–10 min hops).</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Any time; cafés from about 09:00</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>Plane-tree streets of 1920s–30s villas and apartment blocks. Start at the ship-shaped Wukang Mansion, walk Wukang Road and Anfu Road, and stop for coffee wherever you like. The best part of Shanghai to wander without a plan.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">武康大楼</p><p class="en">“Please take me to Former French Concession walk”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E6%AD%A6%E5%BA%B7%E5%A4%A7%E6%A5%BC&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E6%AD%A6%E5%BA%B7%E5%A4%A7%E6%A5%BC">Apple Maps</a></p></div></details>
+    </div></li><li class="it note"><span class="t">12:00</span><div class="c"><p>Lunch and coffee on Anfu Road.</p></div></li><li class="it stop"><span class="t">13:15</span><div class="c">
+      <h4>Propaganda Poster Art Centre <span class="zh">上海宣传画艺术中心</span></h4>
+      <div class="chips"></div>
+      <p>An hour among the Mao-era posters.</p>
+      <p class="go"><b>Get there:</b> Didi 10 min from Anfu Road. Floor 7, Room K of 726 Yan’an West Road.</p>
+      <p class="go bike"><b>By bike:</b> 10 min by bike from Anfu Road.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 25 RMB (S$4.8)</dd><dt>Open</dt><dd>10:00–17:00, last entry 16:30</dd>
+        <dt>Booking</dt><dd>No booking needed. Pay at the door. Check the opening days on Amap the day before; small private museums sometimes close at short notice.</dd>
+        <dt>What it is</dt><dd>A private collection of several thousand posters from the Mao era: smiling farmers, heroic workers, slogans against imperialism. Small, odd and genuinely fascinating; it shows how the state talked to its people from the 1950s to the 1970s. The person who told you about it was right.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">上海宣传画艺术中心</p><p class="en">“Please take me to Propaganda Poster Art Centre”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E4%B8%8A%E6%B5%B7%E5%AE%A3%E4%BC%A0%E7%94%BB%E8%89%BA%E6%9C%AF%E4%B8%AD%E5%BF%83&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E4%B8%8A%E6%B5%B7%E5%AE%A3%E4%BC%A0%E7%94%BB%E8%89%BA%E6%9C%AF%E4%B8%AD%E5%BF%83">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop opt"><span class="t">14:45</span><div class="c">
+      <h4>Jing’an Temple to Xinle Road citywalk <span class="zh">静安寺 → 巨鹿路 · 富民路 · 新乐路</span></h4>
+      <div class="chips"><span class="chip">Maybe</span></div>
+      <p>Jing’an Temple, then the walk south through Julu Road, Fumin Road and Xinle Road, browsing as you go.</p>
+      <p class="go"><b>Get there:</b> Walk 15 min to Jiangsu Road, Metro Line 2 one stop to Jing’an Temple. Or Didi 10 min.</p>
+      <p class="go bike"><b>By bike:</b> Ride to the temple (10 min from the poster centre), then walk the route: it is a browsing walk with stops every 100 m.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Temple about 50 RMB (S$9.6); coffee about 40–60 RMB (S$7.7–12), ice cream about 35–50 RMB (S$6.7–9.6), cocktails extra</dd><dt>Open</dt><dd>Temple about 07:30–17:00; shops roughly 11:00–20:00</dd>
+        <dt>Booking</dt><dd>No booking needed. Small shops open late morning; this works best as an afternoon into the evening.</dd>
+        <dt>What it is</dt><dd>The route you found: start at the gilded Jing’an Temple, then walk about 2.5 km south through quiet lane-house streets. Coffee on Huashan Road, the 1920s lane houses of Lane 852 Julu Road, then Fumin Road’s small shops (ceramics at Hitable, vintage jewellery and flowers, Milk Train ice cream), Zheng Gallery and Basement FG on Xinle Road, the blue onion domes of the old Russian Orthodox church at 55 Xinle Road (seen from outside), and finally TCM cocktails at Zhihe Herbal Bar, 2F, 100 Xiangyang North Road (襄阳北路100号2楼). Pure browsing and grazing; go at your own pace.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">静安寺 → 巨鹿路 · 富民路 · 新乐路</p><p class="en">“Please take me to Jing’an Temple to Xinle Road citywalk”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E9%9D%99%E5%AE%89%E5%AF%BA&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E9%9D%99%E5%AE%89%E5%AF%BA">Apple Maps</a></p></div></details>
+    </div></li><li class="it note"><span class="t">18:00</span><div class="c"><p>TCM cocktails at Zhihe Herbal Bar, 2F, 100 Xiangyang North Road, the last stop of the walk. Dinner nearby.</p></div></li><li class="it note"><span class="t">21:00</span><div class="c"><p>Home: walk 10 min to Shaanxi South Road, Metro Line 1 two stops to People’s Square, walk 10 min. Or Didi 15 min.</p></div></li></ol>
+    <p class="rain">Monday: Yu Garden, Shanghai Museum and most museums are closed. The citywalk is a Maybe: if you skip it, ride the West Bund riverside path for sunset instead, or book the ERA acrobatics show at 19:30.</p>
+    <div class="tonight"><span class="lbl">Tonight</span> <b>Metropolo Classiq YMCA, People’s Square</b> <span class="chip ok">✓ booked</span> <a href="#hotel-sh">hotel card ↓</a></div>
+    <a class="top" href="#top">↑ Days</a>
+  </section>
+<section class="day" id="d3" data-date="2026-11-03" style="--cc:var(--c-sz)">
+    <header class="dh"><div class="date"><span class="wd">Tue</span><span class="dn">3 Nov</span></div><div><span class="city">Suzhou 苏州</span><h3>To Suzhou: the great garden and the Pei museum</h3><div class="chips"><span class="chip">Travel day</span></div></div></header>
+    <ol class="items"><li class="it note"><span class="t">07:45</span><div class="c"><p>Check out. Passports in the day bag: the train, the garden and the museum all scan them.</p></div></li><li class="it mv"><span class="t">07:50</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Didi with your bags to Shanghai Railway Station (上海站), not the metro: no stairs or transfers with suitcases</span></div><div class="meta"><span class="dur">15–20 min</span></div></div></li><li class="it mv"><span class="t">08:30</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2c-4 0-8 .5-8 4v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5V21h2l2-2h4l2 2h2v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4Zm-4.5 15a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM18 10H6V6h12v4Z"/></svg><span>Train Shanghai Station → Suzhou Station. Be at the station 30 min early for security.</span></div><div class="meta"><span class="dur">25–35 min</span><span class="chip must">to book</span></div></div></li><li class="it mv"><span class="t">09:10</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Didi from the station taxi rank to Pan Pacific (苏州吴宫泛太平洋酒店, 新市路259号), drop the bags at reception</span></div><div class="meta"><span class="dur">about 20 min</span></div></div></li><li class="it note"><span class="t">09:45</span><div class="c"><p>Buffer: coffee at the hotel. If anything ran late, this is where it gets absorbed.</p></div></li><li class="it mv"><span class="t">10:10</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Didi to the garden ticket office (拙政园售票处)</span></div><div class="meta"><span class="dur">about 20 min</span></div></div></li><li class="it stop"><span class="t">10:30</span><div class="c">
+      <h4>Humble Administrator’s Garden <span class="zh">拙政园</span></h4>
+      <div class="chips"><span class="chip ok">✓ booked</span></div>
+      <p>Booked: enter any time between 10:30 and 11:30. Allow two hours.</p>
+      <p class="go"><b>Get there:</b> Metro Line 6 to 拙政园苏博 station, or Didi to the ticket office (tell the driver 拙政园售票处). About 10 min by car from Suzhou Station; a 5–10 min walk from Pingjiang Road.</p>
+      <p class="go bike"><b>By bike:</b> In the old town everything is 5–15 min by bike on flat lanes along the canals.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 70 RMB (S$13) (off-season from November)</dd><dt>Open</dt><dd>07:30–17:00, last entry 16:30</dd>
+        <dt>Booking</dt><dd>Booked for 2: Tue 3 Nov, entry 10:30–11:30, booking no. 1578951582843625, S$26.94</dd>
+        <dt>What it is</dt><dd>The largest and most famous of Suzhou’s classical gardens: ponds, zigzag bridges, moon gates and framed views. If you see one Chinese garden on this trip, see this one, and go early.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">拙政园</p><p class="en">“Please take me to Humble Administrator’s Garden”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E6%8B%99%E6%94%BF%E5%9B%AD&city=%E8%8B%8F%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E6%8B%99%E6%94%BF%E5%9B%AD">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop opt"><span class="t">12:45</span><div class="c">
+      <h4>Lion Grove Garden <span class="zh">狮子林</span></h4>
+      <div class="chips"><span class="chip adv">Buy online</span><span class="chip">Maybe</span></div>
+      <p>Maybe: the rock maze of Lion Grove next door (1 h). Otherwise straight to lunch.</p>
+      <p class="go"><b>Get there:</b> Walk 3 min west from the Humble Administrator’s Garden.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 30–40 RMB (S$5.8–7.7)</dd><dt>Open</dt><dd>About 07:30–17:00</dd>
+        <dt>Booking</dt><dd>Trip.com, or the official 苏州园林 booking in WeChat. The day before is fine.</dd>
+        <dt>What it is</dt><dd>A garden built around a giant maze of eroded limestone rocks you can climb through. Two minutes from the Humble Administrator’s Garden; easy to add.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">狮子林</p><p class="en">“Please take me to Lion Grove Garden”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E7%8B%AE%E5%AD%90%E6%9E%97&city=%E8%8B%8F%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E7%8B%AE%E5%AD%90%E6%9E%97">Apple Maps</a></p></div></details>
+    </div></li><li class="it note"><span class="t">13:15</span><div class="c"><p>Lunch near the garden.</p></div></li><li class="it stop"><span class="t">14:15</span><div class="c">
+      <h4>Suzhou Museum (I. M. Pei) <span class="zh">苏州博物馆</span></h4>
+      <div class="chips"><span class="chip reserve">Reserve (free)</span></div>
+      <p>Your reserved slot at the museum next door (book around 14:00–14:30).</p>
+      <p class="go"><b>Get there:</b> Next door to the Humble Administrator’s Garden, 2 min walk.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>About 09:00–17:00. Closed Mondays.</dd>
+        <dt>Booking</dt><dd>WeChat: search the mini-program 苏州博物馆, choose “Passport” as ID type. Opens 7 days ahead (sources say 08:00 or 20:00); popular slots go fast. No walk-ins for foreigners. Plan B without booking: Suzhou Museum West across town.</dd>
+        <dt>What it is</dt><dd>I. M. Pei’s white-walled museum, a modern take on a Suzhou garden, right next to the Humble Administrator’s Garden. The building is the main reason to go.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">苏州博物馆</p><p class="en">“Please take me to Suzhou Museum (I. M. Pei)”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E8%8B%8F%E5%B7%9E%E5%8D%9A%E7%89%A9%E9%A6%86&city=%E8%8B%8F%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E8%8B%8F%E5%B7%9E%E5%8D%9A%E7%89%A9%E9%A6%86">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">16:00</span><div class="c">
+      <h4>Pingjiang Road <span class="zh">平江路</span></h4>
+      <div class="chips"></div>
+      <p>Canal lanes at golden hour, a tea house with pingtan, dinner. Back to Pan Pacific by Didi (15 min) to check in.</p>
+      <p class="go"><b>Get there:</b> Walk 10–15 min south-east from the Humble Administrator’s Garden.</p>
+      <p class="go bike"><b>By bike:</b> Pingjiang Road itself is narrow and busy, so walk it; ride the quieter parallel canal lanes to get there.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Any time; best late afternoon to evening</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>A canal-side lane of whitewashed houses, small bridges, snack shops and tea houses. Stop in a tea house that has pingtan, Suzhou’s sung storytelling with lute and drum.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">平江路</p><p class="en">“Please take me to Pingjiang Road”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E5%B9%B3%E6%B1%9F%E8%B7%AF&city=%E8%8B%8F%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E5%B9%B3%E6%B1%9F%E8%B7%AF">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop opt"><span class="t">20:00</span><div class="c">
+      <h4>Night boat on the old city moat <span class="zh">古运河游船 新市桥码头</span></h4>
+      <div class="chips"><span class="chip adv">Buy online</span><span class="chip">Optional</span></div>
+      <p>Optional: the night boat on the moat from the pier at Xinshi Bridge.</p>
+      <p class="go"><b>Get there:</b> Didi 15 min from Pingjiang Road.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 100–150 RMB (S$19–29)</dd><dt>Open</dt><dd>Evening departures; times vary by season</dd>
+        <dt>Booking</dt><dd>At the pier, or ask the hotel. Same day.</dd>
+        <dt>What it is</dt><dd>An hour on the canal that rings the old town, past lit gates and bridges. One of the piers is at Xinshi Bridge by Pan Gate.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">古运河游船 新市桥码头</p><p class="en">“Please take me to Night boat on the old city moat”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E5%8F%A4%E8%BF%90%E6%B2%B3%E6%B8%B8%E8%88%B9%20%E6%96%B0%E5%B8%82%E6%A1%A5%E7%A0%81%E5%A4%B4&city=%E8%8B%8F%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E5%8F%A4%E8%BF%90%E6%B2%B3%E6%B8%B8%E8%88%B9%20%E6%96%B0%E5%B8%82%E6%A1%A5%E7%A0%81%E5%A4%B4">Apple Maps</a></p></div></details>
+    </div></li></ol>
+    
+    <div class="tonight"><span class="lbl">Tonight</span> <b>Pan Pacific Suzhou</b> <span class="chip ok">✓ booked</span> <a href="#hotel-sz">hotel card ↓</a></div>
+    <a class="top" href="#top">↑ Days</a>
+  </section>
+<section class="day" id="d4" data-date="2026-11-04" style="--cc:var(--c-hz)">
+    <header class="dh"><div class="date"><span class="wd">Wed</span><span class="dn">4 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>A small garden, then Hangzhou and the TCM museum</h3><div class="chips"><span class="chip">Travel day</span></div></div></header>
+    <ol class="items"><li class="it stop"><span class="t">07:30</span><div class="c">
+      <h4>Master of the Nets Garden <span class="zh">网师园</span></h4>
+      <div class="chips"><span class="chip adv">Buy online</span></div>
+      <p>The Master of the Nets Garden at opening, almost to yourselves.</p>
+      <p class="go"><b>Get there:</b> In the south of the old town. Didi 10–15 min from Pingjiang Road or Pan Gate.</p>
+      <p class="go bike"><b>By bike:</b> About 15 min by bike from Pingjiang Road through the old town.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 30–40 RMB (S$5.8–7.7)</dd><dt>Open</dt><dd>07:30–17:00 from late October. Evening garden shows run in spring to autumn; check if they are still on.</dd>
+        <dt>Booking</dt><dd>Trip.com or 苏州园林 in WeChat. The day before is fine.</dd>
+        <dt>What it is</dt><dd>The smallest of the great gardens and many people’s favourite: one pond, perfectly composed. It opens at 07:30, which makes it the ideal first stop of a morning.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">网师园</p><p class="en">“Please take me to Master of the Nets Garden”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E7%BD%91%E5%B8%88%E5%9B%AD&city=%E8%8B%8F%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E7%BD%91%E5%B8%88%E5%9B%AD">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">08:45</span><div class="c">
+      <h4>Panmen Gate <span class="zh">盘门</span></h4>
+      <div class="chips"></div>
+      <p>Pan Gate and the moat in the quiet morning, then back for breakfast.</p>
+      <p class="go"><b>Get there:</b> Didi 10 min from the Nets Garden.</p>
+      <p class="go bike"><b>By bike:</b> About 10 min by bike from the Master of the Nets Garden; ride the moat path.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 40 RMB (S$7.7)</dd><dt>Open</dt><dd>About 07:30–17:00</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>The only original water gate of Suzhou’s city wall, with a pagoda and an arched bridge over the moat. The gate area is calm in the morning and the moat is lit up at night.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">盘门</p><p class="en">“Please take me to Panmen Gate”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E7%9B%98%E9%97%A8&city=%E8%8B%8F%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E7%9B%98%E9%97%A8">Apple Maps</a></p></div></details>
+    </div></li><li class="it note"><span class="t">10:30</span><div class="c"><p>Check out.</p></div></li><li class="it mv"><span class="t">11:00</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Didi to Suzhou Station</span></div><div class="meta"><span class="dur">20–25 min</span></div></div></li><li class="it mv"><span class="t">11:45</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2c-4 0-8 .5-8 4v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5V21h2l2-2h4l2 2h2v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4Zm-4.5 15a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM18 10H6V6h12v4Z"/></svg><span>Train Suzhou → Hangzhou East</span></div><div class="meta"><span class="dur">about 1 h 30 – 2 h</span><span class="chip must">to book</span></div></div></li><li class="it mv"><span class="t">13:45</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8 2 4 2.5 4 6v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5V21h12v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4ZM7.5 17A1.5 1.5 0 1 1 9 15.5 1.5 1.5 0 0 1 7.5 17Zm3.5-7H6V6h5v4Zm2 0V6h5v4h-5Zm3.5 7a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5Z"/></svg><span>Metro Line 1 Hangzhou East → Ding’an Road, drop bags at Yitel</span></div><div class="meta"><span class="dur">30 min</span></div></div></li><li class="it stop"><span class="t">14:45</span><div class="c">
+      <h4>Hu Qing Yu Tang: TCM museum and pharmacy <span class="zh">胡庆余堂中药博物馆</span></h4>
+      <div class="chips"><span class="chip adv">Ask hotel</span></div>
+      <p>Your TCM visit, a 10 min walk from the hotel. Ask whether a doctor is seeing walk-ins.</p>
+      <p class="go"><b>Get there:</b> Walk 10 min south from the hotel, at the top of Hefang Street (Dajing Lane).</p>
+      <p class="go bike"><b>By bike:</b> 10 min walk; no need for a bike.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Small entry ticket at the door</dd><dt>Open</dt><dd>About 09:00–17:00</dd>
+        <dt>Booking</dt><dd>No ticket to book. For a doctor’s pulse reading, ask your hotel to call ahead. A day or two before. Bring a translation app for any consultation.</dd>
+        <dt>What it is</dt><dd>Your TCM visit. A working pharmacy from the 1870s with China’s museum of traditional Chinese medicine inside: carved wooden herb halls, old preparation tools and a courtyard of medicinal plants. A doctor sometimes sees walk-ins for a pulse reading; it depends on who is on duty and will be in Mandarin.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">胡庆余堂中药博物馆</p><p class="en">“Please take me to Hu Qing Yu Tang: TCM museum and pharmacy”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E8%83%A1%E5%BA%86%E4%BD%99%E5%A0%82%E4%B8%AD%E8%8D%AF%E5%8D%9A%E7%89%A9%E9%A6%86&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E8%83%A1%E5%BA%86%E4%BD%99%E5%A0%82%E4%B8%AD%E8%8D%AF%E5%8D%9A%E7%89%A9%E9%A6%86">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">16:15</span><div class="c">
+      <h4>Hefang Street and Qinghefang <span class="zh">河坊街</span></h4>
+      <div class="chips"></div>
+      <p>Hefang Street and Dajing Lane right outside, then the lakeshore for sunset (about 17:05).</p>
+      <p class="go"><b>Get there:</b> Walk 15 min south from the hotel, or Metro Line 7 to Wushan Square.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Best in the evening</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>An old commercial street of traditional shops, pharmacies and snack stalls. Busy and touristy, good for an evening wander and street food.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">河坊街</p><p class="en">“Please take me to Hefang Street and Qinghefang”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E6%B2%B3%E5%9D%8A%E8%A1%97&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E6%B2%B3%E5%9D%8A%E8%A1%97">Apple Maps</a></p></div></details>
+    </div></li><li class="it note"><span class="t">19:00</span><div class="c"><p>Dinner around the Hubin lakefront, 10 min from the hotel.</p></div></li><li class="it stop"><span class="t">20:15</span><div class="c">
+      <h4>West Lake north shore: Broken Bridge and Bai Causeway <span class="zh">断桥 · 白堤</span></h4>
+      <div class="chips"></div>
+      <p>A night walk to the Broken Bridge and onto the Bai Causeway.</p>
+      <p class="go"><b>Get there:</b> Walk 10 min west from the hotel to the lake at Hubin, then 20 min north along the shore.</p>
+      <p class="go bike"><b>By bike:</b> The lakeshore road is good for cycling, but parts of the Bai Causeway are signed no-cycling: push the bike there.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Always open</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>The classic first walk: along the lakeshore to the Broken Bridge, then out across the willow-lined Bai Causeway. Early morning is quiet; weekends are packed by 10:00.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">断桥 · 白堤</p><p class="en">“Please take me to West Lake north shore: Broken Bridge and Bai Causeway”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E6%96%AD%E6%A1%A5&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E6%96%AD%E6%A1%A5">Apple Maps</a></p></div></details>
+    </div></li></ol>
+    
+    <div class="tonight"><span class="lbl">Tonight</span> <b>Yitel Collection, West Lake (Intime in77)</b> <span class="chip must">to book</span> <a href="#hotel-hz">hotel card ↓</a></div>
+    <a class="top" href="#top">↑ Days</a>
+  </section>
+<section class="day" id="d5" data-date="2026-11-05" style="--cc:var(--c-hz)">
+    <header class="dh"><div class="date"><span class="wd">Thu</span><span class="dn">5 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>Xixi Wetland in reed season, lake at sunset</h3></div></header>
+    <ol class="items"><li class="it mv"><span class="t">08:30</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Didi to Xixi Wetland South gate, or Metro Line 3 to Xixi Wetland South</span></div><div class="meta"><span class="dur">30–50 min</span></div></div></li><li class="it stop"><span class="t">09:15</span><div class="c">
+      <h4>Xixi Wetland <span class="zh">西溪国家湿地公园</span></h4>
+      <div class="chips"><span class="chip adv">Buy online</span></div>
+      <p>Electric boat through the reed channels while the light is soft and the piers are quiet. Allow 3–4 hours.</p>
+      <p class="go"><b>Get there:</b> Didi 30–50 min to the South gate, or Metro Line 3 to Xixi Wetland South.</p>
+      <p class="go bike"><b>By bike:</b> About 35 min from the hotel by bike; inside the park, use the boats and footpaths.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 80 RMB (S$15) entry (East Zone and Hongyuan), electric boat about 60 RMB (S$12), reed boat about 99 RMB (S$19)</dd><dt>Open</dt><dd>Entry until about 16:30; boats can finish around 15:40</dd>
+        <dt>Booking</dt><dd>Trip.com. The day before.</dd>
+        <dt>What it is</dt><dd>Reed channels, persimmon trees and quiet boardwalks on the west side of the city, explored by electric boat. Early November is reed-flower season, when a special “Listen to the Reeds” boat line also runs. Calm and green, and much quieter on a weekday.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">西溪国家湿地公园</p><p class="en">“Please take me to Xixi Wetland”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E8%A5%BF%E6%BA%AA%E5%9B%BD%E5%AE%B6%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E8%A5%BF%E6%BA%AA%E5%9B%BD%E5%AE%B6%E6%B9%BF%E5%9C%B0%E5%85%AC%E5%9B%AD">Apple Maps</a></p></div></details>
+    </div></li><li class="it note"><span class="t">13:00</span><div class="c"><p>Lunch inside the park or near the south gate.</p></div></li><li class="it stop"><span class="t">14:30</span><div class="c">
+      <h4>Gushan Island <span class="zh">孤山</span></h4>
+      <div class="chips"></div>
+      <p>Back to West Lake for the island pavilions.</p>
+      <p class="go"><b>Get there:</b> Didi 25 min to Gushan (孤山).</p>
+      <p class="go bike"><b>By bike:</b> On the lake loop. Ride the lakeshore and lock up at the island.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Always open</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>A small wooded island at the end of the Bai Causeway with pavilions, a seal-carving society and the best lake views. Free and easy to linger.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">孤山</p><p class="en">“Please take me to Gushan Island”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E5%AD%A4%E5%B1%B1&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E5%AD%A4%E5%B1%B1">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">16:45</span><div class="c">
+      <h4>West Lake north shore: Broken Bridge and Bai Causeway <span class="zh">断桥 · 白堤</span></h4>
+      <div class="chips"></div>
+      <p>Sunset from the Bai Causeway, then walk back along the shore.</p>
+      <p class="go"><b>Get there:</b> Walk 10 min west from the hotel to the lake at Hubin, then 20 min north along the shore.</p>
+      <p class="go bike"><b>By bike:</b> The lakeshore road is good for cycling, but parts of the Bai Causeway are signed no-cycling: push the bike there.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Always open</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>The classic first walk: along the lakeshore to the Broken Bridge, then out across the willow-lined Bai Causeway. Early morning is quiet; weekends are packed by 10:00.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">断桥 · 白堤</p><p class="en">“Please take me to West Lake north shore: Broken Bridge and Bai Causeway”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E6%96%AD%E6%A1%A5&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E6%96%AD%E6%A1%A5">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop opt"><span class="t">19:00</span><div class="c">
+      <h4>Musical fountain at Hubin <span class="zh">湖滨音乐喷泉</span></h4>
+      <div class="chips"><span class="chip">Optional</span></div>
+      <p>Dinner at Hubin; catch the fountain if it is running.</p>
+      <p class="go"><b>Get there:</b> Walk 10 min west from the hotel.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Evening shows; times vary by season, so check at the lakeside</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>A short water-and-light show on the lake, 10 minutes from your hotel. Fun if you are there; not worth planning around.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">湖滨音乐喷泉</p><p class="en">“Please take me to Musical fountain at Hubin”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E6%B9%96%E6%BB%A8%E9%9F%B3%E4%B9%90%E5%96%B7%E6%B3%89&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E6%B9%96%E6%BB%A8%E9%9F%B3%E4%B9%90%E5%96%B7%E6%B3%89">Apple Maps</a></p></div></details>
+    </div></li></ol>
+    <p class="rain">Alternative for this free weekday: a full day in Wuzhen water town instead of Xixi. If Friday looks wet, swap this day with the park day.</p>
+    <div class="tonight"><span class="lbl">Tonight</span> <b>Yitel Collection, West Lake (Intime in77)</b> <span class="chip must">to book</span> <a href="#hotel-hz">hotel card ↓</a></div>
+    <a class="top" href="#top">↑ Days</a>
+  </section>
+<section class="day" id="d6" data-date="2026-11-06" style="--cc:var(--c-hz)">
+    <header class="dh"><div class="date"><span class="wd">Fri</span><span class="dn">6 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>OMG Heartbeat Park</h3><div class="chips"><span class="chip hb">心跳 Park day</span><span class="chip">Travel day</span></div></div></header>
+    <ol class="items"><li class="it mv"><span class="t">07:30</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8 2 4 2.5 4 6v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5V21h12v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4ZM7.5 17A1.5 1.5 0 1 1 9 15.5 1.5 1.5 0 0 1 7.5 17Zm3.5-7H6V6h5v4Zm2 0V6h5v4h-5Zm3.5 7a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5Z"/></svg><span>Metro Line 1 Ding’an Road → Hangzhou East</span></div><div class="meta"><span class="dur">25 min</span></div></div></li><li class="it mv"><span class="t">08:10</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2c-4 0-8 .5-8 4v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5V21h2l2-2h4l2 2h2v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4Zm-4.5 15a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM18 10H6V6h12v4Z"/></svg><span>Train Hangzhou East → Tonglu</span></div><div class="meta"><span class="dur">30–40 min</span><span class="chip must">to book</span></div></div></li><li class="it mv"><span class="t">08:50</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Taxi or Didi Tonglu Station → the park in Yaolin</span></div><div class="meta"><span class="dur">30–40 min</span></div></div></li><li class="it stop"><span class="t">09:30</span><div class="c">
+      <h4>OMG Heartbeat Park <span class="zh">OMG心跳乐园</span></h4>
+      <div class="chips"><span class="chip must">Book ahead</span></div>
+      <p>Start with the underground river, then up the mountain. Plan 4–5 hours inside.</p>
+      <p class="go"><b>Get there:</b> Train Hangzhou East → Tonglu (30–40 min), then taxi or Didi about 30–40 min to the park in Yaolin. Or a Didi door to door, 1 h 15 – 1 h 30. Trip.com also sells a shuttle bus from the city.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 400–500 RMB (S$77–96) for the all-rides pass</dd><dt>Open</dt><dd>Typically 08:00 to evening. Check November hours when booking.</dd>
+        <dt>Booking</dt><dd>Trip.com or Klook (“OMG Heartbeat Paradise”); pick the pass with or without the cave expedition. A few days ahead; cheaper than at the gate. Bring a light jacket for the cave (about 18 °C) and dry clothes for the water rides.</dd>
+        <dt>What it is</dt><dd>Your fixed day, and the one early start: leave the hotel at 07:30. A boat ride along an underground river in a karst cave, then rides on the mountain above it: glass bridge, cliff swing, mountain coaster and drift slides. Keep it on a weekday; weekends bring long queues.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">OMG心跳乐园</p><p class="en">“Please take me to OMG Heartbeat Park”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=OMG%E5%BF%83%E8%B7%B3%E4%B9%90%E5%9B%AD&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=OMG%E5%BF%83%E8%B7%B3%E4%B9%90%E5%9B%AD">Apple Maps</a></p></div></details>
+    </div></li><li class="it mv"><span class="t">14:30</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2c-4 0-8 .5-8 4v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5V21h2l2-2h4l2 2h2v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4Zm-4.5 15a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM18 10H6V6h12v4Z"/></svg><span>Book the return Didi before you leave the park (taxis out here are scarce), then the train back</span></div><div class="meta"><span class="dur">about 1 h 30</span><span class="chip must">to book</span></div></div></li><li class="it note"><span class="t">17:00</span><div class="c"><p>Back at the hotel to rest.</p></div></li><li class="it stop"><span class="t">19:00</span><div class="c">
+      <h4>Hefang Street and Qinghefang <span class="zh">河坊街</span></h4>
+      <div class="chips"></div>
+      <p>An easy dinner near the hotel.</p>
+      <p class="go"><b>Get there:</b> Walk 15 min south from the hotel, or Metro Line 7 to Wushan Square.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Best in the evening</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>An old commercial street of traditional shops, pharmacies and snack stalls. Busy and touristy, good for an evening wander and street food.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">河坊街</p><p class="en">“Please take me to Hefang Street and Qinghefang”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E6%B2%B3%E5%9D%8A%E8%A1%97&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E6%B2%B3%E5%9D%8A%E8%A1%97">Apple Maps</a></p></div></details>
+    </div></li></ol>
+    <p class="rain">If the forecast is wet, swap this day with another weekday. The high rides are much better dry, and it should stay a weekday.</p>
+    <div class="tonight"><span class="lbl">Tonight</span> <b>Yitel Collection, West Lake (Intime in77)</b> <span class="chip must">to book</span> <a href="#hotel-hz">hotel card ↓</a></div>
+    <a class="top" href="#top">↑ Days</a>
+  </section>
+<section class="day" id="d7" data-date="2026-11-07" style="--cc:var(--c-hz)">
+    <header class="dh"><div class="date"><span class="wd">Sat</span><span class="dn">7 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>Lingyin, tea hills, Su Causeway, Leifeng sunset</h3></div></header>
+    <ol class="items"><li class="it stop"><span class="t">07:15</span><div class="c">
+      <h4>Lingyin Temple and Feilai Feng <span class="zh">灵隐寺 · 飞来峰</span></h4>
+      <div class="chips"><span class="chip reserve">Reserve (free)</span></div>
+      <p>At opening with your reserved slot. On a Saturday the crowds arrive by 10:00, so this is the morning to be early.</p>
+      <p class="go"><b>Get there:</b> Didi 20–25 min from the hotel (say 灵隐寺), or bus 7 from Hubin to the terminus.</p>
+      <p class="go bike"><b>By bike:</b> About 25 min by bike from the hotel along the lake and up the valley; the last part climbs gently.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Scenic area free since December 2025; the temple halls have their own small ticket</dd><dt>Open</dt><dd>About 07:00–18:00</dd>
+        <dt>Booking</dt><dd>Alipay or WeChat: search the mini-program 杭州灵隐飞来峰, book a time slot with each passport. At least one day ahead; no same-day booking. Physical passport required at the gate.</dd>
+        <dt>What it is</dt><dd>One of China’s great Buddhist temples, in a forested valley, with hundreds of 10th–14th century Buddhas carved into the cliffs of Feilai Feng opposite. Go at opening; it gets very crowded by late morning.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">灵隐寺 · 飞来峰</p><p class="en">“Please take me to Lingyin Temple and Feilai Feng”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E7%81%B5%E9%9A%90%E5%AF%BA&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E7%81%B5%E9%9A%90%E5%AF%BA">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">10:30</span><div class="c">
+      <h4>Longjing tea village <span class="zh">龙井村</span></h4>
+      <div class="chips"></div>
+      <p>Tea among the terraces, then an early tea-house lunch.</p>
+      <p class="go"><b>Get there:</b> Didi 15 min from Lingyin Temple, or bus 27. From the hotel, Didi 25 min.</p>
+      <p class="go bike"><b>By bike:</b> Uphill from Lingyin through the tea hills: take an e-bike if you want to ride it. Downhill back to the lake is a lovely ride.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Lunch and tea about 100–200 RMB (S$19–38) per person</dd><dt>Open</dt><dd>Daytime</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>Hills of terraced tea bushes where Dragon Well green tea grows. Have lunch at a family tea house (try the Longjing shrimp) and a pot of this year’s tea. Agree the price before you sit down.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">龙井村</p><p class="en">“Please take me to Longjing tea village”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E9%BE%99%E4%BA%95%E6%9D%91&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E9%BE%99%E4%BA%95%E6%9D%91">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">13:30</span><div class="c">
+      <h4>Su Causeway, on foot or by bike <span class="zh">苏堤</span></h4>
+      <div class="chips"></div>
+      <p>Walk or cycle the causeway north to south.</p>
+      <p class="go"><b>Get there:</b> Didi 15 min from Longjing to the north end by Yue Fei Temple.</p>
+      <p class="go bike"><b>By bike:</b> The classic ride. Use a shared bike or Hangzhou’s red public bikes (first hour free). On weekends the causeway gets crowded and you may have to push in places. The full lake loop is 12–15 km, 2–3 hours with stops.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Always open</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>A 3 km causeway across the lake, lined with trees and six arched bridges. Walk it or ride a shared bike (Hellobike in Alipay).</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">苏堤</p><p class="en">“Please take me to Su Causeway, on foot or by bike”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E8%8B%8F%E5%A0%A4&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E8%8B%8F%E5%A0%A4">Apple Maps</a></p></div></details>
+    </div></li><li class="it note"><span class="t">15:30</span><div class="c"><p>Rest at the hotel.</p></div></li><li class="it stop"><span class="t">16:30</span><div class="c">
+      <h4>Leifeng Pagoda <span class="zh">雷峰塔</span></h4>
+      <div class="chips"><span class="chip adv">Buy online</span></div>
+      <p>Up the pagoda on the south shore for sunset (about 17:05).</p>
+      <p class="go"><b>Get there:</b> Didi 15 min from the hotel.</p>
+      <p class="go bike"><b>By bike:</b> On the south shore, on the lake loop: 10 min by bike from the south end of the Su Causeway.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>About 40 RMB (S$7.7)</dd><dt>Open</dt><dd>About 08:00–17:30 in November</dd>
+        <dt>Booking</dt><dd>Trip.com or at the gate. Same day.</dd>
+        <dt>What it is</dt><dd>A rebuilt pagoda on the south shore with an escalator to the top and a wide view over the lake. Best near sunset (about 17:05).</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">雷峰塔</p><p class="en">“Please take me to Leifeng Pagoda”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E9%9B%B7%E5%B3%B0%E5%A1%94&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E9%9B%B7%E5%B3%B0%E5%A1%94">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">19:00</span><div class="c">
+      <h4>Hefang Street and Qinghefang <span class="zh">河坊街</span></h4>
+      <div class="chips"></div>
+      <p>Dinner in the Qinghefang lanes.</p>
+      <p class="go"><b>Get there:</b> Didi 10 min.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Best in the evening</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>An old commercial street of traditional shops, pharmacies and snack stalls. Busy and touristy, good for an evening wander and street food.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">河坊街</p><p class="en">“Please take me to Hefang Street and Qinghefang”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E6%B2%B3%E5%9D%8A%E8%A1%97&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E6%B2%B3%E5%9D%8A%E8%A1%97">Apple Maps</a></p></div></details>
+    </div></li></ol>
+    
+    <div class="tonight"><span class="lbl">Tonight</span> <b>Yitel Collection, West Lake (Intime in77)</b> <span class="chip must">to book</span> <a href="#hotel-hz">hotel card ↓</a></div>
+    <a class="top" href="#top">↑ Days</a>
+  </section>
+<section class="day" id="d8" data-date="2026-11-08" style="--cc:var(--c-hz)">
+    <header class="dh"><div class="date"><span class="wd">Sun</span><span class="dn">8 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>The Grand Canal, then the airport hotel</h3></div></header>
+    <ol class="items"><li class="it note"><span class="t">09:00</span><div class="c"><p>Check out of Yitel and leave your bags at the front desk.</p></div></li><li class="it stop"><span class="t">09:30</span><div class="c">
+      <h4>Grand Canal Museum <span class="zh">中国京杭大运河博物馆</span></h4>
+      <div class="chips"></div>
+      <p>Open on Sundays; free.</p>
+      <p class="go"><b>Get there:</b> Metro Line 5 to Gongchen Bridge East, or Didi 20 min from the hotel.</p>
+      <p class="go bike"><b>By bike:</b> A good ride: about 25 min from the hotel, much of it on the path along the Grand Canal.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Last entry 16:00. Closed Mondays.</dd>
+        <dt>Booking</dt><dd>No booking needed. Bring your passport.</dd>
+        <dt>What it is</dt><dd>The story of the 1,800 km canal that linked Hangzhou with Beijing for over a thousand years, by the bridge at its southern end. A good, dry start to a canal day.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">中国京杭大运河博物馆</p><p class="en">“Please take me to Grand Canal Museum”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E4%B8%AD%E5%9B%BD%E4%BA%AC%E6%9D%AD%E5%A4%A7%E8%BF%90%E6%B2%B3%E5%8D%9A%E7%89%A9%E9%A6%86&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E4%B8%AD%E5%9B%BD%E4%BA%AC%E6%9D%AD%E5%A4%A7%E8%BF%90%E6%B2%B3%E5%8D%9A%E7%89%A9%E9%A6%86">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">11:00</span><div class="c">
+      <h4>Gongchen Bridge and the Qiaoxi craft museums <span class="zh">拱宸桥 · 桥西历史街区</span></h4>
+      <div class="chips"></div>
+      <p>Cross Gongchen Bridge and see a craft museum or two, then lunch in the Qiaoxi block.</p>
+      <p class="go"><b>Get there:</b> Across the bridge from the Grand Canal Museum, 5 min walk.</p>
+      
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Craft museums last entry 16:00. Closed Tuesdays.</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>A tall stone bridge over the canal and, on its west side, a restored block of old houses with small free museums of fans, paper umbrellas, knives and scissors, all Hangzhou crafts. Good for lunch too.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">拱宸桥 · 桥西历史街区</p><p class="en">“Please take me to Gongchen Bridge and the Qiaoxi craft museums”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E6%8B%B1%E5%AE%B8%E6%A1%A5&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E6%8B%B1%E5%AE%B8%E6%A1%A5">Apple Maps</a></p></div></details>
+    </div></li><li class="it stop"><span class="t">14:30</span><div class="c">
+      <h4>Xiaohe Street <span class="zh">小河直街</span></h4>
+      <div class="chips"></div>
+      <p>Walk south along the canal, coffee, and stay for the lights around 17:00 with an early dinner.</p>
+      <p class="go"><b>Get there:</b> Walk 20 min south along the canal from Gongchen Bridge. Back to the hotel: Didi 20 min.</p>
+      <p class="go bike"><b>By bike:</b> 10 min by bike along the canal from Gongchen Bridge.</p>
+      <details class="more"><summary>Cost, hours, booking</summary><dl>
+        <dt>Cost</dt><dd>Free</dd><dt>Open</dt><dd>Any time; best at dusk</dd>
+        <dt>Booking</dt><dd>No booking needed.</dd>
+        <dt>What it is</dt><dd>A quiet canal-side lane of whitewashed houses, small cafés and snack shops, prettiest when the lights come on around 17:00. Less touristy than Hefang Street.</dd></dl></details>
+      <details class="taxi"><summary>Show driver</summary><div class="card"><p class="say">请带我去</p><p class="big">小河直街</p><p class="en">“Please take me to Xiaohe Street”</p><p class="maps"><a href="https://uri.amap.com/search?keyword=%E5%B0%8F%E6%B2%B3%E7%9B%B4%E8%A1%97&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E5%B0%8F%E6%B2%B3%E7%9B%B4%E8%A1%97">Apple Maps</a></p></div></details>
+    </div></li><li class="it mv"><span class="t">18:15</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Didi back to Yitel for the bags (20 min), then on to Hyatt Place at Terminal 4</span></div><div class="meta"><span class="dur">about 1 h 15 in total</span></div></div></li><li class="it note"><span class="t">19:45</span><div class="c"><p>Check in. Early night: alarm at 05:15.</p></div></li></ol>
+    
+    <div class="tonight"><span class="lbl">Tonight</span> <b>Hyatt Place Hangzhou International Airport</b> <span class="chip ok">✓ booked</span> <a href="#hotel-ap">hotel card ↓</a></div>
+    <a class="top" href="#top">↑ Days</a>
+  </section>
+<section class="day" id="d9" data-date="2026-11-09" style="--cc:var(--c-hz)">
+    <header class="dh"><div class="date"><span class="wd">Mon</span><span class="dn">9 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>Fly home</h3></div></header>
+    <ol class="items"><li class="it note"><span class="t">05:15</span><div class="c"><p>Alarm, check out.</p></div></li><li class="it note"><span class="t">05:45</span><div class="c"><p>Walk from the hotel to Terminal 4 through the indoor walkway (about 5 min). Check-in usually closes 60 min before departure.</p></div></li><li class="it mv"><span class="t">08:15</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z"/></svg><span>Flight MF 8703 Hangzhou T4 → Singapore Changi T1, lands 13:40</span></div><div class="meta"><span class="dur">5 h 25</span></div></div></li></ol>
+    
+    
+    <a class="top" href="#top">↑ Days</a>
+  </section>
+
+<section class="sec" id="hotels"><h2>Hotels</h2><p class="muted">Show the red card to a taxi driver, or tap Amap to navigate.</p><article class="hotel" id="hotel-sh" style="--cc:var(--c-sh)">
+    <div class="hh"><span class="lbl">31 Oct – 3 Nov · 3 nights</span><span class="chip ok">✓ booked</span></div>
+    <h3>Metropolo Classiq YMCA, People’s Square</h3>
+    <div class="card"><p class="say">请带我去</p><p class="big">锦江都城经典酒店（上海人民广场青年会）</p><p class="addr">上海市黄浦区西藏南路123号</p></div>
+    <p>123 Xizang Road South, Huangpu</p>
+    <p class="go"><b>Nearby:</b> Dashijie (Line 8), 1 min walk. People’s Square (Lines 1, 2, 8) about 10 min walk.</p>
+    <p class="go">Check-in from 14:00</p>
+    
+    <p class="maps"><a href="https://uri.amap.com/search?keyword=%E9%94%A6%E6%B1%9F%E9%83%BD%E5%9F%8E%E7%BB%8F%E5%85%B8%E9%85%92%E5%BA%97&city=%E4%B8%8A%E6%B5%B7">Amap</a><a href="https://maps.apple.com/?q=%E9%94%A6%E6%B1%9F%E9%83%BD%E5%9F%8E%E7%BB%8F%E5%85%B8%E9%85%92%E5%BA%97">Apple Maps</a></p>
+  </article><article class="hotel" id="hotel-sz" style="--cc:var(--c-sz)">
+    <div class="hh"><span class="lbl">3 – 4 Nov · 1 night</span><span class="chip ok">✓ booked</span></div>
+    <h3>Pan Pacific Suzhou</h3>
+    <div class="card"><p class="say">请带我去</p><p class="big">苏州吴宫泛太平洋酒店</p><p class="addr">苏州市姑苏区新市路259号</p></div>
+    <p>259 Xinshi Road, Gusu District (next to Panmen Gate)</p>
+    <p class="go"><b>Nearby:</b> South-west corner of the old town. Didi about 20 min from Suzhou Station.</p>
+    
+    
+    <p class="maps"><a href="https://uri.amap.com/search?keyword=%E8%8B%8F%E5%B7%9E%E5%90%B4%E5%AE%AB%E6%B3%9B%E5%A4%AA%E5%B9%B3%E6%B4%8B%E9%85%92%E5%BA%97&city=%E8%8B%8F%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E8%8B%8F%E5%B7%9E%E5%90%B4%E5%AE%AB%E6%B3%9B%E5%A4%AA%E5%B9%B3%E6%B4%8B%E9%85%92%E5%BA%97">Apple Maps</a></p>
+  </article><article class="hotel" id="hotel-hz" style="--cc:var(--c-hz)">
+    <div class="hh"><span class="lbl">4 – 8 Nov · 4 nights</span><span class="chip must">to book</span></div>
+    <h3>Yitel Collection, West Lake (Intime in77)</h3>
+    <div class="card"><p class="say">请带我去</p><p class="big">和颐至尚酒店（杭州西湖风景区银泰in77店）</p><p class="addr">杭州市上城区延安路126号耀江广厦A座</p></div>
+    <p>Tower A, Yaojiang Guangsha, 126 Yan’an Road, Shangcheng</p>
+    <p class="go"><b>Nearby:</b> Ding’an Road (Line 1), a few minutes’ walk. West Lake shore about 10 min on foot.</p>
+    <p class="go">Check-in from 14:00</p>
+    <p class="go"><b>Not booked yet.</b> Your previous pick was in the right place: around Hubin and Ding’an Road (Metro Line 1) you walk to the lake, Hefang Street and the TCM museum, and Line 1 runs direct to Hangzhou East for the trains. Staying right on the lake’s west side is prettier but needs a car for everything.</p>
+    <p class="maps"><a href="https://uri.amap.com/search?keyword=%E5%92%8C%E9%A2%90%E8%87%B3%E5%B0%9A%E9%85%92%E5%BA%97&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E5%92%8C%E9%A2%90%E8%87%B3%E5%B0%9A%E9%85%92%E5%BA%97">Apple Maps</a></p>
+  </article><article class="hotel" id="hotel-ap" style="--cc:var(--c-hz)">
+    <div class="hh"><span class="lbl">8 – 9 Nov · 1 night</span><span class="chip ok">✓ booked</span></div>
+    <h3>Hyatt Place Hangzhou International Airport</h3>
+    <div class="card"><p class="say">请带我去</p><p class="big">杭州国际机场凯悦嘉轩酒店</p><p class="addr">杭州萧山国际机场T4航站楼 地面交通中心2楼</p></div>
+    <p>2F Ground Transport Centre, Terminal 4, Hangzhou Airport</p>
+    <p class="go"><b>Nearby:</b> Connected to Terminal 4 by an indoor walkway. Metro Line 1 and Line 7 stop at the airport.</p>
+    <p class="go">Check-in from 15:00</p>
+    
+    <p class="maps"><a href="https://uri.amap.com/search?keyword=%E6%9D%AD%E5%B7%9E%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA%E5%87%AF%E6%82%A6%E5%98%89%E8%BD%A9%E9%85%92%E5%BA%97&city=%E6%9D%AD%E5%B7%9E">Amap</a><a href="https://maps.apple.com/?q=%E6%9D%AD%E5%B7%9E%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA%E5%87%AF%E6%82%A6%E5%98%89%E8%BD%A9%E9%85%92%E5%BA%97">Apple Maps</a></p>
+  </article></section>
+
+<section class="sec" id="bookings"><h2>Bookings</h2><p class="muted">Status as of Fri 30 Oct 2026, 00:26. Tell Claude when something is booked and you’ll get an updated file.</p>
+<ul class="list"><li class=""><div class="row"><b>Yitel Collection, West Lake (Intime in77) (4 – 8 Nov · 4 nights)</b><span class="chip must">open</span></div><span class="cat">Hotel</span></li><li class=""><div class="row"><b>China online arrival card, one per person</b><span class="chip must">open</span></div><span class="cat">Entry</span><span class="muted">Official and free: s.nia.gov.cn/ArrivalCardFillingPC, the NIA 12367 app, or the NIA 12367 mini-program in WeChat or Alipay. Ignore look-alike sites that charge a fee.</span></li><li class=""><div class="row"><b>Train Shanghai → Suzhou</b><span class="chip must">open</span></div><span class="cat">Train</span><span class="muted">Trip.com (English, pay by card) or the 12306 app. Enter each passport; the passport is your ticket at the gate.</span></li><li class=""><div class="row"><b>Train Suzhou → Hangzhou East</b><span class="chip must">open</span></div><span class="cat">Train</span><span class="muted">Trip.com or 12306. Look for a direct train from Suzhou Station (苏州站) or Suzhou North (苏州北站) to Hangzhou East (杭州东站).</span></li><li class=""><div class="row"><b>Ask Hyatt Place about early check-out and breakfast-to-go for 05:15</b><span class="chip must">open</span></div><span class="cat">Hotel</span><span class="muted">A short message through your booking platform. The hotel is inside the T4 transport centre, so no transfer to book.</span></li><li class=""><div class="row"><b>Trains Hangzhou East ⇄ Tonglu for the park</b><span class="chip must">open</span></div><span class="cat">Train</span><span class="muted">Trip.com or 12306, both directions. Or skip the train and book the park shuttle bus on Trip.com, or a Didi door to door.</span></li><li class=""><div class="row"><b>Suzhou Museum (I. M. Pei)</b><span class="chip must">open</span></div><span class="cat">Tue 3 Nov</span><span class="muted">WeChat: search the mini-program 苏州博物馆, choose “Passport” as ID type. Opens 7 days ahead (sources say 08:00 or 20:00); popular slots go fast</span></li><li class=""><div class="row"><b>Lingyin Temple and Feilai Feng</b><span class="chip must">open</span></div><span class="cat">Sat 7 Nov</span><span class="muted">Alipay or WeChat: search the mini-program 杭州灵隐飞来峰, book a time slot with each passport. At least one day ahead; no same-day booking</span></li><li class=""><div class="row"><b>Hu Qing Yu Tang: TCM museum and pharmacy</b><span class="chip must">open</span></div><span class="cat">Wed 4 Nov</span><span class="muted">No ticket to book. For a doctor’s pulse reading, ask your hotel to call ahead. A day or two before</span></li><li class=""><div class="row"><b>OMG Heartbeat Park</b><span class="chip must">open</span></div><span class="cat">Fri 6 Nov</span><span class="muted">Trip.com or Klook (“OMG Heartbeat Paradise”); pick the pass with or without the cave expedition. A few days ahead; cheaper than at the gate</span></li><li class="ok"><div class="row"><b>Metropolo Classiq YMCA, People’s Square (31 Oct – 3 Nov · 3 nights)</b><span class="chip ok">✓ done</span></div><span class="cat">Hotel</span></li><li class="ok"><div class="row"><b>Pan Pacific Suzhou (3 – 4 Nov · 1 night)</b><span class="chip ok">✓ done</span></div><span class="cat">Hotel</span></li><li class="ok"><div class="row"><b>Hyatt Place Hangzhou International Airport (8 – 9 Nov · 1 night)</b><span class="chip ok">✓ done</span></div><span class="cat">Hotel</span></li><li class="ok"><div class="row"><b>Tell Metropolo YMCA you check in around 01:00</b><span class="chip ok">✓ done</span></div><span class="cat">Hotel</span><span class="muted">Message the hotel through your booking platform. Listings say check-in runs until midnight, so a late-arrival note keeps the room.</span></li><li class="ok"><div class="row"><b>Airport pickup at Pudong</b><span class="chip ok">✓ done</span></div><span class="cat">Transfer</span><span class="muted">Already booked. Send the driver your flight number 9C 7678 and save their phone number; you land at 22:55.</span></li><li class="ok"><div class="row"><b>Phone setup: Alipay with your card, WeChat, Didi inside Alipay, Amap, Trip.com, an eSIM</b><span class="chip ok">✓ done</span></div><span class="cat">Setup</span><span class="muted">Link a Visa or Mastercard in Alipay and WeChat Pay. Didi works inside Alipay. Amap (高德地图) is the reliable map. A roaming eSIM also keeps Google and WhatsApp working.</span></li><li class="ok"><div class="row"><b>Humble Administrator’s Garden</b><span class="chip ok">✓ done</span></div><span class="cat">Tue 3 Nov</span><span class="muted">Booked for 2: Tue 3 Nov, entry 10:30–11:30, booking no. 1578951582843625, S$26.94</span></li></ul></section>
+
+<section class="sec" id="metro"><h2>Metro</h2>
+<div class="box"><h3>Every ride</h3><ol class="steps">
+<li>Plan in <b>Amap</b> before going underground: line, direction (named after the last station), exit number.</li>
+<li>Bags through the X-ray at the entrance.</li>
+<li>Alipay → <b>乘车码</b> (ride code) → pick the city → hold the QR on the scanner. <b>Scan in and out.</b> In Shanghai you can also tap a contactless Visa or Mastercard.</li>
+<li>Check the platform screen for the direction. Transfers: follow <b>换乘</b> and the line colour.</li>
+<li>Leave by the exit number Amap shows (<b>出口</b> = exit). Rides cost 2–5 RMB (S$0.4–1).</li>
+<li>With suitcases or in rush hour (07:30–09:30, 17:30–19:00): take a Didi instead.</li>
+</ol></div>
+<div class="box" style="border-top:4px solid var(--c-sh)"><h3>Shanghai 上海</h3><ul>
+<li>Hotel station: <b>Dashijie</b> (Line 8), 1 min. People’s Square (Lines 1, 2, 8) 10 min walk.</li>
+<li>Bund: Line 2 → East Nanjing Road. Shanghai Tower: Line 2 → Lujiazui, exit 6.</li>
+<li>Yu Garden: Line 8 → Laoximen, Line 10 → Yuyuan Garden, exit 1.</li>
+<li>Wukang Mansion: Line 10 → Jiaotong University. Jing’an Temple: Line 2 or 7.</li></ul></div>
+<div class="box" style="border-top:4px solid var(--c-sz)"><h3>Suzhou 苏州</h3><ul>
+<li>Garden and museum: Line 6 → 拙政园苏博.</li>
+<li>From Pan Pacific, Didi is simpler: 15–20 min, about 15–25 RMB (S$3–5). Alipay code only at the gates.</li></ul></div>
+<div class="box" style="border-top:4px solid var(--c-hz)"><h3>Hangzhou 杭州</h3><ul>
+<li>Hotel station: <b>Ding’an Road</b> (Line 1). Hangzhou East: Line 1 direct, about 25 min.</li>
+<li>Grand Canal: Line 5 → Gongchen Bridge East. Xixi: Line 3 → Xixi Wetland South.</li>
+<li>No metro to Lingyin, Longjing or Leifeng: Didi, bus or bike. Alipay code only at the gates.</li></ul></div>
+<div class="box"><h3>Shared bikes</h3><ul>
+<li>Alipay → search <b>哈啰</b> (Hellobike) → scan the bike’s QR. About 1.5 RMB (S$0.3) per 15 min.</li>
+<li>Park only in marked zones (fines of 5–20 RMB (S$1–4)). Hangzhou’s red public bikes: first hour free.</li></ul></div>
+</section>
+
+<section class="sec" id="phrases"><h2>Phrases</h2><p class="muted">Show the Chinese, or read the pinyin.</p>
+<div class="list"><div class="ph"><span class="zh">请带我去这里</span><span class="py">Qǐng dài wǒ qù zhèlǐ</span><span class="en">Please take me here</span></div><div class="ph"><span class="zh">多少钱？</span><span class="py">Duōshǎo qián?</span><span class="en">How much is it?</span></div><div class="ph"><span class="zh">可以用支付宝吗？</span><span class="py">Kěyǐ yòng Zhīfùbǎo ma?</span><span class="en">Can I pay with Alipay?</span></div><div class="ph"><span class="zh">洗手间在哪里？</span><span class="py">Xǐshǒujiān zài nǎlǐ?</span><span class="en">Where is the toilet?</span></div><div class="ph"><span class="zh">这个，谢谢</span><span class="py">Zhège, xièxie</span><span class="en">This one, please (pointing)</span></div><div class="ph"><span class="zh">不要辣</span><span class="py">Bú yào là</span><span class="en">Not spicy, please</span></div><div class="ph"><span class="zh">买单</span><span class="py">Mǎidān</span><span class="en">The bill, please</span></div><div class="ph"><span class="zh">我们有预约</span><span class="py">Wǒmen yǒu yùyuē</span><span class="en">We have a reservation</span></div><div class="ph"><span class="zh">可以寄存行李吗？</span><span class="py">Kěyǐ jìcún xínglǐ ma?</span><span class="en">Can we leave our luggage?</span></div><div class="ph"><span class="zh">谢谢</span><span class="py">Xièxie</span><span class="en">Thank you</span></div><div class="ph"><span class="zh">我听不懂</span><span class="py">Wǒ tīng bu dǒng</span><span class="en">I don’t understand</span></div></div></section>
+
+<section class="sec" id="help"><h2>Help</h2>
+<div class="sos"><div><b>110</b><span>Police</span></div><div><b>120</b><span>Ambulance</span></div><div><b>119</b><span>Fire</span></div><div><b>12308</b><span>Consular hotline (China MFA)</span></div></div>
+<div class="box contact"><h3>Singapore Consulate-General Shanghai</h3><dl>
+<dt>Address</dt><dd>89 Wanshan Road, Changning (万山路89号)</dd><dt>Phone</dt><dd class="num">+86 21 6278 5566</dd><dt>Emergency</dt><dd class="num">+86 138 0194 9439</dd><dt>MFA Singapore</dt><dd class="num">+65 6379 8800</dd></dl></div>
+<div class="box contact"><h3>German Consulate General Shanghai</h3><dl>
+<dt>Consular</dt><dd>8/F SOHO Donghai Plaza, 299 Tongren Road (铜仁路299号)</dd><dt>Phone</dt><dd class="num">+86 21 6032 6500</dd><dt>Main office</dt><dd class="num">+86 21 3401 0106</dd><dt>Embassy Beijing</dt><dd class="num">+86 10 8532 9000</dd></dl></div>
+<div class="box"><h3>Money and apps</h3><ul>
+<li>Prices: RMB with S$ in brackets, about 1 SGD = 5.2 RMB.</li>
+<li>Pay with Alipay or WeChat Pay; keep a little cash. Cars: Didi inside Alipay. Maps: Amap (高德地图).</li>
+<li>Google, WhatsApp and YouTube need your roaming eSIM; they don’t work on hotel Wi-Fi.</li>
+<li>Carry your physical passports every day: trains, gardens and museums scan them.</li></ul></div>
+</section>
+
+  <section id="docs" class="sec">
+    <h2>Passports</h2>
+    <p class="muted">Type your passport details once. They are saved only on this phone, never online.</p>
+    <form id="ppform" class="pp" autocomplete="off">
+      <dl>
+        <dt><label for="pp-name">Name</label></dt><dd><input id="pp-name" class="inp" placeholder="As in passport"></dd>
+        <dt><label for="pp-no">Passport no.</label></dt><dd><input id="pp-no" class="inp num" placeholder="e.g. C1234567"></dd>
+        <dt><label for="pp-nat">Nationality</label></dt><dd><input id="pp-nat" class="inp"></dd>
+        <dt><label for="pp-dob">Date of birth</label></dt><dd><input id="pp-dob" class="inp" placeholder="e.g. 18 Jan 1987"></dd>
+      </dl>
+      <p style="margin-top:10px"><button type="submit" class="btn">Save on this phone</button> <span id="pp-saved" class="muted" hidden>Saved</span></p>
+    </form>
+  </section>
+<footer><p>Jiangnan Guide · updated Fri 30 Oct 2026, 00:26 (Singapore time). Works offline; save it on your phone.</p><p>Prices, hours and booking rules were checked in late October 2026 and can change.</p></footer>
+</main>
+<script>
+(function(){
+  try{
+    var now=new Date();var sgt=new Date(now.getTime()+(now.getTimezoneOffset()+480)*60000);
+    var iso=sgt.getFullYear()+'-'+String(sgt.getMonth()+1).padStart(2,'0')+'-'+String(sgt.getDate()).padStart(2,'0');
+    var day=document.querySelector('.day[data-date="'+iso+'"]');
+    if(!day)return;
+    var i=day.id.slice(1);var link=document.querySelector('nav.days a[data-i="'+i+'"]');
+    if(link){link.classList.add('today');link.querySelector('span').textContent='Today';link.scrollIntoView({inline:'center',block:'nearest'});}
+    if(!location.hash){day.scrollIntoView();}
+  }catch(e){}
+})();
+</script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
+(function(){var f=document.getElementById('ppform');if(!f)return;var ids=['pp-name','pp-no','pp-nat','pp-dob'];
+try{var d=JSON.parse(localStorage.getItem('jn-pp')||'{}');ids.forEach(function(k){if(d[k])document.getElementById(k).value=d[k];});}catch(e){}
+f.addEventListener('submit',function(ev){ev.preventDefault();var d={};ids.forEach(function(k){d[k]=document.getElementById(k).value.trim();});
+try{localStorage.setItem('jn-pp',JSON.stringify(d));var s=document.getElementById('pp-saved');s.hidden=false;setTimeout(function(){s.hidden=true},1800);}catch(e){}});})();
+</script>
+</body>
+</html>
