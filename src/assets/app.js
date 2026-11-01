@@ -119,17 +119,17 @@ function initPreviews(){
     if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){make();io.disconnect()}})},{rootMargin:'300px'});io.observe(box)}else make();
   })}
 function buildMapFS(){mapfs=document.createElement('div');mapfs.className='mapfs';mapfs.hidden=true;
-  mapfs.innerHTML='<div class="mf-head"><div class="mf-top"><button class="mf-x" type="button" aria-label="Close map">✕</button><div class="ttl"></div></div><div class="mf-tabs"></div></div><div id="mf-map"></div><div class="mf-panel"><div class="mf-tools"><button type="button" data-a="me">📍 Where am I</button><button type="button" data-a="all">Fit day</button><button type="button" data-a="shops" class="on">🛍 Shops</button><button type="button" data-a="save" hidden>⬇ Save offline</button></div><div class="mf-status"></div><ol class="legs"></ol></div>';
+  mapfs.innerHTML='<div class="mf-head"><div class="mf-top"><button class="mf-x" type="button" aria-label="Close map">✕</button><div class="ttl"></div></div><div class="mf-tabs"></div></div><div id="mf-map"></div><div class="mf-panel"><div class="mf-tools"><button type="button" data-a="me">📍 My position</button><button type="button" data-a="all">Fit day</button><button type="button" data-a="shops" class="on">🛍 Shops</button><button type="button" data-a="save" hidden>⬇ Save offline</button></div><div class="mf-status"></div><ol class="legs"></ol></div>';
   document.body.appendChild(mapfs);$('.mf-x',mapfs).addEventListener('click',function(){closeMap()});
   $('.mf-tools',mapfs).addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var a=b.getAttribute('data-a');
-    if(a==='me')locate();if(a==='all')fitSeg();if(a==='shops'){showShops=!showShops;b.classList.toggle('on',showShops);drawSeg()}if(a==='save')saveOffline(b)});
+    if(a==='me')locate(true);if(a==='all')fitSeg();if(a==='shops'){showShops=!showShops;b.classList.toggle('on',showShops);drawSeg()}if(a==='save')saveOffline(b)});
   if(canCache())$('[data-a="save"]',mapfs).hidden=false}
 function openMap(id,si){if(!hasL)return;curDay=id;curSeg=si||0;mapfs.hidden=false;document.documentElement.style.overflow='hidden';
   var segs=DAYS[id],tabs=$('.mf-tabs',mapfs);tabs.innerHTML='';if(segs.length>1)segs.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.textContent=s.tab||s.t;b.setAttribute('aria-pressed',i===curSeg);b.addEventListener('click',function(){curSeg=i;$$('button',tabs).forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});drawSeg();fitSeg(true)});tabs.appendChild(b)});
-  if(!fsMap){fsMap=L.map('mf-map',{zoomControl:true,zoomSnap:.5,tap:true});tl().addTo(fsMap);fsMap.attributionControl.setPrefix(false)}
-  setTimeout(function(){fsMap.invalidateSize();drawSeg();fitSeg(true)},30);
+  if(!fsMap){fsMap=L.map('mf-map',{zoomControl:true,zoomSnap:.5,tap:true});tl().addTo(fsMap);fsMap.attributionControl.setPrefix(false);addLocControl()}
+  setTimeout(function(){fsMap.invalidateSize();drawSeg();fitSeg(true);var on=false;try{on=localStorage.getItem('jn-loc')==='1'}catch(e){}if(on)locate(false)},30);
   try{history.pushState({map:1},'');mapPushed=true}catch(e){}}
-function closeMap(fromPop){if(!mapfs||mapfs.hidden)return;mapfs.hidden=true;document.documentElement.style.overflow='';if(meWatch!=null){navigator.geolocation.clearWatch(meWatch);meWatch=null}if(fromPop!==true&&mapPushed){mapPushed=false;try{history.back()}catch(e){}}else mapPushed=false}
+function closeMap(fromPop){if(!mapfs||mapfs.hidden)return;mapfs.hidden=true;document.documentElement.style.overflow='';stopLocate();if(fromPop!==true&&mapPushed){mapPushed=false;try{history.back()}catch(e){}}else mapPushed=false}
 window.addEventListener('popstate',function(){closeSheet(true);closeMap(true)});
 function drawSeg(){var seg=DAYS[curDay][curSeg],col=resolveCol(dayCol(curDay));if(fsLayers)fsMap.removeLayer(fsLayers);fsLayers=L.featureGroup([segLayers(seg,col,false)]);if(showShops)fsLayers.addLayer(shopLayer(seg));fsLayers.addTo(fsMap);
   $('.ttl',mapfs).textContent=seg.t;
@@ -142,13 +142,30 @@ function drawSeg(){var seg=DAYS[curDay][curSeg],col=resolveCol(dayCol(curDay));i
   $$('button[data-z]',legs).forEach(function(b){b.addEventListener('click',function(){var i=+b.getAttribute('data-z');fsMap.fitBounds(L.latLngBounds([seg.pts[i-1].ll,seg.pts[i].ll]),{padding:[50,50],maxZoom:17})})});
   fsMap.invalidateSize({pan:false});updSaveStatus()}
 function fitSeg(now){if(fsLayers)fsMap.fitBounds(fsLayers.getBounds(),{padding:[30,30],maxZoom:16,animate:!now})}
-function locate(){var st=$('.mf-status',mapfs);if(!navigator.geolocation){st.textContent='Location is not available on this device.';return}
-  st.textContent='Finding you… (GPS works offline)';
+/* your position: blue dot, accuracy circle, follow mode, distance to stops */
+var follow=false,meAcc=null,meLL=null,locBtn=null;
+var LOCSVG='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2 4.5 20.3l.7.7L12 18l6.8 3 .7-.7z" fill="currentColor" transform="rotate(45 12 12)"/></svg>';
+function dist(a,b){var R=6371000,t=Math.PI/180,dl=(b[0]-a[0])*t,dn=(b[1]-a[1])*t,x=Math.sin(dl/2)*Math.sin(dl/2)+Math.cos(a[0]*t)*Math.cos(b[0]*t)*Math.sin(dn/2)*Math.sin(dn/2);return 2*R*Math.asin(Math.sqrt(x))}
+function fmtD(m){return m<950?Math.round(m/10)*10+' m':(m/1000).toFixed(m<9500?1:0)+' km'}
+function setLocState(st){if(!locBtn)return;locBtn.className='locbtn '+st;locBtn.setAttribute('aria-pressed',st!=='off')}
+function addLocControl(){var C=L.Control.extend({options:{position:'bottomright'},onAdd:function(){var b=L.DomUtil.create('button','locbtn off');b.type='button';b.title='Show my position';b.setAttribute('aria-label','Show my position');b.innerHTML=LOCSVG;
+    L.DomEvent.disableClickPropagation(b);L.DomEvent.on(b,'click',function(){if(meLL&&meWatch!=null){follow=true;setLocState('follow');fsMap.setView(meLL,Math.max(fsMap.getZoom(),16))}else locate(true)});locBtn=b;return b}});
+  fsMap.addControl(new C());fsMap.on('dragstart',function(){if(follow){follow=false;setLocState('on')}})}
+function locStatus(pos){var st=$('.mf-status',mapfs);if(!meLL)return;var seg=DAYS[curDay]&&DAYS[curDay][curSeg],best=null;
+  if(seg)seg.pts.forEach(function(p){if(!p.n)return;var d=dist(meLL,p.ll);if(!best||d<best.d)best={p:p,d:d}});
+  st.textContent='📍 You are the blue dot (±'+Math.round(pos.coords.accuracy)+' m).'+(best?' Nearest stop: '+best.p.n+' '+best.p.name+', '+fmtD(best.d)+' as the crow flies.':'')}
+function locate(f){var st=$('.mf-status',mapfs);if(!navigator.geolocation){st.textContent='Location is not available here. In the installed app it works with GPS, even offline.';return}
+  st.textContent='Finding you… GPS works without internet.';follow=f!==false;setLocState('wait');
   if(meWatch!=null)navigator.geolocation.clearWatch(meWatch);
-  var first=true;meWatch=navigator.geolocation.watchPosition(function(pos){var ll=[pos.coords.latitude,pos.coords.longitude];
-    if(!meMarker)meMarker=L.marker(ll,{icon:L.divIcon({className:'',html:'<div class="mk me" style="width:18px;height:18px"></div>',iconSize:[18,18],iconAnchor:[9,9]}),zIndexOffset:1000}).bindTooltip('You',{className:'tl'});
-    meMarker.setLatLng(ll).addTo(fsMap);if(first){first=false;fsMap.setView(ll,Math.max(fsMap.getZoom(),16));st.textContent='Blue dot: you, ±'+Math.round(pos.coords.accuracy)+' m'}},
-    function(err){st.textContent='Could not get your location ('+(err.code===1?'permission denied: allow location for this app in settings':'no GPS fix yet')+').'},{enableHighAccuracy:true,maximumAge:15000,timeout:20000})}
+  meWatch=navigator.geolocation.watchPosition(function(pos){meLL=[pos.coords.latitude,pos.coords.longitude];try{localStorage.setItem('jn-loc','1')}catch(e){}
+    if(!meMarker){meMarker=L.marker(meLL,{icon:L.divIcon({className:'',html:'<div class="mk me" style="width:18px;height:18px"></div>',iconSize:[18,18],iconAnchor:[9,9]}),zIndexOffset:1000,keyboard:false}).bindTooltip('You',{className:'tl'});
+      meAcc=L.circle(meLL,{radius:pos.coords.accuracy,color:'#2A7BF4',weight:1,fillColor:'#2A7BF4',fillOpacity:.12,interactive:false})}
+    meAcc.setLatLng(meLL).setRadius(Math.min(pos.coords.accuracy,2000)).addTo(fsMap);meMarker.setLatLng(meLL).addTo(fsMap);
+    if(follow){setLocState('follow');fsMap.setView(meLL,Math.max(fsMap.getZoom(),16),{animate:true})}else setLocState('on');
+    locStatus(pos)},
+    function(err){setLocState('off');follow=false;st.textContent=err.code===1?'Location is blocked. Allow it for this app: Android: Settings › Apps › Chrome (or the app) › Permissions › Location. iPhone: Settings › Privacy › Location Services › Safari Websites › While Using.':'No GPS fix yet. Step outside or wait a moment, then tap the arrow again.'},
+    {enableHighAccuracy:true,maximumAge:10000,timeout:30000})}
+function stopLocate(){if(meWatch!=null){navigator.geolocation.clearWatch(meWatch);meWatch=null}follow=false;setLocState('off')}
 
 /* offline tiles */
 function canCache(){return 'caches' in window&&location.protocol==='https:'}
