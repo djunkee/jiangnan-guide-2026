@@ -1,5 +1,5 @@
 // Offline cache for the Jiangnan Guide. Version changes whenever the guide changes.
-const CACHE='jiangnan-20261101-1343';
+const CACHE='jiangnan-20261101-1401';
 const TILES='jn-tiles-v2';
 const FILES=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));});

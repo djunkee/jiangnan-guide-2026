@@ -968,13 +968,30 @@ details.shopd[open]{justify-self:stretch}
 @keyframes pulse{from{opacity:.3}to{opacity:1}}
 .legs .rd{font:600 12px/1.3 var(--f-mono);color:var(--jade);margin-top:3px}.legs .rd:empty{display:none}
 
+/* weather */
+.wx{margin:10px 14px 0;padding:9px 11px;border-radius:10px;background:var(--paper);border:1px solid var(--line);display:grid;gap:7px;font-size:13.5px}
+.wx[hidden],.wx:empty{display:none}
+.wx-row{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.wx-i{font-size:24px;line-height:1}
+.wx-t{flex:1 1 180px;min-width:0;color:var(--muted)}
+.wx-t b{color:var(--ink);font-size:15px}
+.wx-l{display:flex;gap:6px;flex-wrap:wrap}
+.wx-l a{font:600 12.5px/1 var(--f-body);text-decoration:none;color:var(--cobalt);padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--surface)}
+.wx-h{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin:0 -2px}
+.wx-h::-webkit-scrollbar{display:none}
+.wx-h span{flex:none;display:grid;justify-items:center;gap:1px;min-width:40px;padding:4px 2px;border-radius:7px;background:var(--surface);font-size:15px}
+.wx-h i{font:600 10.5px/1 var(--f-mono);font-style:normal;color:var(--muted)}
+.wx-h b{font:700 12px/1.2 var(--f-mono)}
+.wx-h em{font:600 10px/1 var(--f-mono);font-style:normal;color:var(--cobalt)}
+.wx-s{font-size:11.5px;color:var(--muted)}
+
 </style>
 </head>
 <body>
 <div class="wrap masthead" id="top">
   <p class="k">Sat 31 Oct – Mon 9 Nov 2026 · Moritz &amp; Lisa</p>
   <h1>Shanghai <span class="ar">→</span> Suzhou <span class="ar">→</span> Hangzhou</h1>
-  <p class="stamp">Updated <time datetime="2026-11-01T13:43+08:00">Sun 1 Nov 2026, 13:43</time> (China / Singapore time)</p>
+  <p class="stamp">Updated <time datetime="2026-11-01T14:01+08:00">Sun 1 Nov 2026, 14:01</time> (China / Singapore time)</p>
   <div class="quick">
     <a href="#d0"><span>Fly in · Sat 31</span><b>9C 7678</b>SIN 17:40 → PVG 22:55</a>
     <a href="#d9"><span>Fly out · Mon 9</span><b>MF 8703</b>HGH T4 08:15 → SIN 13:40</a>
@@ -986,6 +1003,7 @@ details.shopd[open]{justify-self:stretch}
 <main class="wrap">
 <section class="day" id="d0" data-date="2026-10-31" style="--cc:var(--c-sh)">
     <header class="dh"><div class="date"><span class="wd">Sat</span><span class="dn">31 Oct</span></div><div><span class="city">Shanghai 上海</span><h3>Fly in, straight to bed</h3></div></header>
+    <div class="wx" data-loc="sh"></div>
     <ol class="items"><li class="it mv"><span class="t">17:40</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z"/></svg><span>Flight 9C 7678 Singapore Changi → Shanghai Pudong</span></div><div class="meta"><span class="dur">5 h 15</span></div></div></li><li class="it note"><span class="t">22:55</span><div class="c"><p>Land at Pudong. Immigration (online arrival cards done), then bags. Allow 45–75 min.</p></div></li><li class="it mv"><span class="t">~23:45</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Your pre-booked car to the hotel. The Maglev and metro have stopped by now.</span></div><div class="meta"><span class="dur">about 50–60 min</span><span class="chip ok">✓ booked</span></div></div></li><li class="it note"><span class="t">~00:45</span><div class="c"><p>Check in at Metropolo YMCA. Tell the hotel in advance you arrive after midnight so the room is held.</p></div></li></ol>
     
     <div class="tonight"><span class="lbl">Tonight</span> <b>Metropolo Classiq YMCA, People’s Square</b> <span class="chip ok">✓ booked</span> <a href="#hotel-sh">hotel card ↓</a></div>
@@ -1021,6 +1039,7 @@ details.shopd[open]{justify-self:stretch}
   </section>
 <section class="day" id="d1" data-date="2026-11-01" style="--cc:var(--c-sh)">
     <header class="dh"><div class="date"><span class="wd">Sun</span><span class="dn">1 Nov</span></div><div><span class="city">Shanghai 上海</span><h3>Old Shanghai and the skyline</h3></div></header>
+    <div class="wx" data-loc="sh"></div>
     <div class="dmap" data-day="d1"></div>
     <ol class="items"><li class="it stop" data-o="yugarden"><span class="t">11:00</span><div class="c">
       <h4>Yu Garden and the Old City <span class="zh">豫园</span></h4>
@@ -1135,6 +1154,7 @@ details.shopd[open]{justify-self:stretch}
   </section>
 <section class="day" id="d2" data-date="2026-11-02" style="--cc:var(--c-sh)">
     <header class="dh"><div class="date"><span class="wd">Mon</span><span class="dn">2 Nov</span></div><div><span class="city">Shanghai 上海</span><h3>French Concession, posters, and your Jing’an citywalk</h3><div class="chips"><span class="chip warn">Museums closed</span></div></div></header>
+    <div class="wx" data-loc="sh"></div>
     <div class="dmap" data-day="d2"></div>
     <ol class="items"><li class="it stop" data-o="frenchc"><span class="t">09:30</span><div class="c">
       <h4>Former French Concession walk <span class="zh">武康大楼</span></h4>
@@ -1204,6 +1224,7 @@ details.shopd[open]{justify-self:stretch}
   </section>
 <section class="day" id="d3" data-date="2026-11-03" style="--cc:var(--c-sz)">
     <header class="dh"><div class="date"><span class="wd">Tue</span><span class="dn">3 Nov</span></div><div><span class="city">Suzhou 苏州</span><h3>To Suzhou: the great garden and the Pei museum</h3><div class="chips"><span class="chip">Travel day</span></div></div></header>
+    <div class="wx" data-loc="sz"></div>
     <div class="dmap" data-day="d3"></div>
     <ol class="items"><li class="it note"><span class="t">07:50</span><div class="c"><p>Check out. Passports in the day bag: the train, the gardens and the museum all scan them.</p></div></li><li class="it mv"><span class="t">08:00</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Didi with your bags to Shanghai Railway Station (上海站), not the metro: no stairs or transfers with suitcases. Be there by 08:15 for security.</span></div><div class="meta"><span class="dur">15–20 min</span></div></div></li><li class="it mv"><span class="t">08:41</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2c-4 0-8 .5-8 4v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5V21h2l2-2h4l2 2h2v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4Zm-4.5 15a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM18 10H6V6h12v4Z"/></svg><span>Train <b>D2906</b> Shanghai Station (上海站) → Suzhou Station (苏州站), arrives 09:09. Passports through security, then waiting room 9 (候车室9); the gate shows on the screens 15–20 min before departure. Your passport is the ticket at the gate.</span></div><div class="meta"><span class="dur">28 min</span><span class="chip ok">✓ booked</span></div></div></li><li class="it mv"><span class="t">09:10</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Leave by a South exit (南出口) to the taxi and pickup area, then Didi to Pan Pacific (苏州吴宫泛太平洋酒店, 新市路259号) and drop the bags at reception</span></div><div class="meta"><span class="dur">about 20 min</span></div></div></li><li class="it note"><span class="t">09:45</span><div class="c"><p>Buffer: coffee at the hotel. If anything ran late, this is where it gets absorbed.</p></div></li><li class="it mv"><span class="t">10:10</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Didi to the garden ticket office (拙政园售票处)</span></div><div class="meta"><span class="dur">about 20 min</span></div></div></li><li class="it stop" data-o="humble"><span class="t">10:30</span><div class="c">
       <h4>Humble Administrator’s Garden <span class="zh">拙政园</span></h4>
@@ -1295,6 +1316,7 @@ details.shopd[open]{justify-self:stretch}
   </section>
 <section class="day" id="d4" data-date="2026-11-04" style="--cc:var(--c-hz)">
     <header class="dh"><div class="date"><span class="wd">Wed</span><span class="dn">4 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>A small garden, then Hangzhou and the TCM museum</h3><div class="chips"><span class="chip">Travel day</span></div></div></header>
+    <div class="wx" data-loc="hz"></div>
     <div class="dmap" data-day="d4"></div>
     <ol class="items"><li class="it stop" data-o="nets"><span class="t">07:30</span><div class="c">
       <h4>Master of the Nets Garden <span class="zh">网师园</span></h4>
@@ -1386,6 +1408,7 @@ details.shopd[open]{justify-self:stretch}
   </section>
 <section class="day" id="d5" data-date="2026-11-05" style="--cc:var(--c-hz)">
     <header class="dh"><div class="date"><span class="wd">Thu</span><span class="dn">5 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>Xixi Wetland in reed season, lake at sunset</h3></div></header>
+    <div class="wx" data-loc="hz"></div>
     <div class="dmap" data-day="d5"></div>
     <ol class="items"><li class="it mv"><span class="t">08:30</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Didi to Xixi Wetland South gate, or Metro Line 3 to Xixi Wetland South</span></div><div class="meta"><span class="dur">30–50 min</span></div></div></li><li class="it stop" data-o="xixi"><span class="t">09:15</span><div class="c">
       <h4>Xixi Wetland <span class="zh">西溪国家湿地公园</span></h4>
@@ -1466,6 +1489,7 @@ details.shopd[open]{justify-self:stretch}
   </section>
 <section class="day" id="d6" data-date="2026-11-06" style="--cc:var(--c-hz)">
     <header class="dh"><div class="date"><span class="wd">Fri</span><span class="dn">6 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>OMG Heartbeat Park</h3><div class="chips"><span class="chip hb">心跳 Park day</span><span class="chip">Travel day</span></div></div></header>
+    <div class="wx" data-loc="tl"></div>
     <div class="dmap" data-day="d6"></div>
     <ol class="items"><li class="it mv"><span class="t">07:30</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8 2 4 2.5 4 6v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5V21h12v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4ZM7.5 17A1.5 1.5 0 1 1 9 15.5 1.5 1.5 0 0 1 7.5 17Zm3.5-7H6V6h5v4Zm2 0V6h5v4h-5Zm3.5 7a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5Z"/></svg><span>Metro Line 1 Ding’an Road → Hangzhou East</span></div><div class="meta"><span class="dur">25 min</span></div></div></li><li class="it mv"><span class="t">08:10</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2c-4 0-8 .5-8 4v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5V21h2l2-2h4l2 2h2v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4Zm-4.5 15a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM18 10H6V6h12v4Z"/></svg><span>Train Hangzhou East → Tonglu</span></div><div class="meta"><span class="dur">30–40 min</span><span class="chip must">to book</span></div></div></li><li class="it mv"><span class="t">08:50</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 6a1.5 1.5 0 0 0-1.4-1h-11a1.5 1.5 0 0 0-1.4 1L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.1-6ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z"/></svg><span>Taxi or Didi Tonglu Station → the park in Yaolin</span></div><div class="meta"><span class="dur">30–40 min</span></div></div></li><li class="it stop" data-o="omg"><span class="t">09:30</span><div class="c">
       <h4>OMG Heartbeat Park <span class="zh">OMG心跳乐园</span></h4>
@@ -1524,6 +1548,7 @@ details.shopd[open]{justify-self:stretch}
   </section>
 <section class="day" id="d7" data-date="2026-11-07" style="--cc:var(--c-hz)">
     <header class="dh"><div class="date"><span class="wd">Sat</span><span class="dn">7 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>Lingyin, tea hills, Su Causeway, Leifeng sunset</h3></div></header>
+    <div class="wx" data-loc="hz"></div>
     <div class="dmap" data-day="d7"></div>
     <ol class="items"><li class="it stop" data-o="lingyin"><span class="t">07:15</span><div class="c">
       <h4>Lingyin Temple and Feilai Feng <span class="zh">灵隐寺 · 飞来峰</span></h4>
@@ -1615,6 +1640,7 @@ details.shopd[open]{justify-self:stretch}
   </section>
 <section class="day" id="d8" data-date="2026-11-08" style="--cc:var(--c-hz)">
     <header class="dh"><div class="date"><span class="wd">Sun</span><span class="dn">8 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>The Grand Canal, then the airport hotel</h3></div></header>
+    <div class="wx" data-loc="hz"></div>
     <div class="dmap" data-day="d8"></div>
     <ol class="items"><li class="it note"><span class="t">09:00</span><div class="c"><p>Check out of Yitel and leave your bags at the front desk.</p></div></li><li class="it stop" data-o="canalmuseum"><span class="t">09:30</span><div class="c">
       <h4>Grand Canal Museum <span class="zh">中国京杭大运河博物馆</span></h4>
@@ -1684,6 +1710,7 @@ details.shopd[open]{justify-self:stretch}
   </section>
 <section class="day" id="d9" data-date="2026-11-09" style="--cc:var(--c-hz)">
     <header class="dh"><div class="date"><span class="wd">Mon</span><span class="dn">9 Nov</span></div><div><span class="city">Hangzhou 杭州</span><h3>Fly home</h3></div></header>
+    <div class="wx" data-loc="hz"></div>
     <ol class="items"><li class="it note"><span class="t">05:15</span><div class="c"><p>Alarm, check out.</p></div></li><li class="it note"><span class="t">05:45</span><div class="c"><p>Walk from the hotel to Terminal 4 through the indoor walkway (about 5 min). Check-in usually closes 60 min before departure.</p></div></li><li class="it mv"><span class="t">08:15</span><div class="c"><div class="mvl"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z"/></svg><span>Flight MF 8703 Hangzhou T4 → Singapore Changi T1, lands 13:40</span></div><div class="meta"><span class="dur">5 h 25</span></div></div></li></ol>
     
     
@@ -1815,7 +1842,7 @@ details.shopd[open]{justify-self:stretch}
       <p style="margin-top:10px"><button type="submit" class="btn">Save on this phone</button> <span id="pp-saved" class="muted" hidden>Saved</span></p>
     </form>
   </section>
-<footer><p>Jiangnan Guide · updated Sun 1 Nov 2026, 13:43 (China / Singapore time). Works offline; save it on your phone.</p><p>Prices, hours and booking rules were checked in late October 2026 and can change.</p></footer>
+<footer><p>Jiangnan Guide · updated Sun 1 Nov 2026, 14:01 (China / Singapore time). Works offline; save it on your phone.</p><p>Prices, hours and booking rules were checked in late October 2026 and can change.</p></footer>
 </main>
 <script>
 (function(){
@@ -1991,14 +2018,14 @@ function initPreviews(){
     if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){make();io.disconnect()}})},{rootMargin:'300px'});io.observe(box)}else make();
   })}
 function buildMapFS(){mapfs=document.createElement('div');mapfs.className='mapfs';mapfs.hidden=true;
-  mapfs.innerHTML='<div class="mf-head"><div class="mf-top"><button class="mf-x" type="button" aria-label="Close map">✕</button><div class="ttl"></div></div><div class="mf-tabs"></div></div><div id="mf-map"></div><div class="mf-panel"><div class="mf-tools"><button type="button" data-a="me">📍 My position</button><button type="button" data-a="all">Fit day</button><button type="button" data-a="shops" class="on">🛍 Shops</button><button type="button" data-a="save" hidden>⬇ Save offline</button></div><div class="mf-status"></div><ol class="legs"></ol></div>';
+  mapfs.innerHTML='<div class="mf-head"><div class="mf-top"><button class="mf-x" type="button" aria-label="Close map">✕</button><div class="ttl"></div></div><div class="mf-tabs"></div></div><div id="mf-map"></div><div class="mf-panel"><div class="mf-tools"><button type="button" data-a="me">📍 My position</button><button type="button" data-a="all">Fit day</button><button type="button" data-a="shops" class="on">🛍 Shops</button><button type="button" data-a="transit">🚇 Transit lines</button><button type="button" data-a="save" hidden>⬇ Save offline</button></div><div class="mf-status"></div><ol class="legs"></ol></div>';
   document.body.appendChild(mapfs);$('.mf-x',mapfs).addEventListener('click',function(){closeMap()});
   $('.mf-tools',mapfs).addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var a=b.getAttribute('data-a');
-    if(a==='me')locate(true);if(a==='all')fitSeg();if(a==='shops'){showShops=!showShops;b.classList.toggle('on',showShops);drawSeg()}if(a==='save')saveOffline(b)});
+    if(a==='transit')toggleTransit(b);if(a==='me')locate(true);if(a==='all')fitSeg();if(a==='shops'){showShops=!showShops;b.classList.toggle('on',showShops);drawSeg()}if(a==='save')saveOffline(b)});
   if(canCache())$('[data-a="save"]',mapfs).hidden=false}
 function openMap(id,si){if(!hasL)return;curDay=id;curSeg=si||0;mapfs.hidden=false;document.documentElement.style.overflow='hidden';
   var segs=DAYS[id],tabs=$('.mf-tabs',mapfs);tabs.innerHTML='';if(segs.length>1)segs.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.textContent=s.tab||s.t;b.setAttribute('aria-pressed',i===curSeg);b.addEventListener('click',function(){curSeg=i;$$('button',tabs).forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});drawSeg();fitSeg(true)});tabs.appendChild(b)});
-  if(!fsMap){fsMap=L.map('mf-map',{zoomControl:true,zoomSnap:.5,tap:true});tl().addTo(fsMap);fsMap.attributionControl.setPrefix(false);addLocControl()}
+  if(!fsMap){fsMap=L.map('mf-map',{zoomControl:true,zoomSnap:.5,tap:true});fsBase=tl().addTo(fsMap);fsMap.attributionControl.setPrefix(false);addLocControl()}
   setTimeout(function(){fsMap.invalidateSize();drawSeg();fitSeg(true);var on=false;try{on=localStorage.getItem('jn-loc')==='1'}catch(e){}if(on)locate(false)},30);
   try{history.pushState({map:1},'');mapPushed=true}catch(e){}}
 function closeMap(fromPop){if(!mapfs||mapfs.hidden)return;mapfs.hidden=true;document.documentElement.style.overflow='';stopLocate();if(fromPop!==true&&mapPushed){mapPushed=false;try{history.back()}catch(e){}}else mapPushed=false}
@@ -2009,7 +2036,7 @@ function drawSeg(){var seg=DAYS[curDay][curSeg],col=resolveCol(dayCol(curDay));i
   for(var i=1;i<seg.pts.length;i++){var a=seg.pts[i-1],b=seg.pts[i],m=MODE[b.m]||MODE.walk;
     var q=encodeURIComponent(b.zh||b.name),am='https://uri.amap.com/search?keyword='+q+'&city='+encodeURIComponent(seg.city||'')+'&callnative=1&src=jiangnan-guide';
     var ap='https://maps.apple.com/?daddr='+encodeURIComponent((b.zh||b.name)+(seg.city?' '+seg.city:''))+'&dirflg='+(APPLEMODE[b.m]||'w');
-    h+='<li><span class="md" style="background:'+m.c+'">'+m.l+'</span><div><div class="who">'+(a.n?a.n+' ':'')+esc(a.name)+' → '+(b.n?b.n+' ':'')+esc(b.name)+'</div><div class="how">'+esc(b.d||'')+'</div><div class="rd" data-r="'+i+'"></div></div><div class="go2"><button type="button" data-z="'+i+'">Show</button><a href="'+am+'" target="_blank" rel="noopener">Amap</a><a href="'+ap+'" target="_blank" rel="noopener">Apple Maps</a></div></li>'}
+    h+='<li><span class="md" style="background:'+m.c+'">'+m.l+'</span><div><div class="who">'+(a.n?a.n+' ':'')+esc(a.name)+' → '+(b.n?b.n+' ':'')+esc(b.name)+'</div><div class="how">'+esc(b.d||'')+'</div><div class="rd" data-r="'+i+'"></div></div><div class="go2"><button type="button" data-z="'+i+'">Show</button><a href="'+am+'" target="_blank" rel="noopener">Amap</a><a href="'+('https://uri.amap.com/navigation?from='+a.ll[1]+','+a.ll[0]+','+encodeURIComponent(a.zh||a.name)+'&to='+b.ll[1]+','+b.ll[0]+','+encodeURIComponent(b.zh||b.name)+'&mode=bus&coordinate=wgs84&callnative=1&src=jiangnan-guide')+'" target="_blank" rel="noopener">🚇 Transit in Amap</a><a href="'+ap+'" target="_blank" rel="noopener">Apple Maps</a></div></li>'}
   var legs=$('.legs',mapfs);legs.innerHTML=h;
   $$('button[data-z]',legs).forEach(function(b){b.addEventListener('click',function(){var i=+b.getAttribute('data-z');fsMap.fitBounds(L.latLngBounds([seg.pts[i-1].ll,seg.pts[i].ll]),{padding:[50,50],maxZoom:17})})});
   seg.pts.forEach(function(b,i){if(!i)return;var a=seg.pts[i-1];var pcs=pieces(a,b),tot=0,n=0,want=0;
@@ -2017,6 +2044,15 @@ function drawSeg(){var seg=DAYS[curDay][curSeg],col=resolveCol(dayCol(curDay));i
       if(n===want&&tot){var el=$('.rd[data-r="'+i+'"]',legs);if(el)el.textContent=(b.m==='car'?'By road ≈ '+fmtD(tot):b.m==='metro'?'Walking to and from the stations ≈ '+fmtD(tot):'Walking route ≈ '+fmtD(tot)+', about '+Math.max(1,Math.round(tot/1000/4.5*60))+' min')}})})});
   fsMap.invalidateSize({pan:false});updSaveStatus()}
 function fitSeg(now){if(fsLayers)fsMap.fitBounds(fsLayers.getBounds(),{padding:[30,30],maxZoom:16,animate:!now})}
+
+/* transit view: public-transport map (bus, tram, metro lines) plus metro and rail lines on top; needs internet */
+var fsBase=null,trBase=null,trRail=null,transitOn=false;
+function toggleTransit(btn){transitOn=!transitOn;btn.classList.toggle('on',transitOn);var st=$('.mf-status',mapfs);
+  if(!trBase){trBase=L.tileLayer('https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',{maxZoom:18,attribution:'Transit map <a href="https://memomaps.de/">memomaps.de</a> CC-BY-SA, data © OpenStreetMap'});
+    trRail=L.tileLayer('https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',{subdomains:'abc',maxZoom:19,opacity:.8,attribution:'<a href="https://www.openrailwaymap.org/">OpenRailwayMap</a>'})}
+  if(transitOn){fsMap.removeLayer(fsBase);trBase.addTo(fsMap);trRail.addTo(fsMap);trBase.bringToBack();
+    st.textContent='🚇 Transit view: bus, tram and metro lines with stops (from OpenStreetMap; needs internet, not saved offline). Zoom in to see line numbers. For the best transit route, tap “Transit in Amap” on a leg.'}
+  else{fsMap.removeLayer(trBase);fsMap.removeLayer(trRail);fsBase.addTo(fsMap);fsBase.bringToBack();st.textContent='';updSaveStatus()}}
 /* your position: blue dot, accuracy circle, follow mode, distance to stops */
 var follow=false,meAcc=null,meLL=null,locBtn=null;
 var LOCSVG='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2 4.5 20.3l.7.7L12 18l6.8 3 .7-.7z" fill="currentColor" transform="rotate(45 12 12)"/></svg>';
@@ -2073,7 +2109,30 @@ function luca(){var mh=$('.masthead');if(mh&&JN.LUCA&&!$('.luca-mh',mh)){var b=d
     var lines=JN.BARKS||['汪汪! wāng wāng'],n=0;b.addEventListener('click',function(){$('.bub',b).textContent=lines[n++%lines.length];b.classList.add('bark');clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove('bark')},2600)})}
   try{if(!sessionStorage.getItem('jn-trot')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('jn-trot','1');setTimeout(function(){var t=document.createElement('div');t.className='trot';t.setAttribute('aria-hidden','true');t.innerHTML=JN.LUCA;document.body.appendChild(t);setTimeout(function(){t.remove()},9500)},3500)}}catch(e){}}
 
-function init(){buildSheet();decorate();if(hasL){buildMapFS();initPreviews()}luca();initNow()}
+
+/* ---------- weather: Open-Meteo forecast, fetched when online, kept for offline ---------- */
+var WXL={sh:{n:'Shanghai',ll:[31.23,121.47],radar:'https://www.nmc.cn/publish/radar/shang-hai/qing-pu.htm'},sz:{n:'Suzhou',ll:[31.30,120.62],radar:'https://www.nmc.cn/publish/radar/shang-hai/qing-pu.htm'},
+  hz:{n:'Hangzhou',ll:[30.25,120.16],radar:'https://www.nmc.cn/publish/radar/huadong.html'},tl:{n:'Tonglu (the park)',ll:[29.92,119.52],radar:'https://www.nmc.cn/publish/radar/huadong.html'}};
+var MOSAIC='https://www.nmc.cn/publish/radar/huadong.html';
+function wmo(c){return c==null?['',' ']:c===0?['☀️','Clear']:c<=2?['🌤️','Partly cloudy']:c===3?['☁️','Overcast']:c<=48?['🌫️','Fog']:c<=55?['🌦️','Drizzle']:c<=57?['🌧️','Freezing drizzle']:c<=65?['🌧️','Rain']:c<=67?['🌧️','Freezing rain']:c<=77?['🌨️','Snow']:c<=82?['🌦️','Showers']:c<=86?['🌨️','Snow showers']:['⛈️','Thunderstorm']}
+function wxGet(loc){var k='jn-wx2-'+loc,c=null;try{c=JSON.parse(localStorage.getItem(k)||'null')}catch(e){}
+  var fresh=c&&Date.now()-c.t<60*60000;if(fresh||navigator.onLine===false)return Promise.resolve(c);
+  var L0=WXL[loc].ll,u='https://api.open-meteo.com/v1/forecast?latitude='+L0[0]+'&longitude='+L0[1]+'&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,wind_speed_10m_max&hourly=temperature_2m,precipitation_probability,weather_code&timezone=Asia%2FShanghai&forecast_days=16';
+  return fetch(u).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d||!d.daily)return c;var o={t:Date.now(),d:d};try{localStorage.setItem(k,JSON.stringify(o))}catch(e){}return o}).catch(function(){return c})}
+function wxRender(){var today=iso(cn()),locs={};
+  $$('.wx').forEach(function(el){locs[el.getAttribute('data-loc')]=1});
+  Object.keys(locs).forEach(function(loc){wxGet(loc).then(function(c){
+    $$('.wx[data-loc="'+loc+'"]').forEach(function(el){var day=el.closest('.day'),date=day&&day.getAttribute('data-date'),W=WXL[loc];
+      var links='<a href="'+W.radar+'" target="_blank" rel="noopener">Rain radar</a>'+(W.radar!==MOSAIC?'<a href="'+MOSAIC+'" target="_blank" rel="noopener">East China radar</a>':'');
+      if(date<today){el.innerHTML='';el.hidden=true;return}
+      var D=c&&c.d&&c.d.daily,i=D?D.time.indexOf(date):-1;
+      if(i<0){el.innerHTML='<div class="wx-row"><span class="wx-t">'+(c?'Forecast not out yet for this day':'Weather loads when you are online')+' · '+esc(W.n)+'</span><span class="wx-l">'+links+'</span></div>';return}
+      var w=wmo(D.weather_code[i]),h='<div class="wx-row"><span class="wx-i" title="'+w[1]+'">'+w[0]+'</span><span class="wx-t"><b>'+Math.round(D.temperature_2m_min[i])+'–'+Math.round(D.temperature_2m_max[i])+' °C</b> '+w[1]+' · ☔ '+(D.precipitation_probability_max[i]==null?'–':D.precipitation_probability_max[i]+'%')+(D.precipitation_sum[i]>=0.2?' ('+D.precipitation_sum[i].toFixed(1)+' mm)':'')+' · 💨 '+Math.round(D.wind_speed_10m_max[i])+' km/h · '+esc(W.n)+'</span><span class="wx-l">'+links+'</span></div>';
+      if(date===today&&c.d.hourly){var H=c.d.hourly,now=cn(),hh=String(now.getHours()).padStart(2,'0'),start=H.time.indexOf(date+'T'+hh+':00');
+        if(start>=0){h+='<div class="wx-h">';for(var j=start;j<Math.min(start+14,H.time.length);j++){var hw=wmo(H.weather_code[j]);h+='<span><i>'+H.time[j].slice(11,13)+'</i>'+hw[0]+'<b>'+Math.round(H.temperature_2m[j])+'°</b><em>'+(H.precipitation_probability[j]||0)+'%</em></span>'}h+='</div>'}}
+      var age=Math.round((Date.now()-c.t)/60000);h+='<div class="wx-s">Open-Meteo forecast, updated '+(age<2?'just now':age<60?age+' min ago':Math.round(age/60)+' h ago')+(navigator.onLine===false?' (offline copy)':'')+'</div>';
+      el.innerHTML=h;el.hidden=false})})})}
+function init(){buildSheet();decorate();if(hasL){buildMapFS();initPreviews()}luca();initNow();wxRender();window.addEventListener('online',wxRender);setInterval(function(){if(!document.hidden)wxRender()},30*60000)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 
