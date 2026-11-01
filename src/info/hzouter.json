@@ -1,0 +1,383 @@
+{
+  "places": {
+    "xixi": {
+      "name": "Xixi National Wetland Park",
+      "zh": "西溪国家湿地公园",
+      "pinyin": "Xīxī Guójiā Shīdì Gōngyuán",
+      "glance": "A large patchwork of creeks, ponds, fish ponds and old persimmon groves on Hangzhou's western edge, about 11 km from West Lake. It was China's first national wetland park. You see it best from a slow wooden boat, and in November the reed beds start turning white.",
+      "history": [
+        "People have farmed and fished here for a very long time. The wetland took shape in the Liangzhu culture period, villages appeared in the Han and Tang dynasties, and in the Five Dynasties there were garrisons around it. The Song and Yuan dynasties saw the most development. Emperor Gaozong of the Southern Song (12th century) liked the area so much that he is said to have considered making it his capital. Scholars later built retreats and small gardens here, such as Hongyuan (Ming) and Gaozhuang (Qing).",
+        "In 2002 the wetland came under Hangzhou's Xihu District. A protection project began in August 2003, and the park opened in 2005 as China's first national wetland park. It was put on China's list of Wetlands of International Importance in 2009 (it is Ramsar site no. 1867) and got the top 5A tourism grade in 2012. Director Feng Xiaogang filmed parts of his hit comedy If You Are the One (非诚勿扰, 2008) here, which made Xixi famous across China."
+      ],
+      "meaning": "Xixi is nicknamed the 'green lung' of Hangzhou. It stands for a kind of old Jiangnan (south-of-the-Yangtze) country life: houses on the water, silkworm farming, fishing and persimmon trees. Poets came here for the reeds in autumn, which look like snow when the wind blows them. That is why the hermitage on the reed island is called Qiuxue'an (秋雪庵), 'Autumn Snow Hermitage'. A local story says Emperor Gaozong told his court 'leave Xixi for now' (西溪且留下), and the nearby district name Liuxia (留下, 'stay here') is linked to it.",
+      "highlights": [
+        {"name": "Zhoujiacun main gate and boat pier", "zh": "周家村入口", "what": "Main ticketed entrance with the pier for hand-oared boats and electric boats. Start here if you want the reed island."},
+        {"name": "Meizhu Shanzhuang (Plum and Bamboo Villa)", "zh": "梅竹山庄", "what": "Small scholar's villa on the water, about an hour by hand-oared boat. Open 08:00–16:30."},
+        {"name": "Qiuxue'an reed island (Autumn Snow Hermitage)", "zh": "秋雪庵", "what": "The heart of the reed beds (over 360 mu, about 24 ha), reached only by boat. Opens only 13:30–17:00. Reeds start whitening in early November and peak mid-November to early December."},
+        {"name": "Yanshui Yuzhuang (Misty Water Fishing Village)", "zh": "烟水渔庄", "what": "Old fishing-village houses on stilts. A quiet stop on the boat loop."},
+        {"name": "Shentankou old wharf", "zh": "深潭口", "what": "An old village landing and main boat dock with a camphor tree said to be about 600 years old. If You Are the One was partly filmed around here."},
+        {"name": "Hongyuan", "zh": "洪园", "what": "West zone around a Ming-dynasty family estate, with a lotus pond and persimmon groves. Electric boat Line B goes here."},
+        {"name": "Hezhu Street and the China Wetland Museum", "zh": "河渚街 · 中国湿地博物馆", "what": "Free zone. A recreated old market street with snacks and crafts, plus a museum about wetlands (closed Mondays)."}
+      ],
+      "tips": [
+        "Book the ¥80 ticket on Trip.com or at the window with your passport (real-name booking opens 7 days ahead). Arrive at opening if it is a weekend: boat queues can reach 1–2 hours in reed season.",
+        "The hand-oared boat (摇橹船, about ¥100 per boat per hour, 2–6 people, 1 h minimum) is the way to see the reeds; the 2-hour round trip goes to Qiuxue'an. Electric boats are ¥60 per person. Boats can stop running by about 15:40.",
+        "Qiuxue'an only opens 13:30–17:00, so time a reed boat for early afternoon.",
+        "During the annual 'Listen to the Reeds' festival (西溪听芦节, usually from early November) electric boats also run through the Xiaolongtan / Xialongtan reed marsh; a separate reed-island boat (about ¥99) leaves from the North Gate pier.",
+        "Skip the on-board tea packages (¥288–388) and the little vintage train; both are poor value."
+      ],
+      "facts": [
+        ["Area", "11.5 km² (1,150 ha)"],
+        ["Opened as national wetland park", "2005 (protection project from 2003)"],
+        ["Tourism grade", "5A, awarded 2012"],
+        ["Wetland of International Importance", "2009 (Ramsar site 1867)"],
+        ["Old persimmon trees", "2,802"],
+        ["Ticket", "¥80 (east zone + Hongyuan); parts are free"]
+      ],
+      "ratings": {
+        "china_grade": "AAAAA",
+        "unesco": null,
+        "visitor": {"score": 4.6, "of": 5, "count": "29,393 reviews", "site": "Trip.com", "url": "https://bh.trip.com/moments/poi-xixi-national-wetland-park-81715", "checked": "2026-11-01"},
+        "verdict": {"stars": 4, "line": "Worth it if you take a hand-oared boat: a calm, green half-day after the city. In early November the reeds are only starting to whiten, so do not expect peak 'autumn snow'."}
+      },
+      "time": "3–4 h (half day)",
+      "best": "Early afternoon on a weekday, so a boat can land at Qiuxue'an (open 13:30–17:00) and you avoid weekend queues.",
+      "coord": [30.2595, 120.0605],
+      "coord_src": "approx",
+      "sources": [
+        ["Xixi National Wetland Park – Wikipedia", "https://en.wikipedia.org/wiki/Xixi_National_Wetland_Park"],
+        ["Xixi Wetland guide – China for Travelers", "https://chinafortravelers.com/guides/xixi-wetland-hangzhou/"],
+        ["Xixi National Wetland Park, If You Are the One – China Daily", "https://govt.chinadaily.com.cn/s/202208/25/WS63073aa2498ea274927a1d6f/xixi-national-wetland-park-em-if-you-are-the-one-em.html"],
+        ["西溪芦花 – 杭州网", "https://hznews.hangzhou.com.cn/chengshi/content/2020-11/03/content_7845242_2.htm"],
+        ["第十六届西溪听芦节 – 杭州网", "https://hznews.hangzhou.com.cn/chengshi/content/2020-11/03/content_7845427.htm"],
+        ["Xixi National Wetland Park – Trip.com", "https://bh.trip.com/moments/poi-xixi-national-wetland-park-81715"]
+      ]
+    },
+
+    "omg": {
+      "name": "OMG Heartbeat Park (Chuiyun Tongtian River Scenic Area)",
+      "zh": "OMG心跳乐园 · 垂云通天河景区",
+      "pinyin": "OMG Xīntiào Lèyuán · Chuíyún Tōngtiān Hé",
+      "glance": "A mountain adventure park in Yaolin, Tonglu County, about 80 km south-west of Hangzhou. It mixes a boat ride on an underground river inside a limestone cave with cliff-top glass walkways, a long mountain coaster and a glass water slide. It went viral on Chinese social media and is one of the most talked-about day trips from Hangzhou.",
+      "history": [
+        "The park is built inside the older Chuiyun Tongtian River (垂云通天河) scenic area in Donglin Village, Yaolin Town. The area is karst country: soft limestone that water has dissolved into caves over a very long time. The park's own text says the landscape formed about 270 million years ago. The underground river is described as about 4.5 km long, and a boat takes visitors through part of it.",
+        "Nearby Yaolin Wonderland (瑶琳仙境), a separate show cave about 1 km long, was surveyed by cavers in 1979, opened in 1981 and was made a 4A attraction in 2002. In recent years the Chuiyun Tongtian site was rebuilt as 'OMG Heartbeat Park' on about 200 mu (13 ha), adding the sky rides on the cliffs above the cave. Its Journey to the West (西游记) theme, from the classic novel about the Monkey King, runs through the cave light show and the ride names."
+      ],
+      "meaning": "This is a modern Chinese theme park, not a heritage site. Its draw is the contrast: a cool, dark cave below and glass bridges in the sky above, with names taken from Journey to the West, a story every Chinese child knows (Monkey, Pigsy and the monk travelling to India for Buddhist scriptures). The name 'Heartbeat' (心跳) is about thrills. For Chinese families it is a weekend escape from the cities of Hangzhou, Shanghai and Jiangsu.",
+      "highlights": [
+        {"name": "Underground river boat (Tongtian River cruise)", "what": "Electric boat through the lit cave with a Journey to the West light show, then a short walk through a second chamber over an underground stream. Constant about 18°C."},
+        {"name": "Earth Core Expedition", "what": "Guided cave walk with helmets, wading through clear mountain water. Extra fee; wear shoes that can get wet."},
+        {"name": "Lingyun Sky Bridge", "what": "Glass-floored bridge high over the forested valley. Not for anyone afraid of heights."},
+        {"name": "Jiutian Cloud Corridor", "what": "Glass boardwalk that sticks out from a cliff face. Best view of the valley."},
+        {"name": "Sky Road mountain coaster", "zh": "天路飞车", "what": "Self-braking cart on a long track down the mountain (reported 2–3 km). The most popular ride, so do it first."},
+        {"name": "Dragon-chasing glass water slide", "what": "Transparent raft slide of about 1,350 m through the forest. Free raincoats are given out."}
+      ],
+      "tips": [
+        "Getting there: high-speed train Hangzhou East → Tonglu (桐庐站) takes about 40 min, then a taxi or Didi about 20–40 min (¥50–80). Book or arrange the return taxi before you leave the park: Yaolin is rural.",
+        "Arrive at opening and ride the coaster first; queues build by late morning.",
+        "Bring a light jacket for the cave (about 18°C) and non-slip shoes; the cave floor is wet.",
+        "Food inside is basic (about ¥38–58 per meal). Bring water and snacks.",
+        "Collect all 9 stamps on the park stamp card for a small charm. Ride briefings are usually in Mandarin only."
+      ],
+      "facts": [
+        ["Location", "Donglin Village, Yaolin Town, Tonglu County"],
+        ["Size", "about 200 mu (13 ha)"],
+        ["Cave temperature", "about 18°C all year"],
+        ["Underground river", "about 4.5 km (park figure)"],
+        ["Hours (listing)", "08:30–18:00, last entry 16:30; longer evening hours in summer"],
+        ["Suggested time", "3–5 h"]
+      ],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": {"score": 4.7, "of": 5, "count": "14,912 reviews", "site": "Trip.com", "url": "https://uk.trip.com/toplist/tripbest/recommend/tonglu/best-family-friendly-attractions/10076885039811/", "checked": "2026-11-01"},
+        "verdict": {"stars": 4, "line": "A fun, different day out if you like heights and a bit of adrenaline; the cave boat alone is not worth the long trip, so go for the whole combo."}
+      },
+      "time": "Full day including travel (4–5 h in the park)",
+      "best": "A weekday, arriving at opening; November is quiet and the cave stays cool whatever the weather.",
+      "coord": [29.915, 119.52],
+      "coord_src": "approx",
+      "sources": [
+        ["OMG Heartbeat Park – Trip.com (Tonglu family attractions)", "https://uk.trip.com/toplist/tripbest/recommend/tonglu/best-family-friendly-attractions/10076885039811/"],
+        ["Chuiyun Tongtian River – Trip.com", "https://nz.trip.com/moments/poi-chuiyun-tongtian-river-82827"],
+        ["OMG Heartbeat Paradise – TheSmartLocal", "https://thesmartlocal.com/read/omg-heartbeat-paradise-hangzhou/amp/"],
+        ["OMG心跳乐园 – 新京报", "https://www.bjnews.com.cn/detail/1784283636129392.html"],
+        ["Yaolin Cave – Showcaves.com", "https://showcaves.com/english/cn/showcaves/Yaolin.html"]
+      ]
+    },
+
+    "canalmuseum": {
+      "name": "China Grand Canal Museum (Beijing–Hangzhou Grand Canal Museum)",
+      "zh": "中国京杭大运河博物馆",
+      "pinyin": "Zhōngguó Jīng-Háng Dà Yùnhé Bówùguǎn",
+      "glance": "The museum of the Grand Canal, the world's longest man-made waterway, which ends here in Hangzhou. It stands on the Canal Cultural Square right next to Gongchen Bridge, so it is the natural first stop before walking the old canal quarter.",
+      "history": [
+        "The Grand Canal was built in stages over many centuries. The big push came under Emperor Yang of the Sui dynasty, who linked older waterways into one network between 604 and 609. For over a thousand years it carried grain and goods between the rich south and the political north. Its main stem today runs about 1,776 km from Beijing to Hangzhou. UNESCO listed the Grand Canal as a World Heritage Site on 22 June 2014; Gongchen Bridge and the Qiaoxi quarter are parts of that listing.",
+        "The museum opened on 1 October 2006 as one of the first in China devoted to the canal. In 2023 it was renovated for Hangzhou's Asian Games, with new displays, digital rooms and better lighting. The exhibition area is over 5,000 m² and shows more than 600 objects from its collection."
+      ],
+      "meaning": "For Chinese people the Grand Canal is as important as the Great Wall: one built to defend, the other to connect. It tied the empire together, fed the capital and let ideas, food and crafts move between north and south. Hangzhou grew rich as its southern end. The museum tells that story and how the canal shaped life along its banks.",
+      "highlights": [
+        {"name": "Canal history galleries", "what": "From the Sui dynasty to today: how the canal was built and how grain and goods moved north."},
+        {"name": "World Heritage gallery", "what": "How the canal was protected and listed by UNESCO in 2014, with the Hangzhou sites marked."},
+        {"name": "Digital experience rooms", "what": "New interactive displays added in the 2023 renovation."},
+        {"name": "Canal Cultural Square", "zh": "运河文化广场", "what": "The square outside, on the canal bank, with a view across to Gongchen Bridge."}
+      ],
+      "tips": [
+        "Closed on Mondays; open about 09:00–16:30, last entry 16:00. Bring your passport.",
+        "Do the museum first (about 1 h), then cross Gongchen Bridge to the Qiaoxi craft museums, which close on Tuesdays instead.",
+        "Metro Line 5 to Gongchen Bridge East (拱宸桥东) is a short walk; the ¥3 Water Bus Line 1 also stops at Gongchen Bridge."
+      ],
+      "facts": [
+        ["Opened", "1 October 2006; renovated 2023"],
+        ["Exhibition area", "over 5,000 m²"],
+        ["Objects on show", "600+"],
+        ["Grand Canal length", "about 1,776 km (main stem)"],
+        ["UNESCO", "The Grand Canal, 2014"]
+      ],
+      "ratings": {
+        "china_grade": null,
+        "unesco": "The Grand Canal (2014) – the canal, not the museum building",
+        "visitor": null,
+        "verdict": {"stars": 3, "line": "Good context in an hour before the bridge walk; skip it if you are tired or it is a Monday."}
+      },
+      "time": "1–1.5 h",
+      "best": "Mid-morning on a Wednesday to Sunday, so you can follow on with Qiaoxi and stay for the canal lights at dusk.",
+      "coord": [30.3185, 120.1380],
+      "coord_src": "approx",
+      "sources": [
+        ["Beijing-Hangzhou Grand Canal Museum to make fresh debut – China Daily", "https://regional.chinadaily.com.cn/ezhejiang/2023-09/06/c_918242.htm"],
+        ["Grand Canal (China) – Wikipedia", "https://en.wikipedia.org/wiki/Grand_Canal_(China)"],
+        ["Grand Canal Hangzhou guide – China for Travelers", "https://chinafortravelers.com/guides/grand-canal-hangzhou/"]
+      ]
+    },
+
+    "qiaoxi": {
+      "name": "Gongchen Bridge and the Qiaoxi Historic Block",
+      "zh": "拱宸桥 · 桥西历史街区",
+      "pinyin": "Gǒngchén Qiáo · Qiáoxī Lìshǐ Jiēqū",
+      "glance": "Gongchen Bridge is the tall three-arched stone bridge that marks the southern end of the Grand Canal. Qiaoxi ('west of the bridge') is the old dock quarter beside it, with late-Qing houses, cafés and a cluster of free craft museums for knives, umbrellas and fans in old factory buildings.",
+      "history": [
+        "Gongchen Bridge was first built in 1631, in the Ming dynasty, and rebuilt in 1885 under the Qing Guangxu Emperor. The Kangxi and Qianlong emperors stepped ashore here on their tours of the south. It is about 92 m long and 5.9 m wide. In 1945 Japanese troops surrendered nearby. The bridge became a national protected site in 2013 and is part of the Grand Canal World Heritage listing (2014), together with the Qiaoxi quarter.",
+        "Qiaoxi grew as a busy water and land dock in the Qing Tongzhi era (1860s–70s). Riverside homes from the late Qing and early Republic survive, along with industrial buildings from Hangzhou's textile boom. The Tongyigong (通益公) cotton mill, founded in 1896, became the Hangzhou Arts and Crafts Museum in 2011; the knife, umbrella and fan museums sit beside it in converted warehouses and workshops."
+      ],
+      "meaning": "The name Gongchen means roughly 'bowing to the emperor': 拱 is to greet with folded hands, 宸 is the emperor's palace. It was the gate by which emperors and boat traffic arrived in Hangzhou. Today the bridge is the symbol of the canal's end point. The museums honour Hangzhou's crafts: Zhang Xiaoquan scissors, silk umbrellas and folding fans, all once sold up and down the canal.",
+      "highlights": [
+        {"name": "Gongchen Bridge", "zh": "拱宸桥", "what": "Walk over the hump for views both ways along the canal, and look at the worn stone steps."},
+        {"name": "China Knife, Scissors and Sword Museum", "zh": "中国刀剪剑博物馆", "what": "Two halls, 'Knife and Sword' and 'Story of Scissors', in a rebuilt warehouse at No. 336 Xiaohe Road. 20–40 min. Free."},
+        {"name": "China Umbrella Museum", "zh": "中国伞博物馆", "what": "Oil-paper and Jiangnan silk umbrellas; well lit and photogenic. Free."},
+        {"name": "China Fan Museum", "zh": "中国扇博物馆", "what": "Folding fans, painted silk fans and Hangzhou fan-making. Free."},
+        {"name": "Handicraft Living Museum", "what": "Craftspeople working live; try bamboo weaving or movable-type printing."},
+        {"name": "Jingshengli and Qiaolong Street", "what": "The most atmospheric lanes of old houses, small shops and teahouses."}
+      ],
+      "tips": [
+        "The craft museums are free, open 09:00–16:30 (last entry 16:00) and usually close on Tuesdays (some listings say Mondays). Bring your passport in case they ask for ID.",
+        "Stay for dusk: the bridge and lanterns light up around 18:00, and 18:30–19:30 is the best time for photos.",
+        "Wear flat shoes; the lanes are paved with bluestone.",
+        "Snack on cong bao hui (葱包桧, scallion-wrapped fried dough) or Dingsheng cake (定胜糕) from the street stalls.",
+        "Water Bus Line 1 (about ¥3) runs along the canal to Wulinmen downtown; board early on the line, as boats fill up."
+      ],
+      "facts": [
+        ["Bridge built", "1631 (Ming); rebuilt 1885"],
+        ["Bridge size", "about 92 m long, 5.9 m wide, three arches"],
+        ["Protected", "National key cultural relic, 2013"],
+        ["UNESCO", "Part of The Grand Canal (2014)"],
+        ["Museums", "Free; 09:00–16:30, usually closed Tuesday"]
+      ],
+      "ratings": {
+        "china_grade": null,
+        "unesco": "The Grand Canal (2014) – Gongchen Bridge and Qiaoxi Historical Quarter are component sites",
+        "visitor": {"score": 4.7, "of": 5, "count": "125 reviews", "site": "Trip.com", "url": "https://nz.trip.com/moments/poi-qiaoxi-historical-district-10520108", "checked": "2026-11-01"},
+        "verdict": {"stars": 4, "line": "A relaxed, free afternoon with real local life and good small museums; ideal for two museum lovers, best ending at dusk."}
+      },
+      "time": "2–3 h (plus dusk)",
+      "best": "Late afternoon on a weekday (not Tuesday), staying for the lights after 18:00.",
+      "coord": [30.320472, 120.13472],
+      "coord_src": "Wikipedia",
+      "sources": [
+        ["Gongchen Bridge – Wikipedia", "https://en.wikipedia.org/wiki/Gongchen_Bridge"],
+        ["Gongchen Bridge – China Daily", "https://regional.chinadaily.com.cn/ezhejiang/2016-08/03/c_54931.htm"],
+        ["Gongchen Bridge – eHangzhou", "https://www.ehangzhou.gov.cn/2018-08/03/c_260162.htm"],
+        ["Hangzhou Arts and Crafts Museum – Wikipedia", "https://en.wikipedia.org/wiki/Hangzhou_Arts_and_Crafts_Museum"],
+        ["Qiaoxi Historical District – Trip.com", "https://nz.trip.com/moments/poi-qiaoxi-historical-district-10520108"],
+        ["China Knives and Scissors and Swords Museum – Trip.com", "https://uk.trip.com/moments/poi-china-knives-and-scissors-and-swords-museum-10520107"]
+      ]
+    },
+
+    "xiaohe": {
+      "name": "Xiaohe Street Historic Block",
+      "zh": "小河直街历史街区",
+      "pinyin": "Xiǎohé Zhíjiē",
+      "glance": "A short, lived-in canal street of white-walled, black-tiled shophouses where three waterways meet. It is about 1.5 km (20 min walk) south of Gongchen Bridge and quieter, with small studios, cafés and residents still hanging washing over the water.",
+      "history": [
+        "In the Southern Song dynasty this was a trans-shipment point. A short man-made channel linked the Grand Canal with the Yuhang Tang River and was called Xiaohe, 'small river'. By the late Qing and early Republic the street was packed with shops, workshops, pawnshops, teahouses and guild halls serving the boat trade.",
+        "As roads and railways replaced boats in the 20th century, the area declined and was threatened with demolition. In the early 2000s Hangzhou chose 'protective restoration' instead: houses were repaired, services improved and many original residents moved back. That is why it still feels like a neighbourhood rather than a stage set."
+      ],
+      "meaning": "Xiaohe Street shows ordinary canal life rather than imperial history. The 'shop downstairs, home upstairs' houses were the typical Jiangnan merchant home. Locals see it as a successful example of keeping an old quarter alive with its people, in a country where many old streets were torn down and rebuilt from scratch.",
+      "highlights": [
+        {"name": "The three-river junction", "what": "Where the Grand Canal, Xiaohe and Yuhang Tang River meet; good view from the small bridges."},
+        {"name": "Main street shophouses", "what": "One- and two-storey brick-and-timber houses with carved railings and wooden shutters."},
+        {"name": "Craft studios", "what": "Small studios for pottery, leather, blue calico (indigo-printed cloth) and metalwork; some offer short workshops."},
+        {"name": "Riverside cafés and teahouses", "what": "Sit by the water and watch residents playing chess or washing clothes."}
+      ],
+      "tips": [
+        "Walk here along the canal path from Gongchen Bridge (about 20 min), or take Water Bus Line 1 to the Xiaohe Zhijie stop.",
+        "By metro: Line 5 to The Grand Canal station (大运河), exit D, then 10–15 min on foot.",
+        "Come in the morning for empty lanes, or at dusk when the lanterns come on; weekend afternoons are busy.",
+        "Pick one for the evening: Xiaohe Street or Qiaoxi. Doing both after dark is a lot of walking."
+      ],
+      "facts": [
+        ["Origin", "Southern Song trans-shipment point"],
+        ["Heyday", "Late Qing and early Republic"],
+        ["Restored", "Early 2000s, with residents kept in place"],
+        ["Distance from Gongchen Bridge", "about 1.5 km"]
+      ],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 3, "line": "A pleasant 45-minute stroll and coffee stop; nice if you have energy after Qiaoxi, easy to skip if not."}
+      },
+      "time": "45 min – 1 h",
+      "best": "Early morning or just after dusk, when it is quiet or lit by lanterns.",
+      "coord": [30.3065, 120.1410],
+      "coord_src": "approx",
+      "sources": [
+        ["Xiaohe Straight Street – IntoTravelChina", "https://intotravelchina.com/en/attractions/hangzhou_attraction/xiaohe-straight-street.html"],
+        ["Grand Canal Hangzhou guide – China for Travelers", "https://chinafortravelers.com/guides/grand-canal-hangzhou/"]
+      ]
+    },
+
+    "wuzhen": {
+      "name": "Wuzhen Water Town (West Scenic Area Xizha and East Scenic Area Dongzha)",
+      "zh": "乌镇 · 西栅 / 东栅",
+      "pinyin": "Wūzhèn · Xīzhà / Dōngzhà",
+      "glance": "One of the best-known canal towns of the Yangtze delta, about 80 km north-east of Hangzhou. It has two separate ticketed areas: Xizha (West), larger with many bridges and lovely at night, and Dongzha (East), smaller, older-feeling and best by day. A good rain-day alternative because much of it is covered lanes, workshops and small museums.",
+      "history": [
+        "People have lived here for about 7,000 years, since the Neolithic Majiabang culture. In the Spring and Autumn period the town, then called Wu Dun, sat on the border between the rival kingdoms of Wu and Yue. Most of the town was built from the Tang dynasty (7th century) onward. In May 1950 Wuzhen and neighbouring Qingzhen merged into today's town, part of Tongxiang under Jiaxing.",
+        "The writer Mao Dun, one of modern China's great novelists, was born here; his mid-19th-century family house was renovated in 1984, opened as a museum in 1985 and became a nationally protected relic in 1988. His novel The Lin Family Shop (林家铺子) describes life in Wuzhen. Since 2014 Wuzhen has been the permanent host of the World Internet Conference, and since 2016 of the Art Wuzhen contemporary art show."
+      ],
+      "meaning": "Water towns like Wuzhen show how Jiangnan worked before roads: the canal was the street, houses had doors onto the water, and goods arrived by boat. Chinese visitors come for that nostalgia, for Mao Dun's literature, and for the classic image of stone bridges, black-tiled roofs and lanterns in the water. The 'Bridge within a Bridge' (桥里桥) view, where one arch frames another, is the town's postcard.",
+      "highlights": [
+        {"name": "Xizha by night", "zh": "西栅夜景", "what": "Twelve islets linked by about 60 bridges. Lanterns reflect in the canals; open until about 22:00."},
+        {"name": "Indigo dye workshop", "zh": "草木本色染坊", "what": "Long strips of blue-and-white printed cloth hang to dry in a courtyard; Wuzhen's most photographed scene."},
+        {"name": "Zhaoming Academy", "zh": "昭明书院", "what": "Old study hall named after Prince Zhaoming of the Liang dynasty (6th century), one of the famous people the town claims."},
+        {"name": "Mu Xin Art Museum", "zh": "木心美术馆", "what": "Modern museum on the water for the poet and painter Mu Xin, born in Wuzhen."},
+        {"name": "Mao Dun's Former Residence (Dongzha)", "zh": "茅盾故居", "what": "The writer's family home, now a museum."},
+        {"name": "Bridge within a Bridge (Dongzha)", "zh": "桥里桥", "what": "Tongji and Renji bridges, placed so that each can be seen through the other's arch."}
+      ],
+      "tips": [
+        "IMPORTANT: the 2026 World Internet Conference Wuzhen Summit runs 2–5 November 2026 in Wuzhen. Expect security checks, traffic control and possibly closed parts of Xizha; if you go, aim for after 5 November or choose Dongzha.",
+        "Getting there: high-speed train Hangzhou East → Tongxiang (桐乡站) in about 20–30 min, then taxi about 45 min. Wuzhen has no high-speed station of its own.",
+        "Tickets: Xizha about ¥150; Dongzha is cheaper. Xizha is open about 09:00–22:00, Dongzha about 07:00–17:30 in winter.",
+        "If you pick only one: Xizha, arriving mid-afternoon to stay for the night lights. A short evening boat costs about ¥60.",
+        "Restaurants inside close around 20:30; try the small guesthouse kitchens, Dingsheng cake and cong bao hui."
+      ],
+      "facts": [
+        ["Settled", "about 7,000 years ago (Majiabang culture)"],
+        ["Town built mainly", "from the Tang dynasty (7th century)"],
+        ["Tourism grade", "5A"],
+        ["Xizha", "12 islets, about 60 bridges"],
+        ["World Internet Conference host", "since 2014"]
+      ],
+      "ratings": {
+        "china_grade": "AAAAA",
+        "unesco": null,
+        "visitor": {"score": 4.6, "of": 5, "count": "5,089 reviews", "site": "Trip.com", "url": "https://my.trip.com/guide/attraction/wuzhen.html", "checked": "2026-11-01"},
+        "verdict": {"stars": 3, "line": "Lovely but polished and touristy, and you already have Suzhou-style canals; worth it as a rain-day plan or for Xizha at night, but watch the 2–5 Nov conference."}
+      },
+      "time": "Full day trip (5–6 h in town plus about 1.5 h each way)",
+      "best": "A weekday afternoon into evening in Xizha, avoiding the 2–5 November conference dates.",
+      "coord": [30.748, 120.479],
+      "coord_src": "approx",
+      "sources": [
+        ["Wuzhen – Wikipedia", "https://en.wikipedia.org/wiki/Wuzhen"],
+        ["Wuzhen Ancient Town – Zhejiang Culture and Tourism", "https://ct.zj.gov.cn/art/2019/8/5/art_1664685_36392466.html"],
+        ["Wuzhen Water Town guide – China Highlights", "https://www.chinahighlights.com/hangzhou/attraction/ancient-village-wuzhen.htm"],
+        ["Wuzhen travel guide – Trip.com", "https://my.trip.com/guide/attraction/wuzhen.html"],
+        ["2026 World Internet Conference Wuzhen Summit, 2–5 Nov – CAC", "https://www.cac.gov.cn/2026-10/21/c_1794335237063244.htm"],
+        ["World Internet Conference – Wikipedia", "https://en.wikipedia.org/wiki/World_Internet_Conference"]
+      ]
+    }
+  },
+
+  "pois": {
+    "rail_hze": {"name": "Hangzhou East Railway Station", "zh": "杭州东站", "kind": "rail", "coord": [30.2935, 120.208361], "coord_src": "Wikipedia", "note": "Metro Lines 1/4 (火车东站) and separate Lines 6/19 station (火车东站东广场); waiting hall and gates 1–28 on 2F, gates open 15 min before departure. Foreign passports use the staffed lanes."},
+    "rail_tonglu": {"name": "Tonglu Railway Station", "zh": "桐庐站", "kind": "rail", "coord": [29.79167, 119.72722], "coord_src": "Wikipedia", "note": "About 40 min by high-speed train from Hangzhou East; taxi/Didi to OMG park about 20–40 min, ¥50–80. Not Tonglu East (桐庐东)."},
+    "omg_entr": {"name": "OMG Heartbeat Park main entrance", "zh": "OMG心跳乐园（垂云通天河景区）入口", "kind": "entrance", "coord": [29.915, 119.52], "coord_src": "approx", "note": "Donglin Village, Yaolin Town; point not verified on a map. Tell the driver 垂云通天河 OMG心跳乐园."},
+    "yaolin_cave": {"name": "Yaolin Wonderland cave", "zh": "瑶琳仙境", "kind": "other", "coord": [29.8881899, 119.5314124], "coord_src": "Showcaves.com", "note": "Separate 4A show cave near the park; optional."},
+    "xixi_south": {"name": "Xixi Wetland Zhoujiacun main entrance", "zh": "西溪湿地周家村入口", "kind": "entrance", "coord": [30.2595, 120.0605], "coord_src": "approx", "note": "About 500 m from Xixi Wetland South metro exit A. Ticketed zone and hand-oared boat pier."},
+    "m_xixi_s": {"name": "Xixi Wetland South metro station (Line 3)", "zh": "西溪湿地南", "kind": "metro", "coord": [30.2560059, 120.0565215], "coord_src": "Wikipedia", "note": "Use exit A for Zhoujiacun gate (about 500 m)."},
+    "gongchen": {"name": "Gongchen Bridge", "zh": "拱宸桥", "kind": "other", "coord": [30.320472, 120.13472], "coord_src": "Wikipedia", "note": "Water Bus Line 1 pier is beside the bridge."},
+    "m_gongchen_e": {"name": "Gongchen Bridge East metro station (Line 5)", "zh": "拱宸桥东", "kind": "metro", "coord": [30.3192, 120.1436], "coord_src": "Wikipedia", "note": "Short walk west to Canal Cultural Square, the museum and the bridge."},
+    "hotel_ap": {"name": "Hyatt Place Hangzhou International Airport", "zh": "杭州萧山国际机场凯悦嘉轩酒店", "kind": "hotel", "coord": [30.2387, 120.4302], "coord_src": "approx", "note": "In the Terminal 4 ground transport centre, next to the airport metro station (Lines 1/7/19, exit B for T4). Position estimated from the metro station."},
+    "hgh_t4": {"name": "Hangzhou Xiaoshan International Airport Terminal 4", "zh": "杭州萧山国际机场T4航站楼", "kind": "airport", "coord": [30.2400, 120.4315], "coord_src": "approx", "note": "Opened September 2022; international flights. Metro exit B serves T4."}
+  },
+
+  "shops": [
+    {
+      "name": "Qiaoxi craft museum shops and workshops",
+      "zh": "桥西历史街区手工艺店",
+      "kind": "street",
+      "near": "qiaoxi",
+      "walk": "0–3 min; around the Fan, Umbrella and Knife museums west of Gongchen Bridge",
+      "buy": "Hangzhou-style folding fans and DIY lacquer fans, oil-paper or silk umbrellas, scissors, old-style clay figurines, small craft souvenirs. For reference, handmade Wangxingji (王星记) fans run about ¥80–200+ in Hangzhou.",
+      "watch": "The famous Zhang Xiaoquan (张小泉) scissors brand's verified flagship is on Hefang Street (No. 232) in the old town, not here; check any 'Zhang Xiaoquan' item for the brand's own packaging.",
+      "hours": "Lanes always open; museums 09:00–16:30, usually closed Tuesday",
+      "coord": [30.3210, 120.1333],
+      "coord_src": "approx",
+      "sources": [["Qiaoxi Historical District – Trip.com", "https://nz.trip.com/moments/poi-qiaoxi-historical-district-10520108"], ["What to buy in Hangzhou – Trip.com", "https://sg.trip.com/guide/info/what-to-buy-in-hangzhou.html"], ["Zhang Xiaoquan Hefang Street store – SilverKris", "https://silverkris.singaporeair.com/guide/china/hgh/shop-hangzhou/zhang-xiao-quan-scissors/"]]
+    },
+    {
+      "name": "Xiaohe Street studios and cafés",
+      "zh": "小河直街",
+      "kind": "street",
+      "near": "xiaohe",
+      "walk": "On the street itself; 20 min walk south of Gongchen Bridge",
+      "buy": "Small-studio pottery, leather goods, blue calico (indigo-printed cotton) and metalwork; Jiangnan snacks such as Dingsheng cake, osmanthus cake and orange-peel cake.",
+      "watch": "Studios are small and keep irregular hours; mornings some are still closed.",
+      "hours": null,
+      "coord": [30.3065, 120.1410],
+      "coord_src": "approx",
+      "sources": [["Xiaohe Straight Street – IntoTravelChina", "https://intotravelchina.com/en/attractions/hangzhou_attraction/xiaohe-straight-street.html"]]
+    },
+    {
+      "name": "Hezhu Street (Xixi)",
+      "zh": "河渚街",
+      "kind": "food",
+      "near": "xixi",
+      "walk": "In the free zone of Xixi, near the China Wetland Museum; take the sightseeing cart from the Zhoujiacun gate if tired",
+      "buy": "Local snacks such as Dingsheng cake (定胜糕) and lotus-root starch (藕粉, a Hangzhou classic you stir with hot water), plus small crafts. Xixi is known for its persimmon groves, so look for persimmon products in season.",
+      "watch": "Recreated tourist street; prices higher than in town. Tea packages sold on the boats are poor value.",
+      "hours": null,
+      "coord": [30.2700, 120.0790],
+      "coord_src": "approx",
+      "sources": [["Xixi Wetland – Travel of China", "https://www.travelofchina.com/xixi-wetland/"], ["Xixi Wetland guide – China for Travelers", "https://chinafortravelers.com/guides/xixi-wetland-hangzhou/"]]
+    },
+    {
+      "name": "OMG park snack stops (Bajie Fruit Shop, cliff café)",
+      "zh": "OMG心跳乐园 八戒水果铺 · 悬崖咖啡",
+      "kind": "food",
+      "near": "omg",
+      "walk": "Inside the park, along the ride route",
+      "buy": "Not a shopping stop. Worth it: fruit (pick a watermelon from the pool near the coaster in season), coffee and cake at the glass-walled cliff café, and the free charm for collecting 9 stamps.",
+      "watch": "Meals are basic fast food (about ¥38–58). Bring water and snacks.",
+      "hours": "Park hours, about 08:30–18:00",
+      "coord": [29.915, 119.52],
+      "coord_src": "approx",
+      "sources": [["OMG Heartbeat Paradise – TheSmartLocal", "https://thesmartlocal.com/read/omg-heartbeat-paradise-hangzhou/amp/"], ["Chuiyun Tongtian River – Trip.com", "https://nz.trip.com/moments/poi-chuiyun-tongtian-river-82827"]]
+    },
+    {
+      "name": "Wuzhen workshops street (blue calico and crafts)",
+      "zh": "乌镇传统作坊 · 蓝印花布",
+      "kind": "street",
+      "near": "wuzhen",
+      "walk": "Inside the scenic areas, near the indigo dye workshop",
+      "buy": "Blue calico (蓝印花布, indigo-printed cotton): scarves, bags, table cloths. Also handmade cloth shoes, made in the traditional workshops.",
+      "watch": "Prices inside the scenic area are high; compare a few stalls. Buy on a non-conference day (summit 2–5 Nov 2026).",
+      "hours": "Scenic area hours",
+      "coord": [30.748, 120.479],
+      "coord_src": "approx",
+      "sources": [["Wuzhen – Wikipedia", "https://en.wikipedia.org/wiki/Wuzhen"], ["Wuzhen travel guide – Trip.com", "https://my.trip.com/guide/attraction/wuzhen.html"]]
+    }
+  ]
+}

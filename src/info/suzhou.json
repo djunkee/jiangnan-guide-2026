@@ -1,0 +1,485 @@
+{
+  "places": {
+    "humble": {
+      "name": "Humble Administrator's Garden",
+      "zh": "拙政园",
+      "pinyin": "Zhuōzhèng Yuán",
+      "glance": "The largest classical garden in Suzhou, built in the 1510s by a retired official who wanted a quiet life among water, rock and plants. Ponds fill much of it. It is the garden most Chinese people picture when they hear 'Suzhou garden'.",
+      "history": [
+        "The site was home to the Tang scholar Lu Guimeng, then a Yuan-dynasty temple. Around 1510 Wang Xianchen, an imperial envoy who had fallen out with court politics, came home to Suzhou and began building a garden on the temple ruins. It took about 16 years and was finished in 1526. His friend, the painter Wen Zhengming, painted 31 views of it with poems in 1533.",
+        "After Wang died the garden was split, sold and renamed many times. In the Ming the eastern part became a separate estate. In 1738 the middle and western parts went to different owners. In 1860 the Taiping prince Li Xiucheng took it over and remodelled it, and much of what you see dates from then. A merchant bought the western part in 1877. The three parts were reunited in 1949, opened to the public, and restored in 1952. In 1997 it was inscribed by UNESCO with the other Classical Gardens of Suzhou."
+      ],
+      "meaning": "The name comes from a line by the Jin-dynasty poet Pan Yue: tending one's garden and selling vegetables is 'the governing of the clumsy'. Wang was saying, with a wink, that he had failed in politics and would now 'administer' only his garden. Almost every hall takes its name from a poem. The Hall of Distant Fragrance quotes Zhou Dunyi's essay on the lotus, which grows clean out of mud, like an honest official. The 'With Whom Shall I Sit?' pavilion quotes Su Shi: the answer is the bright moon, the clear breeze, and me. The garden also 'borrows' the North Temple Pagoda outside its walls as part of its own view.",
+      "highlights": [
+        {"name": "Orchid and Snow Hall and the eastern garden", "zh": "兰雪堂", "what": "Where you enter. The eastern part is the most open, with lawns, a pine grove and a large pond. Walk through it quickly if it is crowded."},
+        {"name": "Hall of Distant Fragrance", "zh": "远香堂", "what": "The main hall of the central garden, with windows on all four sides so the pond is framed like scroll paintings. Look out over the lotus pond, brown and sculptural in November."},
+        {"name": "Small Flying Rainbow bridge", "zh": "小飞虹", "what": "A covered, roofed bridge over the water, rare in Suzhou's gardens. Best seen from across the water, reflected in the pond."},
+        {"name": "Borrowed view of the North Temple Pagoda", "zh": "北寺塔", "what": "From the Leaning-on-Rainbow Pavilion (倚虹亭) at the eastern end of the central pond, look west along the water: the pagoda, outside the walls, appears to stand inside the garden. This is the classic 'borrowed scenery' (借景) photo."},
+        {"name": "'With Whom Shall I Sit?' Pavilion", "zh": "与谁同坐轩", "what": "A small fan-shaped pavilion in the western garden. Even its windows and table are fan-shaped."},
+        {"name": "Hall of 36 Mandarin Ducks", "zh": "卅六鸳鸯馆", "what": "The main hall of the western garden, used for Kunqu opera parties. Look for the blue-glass windows and the curved ceiling, built to carry the sound."},
+        {"name": "Bonsai garden", "zh": "盆景园", "what": "The garden keeps over 700 Suzhou-style miniature landscapes (penjing). Worth a short loop on the way out."}
+      ],
+      "tips": [
+        "Go at the 07:30 opening. By mid-morning the central garden is packed with tour groups.",
+        "Book tickets online in advance with your passport (official WeChat or Trip.com); same-day tickets can sell out. The low-season price (31 Oct–15 Apr) is 50 RMB.",
+        "If the central pond is crowded, do the western garden first and come back.",
+        "Suzhou Museum and Lion Grove are a few minutes' walk away on the same street, so plan them as one morning.",
+        "Skip the souvenir stalls inside; the museum shop next door is better."
+      ],
+      "facts": [["Built", "1510–1526 (Ming dynasty)"], ["Founder", "Wang Xianchen"], ["Area", "5.2 ha (78 mu), largest garden in Suzhou"], ["Buildings", "48 buildings, 101 tablets, 40 steles"], ["Hours", "07:30–17:30"], ["Ticket", "50 RMB (31 Oct–15 Apr), 70 RMB in high season"]],
+      "ratings": {
+        "china_grade": "AAAAA",
+        "unesco": "Classical Gardens of Suzhou (1997)",
+        "visitor": null,
+        "verdict": {"stars": 5, "line": "Must-see: the grandest Suzhou garden and the best place to learn how these gardens work. Go early, or it feels like a crowd with a pond."}
+      },
+      "time": "2–2.5 h",
+      "best": "At the 07:30 opening, before the tour groups arrive around 09:00.",
+      "coord": [31.32672, 120.62564],
+      "coord_src": "Wikipedia",
+      "sources": [
+        ["Humble Administrator's Garden – Wikipedia", "https://en.wikipedia.org/wiki/Humble_Administrator%27s_Garden"],
+        ["Humble Administrator's Garden – China Highlights", "https://www.chinahighlights.com/suzhou/attraction/humble-administrators-garden.htm"],
+        ["Classical Gardens of Suzhou – Wikipedia", "https://en.wikipedia.org/wiki/Classical_Gardens_of_Suzhou"]
+      ]
+    },
+    "lion": {
+      "name": "Lion Grove Garden",
+      "zh": "狮子林",
+      "pinyin": "Shīzi Lín",
+      "glance": "A garden built by Buddhist monks in 1342 around a huge maze of eroded Taihu limestone rocks, many shaped like lions. You climb, squeeze and get lost in it on purpose. It was owned by I. M. Pei's family, which ties it to the Suzhou Museum across the street.",
+      "history": [
+        "In 1342, in the Yuan dynasty, the Zen monk Tianru built the garden as part of a monastery, in memory of his teacher, Abbot Zhongfeng. The painter Ni Zan made a famous scroll of it in 1373. After the monk's death it decayed and was rebuilt in 1589. Later it passed into private hands and was rebuilt again in 1771.",
+        "Emperors loved it. The Kangxi Emperor visited in 1703, and the Qianlong Emperor came in 1765, left a tablet reading 'True Delight' (真趣), and had copies of the garden built at his summer palaces in Beijing and Chengde. In 1917 Bei Runsheng, a Shanghai pigment merchant and the grandfather of the architect I. M. Pei, bought it and restored it until 1926. The family handed it to the state in 1949 and it opened to the public in 1956. It was added to the UNESCO Classical Gardens of Suzhou listing in 2000."
+      ],
+      "meaning": "The 'lions' are the rocks: Taihu limestone, pitted by lake water, piled up to look like crouching lions. The name also has a Buddhist meaning. In the sutras the Buddha's teaching is 'the lion's roar', and Abbot Zhongfeng had lived on Lion Peak at Mount Tianmu near Hangzhou. So the rock maze is both a playground and a picture of a mountain where monks meditate. Chinese visitors still argue over which rock looks most like a lion.",
+      "highlights": [
+        {"name": "The rock maze", "what": "Nine paths, 21 caves and three levels of tunnels across about 1,150 m². It is fun, crowded and easy to get turned around; just keep climbing and you will come out."},
+        {"name": "Lion Peak", "zh": "狮子峰", "what": "The most famous single rock, one of the 'Five Famous Peaks' in the grotto. Try to spot the lion's head."},
+        {"name": "Standing-in-the-Snow Hall", "zh": "立雪堂", "what": "Named after the story of a student who waited in the snow for his sleeping teacher to wake. A good spot to sit away from the maze crowds."},
+        {"name": "True Delight Pavilion", "zh": "真趣亭", "what": "Built for the Qianlong Emperor's tablet. Imperial taste in a monks' garden: look at the carved decoration."},
+        {"name": "Stone Boat", "zh": "石舫", "what": "A boat built of stone in the pond, added by the Bei family in 1917."},
+        {"name": "Flying Waterfall Pavilion", "zh": "飞瀑亭", "what": "The highest point in the garden, next to a small artificial waterfall. Best view down over the maze."}
+      ],
+      "tips": [
+        "Go right after the Humble Administrator's Garden; the two are a few minutes apart on Dongbei Street.",
+        "In the maze, walk the upper level first for views, then the caves. Mind your head and shoes; the rock steps are uneven.",
+        "If you only have energy for one smaller garden today, this one is the most playful; the Nets Garden tomorrow is the most refined.",
+        "Ticket about 30 RMB in autumn."
+      ],
+      "facts": [["Founded", "1342 (Yuan dynasty)"], ["Founder", "Zen monk Tianru"], ["Rock grotto", "about 1,154 m², 9 paths, 21 caves, 3 levels"], ["Owners 1917–1949", "Bei family (I. M. Pei's grandfather Bei Runsheng)"], ["Hours", "about 07:30–17:00"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": "Classical Gardens of Suzhou (added 2000)",
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it, and quick: an hour of scrambling through rock tunnels, plus the I. M. Pei family story before you see his museum."}
+      },
+      "time": "1 h",
+      "best": "Late morning on a weekday, straight after the Humble garden; the maze gets slow when tour groups are in.",
+      "coord": [31.323222, 120.625056],
+      "coord_src": "Wikipedia",
+      "sources": [
+        ["Lion Grove Garden – Wikipedia", "https://en.wikipedia.org/wiki/Lion_Grove_Garden"],
+        ["The Lion Grove – China Highlights", "https://www.chinahighlights.com/suzhou/attraction/lion-grove.htm"],
+        ["Classical Gardens of Suzhou – Wikipedia", "https://en.wikipedia.org/wiki/Classical_Gardens_of_Suzhou"]
+      ]
+    },
+    "szmuseum": {
+      "name": "Suzhou Museum (I. M. Pei building)",
+      "zh": "苏州博物馆",
+      "pinyin": "Sūzhōu Bówùguǎn",
+      "glance": "A museum of Suzhou's art and history in a building by I. M. Pei, the Suzhou-rooted architect of the Louvre pyramid. White walls, grey stone and glass roofs turn the old garden style into something modern. The collection is small but very fine, and entry is free.",
+      "history": [
+        "The museum was founded in 1960 in the former palace of Li Xiucheng, the Taiping 'Loyal Prince' (忠王), who also lived in the Humble Administrator's Garden next door. The old mansion is still part of the museum.",
+        "In the early 2000s the city asked I. M. Pei, whose family had owned Lion Grove Garden, to design a new building. He was in his late eighties. The new museum opened on 6 October 2006. It covers about 10,700 m² of land, with over 19,000 m² of floor space. The collection holds about 30,000 objects: excavated relics, Buddhist treasures, paintings, calligraphy and crafts. A second branch, Suzhou Museum West, has since opened far outside the old city; the Pei building is the one you want."
+      ],
+      "meaning": "Pei wanted to show that a modern building could still be 'Suzhou'. He kept the white plaster walls and grey roofs of the old town but made them geometric, and let daylight in through timber-screened skylights. The main courtyard is a garden with a pond, a bridge and a pavilion, and against its white wall stands a 'mountain' of thin sliced rocks: a Chinese landscape painting turned into 3D, using the wall as paper. Windows are cut to frame bamboo and rock like pictures, the same trick as in the classical gardens.",
+      "highlights": [
+        {"name": "Entrance hall and the main courtyard", "what": "Stand at the glass wall behind the entrance: pond, bridge, octagonal pavilion and the sliced-rock 'mountain' on the white wall. This is the photo of the building."},
+        {"name": "Pearl Stupa", "zh": "真珠舍利宝幢", "what": "A Northern Song (11th century) shrine covered in pearls, gold and carved wood, found hidden in the Ruiguang Pagoda at Pan Gate in 1978. You will see that pagoda tomorrow."},
+        {"name": "Celadon lotus bowl", "zh": "秘色瓷莲花碗", "what": "A Five Dynasties (10th century) Yue-ware bowl shaped like a lotus, from the pagoda at Tiger Hill. Look at the soft green glaze: this colour was once reserved for the court."},
+        {"name": "Wu School painting and calligraphy", "zh": "吴门书画", "what": "Upstairs, west side. Paintings by the Ming-dynasty Suzhou masters, including Wen Zhengming, the man who painted the Humble Administrator's Garden."},
+        {"name": "Wisteria courtyard", "what": "A wisteria linked to Wen Zhengming, whose old vine grows nearby. Bare in November, but the courtyard is lovely."},
+        {"name": "Hexagonal windows and skylights", "what": "Walk the corridors and watch how the window frames and skylight shadows change. Free souvenir stamps are along the 2F corridors."}
+      ],
+      "tips": [
+        "Reservation required, even though entry is free: book on the official site or WeChat (苏州博物馆), up to 7 days ahead from 08:00. Bring passports and arrive within 30 minutes of your time slot.",
+        "Hours 09:00–17:00, last entry 16:00, closed Mondays (Tuesday is fine).",
+        "Audio guide 30 RMB at the main hall; worth it for the treasures.",
+        "Large bags must be stored; bottled water is allowed, food is not.",
+        "The museum shop is one of the best places in Suzhou for well-designed, garden-themed gifts."
+      ],
+      "facts": [["Founded", "1960"], ["Pei building opened", "6 October 2006"], ["Architect", "I. M. Pei"], ["Collection", "about 30,000 objects"], ["Admission", "Free (booking required)"], ["Closed", "Mondays"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 5, "line": "Must-see: free, an hour and a half is enough, and the building alone explains Suzhou better than any guidebook."}
+      },
+      "time": "1.5–2 h",
+      "best": "Early afternoon on a weekday, after the gardens; book your slot the day before.",
+      "coord": [31.3245, 120.6248],
+      "coord_src": "approx",
+      "sources": [
+        ["Suzhou Museum – Wikipedia", "https://en.wikipedia.org/wiki/Suzhou_Museum"],
+        ["A visitor's guide to Suzhou Museum – China Bound / China Daily", "https://www.chinabound.cn/s/202604/17/WS69e2079e498e23165e06edc1/a-visitors-guide-to-suzhou-museum.html"],
+        ["Panmen Scenic Area – China Daily Jiangsu", "https://jiangsu.chinadaily.com.cn/binhu/2012-03/09/content_17871607.htm"]
+      ]
+    },
+    "pingjiang": {
+      "name": "Pingjiang Road",
+      "zh": "平江路",
+      "pinyin": "Píngjiāng Lù",
+      "glance": "A 1.6 km canal-side lane through one of the best-kept old quarters of Suzhou, with stone bridges, whitewashed houses, teahouses and small shops. Its layout matches a city map carved in 1229. Come late afternoon and stay for pingtan, Suzhou's sung storytelling, in a teahouse.",
+      "history": [
+        "In the Southern Song dynasty Suzhou was called Pingjiang, and the lane keeps that old name. It already appears on the Pingjiang Tu (平江图), a city map carved on stone in 1229 that is still kept in Suzhou. The canal, the street beside it and the grid of lanes are largely where they were 800 years ago. The quarter has 51 side lanes, about 3 km of canals and 18 stone bridges, 12 of them already on the 1229 map.",
+        "For centuries this was a neighbourhood of scholars' houses and family gardens. The street was heavily renovated before UNESCO's World Heritage Committee met in Suzhou in 2004. In 2009 it was named one of China's first nine Famous Historical and Cultural Streets, and the block was added to the national list of historic streets in 2015. People still live in the side lanes."
+      ],
+      "meaning": "Pingjiang Road shows the 'double chessboard' of a water town: a street and a canal running side by side, so people could walk on one and carry goods by boat on the other. Houses have a front door on the lane and a back door on the water. Pingtan (评弹), which you can hear here, combines pinghua (storytelling) and tanci (ballads sung to the pipa lute and three-string sanxian). Performed in the soft Suzhou dialect, it is one of the city's proudest arts; you will not follow the words, but the singing and the teahouse setting carry it.",
+      "highlights": [
+        {"name": "North end at Baita East Road", "zh": "白塔东路", "what": "Start here coming from the museum. The northern half is quieter and more residential."},
+        {"name": "China Kunqu Opera Museum and Pingtan Museum", "zh": "中国昆曲博物馆 · 苏州评弹博物馆", "what": "Free museums in old guild halls on Zhongzhangjia Lane (中张家巷), just east of the road. The Kunqu museum has a beautiful old wooden stage."},
+        {"name": "Side lanes", "zh": "大儒巷 · 丁香巷 · 中张家巷", "what": "Duck into Daru, Dingxiang and Zhongzhangjia lanes for quiet canal-and-bridge views when the main lane is busy."},
+        {"name": "Pingtan in a teahouse", "zh": "评弹", "what": "Several teahouses along the road hold sessions; you pay per show or per pot of tea, which is usually included. Listen for the pipa and the high, sliding voices."},
+        {"name": "Hand-rowed boat", "what": "A roughly 40-minute loop on the canal for about 40 RMB per person, from the official dock (daytime, about 08:30–17:30)."},
+        {"name": "South end and Guanqian Street", "zh": "观前街", "what": "At the southern end, walk ten minutes west to Guanqian Street for old snack shops like Caizhizhai."}
+      ],
+      "tips": [
+        "Walk north to south, starting late afternoon; lanterns come on around dusk and teahouses fill up.",
+        "Only take boats from the official dock. Touts offering 'cheaper' rides can add fees mid-trip.",
+        "Main-lane 'Suzhou speciality' restaurants are overpriced; eat in the side lanes or try sweet osmanthus treats from old brands.",
+        "Cheap Hanfu or qipao photo shoots often upsell retouching; agree on the full price in writing first.",
+        "Metro: Line 6 Xuanqiaoxiang (悬桥巷) station is next to the middle of the road; Humble Garden–Suzhou Museum station is one stop north."
+      ],
+      "facts": [["Length", "1,606 m"], ["On historic map", "Pingjiang Tu, 1229"], ["Side lanes", "51"], ["Stone bridges", "18"], ["Listed", "Famous Historical and Cultural Street of China, 2009"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it as the evening stroll after the museum: touristy in the middle, lovely in the side lanes, and the easy place to hear pingtan."}
+      },
+      "time": "1.5–2 h (plus 1 h for pingtan)",
+      "best": "From about 16:30 into the evening, for lanterns and teahouses; or 06:00–08:00 for an empty lane.",
+      "coord": [31.321, 120.6318],
+      "coord_src": "approx",
+      "sources": [
+        ["Pingjiang Road – Wikipedia", "https://en.wikipedia.org/wiki/Pingjiang_Road"],
+        ["Pingjiang Road guide – China for Travelers", "https://chinafortravelers.com/guides/pingjiang-road-suzhou/"],
+        ["8 Things to Do in Suzhou at Night – Travel China Guide", "https://www.travelchinaguide.com/package/things-to-do-in-suzhou-at-night.htm"]
+      ]
+    },
+    "moatboat": {
+      "name": "Night boat on Suzhou's ancient canal (outer moat)",
+      "zh": "古运河游船（新市桥码头）",
+      "pinyin": "Gǔ Yùnhé Yóuchuán",
+      "glance": "A roughly 50-minute evening cruise on the outer moat of the old city, which is part of the Grand Canal route. You float past the lit-up city walls, Pan Gate and its old bridges. The pier is a short walk from your hotel.",
+      "history": [
+        "Suzhou's moat (护城河) has circled the old city since its walls were built in 514 BC, and it later became part of the Grand Canal, the waterway that carried grain and goods between south China and Beijing. Pan Gate's water gate connected the city's inner canals to this moat. Since 2014 the Grand Canal has been a UNESCO World Heritage Site, and Suzhou is one of the cities on it.",
+        "Today tourist boats run from the Xinshi Bridge pier (新市桥码头) at 798 Panxu Road. The southbound route passes Wumen Bridge, the Pan Gate scenic area, Panlong Bridge and Renmin Bridge, turns at the octagonal pavilion beside Miedu Bridge (觅渡桥), and comes back. Day boats run too, but the evening sailings, with the walls and gate lit, are the popular ones."
+      ],
+      "meaning": "Seeing Suzhou from the water is how most people arrived for 2,500 years: by boat, through a water gate. The old walls, gate towers and bridges are lit at night, and some evening boats include a short opera or pingtan performance with commentary. It is the easiest way to feel that Suzhou is a canal city, without walking another step.",
+      "highlights": [
+        {"name": "Xinshi Bridge pier", "zh": "新市桥码头", "what": "The ticket office and boarding point on Panxu Road (盘胥路798号)."},
+        {"name": "Wumen Bridge", "zh": "吴门桥", "what": "Suzhou's only single-arch stone bridge still standing, rising nearly 10 m. The boat passes right under it."},
+        {"name": "Pan Gate and its water gate", "zh": "盘门", "what": "The lit gate tower and the arched water gate that boats once sailed through into the city."},
+        {"name": "Ruiguang Pagoda", "zh": "瑞光塔", "what": "The tall octagonal pagoda behind Pan Gate, lit up at night."},
+        {"name": "Miedu Bridge turn-around", "zh": "觅渡桥", "what": "The boat turns at the octagonal pavilion here and heads back."}
+      ],
+      "tips": [
+        "Night sailings run about 18:00–20:30 and leave when full; ticket collection until about 20:20.",
+        "A night ticket with performance and commentary was listed at about 120 RMB per adult; book on Trip.com or a Chinese ticket site the same day.",
+        "Sit on the side facing the city walls (the old-city side) for the best views.",
+        "Bring a layer: it is cool and breezy on the water in November."
+      ],
+      "facts": [["Pier", "798 Panxu Road (盘胥路798号)"], ["Duration", "about 50 min"], ["Night sailings", "about 18:00–20:30"], ["Night ticket", "about 120 RMB (with performance and commentary)"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": "The Grand Canal (2014)",
+        "visitor": null,
+        "verdict": {"stars": 3, "line": "Nice and easy if you have energy after dinner, since it starts near the hotel. Skip it if tired; you see Pan Gate up close the next morning anyway."}
+      },
+      "time": "1 h including boarding",
+      "best": "After dark, around 18:30–19:30, when the walls and gate are lit.",
+      "coord": [31.2968, 120.6062],
+      "coord_src": "approx",
+      "sources": [
+        ["苏州古运河游船（新市桥码头）攻略 – 大河票务网", "https://www.dahepiao.com/lvyounews1/20250928532157.html"],
+        ["8 Things to Do in Suzhou at Night – Travel China Guide", "https://www.travelchinaguide.com/package/things-to-do-in-suzhou-at-night.htm"],
+        ["Pan Gate – Wikipedia", "https://en.wikipedia.org/wiki/Pan_Gate"]
+      ]
+    },
+    "nets": {
+      "name": "Master of the Nets Garden",
+      "zh": "网师园",
+      "pinyin": "Wǎngshī Yuán",
+      "glance": "A small residential garden, about half a hectare, often called the most perfectly proportioned in Suzhou. A house of halls and courtyards opens onto a single pond ringed by pavilions. It feels like a home, not a park.",
+      "history": [
+        "In 1140, in the Southern Song dynasty, the official Shi Zhengzhi built a garden here called the Ten Thousand Volume Hall, after his library. It was later abandoned. Around 1785 Song Zongyuan, a retired Qing official, rebuilt and redesigned it and gave it its present name, as he liked to call himself a fisherman.",
+        "In 1795 the scholar Qu Yuancun bought it and added buildings. In 1868 it passed to Li Hongyi, an official and master calligrapher; about half the inscribed stones in the garden are in his hand. In 1940 He Chang bought it, restored it and its old name, and in 1958 his daughter He Zehui gave it to the city. One of its studios, the Late Spring Cottage, was copied as the Ming-style courtyard at the Metropolitan Museum of Art in New York. It was inscribed by UNESCO in 1997."
+      ],
+      "meaning": "In Chinese art the fisherman stands for the hermit-scholar who has walked away from court life to live simply and freely. 'Master of the Nets' is a playful way of saying 'retired, and happy about it'. The garden plays with scale: the pond is small, but bridges, rocks and pavilions are kept low so the water looks larger. Inscriptions quote poems, such as the 'Moon Comes with the Breeze' pavilion and the 'Washing Ribbon' pavilion, which echoes an old poem: wash your hat-ribbons when the water is clear, your feet when it is muddy.",
+      "highlights": [
+        {"name": "Main halls of the residence", "zh": "万卷堂", "what": "You enter through formal reception halls. Look at the carved brick gateway in the courtyard, one of the finest in Suzhou."},
+        {"name": "The central pond", "what": "Walk the corridor around it slowly. The pond is tiny but the reflections and angles make it feel bigger."},
+        {"name": "Washing Ribbon Pavilion", "zh": "濯缨水阁", "what": "A pavilion right over the water on the south side. Sit here for the view across the pond."},
+        {"name": "Moon Comes with the Breeze Pavilion", "zh": "月到风来亭", "what": "On the west bank, built for moon viewing. A mirror inside reflects the garden back at you."},
+        {"name": "Late Spring Cottage", "zh": "殿春簃", "what": "A quiet study courtyard in the west, the model for the Met's Astor Court in New York. Often the calmest corner."},
+        {"name": "Duck Shooting Corridor", "zh": "射鸭廊", "what": "A small boat-shaped pavilion by the water on the east side."}
+      ],
+      "tips": [
+        "Go at the 07:30 opening on Wednesday; it is small, so a few groups make it crowded.",
+        "Ticket 30 RMB in November.",
+        "Afterwards, walk out to Shiquan Street (十全街) right outside for embroidery and tea shops.",
+        "Evening shows (Kunqu, music) are held in the garden from mid-March to mid-November, 19:30–22:00, if you want a night option."
+      ],
+      "facts": [["First built", "1140 (Southern Song)"], ["Present name", "c. 1785, Song Zongyuan"], ["Area", "0.54 ha"], ["Hours", "07:30–17:30"], ["Ticket", "30 RMB (Nov–Mar)"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": "Classical Gardens of Suzhou (1997)",
+        "visitor": null,
+        "verdict": {"stars": 5, "line": "Must-see if you love gardens: after the big Humble garden, this small one shows the art at its most refined, in an hour."}
+      },
+      "time": "1–1.5 h",
+      "best": "At the 07:30 opening, when the pond is still and quiet.",
+      "coord": [31.3003333, 120.6298889],
+      "coord_src": "Wikipedia",
+      "sources": [
+        ["Master of the Nets Garden – Wikipedia", "https://en.wikipedia.org/wiki/Master_of_the_Nets_Garden"],
+        ["The Garden of the Master of Nets – China Highlights", "https://www.chinahighlights.com/suzhou/attraction/the-garden-of-the-master-of-nets.htm"],
+        ["8 Things to Do in Suzhou at Night – Travel China Guide", "https://www.travelchinaguide.com/package/things-to-do-in-suzhou-at-night.htm"]
+      ]
+    },
+    "panmen": {
+      "name": "Pan Gate scenic area",
+      "zh": "盘门",
+      "pinyin": "Pánmén",
+      "glance": "The best-preserved combined land and water gate in China, on the south-west corner of Suzhou's old walls. Together with the Ruiguang Pagoda and the high Wumen Bridge it forms the 'Three Landmarks of Pan Gate'. It is right next to your hotel.",
+      "history": [
+        "A gate has stood here since 514 BC, when the State of Wu built its capital walls in the Spring and Autumn period. The present gate dates from about 1351, late in the Yuan dynasty, and its tower was restored in 1986.",
+        "Ruiguang Pagoda is older still in origin: it was first built in the Three Kingdoms period (the date usually given is AD 247) by Sun Quan, ruler of Wu, as an act of gratitude to his mother. The present brick pagoda, seven storeys and 53.6 m high, dates from the Northern Song, around 1004. In 1978 a hidden chamber on its third storey yielded Buddhist relics, including the Pearl Stupa now in the Suzhou Museum. The pagoda became a national key cultural relic in 1988. Wumen Bridge was first built in the Song and rebuilt in the Qing."
+      ],
+      "meaning": "The name means 'Coiled Gate': a carved coiled dragon (盘龙) once topped it, meant to frighten the rival State of Yue. The gate shows how a water city defended itself: two land gates and two water gates, with an enclosure between them and portcullises that could drop to block both boats and people. The pagoda, built out of a son's love for his mother, is an example of filial piety, still a core value in Chinese families.",
+      "highlights": [
+        {"name": "Wumen Bridge", "zh": "吴门桥", "what": "A single stone arch 66 m long with a 9.85 m rise, so barges could pass beneath. Climb it for the classic view of gate, moat and pagoda together."},
+        {"name": "The water gate", "zh": "水城门", "what": "Look for the grooves where the portcullis slid down to seal the canal."},
+        {"name": "Gate tower and city wall", "what": "Walk up onto the wall beside the gate for a view over the moat and the old city."},
+        {"name": "Ruiguang Pagoda", "zh": "瑞光塔", "what": "Seven storeys, eight sides, brick walls with wooden balconies. Remember the Pearl Stupa you saw at the museum came from inside."},
+        {"name": "Pan Gate gardens and pond", "what": "The landscaped grounds inside the scenic area are quiet in the morning and pleasant to wander."}
+      ],
+      "tips": [
+        "Start on Wumen Bridge (free, outside the ticket gate) for the best photo, then enter the scenic area.",
+        "Go first thing Wednesday morning or after the Nets Garden; it is a short walk from the hotel.",
+        "The area is much quieter than the big gardens, so it is a good place to slow down.",
+        "Check on site whether the pagoda is open for climbing that day."
+      ],
+      "facts": [["First gate", "514 BC (State of Wu)"], ["Present gate", "c. 1351 (Yuan dynasty)"], ["Ruiguang Pagoda", "53.6 m, 7 storeys, present structure Northern Song"], ["Wumen Bridge", "66 m long, 9.85 m arch rise"], ["Protection", "Ruiguang Pagoda: national key cultural relic (1988)"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it: on your doorstep, quieter than the gardens, and the one place in Suzhou where you can see how the old city walls actually worked."}
+      },
+      "time": "1–1.5 h",
+      "best": "Early morning, when the moat is calm and the light is soft on the pagoda.",
+      "coord": [31.28917, 120.61194],
+      "coord_src": "Wikipedia",
+      "sources": [
+        ["Pan Gate – Wikipedia", "https://en.wikipedia.org/wiki/Pan_Gate"],
+        ["Panmen Scenic Area – China Daily Jiangsu", "https://jiangsu.chinadaily.com.cn/binhu/2012-03/09/content_17871607.htm"]
+      ]
+    },
+    "huqingyu": {
+      "name": "Hu Qing Yu Tang TCM pharmacy and museum",
+      "zh": "胡庆余堂（中药博物馆）",
+      "pinyin": "Hú Qìngyú Táng",
+      "glance": "A working traditional Chinese medicine (TCM) pharmacy from 1874, in one of the best-preserved late-Qing commercial buildings in China, with a museum of Chinese medicine inside. You can watch pills being made by hand, see hundreds of herbs, and even have your pulse read by a doctor.",
+      "history": [
+        "Hu Xueyan, the richest merchant of the late Qing and a businessman with official rank, founded the pharmacy in 1874. The shop opened in 1878 in a purpose-built complex that cost more than 200,000 taels of silver, twice what he spent on his own mansion nearby. It made more than 400 kinds of medicine from secret family formulas and proven recipes, and became one of China's great 'time-honoured brands' (老字号), alongside Beijing's Tong Ren Tang.",
+        "The complex is built in the Jiangnan style around courtyards, with a grand hall of carved camphor wood. In 1988 it became a national key cultural relics protection unit. Today the pharmacy still sells medicine at its old counters, while the rest of the complex is Hangzhou's museum of Chinese medicine, covering about 4,000 m²."
+      ],
+      "meaning": "The most famous object is a plaque Hu Xueyan wrote himself: 戒欺, 'Do not cheat'. He hung it as a rule for his staff: honest weights, genuine herbs, no shortcuts. Customers judged a pharmacy by exactly that, so the plaque became the brand's promise and a symbol of honest business in China. The building is said to be laid out like a crane resting at the foot of Wu Hill, and the crane stands for long life. For TCM-curious visitors, it shows the whole system in one place: herbs, processing, diagnosis and prescription.",
+      "highlights": [
+        {"name": "Entrance on Dajing Lane", "zh": "大井巷95号", "what": "Look up at the tall white wall with huge black characters before you enter the gate."},
+        {"name": "The pharmacy hall", "what": "A grand camphor-wood hall with fine carvings, a portrait of Hu Xueyan in the centre and couplets either side. Staff still weigh out herbs at the old counters."},
+        {"name": "The 'Do Not Cheat' plaque", "zh": "戒欺", "what": "The founder's own calligraphy, the most famous sign in the building. Ask staff to point it out if you miss it."},
+        {"name": "Museum floors", "what": "Upstairs: the history of Chinese medicine, classic texts and famous doctors (Bian Que, Hua Tuo, Li Shizhen). Ground floor: common herbs, roots, minerals and animal products, and how to tell good quality from bad."},
+        {"name": "Hand-processing workshop", "what": "Staff roll pills by hand and slice roots paper-thin. Sometimes you can try it yourself."},
+        {"name": "Herb garden courtyard", "what": "Living medicinal plants, labelled, in the courtyard."},
+        {"name": "Clinic: pulse diagnosis", "what": "Register, wait your turn, and a TCM doctor reads your pulse at three points on each wrist, looks at your tongue, and writes a prescription. Medicine is ready about 30 minutes after you pay."}
+      ],
+      "tips": [
+        "Free museum presentations in English and Chinese at 09:15, 10:15, 13:15, 14:15 and 15:15; plan your visit around one.",
+        "Museum about 10 RMB; open about 08:30–17:00 (sources disagree on a Monday closure, so check if visiting on a Monday).",
+        "If you want a pulse reading, register early in the day; it is a real clinic, not a show. Tui na massage and cupping can also be booked.",
+        "Pharmacy customers get free seasonal herbal tea.",
+        "Its medicinal-food restaurant (胡庆余堂药膳) is listed in the Michelin Guide, if you want to try TCM cooking."
+      ],
+      "facts": [["Founded", "1874 by Hu Xueyan"], ["Pharmacy opened", "1878"], ["Cost", "over 200,000 taels of silver"], ["Medicines", "400+ formulas"], ["Protection", "National key cultural relic (1988)"], ["Address", "95 Dajing Lane (大井巷95号)"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 5, "line": "Must-see for you two: the best place in China to see TCM as a living practice, in a beautiful building, and an easy add-on to Hefang Street."}
+      },
+      "time": "1–1.5 h (more with a consultation)",
+      "best": "Mid-morning, timed for a 10:15 presentation, before Hefang Street gets crowded.",
+      "coord": [30.2418, 120.169],
+      "coord_src": "approx",
+      "sources": [
+        ["Hu Qing Yu Tang – Wikipedia", "https://en.wikipedia.org/wiki/Hu_Qing_Yu_Tang"],
+        ["Why Visit Hu Qing Yu Tang – China Discovery", "https://www.chinadiscovery.com/zhejiang/hangzhou/hu-qing-yu-tang.html"],
+        ["Hu Qing Yu Tang TCM Museum – ChinaTravel", "https://chinatravel.com/hangzhou/attraction/huqingyu-tang-chinese-traditional-medicine-museum"],
+        ["Huqingyu Chinese Pharmacy – eHangzhou", "https://www.ehangzhou.gov.cn/2018-06/14/c_242806.htm"],
+        ["Qinghefang & Hefang guide – China for Travelers", "https://chinafortravelers.com/guides/qinghefang-hangzhou/"]
+      ]
+    },
+    "hefang": {
+      "name": "Hefang Street and Qinghefang",
+      "zh": "河坊街 · 清河坊",
+      "pinyin": "Héfāng Jiē · Qīnghéfāng",
+      "glance": "Hangzhou's restored old shopping street at the foot of Wu Hill, lined with time-honoured shops, teahouses and snack stalls. It has been a commercial centre since the Southern Song, when Hangzhou was China's capital. Touristy, but fun in the evening, and the place to buy fans, scissors and silk.",
+      "history": [
+        "When the Southern Song made Hangzhou its capital (1127–1279), the Qinghefang area, just below the imperial city and along the Imperial Street, became one of its busiest trading quarters. It stayed the city's commercial heart for centuries, home to medicine halls, tea houses and craft shops; many of today's shops have histories of more than 100 years.",
+        "The street has since been rebuilt in old style and pedestrianised, and became a national 4A scenic area in 2007. It runs about 1.8 km from Wushan Square in the west to the Drum Tower in the east. The surrounding Qinghefang historic district, about 13 ha, includes Hu Qing Yu Tang, the residence of the merchant Hu Xueyan and the 'First Well of Qiantang' on Dajing Lane, and is promoted as a 'Street of China's Time-honoured Brands'."
+      ],
+      "meaning": "For Hangzhou people this street stands for 'old Hangzhou': the city of the Southern Song, its merchant families and its famous products. The five classic Hangzhou specialities sold here are lotus-root starch, scissors, fans, tobacco and silk. Dajing Lane (大井巷, 'Big Well Lane') is named after an old public well; wells like this were the social centre of a neighbourhood. It is a restoration, not original fabric, but the old brands are real.",
+      "highlights": [
+        {"name": "Wushan Square end", "zh": "吴山广场", "what": "The west end, busiest and liveliest. Wu Hill rises behind it if you want a view."},
+        {"name": "Time-honoured shops", "zh": "老字号", "what": "Wangxingji fans (王星记), Zhang Xiaoquan scissors (张小泉) and old medicine halls such as Fang Hui Chun Tang (方回春堂)."},
+        {"name": "Dajing Lane and Hu Qing Yu Tang", "zh": "大井巷", "what": "The quieter lane on the south side, with the big TCM pharmacy and the old well."},
+        {"name": "Street snacks", "what": "Try 葱包桧 (cōng bāo huì, a scallion pancake wrapped round fried dough, a few RMB) and fresh 定胜糕 (dìngshèng gāo, a pink steamed rice cake)."},
+        {"name": "Drum Tower", "zh": "鼓楼", "what": "The east end, on Zhongshan South Road. Lit up at night; shoot from below for the photo."},
+        {"name": "Southern Song Imperial Street", "zh": "南宋御街", "what": "Crosses the street near the east end; a calmer restored street to walk north."}
+      ],
+      "tips": [
+        "Metro Line 7 to Wushan Square (吴山广场), then a 6-minute walk; or Line 1 to Ding'an Road (定安路), about 13 minutes.",
+        "Come at blue hour (about 18:00–20:30); lanterns light up around 18:00 in winter and go off about 22:30.",
+        "Avoid snacks sold by weight (fruit, jerky); the bill can be a shock. Ask the price per 100 g first.",
+        "A 'free Longjing tea tasting' or a street show is often a hook to sit you down and sell; just say no thanks.",
+        "For cheaper, more local food, try Gaoyin Street (高银街) just north."
+      ],
+      "facts": [["Length", "about 1.8 km"], ["Grade", "National AAAA scenic area (2007)"], ["Historic district", "about 13 ha"], ["History", "commercial quarter since the Southern Song (1127–1279)"], ["Specialities", "lotus-root starch, scissors, fans, tobacco, silk"]],
+      "ratings": {
+        "china_grade": "AAAA",
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 3, "line": "Worth an evening hour for shopping and snacks, especially combined with Hu Qing Yu Tang; skip if you dislike crowds and souvenir strips."}
+      },
+      "time": "1–2 h",
+      "best": "Early evening, when lanterns come on and the old shops are still open.",
+      "coord": [30.2425, 120.165],
+      "coord_src": "approx",
+      "sources": [
+        ["Hefang Street – eHangzhou", "https://www.ehangzhou.gov.cn/2018-06/14/c_242888.htm"],
+        ["Hefang Street and Southern Song Imperial Street – eHangzhou", "https://www.ehangzhou.gov.cn/2020-04/09/c_242802.htm"],
+        ["Qinghefang Ancient Street – China Daily Zhejiang", "http://zhejiang.chinadaily.com.cn/2016-08/05/c_55077.htm"],
+        ["Qinghefang & Hefang guide – China for Travelers", "https://chinafortravelers.com/guides/qinghefang-hangzhou/"],
+        ["Soak up Hangzhou's history on Qinghefang Street – eHangzhou", "https://www.ehangzhou.gov.cn/2023-11/23/c_287837.htm"],
+        ["Wushan Square station – Wikipedia", "https://en.wikipedia.org/wiki/Wushan_Square_station"]
+      ]
+    }
+  },
+  "pois": {
+    "rail_sz": {"name": "Suzhou Railway Station (south square)", "zh": "苏州站 南广场", "kind": "rail", "coord": [31.329, 120.6065], "coord_src": "approx (station centre 31.33056, 120.60639 from Wikipedia)", "note": "Use the south exit/south square for taxis and the old city; metro Lines 2 and 4 run under the station."},
+    "hotel_sz": {"name": "Pan Pacific Suzhou", "zh": "苏州吴宫泛太平洋酒店", "kind": "hotel", "coord": [31.2928, 120.6135], "coord_src": "approx", "note": "259 Xinshi Road (新市路259号), next to the Pan Gate scenic area; show the Chinese name to taxi drivers."},
+    "humble_ticket": {"name": "Humble Administrator's Garden entrance and ticket office", "zh": "拙政园 售票处 · 东北街", "kind": "entrance", "coord": [31.3247, 120.628], "coord_src": "approx", "note": "Main entrance on Dongbei Street (东北街178号); Suzhou Museum and Lion Grove are a few minutes west."},
+    "m_zzy_sb": {"name": "Humble Administrator's Garden–Suzhou Museum metro station (Line 6)", "zh": "拙政园苏博站", "kind": "metro", "coord": [31.3243, 120.63], "coord_src": "approx", "note": "Line 6, opened 2024; next stops Meixiang (north) and Xuanqiaoxiang for Pingjiang Road (south)."},
+    "pier_xinshi": {"name": "Xinshi Bridge boat pier (ancient canal cruises)", "zh": "新市桥码头（古运河旅游码头）", "kind": "pier", "coord": [31.2968, 120.6062], "coord_src": "approx", "note": "798 Panxu Road (盘胥路798号); night boats about 18:00–20:30. Walk west along Xinshi Road from the hotel."},
+    "pingjiang_n": {"name": "Pingjiang Road, north end", "zh": "平江路北口（白塔东路）", "kind": "other", "coord": [31.321, 120.6318], "coord_src": "approx", "note": "At Baita East Road; the start if you walk from the museum."},
+    "pingjiang_s": {"name": "Pingjiang Road, south end", "zh": "平江路南口（干将东路）", "kind": "other", "coord": [31.309, 120.6338], "coord_src": "approx", "note": "At Ganjiang East Road; Guanqian Street is about 10 minutes' walk west."},
+    "huqingyu_entr": {"name": "Hu Qing Yu Tang entrance", "zh": "胡庆余堂 大井巷95号", "kind": "entrance", "coord": [30.2418, 120.169], "coord_src": "approx", "note": "95 Dajing Lane, on the lane just south of Hefang Street."}
+  },
+  "shops": [
+    {
+      "name": "Suzhou Museum shop",
+      "zh": "苏州博物馆文创商店",
+      "kind": "shop",
+      "near": "szmuseum",
+      "walk": "Inside the museum, by the exit",
+      "buy": "Garden- and museum-inspired design goods: stationery, scarves, tea sets, bookmarks and prints based on the collection and Pei's building. One of the more reliable places in Suzhou for well-made, not tacky, souvenirs.",
+      "watch": "Popular items sell out; the museum also has an online shop on Tmall if something is gone.",
+      "hours": "With the museum, 09:00–17:00, closed Mondays",
+      "coord": [31.3245, 120.6248],
+      "coord_src": "approx",
+      "sources": [["What to buy in Suzhou – China Bound / China Daily", "https://www.chinabound.cn/s/202605/15/WS6a06dfb0498e23165e06f6de/what-to-buy-in-suzhou-a-visitors-guide-to-meaningful-souvenirs.html"], ["A visitor's guide to Suzhou Museum – China Bound", "https://www.chinabound.cn/s/202604/17/WS69e2079e498e23165e06edc1/a-visitors-guide-to-suzhou-museum.html"]]
+    },
+    {
+      "name": "Pingjiang Road craft studios and bookshops",
+      "zh": "平江路",
+      "kind": "street",
+      "near": "pingjiang",
+      "walk": "Along the lane",
+      "buy": "Small craft studios, bookshops and teahouses on the ground floors. Look for silk scarves (small ones 150–350 RMB, shawls 190–800), handmade Suzhou folding fans (300–1,000 RMB; cheap tourist fans 30–200), small handmade embroidery pieces (50–600 RMB), and Biluochun (碧螺春) green tea from nearby Lake Tai.",
+      "watch": "Be wary of 'silk-style' labels and prices that look too low: much cheap 'embroidery' near tourist sites is machine-made. Ask 'is this hand-embroidered (手绣)?'",
+      "hours": "Most shops roughly 10:00–21:00",
+      "coord": [31.315, 120.633],
+      "coord_src": "approx",
+      "sources": [["Pingjiang Road guide – China for Travelers", "https://chinafortravelers.com/guides/pingjiang-road-suzhou/"], ["What to buy in Suzhou – China Bound / China Daily", "https://www.chinabound.cn/s/202605/15/WS6a06dfb0498e23165e06f6de/what-to-buy-in-suzhou-a-visitors-guide-to-meaningful-souvenirs.html"]]
+    },
+    {
+      "name": "Caizhizhai sweets and pingtan teahouse, Guanqian Street",
+      "zh": "采芝斋（观前街91号）",
+      "kind": "food",
+      "near": "pingjiang",
+      "walk": "About 10–12 min west of the south end of Pingjiang Road",
+      "buy": "A Suzhou sweet-maker founded under the Tongzhi Emperor (1860s). Pine-nut candy (松子糖), black plum cakes, nine-times-processed tangerine peel and dried tofu snacks; good gifts. The branch also runs a pingtan teahouse. Huang Tianyuan (黄天源, founded 1821, known for plum-blossom cakes) is on the same street.",
+      "watch": "Prices rose in recent years; the old brands are fair, but avoid look-alike shops with similar names on the street.",
+      "hours": "From 08:30",
+      "coord": [31.3107, 120.626],
+      "coord_src": "approx",
+      "sources": [["采芝斋 Guanqian Street – Trip.com", "https://nz.trip.com/restaurant/china/suzhou/detail/rest-10559883"], ["Huang Tianyuan – Trip.com", "https://nz.trip.com/restaurant/china/suzhou/detail/huang-tianyuan-10559875"], ["Guanqian Street – Wikipedia", "https://en.wikipedia.org/wiki/Guanqian_Street"]]
+    },
+    {
+      "name": "Shiquan Street",
+      "zh": "十全街",
+      "kind": "street",
+      "near": "nets",
+      "walk": "Right outside the Master of the Nets Garden",
+      "buy": "Craft shops selling Suzhou embroidery (苏绣), silk, antiques and jade, plus restaurants. Good for a browse after the garden. Fine handmade embroidery: 800–5,000 RMB for mid-range pieces; small handmade items from about 50 RMB.",
+      "watch": "The street is a recent rebuild; many 'antiques' are new, and much cheap embroidery is factory-made. Bargain, and ask whether large pieces can be shipped.",
+      "hours": "Roughly 09:30–21:00",
+      "coord": [31.3012, 120.631],
+      "coord_src": "approx",
+      "sources": [["Shiquan Street – China Daily / China Services Info", "https://www.chinaservicesinfo.com/s/201808/14/WS5b889ee0498ea626bcc56382/shiquan-street.html"], ["What to buy in Suzhou – China Bound / China Daily", "https://www.chinabound.cn/s/202605/15/WS6a06dfb0498e23165e06f6de/what-to-buy-in-suzhou-a-visitors-guide-to-meaningful-souvenirs.html"]]
+    },
+    {
+      "name": "Wangxingji fans",
+      "zh": "王星记扇庄",
+      "kind": "shop",
+      "near": "hefang",
+      "walk": "On Qinghefang / Hefang Street",
+      "buy": "Hangzhou's most famous fan-maker, founded in 1875, with over 10,000 designs. Look for the classic black-paper fans (黑纸扇) and fragrant sandalwood fans (檀香扇), a light, typical Hangzhou gift.",
+      "watch": "Buy in the brand's own shop; cheap 'Wangxingji' fans at stalls nearby may not be genuine.",
+      "hours": null,
+      "coord": [30.2425, 120.167],
+      "coord_src": "approx",
+      "sources": [["Hangzhou Wangxingji Fan Company – eHangzhou", "https://www.ehangzhou.gov.cn/2018-06/15/c_271531.htm"], ["Soak up Hangzhou's history on Qinghefang Street – eHangzhou", "https://www.ehangzhou.gov.cn/2023-11/23/c_287837.htm"]]
+    },
+    {
+      "name": "Zhang Xiaoquan scissors",
+      "zh": "张小泉剪刀（河坊街232号）",
+      "kind": "shop",
+      "near": "hefang",
+      "walk": "On Hefang Street, No. 232",
+      "buy": "Scissors from a brand dating to 1628, once supplied to the Qing palace; the forging technique is national intangible heritage. Kitchen, tailor's and small embroidery scissors are useful, compact gifts.",
+      "watch": "Scissors and knives must go in checked luggage, not carry-on.",
+      "hours": null,
+      "coord": [30.2422, 120.1685],
+      "coord_src": "approx",
+      "sources": [["Zhang Xiaoquan – Wikipedia", "https://en.wikipedia.org/wiki/Zhang_Xiaoquan"], ["Zhang Xiao Quan Scissors – SilverKris", "https://silverkris.singaporeair.com/guide/china/hgh/shop-hangzhou/zhang-xiao-quan-scissors/"]]
+    },
+    {
+      "name": "Hu Qing Yu Tang pharmacy counters",
+      "zh": "胡庆余堂 国药号",
+      "kind": "shop",
+      "near": "huqingyu",
+      "walk": "Inside the museum complex, Dajing Lane",
+      "buy": "TCM products from a 150-year-old pharmacy: herbal teas, tonics and the house's own patent medicines. A trustworthy place to buy if you are curious about TCM; customers get free seasonal herbal tea.",
+      "watch": "Check whether any herbal or animal-derived product can be taken into Singapore before buying.",
+      "hours": "About 08:30–17:00",
+      "coord": [30.2418, 120.169],
+      "coord_src": "approx",
+      "sources": [["Hu Qing Yu Tang TCM Museum – ChinaTravel", "https://chinatravel.com/hangzhou/attraction/huqingyu-tang-chinese-traditional-medicine-museum"], ["Why Visit Hu Qing Yu Tang – China Discovery", "https://www.chinadiscovery.com/zhejiang/hangzhou/hu-qing-yu-tang.html"]]
+    }
+  ]
+}
