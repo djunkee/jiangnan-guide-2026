@@ -143,7 +143,7 @@ function initPreviews(){
     var made=false,make=function(){if(made)return;made=true;var col=resolveCol(dayCol(id));
       var map=L.map($('.dm-map',box),{zoomControl:false,attributionControl:false,dragging:false,touchZoom:false,scrollWheelZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,tap:false,zoomSnap:.25});
       tl().addTo(map);var all=L.featureGroup();segs.forEach(function(s){segLayers(s,col,true).addTo(all)});all.addTo(map);map.fitBounds(all.getBounds(),{padding:[18,18],maxZoom:16});paintStops()};
-    if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){make();io.disconnect()}})},{rootMargin:'300px'});io.observe(box)}else make();
+    if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){make();io.disconnect()}})},{rootMargin:'80px'});io.observe(box)}else make();
   })}
 function buildMapFS(){mapfs=document.createElement('div');mapfs.className='mapfs';mapfs.hidden=true;
   mapfs.innerHTML='<div class="mf-head"><div class="mf-top"><button class="mf-x" type="button" aria-label="Close map">✕</button><div class="ttl"></div></div><div class="mf-tabs"></div></div><div id="mf-map"></div><div class="mf-panel"><div class="mf-tools"><button type="button" data-a="me">📍 My position</button><button type="button" data-a="all">Fit day</button><button type="button" data-a="shops" class="on">🛍 Shops</button><button type="button" data-a="metro">Ⓜ Metro lines</button><button type="button" data-a="transit">🚌 Bus &amp; transit map</button><button type="button" data-a="save" hidden>⬇ Save offline</button></div><div class="mf-key" hidden><span><i style="background:#F05A1A"></i>Next stop</span><span><i style="background:#fff;box-shadow:0 0 0 2px #C1352A"></i>You are here (by the plan)</span><span><i style="background:#9AA3AE"></i>Done</span></div><div class="mf-status"></div><ol class="legs"></ol></div>';
@@ -272,6 +272,15 @@ function wxRender(){var today=iso(cn()),locs={};
         if(start>=0){h+='<div class="wx-h">';for(var j=start;j<Math.min(start+14,H.time.length);j++){var hw=wmo(H.weather_code[j]);h+='<span><i>'+H.time[j].slice(11,13)+'</i>'+hw[0]+'<b>'+Math.round(H.temperature_2m[j])+'°</b><em>'+(H.precipitation_probability[j]||0)+'%</em></span>'}h+='</div>'}}
       var age=Math.round((Date.now()-c.t)/60000);h+='<div class="wx-s">Open-Meteo forecast, updated '+(age<2?'just now':age<60?age+' min ago':Math.round(age/60)+' h ago')+(navigator.onLine===false?' (offline copy)':'')+'</div>';
       el.innerHTML=h;el.hidden=false})})})}
-function init(){buildSheet();decorate();if(hasL){buildMapFS();initPreviews()}luca();initNow();wxRender();window.addEventListener('online',wxRender);setInterval(function(){if(!document.hidden)wxRender()},30*60000)}
+/* update notice: the app opens from the saved copy; when a newer guide has been downloaded, offer a one-tap reload */
+function updToast(){if($('.updtoast'))return;var b=document.createElement('button');b.type='button';b.className='updtoast';b.textContent='Updated guide ready · tap to reload';b.addEventListener('click',function(){location.reload()});document.body.appendChild(b)}
+if('serviceWorker' in navigator)navigator.serviceWorker.addEventListener('message',function(e){if(e.data&&e.data.type==='jn-updated')updToast()});
+var loadedAt=Date.now();function checkUpd(){if(!('caches' in window))return;caches.open('jn-meta').then(function(m){return m.match('updated')}).then(function(r){return r&&r.text()}).then(function(t){if(t&&+t>loadedAt-2000)updToast()}).catch(function(){})}
+[2000,5000,10000,20000].forEach(function(ms){setTimeout(checkUpd,ms)});
+var later=window.requestIdleCallback||function(f){return setTimeout(f,250)};
+function init(){buildSheet();decorate();luca();initNow();
+  /* maps and weather after the first paint, so the page shows at once */
+  later(function(){if(hasL){buildMapFS();initPreviews()}wxRender()});
+  window.addEventListener('online',wxRender);setInterval(function(){if(!document.hidden)wxRender()},30*60000)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
