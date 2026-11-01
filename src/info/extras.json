@@ -1,22 +1,109 @@
-{"places":{},"pois":{},"shops":[
- {"name":"Xiaomi Home flagship, Joy City","zh":"小米之家 上海静安大悦城旗舰店","kind":"shop","near":"nanjingrd",
-  "walk":"Metro Line 8 one stop north from People’s Square to Qufu Road, or Didi 10 min; same road as your hotel (Xizang Road), 2 km north",
-  "buy":"Xiaomi’s full Chinese range in one place: phones, the Xiaomi ecosystem (smart home, robot vacuums, scooters, kitchen gadgets, power banks), many products not sold in Singapore. Address: 166 Xizang North Road, Joy City South Tower 1F (西藏北路166号大悦城南座一层).",
-  "watch":"Listed as Xiaomi’s Shanghai flagship in 2019; check on Amap that it is still open before going. Chinese-market products may have Chinese-only software and Chinese plugs.",
-  "coord":[31.2443,121.4720],"coord_src":"approx","sources":[["Bendibao: Shanghai Xiaomi Home flagship","https://wenda.bendibao.com/gouwu/2019916/63648.shtm"]]},
- {"name":"Xujiahui tech block: Bainaohui and TPY Center","zh":"徐家汇 百脑汇（中金国际广场）· TPY中心","kind":"market",
-  "near":"frenchc","walk":"Didi 10 min from Wukang Road, or Line 11 one stop from Jiaotong University to Xujiahui; from there Line 11 runs straight to Jiangsu Road for the poster centre",
-  "buy":"What’s left of Shanghai’s famous computer-market district. Bainaohui still has floors of IT and gadget stalls (PCs, parts, phones, accessories, gaming), mixed with esports and food. Next door, TPY Center (the rebuilt Pacific Digital Plaza, reopened 2024) is pitched as a tech showroom mall.",
-  "watch":"Much smaller than it used to be: Xujiahui’s big electronics bazaars closed as shopping moved online. Shenzhen’s Huaqiangbei is the real thing; this is the closest in Shanghai. Compare prices with JD.com before buying.",
-  "coord":[31.1945,121.4370],"coord_src":"approx","sources":[["NetEase: Xujiahui’s transformation (Dec 2023)","https://www.163.com/dy/article/IMPVC7GB05387NZ8.html"],["The Paper: Who killed the computer market? (2024)","https://www.thepaper.cn/newsDetail_forward_27849132"]]},
- {"name":"Xiaomi Home, Hubin in77","zh":"小米之家（湖滨银泰in77店）","kind":"shop","near":"hefang",
-  "walk":"5–10 min from your hotel, in the in77 malls along Yan’an Road by the lake",
-  "buy":"Xiaomi phones, smart-home gear and gadgets, a short walk from the hotel: easy to drop in on any evening in Hangzhou.",
-  "watch":"Map listings show it in in77 C or E zone; check the zone in Amap. Not confirmed as a flagship.",
-  "coord":[30.2565,120.1662],"coord_src":"approx","sources":[["Dianping: Xiaomi Home Hubin in77","http://m.dianping.com/shop/1833174132?msource=applemaps"],["Hangzhou Bendibao: Xiaomi Home stores","https://hz.bendibao.com/youhui/2024712/158446.shtm"]]},
- {"name":"Wensan Road digital street","zh":"文三路数码街（颐高数码 · 西溪数码港）","kind":"market","near":"xixi",
-  "walk":"Didi 15–20 min from Xixi on the way back to the lake",
-  "buy":"Hangzhou’s electronics street: several digital malls in a row (Yigao Digital Plaza, Xixi Digital Port and others) with stalls for PCs, parts, phones, cameras and accessories. Hangzhou’s old Electronics Market on Dengyun Road (登云路639号) is the place for components.",
-  "watch":"Our sources are from 2017; some malls may have shrunk or closed. Check Amap before going, and treat it as a look-around rather than a big shopping stop.",
-  "coord":[30.2785,120.1400],"coord_src":"approx","sources":[["Hangzhou Bendibao: digital markets (2017)","https://m.hz.bendibao.com/life/69909.shtm"]]}
-]}
+{
+ "places": {},
+ "pois": {},
+ "shops": [
+  {
+   "name": "Super Brand Mall",
+   "zh": "正大广场",
+   "kind": "mall",
+   "near": "shtower",
+   "walk": "Next to the Oriental Pearl Tower, 5–10 min from the Shanghai Tower; Lujiazui station (Line 2) is next door",
+   "buy": "A big Lujiazui mall at 168 Lujiazui West Road (陆家嘴西路168号): fashion, Chinese and international brands, electronics, a supermarket for snacks to take home, and many restaurants, some with river views on the upper floors. Good for a rainy hour or dinner on the Pudong side.",
+   "watch": "Busy at weekends. Restaurants with a river view fill up around sunset; get a queue number early.",
+   "coord": [
+    31.2366,
+    121.4985
+   ],
+   "coord_src": "approx",
+   "sources": []
+  },
+  {
+   "name": "Xiaomi Home flagship, Joy City",
+   "zh": "小米之家 上海静安大悦城旗舰店",
+   "kind": "shop",
+   "near": "nanjingrd",
+   "walk": "Metro Line 8 one stop north from People’s Square to Qufu Road, or Didi 10 min; same road as your hotel (Xizang Road), 2 km north",
+   "buy": "Xiaomi’s full Chinese range in one place: phones, the Xiaomi ecosystem (smart home, robot vacuums, scooters, kitchen gadgets, power banks), many products not sold in Singapore. Address: 166 Xizang North Road, Joy City South Tower 1F (西藏北路166号大悦城南座一层).",
+   "watch": "Listed as Xiaomi’s Shanghai flagship in 2019; check on Amap that it is still open before going. Chinese-market products may have Chinese-only software and Chinese plugs.",
+   "coord": [
+    31.2443,
+    121.472
+   ],
+   "coord_src": "approx",
+   "sources": [
+    [
+     "Bendibao: Shanghai Xiaomi Home flagship",
+     "https://wenda.bendibao.com/gouwu/2019916/63648.shtm"
+    ]
+   ]
+  },
+  {
+   "name": "Xujiahui tech block: Bainaohui and TPY Center",
+   "zh": "徐家汇 百脑汇（中金国际广场）· TPY中心",
+   "kind": "market",
+   "near": "frenchc",
+   "walk": "Didi 10 min from Wukang Road, or Line 11 one stop from Jiaotong University to Xujiahui; from there Line 11 runs straight to Jiangsu Road for the poster centre",
+   "buy": "What’s left of Shanghai’s famous computer-market district. Bainaohui still has floors of IT and gadget stalls (PCs, parts, phones, accessories, gaming), mixed with esports and food. Next door, TPY Center (the rebuilt Pacific Digital Plaza, reopened 2024) is pitched as a tech showroom mall.",
+   "watch": "Much smaller than it used to be: Xujiahui’s big electronics bazaars closed as shopping moved online. Shenzhen’s Huaqiangbei is the real thing; this is the closest in Shanghai. Compare prices with JD.com before buying.",
+   "coord": [
+    31.1945,
+    121.437
+   ],
+   "coord_src": "approx",
+   "sources": [
+    [
+     "NetEase: Xujiahui’s transformation (Dec 2023)",
+     "https://www.163.com/dy/article/IMPVC7GB05387NZ8.html"
+    ],
+    [
+     "The Paper: Who killed the computer market? (2024)",
+     "https://www.thepaper.cn/newsDetail_forward_27849132"
+    ]
+   ]
+  },
+  {
+   "name": "Xiaomi Home, Hubin in77",
+   "zh": "小米之家（湖滨银泰in77店）",
+   "kind": "shop",
+   "near": "hefang",
+   "walk": "5–10 min from your hotel, in the in77 malls along Yan’an Road by the lake",
+   "buy": "Xiaomi phones, smart-home gear and gadgets, a short walk from the hotel: easy to drop in on any evening in Hangzhou.",
+   "watch": "Map listings show it in in77 C or E zone; check the zone in Amap. Not confirmed as a flagship.",
+   "coord": [
+    30.2565,
+    120.1662
+   ],
+   "coord_src": "approx",
+   "sources": [
+    [
+     "Dianping: Xiaomi Home Hubin in77",
+     "http://m.dianping.com/shop/1833174132?msource=applemaps"
+    ],
+    [
+     "Hangzhou Bendibao: Xiaomi Home stores",
+     "https://hz.bendibao.com/youhui/2024712/158446.shtm"
+    ]
+   ]
+  },
+  {
+   "name": "Wensan Road digital street",
+   "zh": "文三路数码街（颐高数码 · 西溪数码港）",
+   "kind": "market",
+   "near": "xixi",
+   "walk": "Didi 15–20 min from Xixi on the way back to the lake",
+   "buy": "Hangzhou’s electronics street: several digital malls in a row (Yigao Digital Plaza, Xixi Digital Port and others) with stalls for PCs, parts, phones, cameras and accessories. Hangzhou’s old Electronics Market on Dengyun Road (登云路639号) is the place for components.",
+   "watch": "Our sources are from 2017; some malls may have shrunk or closed. Check Amap before going, and treat it as a look-around rather than a big shopping stop.",
+   "coord": [
+    30.2785,
+    120.14
+   ],
+   "coord_src": "approx",
+   "sources": [
+    [
+     "Hangzhou Bendibao: digital markets (2017)",
+     "https://m.hz.bendibao.com/life/69909.shtm"
+    ]
+   ]
+  }
+ ]
+}
