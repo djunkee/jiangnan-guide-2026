@@ -6,7 +6,7 @@ var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){retu
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 var MODE={walk:{l:'Walk',c:'#5A6472',dash:'2 7',w:4},metro:{l:'Metro',c:'#2443A0',w:5},car:{l:'Didi',c:'#A35C14',w:4},ferry:{l:'Ferry',c:'#2F7F9E',dash:'8 6',w:4},boat:{l:'Boat',c:'#2F7F9E',dash:'8 6',w:4},train:{l:'Train',c:'#C1352A',dash:'12 6',w:4},bike:{l:'Bike',c:'#2B7764',dash:'6 5',w:4}};
 var AMAPMODE={walk:'walk',metro:'bus',car:'car',ferry:'bus',boat:'walk',train:'bus',bike:'ride'},APPLEMODE={walk:'w',metro:'r',car:'d',ferry:'r',boat:'w',train:'r',bike:'w'};
-var TILE='https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',TILE_SUB='abcd',TILE_ATTR='© OpenStreetMap contributors © CARTO',TCACHE='jn-tiles-v1';
+var TILE='https://tile.openstreetmap.org/{z}/{x}/{y}.png',TILE_ATTR='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',TCACHE='jn-tiles-v2';
 var ICON_I='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 10.5v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="7.2" r="1.5" fill="currentColor"/></svg>';
 var PAW='<svg class="paw" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="16" rx="5.2" ry="4.3"/><ellipse cx="5.6" cy="10.4" rx="2.1" ry="2.7"/><ellipse cx="9.5" cy="6.6" rx="2.1" ry="2.8"/><ellipse cx="14.5" cy="6.6" rx="2.1" ry="2.8"/><ellipse cx="18.4" cy="10.4" rx="2.1" ry="2.7"/></svg>';
 
@@ -95,7 +95,7 @@ function initNow(){nowBtn=document.createElement('button');nowBtn.type='button';
 
 /* ---------- maps ---------- */
 var hasL=typeof window.L!=='undefined',mapfs,fsMap,fsLayers,curDay,curSeg=0,meMarker,meWatch,showShops=true;
-function tl(){return L.tileLayer(TILE,{subdomains:TILE_SUB,maxZoom:19,attribution:TILE_ATTR,crossOrigin:true})}
+function tl(){return L.tileLayer(TILE,{maxZoom:19,attribution:TILE_ATTR,crossOrigin:true})}
 function mk(p,small){var cls=p.n?'mk':'mk poi',txt=p.n||(p.kind==='hotel'?'🛏':p.kind==='rail'?'🚄':p.kind==='pier'?'⛴':p.kind==='metro'?'M':p.kind==='airport'?'✈':'•');
   var s=p.n?(small?22:28):(small?18:24);return L.marker(p.ll,{icon:L.divIcon({className:'',html:'<div class="'+cls+'" style="width:'+s+'px;height:'+s+'px;'+(p.n?'background:'+(p.col||'#C1352A'):'')+'">'+txt+'</div>',iconSize:[s,s],iconAnchor:[s/2,s/2]}),keyboard:false})}
 function segLayers(seg,col,small){var g=L.featureGroup(),pts=seg.pts;
@@ -157,15 +157,15 @@ function lat2y(lat,z){var r=lat*Math.PI/180;return Math.floor((1-Math.log(Math.t
 function tilesFor(seg){var out={},lats=seg.pts.map(function(p){return p.ll[0]}),lngs=seg.pts.map(function(p){return p.ll[1]});
   SHOPS.forEach(function(s){if(s.ll&&seg.pts.some(function(p){return p.k===s.near})){lats.push(s.ll[0]);lngs.push(s.ll[1])}});
   var pad=.008,s=Math.min.apply(0,lats)-pad,n=Math.max.apply(0,lats)+pad,w=Math.min.apply(0,lngs)-pad,e=Math.max.apply(0,lngs)+pad;
-  var span=Math.max(n-s,e-w),zMax=span>.6?14:span>.25?15:16;
+  var span=Math.max(n-s,e-w),zMax=span>.6?13:span>.25?14:15;
   function box(z,S,N,W,E){for(var x=lon2x(W,z);x<=lon2x(E,z);x++)for(var y=lat2y(N,z);y<=lat2y(S,z);y++)out[z+'/'+x+'/'+y]=1}
-  for(var z=10;z<=zMax;z++)box(z,s,n,w,e);
+  for(var z=11;z<=zMax;z++)box(z,s,n,w,e);
   /* close-ups around each point and along legs */
   var pts=seg.pts.map(function(p){return p.ll});SHOPS.forEach(function(sh){if(sh.ll&&seg.pts.some(function(p){return p.k===sh.near}))pts.push(sh.ll)});
-  pts.forEach(function(ll){for(var z=zMax+1;z<=17;z++){var r=z===17?.0045:.009;box(z,ll[0]-r,ll[0]+r,ll[1]-r*1.15,ll[1]+r*1.15)}});
+  pts.forEach(function(ll){for(var z=zMax+1;z<=16;z++){var r=.007;box(z,ll[0]-r,ll[0]+r,ll[1]-r*1.15,ll[1]+r*1.15)}});
   for(var i=1;i<seg.pts.length;i++){var a=seg.pts[i-1].ll,b=seg.pts[i].ll,dist=Math.hypot(a[0]-b[0],a[1]-b[1]);if(dist>.05)continue;var k=Math.ceil(dist/.003);
     for(var j=0;j<=k;j++){var la=a[0]+(b[0]-a[0])*j/k,lo=a[1]+(b[1]-a[1])*j/k;for(var z2=zMax+1;z2<=16;z2++)box(z2,la-.002,la+.002,lo-.002,lo+.002)}}
-  return Object.keys(out).map(function(t,i){var p=t.split('/');return TILE.replace('{s}','abcd'[(+p[1]+ +p[2])%4]).replace('{z}',p[0]).replace('{x}',p[1]).replace('{y}',p[2])})}
+  return Object.keys(out).map(function(t){var p=t.split('/');return TILE.replace('{z}',p[0]).replace('{x}',p[1]).replace('{y}',p[2])})}
 var saving=false;
 function updSaveStatus(){if(!canCache()||saving)return;var st=$('.mf-status',mapfs),urls=tilesFor(DAYS[curDay][curSeg]);
   caches.open(TCACHE).then(function(c){return c.keys()}).then(function(keys){var have={};keys.forEach(function(r){have[r.url]=1});var n=urls.filter(function(u){return have[u]}).length;
