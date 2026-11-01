@@ -140,9 +140,16 @@ s, ntag = re.subn(r'(<li class="it stop[^"]*")(><span class="t">[^<]*</span><div
 print('tagged stops', ntag, 'with key', s.count('data-o='))
 
 s = s.replace('<h4>Su Causeway, on foot or by bike <span', '<h4>Su Causeway on foot <span')
+# 1b. weather slot in every day header
+WXLOC = {'d0':'sh','d1':'sh','d2':'sh','d3':'sz','d4':'hz','d5':'hz','d6':'tl','d7':'hz','d8':'hz','d9':'hz'}
+for day, loc in WXLOC.items():
+    i = s.index(f'id="{day}"'); j = s.index('</header>', i) + len('</header>')
+    s = s[:j] + f'\n    <div class="wx" data-loc="{loc}"></div>' + s[j:]
 # 2. maps after each day header
 for day in DAYS:
     i = s.index(f'id="{day}"'); j = s.index('</header>', i) + len('</header>')
+    w = s.find('<div class="wx"', j)
+    if 0 <= w - j < 12: j = s.index('</div>', w) + len('</div>')
     s = s[:j] + f'\n    <div class="dmap" data-day="{day}"></div>' + s[j:]
 
 # 3. shopping, slotted after the first stop it belongs to
