@@ -97,13 +97,36 @@ function initNow(){nowBtn=document.createElement('button');nowBtn.type='button';
 var hasL=typeof window.L!=='undefined',mapfs,fsMap,fsLayers,curDay,curSeg=0,meMarker,meWatch,showShops=true;
 function tl(){return L.tileLayer(TILE,{maxZoom:19,attribution:TILE_ATTR,crossOrigin:true})}
 function mk(p,small){var cls=p.n?'mk':'mk poi',txt=p.n||(p.kind==='hotel'?'🛏':p.kind==='rail'?'🚄':p.kind==='pier'?'⛴':p.kind==='metro'?'M':p.kind==='airport'?'✈':'•');
-  var s=p.n?(small?22:28):(small?18:24);return L.marker(p.ll,{icon:L.divIcon({className:'',html:'<div class="'+cls+'" style="width:'+s+'px;height:'+s+'px;'+(p.n?'background:'+(p.col||'#C1352A'):'')+'">'+txt+'</div>',iconSize:[s,s],iconAnchor:[s/2,s/2]}),keyboard:false})}
-function segLayers(seg,col,small){var g=L.featureGroup(),pts=seg.pts;
-  for(var i=1;i<pts.length;i++){var m=MODE[pts[i].m]||MODE.walk;L.polyline([pts[i-1].ll,pts[i].ll],{color:m.c,weight:small?3:m.w,opacity:.85,dashArray:m.dash,lineCap:'round'}).addTo(g)}
+  var s=p.n?(small?22:28):(small?18:24);return L.marker(p.ll,{icon:L.divIcon({className:'',html:'<div class="'+cls+'" style="width:'+s+'px;height:'+s+'px;'+(p.n?'background:'+(p.col||'#C1352A'):'')+'">'+txt+'</div>',iconSize:[s,s],iconAnchor:[s/2,s/2]}),keyboard:false,zIndexOffset:p.n?600:200})}
+/* street routes: walking and driving paths from OpenStreetMap routing (FOSSGIS OSRM), fetched once when online, then kept on the phone */
+var RT='https://routing.openstreetmap.de/routed-',PROF={walk:'foot',car:'car',bike:'bike'},rtMem={},rtQ=[],rtBusy=0;
+function rkey(m,a,b){return 'jn-rt1:'+m+':'+a[0].toFixed(5)+','+a[1].toFixed(5)+';'+b[0].toFixed(5)+','+b[1].toFixed(5)}
+function getRoute(m,a,b){var prof=PROF[m];if(!prof)return Promise.resolve(null);var k=rkey(m,a,b);if(rtMem[k])return rtMem[k];
+  var hit=null;try{hit=JSON.parse(localStorage.getItem(k)||'null')}catch(e){}
+  if(hit){rtMem[k]=Promise.resolve(hit);return rtMem[k]}
+  if(navigator.onLine===false)return Promise.resolve(null);
+  rtMem[k]=new Promise(function(res){rtQ.push({k:k,u:RT+prof+'/route/v1/driving/'+a[1]+','+a[0]+';'+b[1]+','+b[0]+'?overview=full&geometries=geojson',res:res});pump()});
+  rtMem[k].then(function(r){if(!r)delete rtMem[k]});return rtMem[k]}
+function pump(){while(rtBusy<2&&rtQ.length){var j=rtQ.shift();rtBusy++;(function(j){
+  var ctl=('AbortController' in window)?new AbortController():null,to=setTimeout(function(){if(ctl)ctl.abort()},12000);
+  fetch(j.u,ctl?{signal:ctl.signal}:{}).then(function(r){return r.ok?r.json():null}).then(function(d){var rt=d&&d.routes&&d.routes[0];if(!rt){j.res(null);return}
+    var c=rt.geometry.coordinates.map(function(x){return [+x[1].toFixed(5),+x[0].toFixed(5)]}),o={c:c,d:Math.round(rt.distance),t:Math.round(rt.duration)};
+    try{localStorage.setItem(j.k,JSON.stringify(o))}catch(e){}j.res(o)}).catch(function(){j.res(null)}).then(function(){clearTimeout(to);rtBusy--;setTimeout(pump,250)})})(j)}}
+/* split a leg into pieces: metro legs walk to the station, ride between stations, walk from the station */
+function pieces(a,b){var m=b.m||'walk';if(m==='metro'&&b.via&&b.via.length){var v=b.via,out=[];
+    if(dist(a.ll,v[0].ll)>60)out.push({m:'walk',p:[a.ll,v[0].ll]});out.push({m:'metro',p:v.map(function(x){return x.ll})});
+    if(dist(v[v.length-1].ll,b.ll)>60)out.push({m:'walk',p:[v[v.length-1].ll,b.ll]});return out}
+  return [{m:m,p:[a.ll,b.ll]}]}
+function segLayers(seg,col,small){var g=L.featureGroup(),pts=seg.pts,stations={};
+  for(var i=1;i<pts.length;i++)pieces(pts[i-1],pts[i]).forEach(function(pc){var m=MODE[pc.m]||MODE.walk,routed=!!PROF[pc.m];
+    var line=L.polyline(pc.p,{color:m.c,weight:small?3:m.w,opacity:routed?.45:.85,dashArray:m.dash,lineCap:'round',lineJoin:'round'}).addTo(g);
+    if(routed&&dist(pc.p[0],pc.p[1])>80)getRoute(pc.m,pc.p[0],pc.p[1]).then(function(r){if(r&&r.c.length>1){line.setLatLngs(r.c);line.setStyle({opacity:.9,dashArray:pc.m==='walk'?(small?'1 5':'1 7'):null,weight:pc.m==='walk'?(small?3.5:5):(small?3:4.5)})}})});
+  pts.forEach(function(p){(p.via||[]).forEach(function(v){stations[v.k]=v})});
+  if(!small)Object.keys(stations).forEach(function(k){var v=stations[k];L.circleMarker(v.ll,{radius:5,color:'#fff',weight:2,fillColor:'#2443A0',fillOpacity:1}).bindTooltip('Ⓜ '+v.name,{className:'tl',direction:'top'}).addTo(g)});
   var seen={};pts.forEach(function(p){var key=p.k+'@'+p.ll.join();if(seen[key])return;seen[key]=1;p.col=col;var m=mk(p,small);if(!small)m.bindTooltip((p.n?p.n+' · ':'')+p.name,{className:'tl',direction:'top',offset:[0,-12]});m.addTo(g)});
   return g}
 function shopLayer(seg){var g=L.featureGroup(),ks={};seg.pts.forEach(function(p){ks[p.k]=1});
-  SHOPS.forEach(function(s){if(!s.ll||!ks[s.near])return;var m=L.marker(s.ll,{icon:L.divIcon({className:'',html:'<div class="mk shopm" style="width:24px;height:24px">🛍</div>',iconSize:[24,24],iconAnchor:[12,12]})});
+  SHOPS.forEach(function(s){if(!s.ll||!ks[s.near])return;var m=L.marker(s.ll,{icon:L.divIcon({className:'',html:'<div class="mk shopm" style="width:22px;height:22px;font-size:11px">🛍</div>',iconSize:[22,22],iconAnchor:[11,11]}),zIndexOffset:-200});
     m.bindTooltip(s.name,{className:'tl',direction:'top',offset:[0,-12]});m.addTo(g)});return g}
 function dayCol(id){var d=document.getElementById(id);return d?(getComputedStyle(d).getPropertyValue('--cc').trim()||'#C1352A'):'#C1352A'}
 function resolveCol(c){if(c.indexOf('var(')<0)return c;var t=document.createElement('span');t.style.color=c;document.body.appendChild(t);var v=getComputedStyle(t).color;t.remove();return v}
@@ -133,13 +156,16 @@ function closeMap(fromPop){if(!mapfs||mapfs.hidden)return;mapfs.hidden=true;docu
 window.addEventListener('popstate',function(){closeSheet(true);closeMap(true)});
 function drawSeg(){var seg=DAYS[curDay][curSeg],col=resolveCol(dayCol(curDay));if(fsLayers)fsMap.removeLayer(fsLayers);fsLayers=L.featureGroup([segLayers(seg,col,false)]);if(showShops)fsLayers.addLayer(shopLayer(seg));fsLayers.addTo(fsMap);
   $('.ttl',mapfs).textContent=seg.t;
-  var h='<li><span class="nt">Pins are close but approximate. To navigate, tap Amap or Apple Maps: they search the Chinese name and route you from where you are.</span></li>';if(seg.note)h+='<li><span class="nt">'+esc(seg.note)+'</span></li>';
+  var h='<li><span class="nt">Dotted paths are walking routes along real streets (OpenStreetMap routing, loaded once when online, then kept on the phone). Pins are close but approximate, so for turn-by-turn directions tap Amap or Apple Maps.</span></li>';if(seg.note)h+='<li><span class="nt">'+esc(seg.note)+'</span></li>';
   for(var i=1;i<seg.pts.length;i++){var a=seg.pts[i-1],b=seg.pts[i],m=MODE[b.m]||MODE.walk;
     var q=encodeURIComponent(b.zh||b.name),am='https://uri.amap.com/search?keyword='+q+'&city='+encodeURIComponent(seg.city||'')+'&callnative=1&src=jiangnan-guide';
     var ap='https://maps.apple.com/?daddr='+encodeURIComponent((b.zh||b.name)+(seg.city?' '+seg.city:''))+'&dirflg='+(APPLEMODE[b.m]||'w');
-    h+='<li><span class="md" style="background:'+m.c+'">'+m.l+'</span><div><div class="who">'+(a.n?a.n+' ':'')+esc(a.name)+' → '+(b.n?b.n+' ':'')+esc(b.name)+'</div><div class="how">'+esc(b.d||'')+'</div></div><div class="go2"><button type="button" data-z="'+i+'">Show</button><a href="'+am+'" target="_blank" rel="noopener">Amap</a><a href="'+ap+'" target="_blank" rel="noopener">Apple Maps</a></div></li>'}
+    h+='<li><span class="md" style="background:'+m.c+'">'+m.l+'</span><div><div class="who">'+(a.n?a.n+' ':'')+esc(a.name)+' → '+(b.n?b.n+' ':'')+esc(b.name)+'</div><div class="how">'+esc(b.d||'')+'</div><div class="rd" data-r="'+i+'"></div></div><div class="go2"><button type="button" data-z="'+i+'">Show</button><a href="'+am+'" target="_blank" rel="noopener">Amap</a><a href="'+ap+'" target="_blank" rel="noopener">Apple Maps</a></div></li>'}
   var legs=$('.legs',mapfs);legs.innerHTML=h;
   $$('button[data-z]',legs).forEach(function(b){b.addEventListener('click',function(){var i=+b.getAttribute('data-z');fsMap.fitBounds(L.latLngBounds([seg.pts[i-1].ll,seg.pts[i].ll]),{padding:[50,50],maxZoom:17})})});
+  seg.pts.forEach(function(b,i){if(!i)return;var a=seg.pts[i-1];var pcs=pieces(a,b),tot=0,n=0,want=0;
+    pcs.forEach(function(pc){if(!PROF[pc.m]||dist(pc.p[0],pc.p[1])<=80)return;want++;getRoute(pc.m,pc.p[0],pc.p[1]).then(function(r){n++;if(r)tot+=r.d;
+      if(n===want&&tot){var el=$('.rd[data-r="'+i+'"]',legs);if(el)el.textContent=(b.m==='car'?'By road ≈ '+fmtD(tot):b.m==='metro'?'Walking to and from the stations ≈ '+fmtD(tot):'Walking route ≈ '+fmtD(tot)+', about '+Math.max(1,Math.round(tot/1000/4.5*60))+' min')}})})});
   fsMap.invalidateSize({pan:false});updSaveStatus()}
 function fitSeg(now){if(fsLayers)fsMap.fitBounds(fsLayers.getBounds(),{padding:[30,30],maxZoom:16,animate:!now})}
 /* your position: blue dot, accuracy circle, follow mode, distance to stops */
@@ -187,7 +213,7 @@ var saving=false;
 function updSaveStatus(){if(!canCache()||saving)return;var st=$('.mf-status',mapfs),urls=tilesFor(DAYS[curDay][curSeg]);
   caches.open(TCACHE).then(function(c){return c.keys()}).then(function(keys){var have={};keys.forEach(function(r){have[r.url]=1});var n=urls.filter(function(u){return have[u]}).length;
     st.textContent=n>=urls.length*.98?'✓ This map is saved for offline use.':'Map pieces saved offline: '+n+' of '+urls.length+' (about '+Math.max(1,Math.round((urls.length-n)*18/1024))+' MB to go).'}).catch(function(){})}
-function saveOffline(btn){if(saving)return;saving=true;btn.disabled=true;var st=$('.mf-status',mapfs),urls=tilesFor(DAYS[curDay][curSeg]),done=0,fail=0,i=0;
+function saveOffline(btn){var sg=DAYS[curDay][curSeg];for(var q=1;q<sg.pts.length;q++)pieces(sg.pts[q-1],sg.pts[q]).forEach(function(pc){if(PROF[pc.m])getRoute(pc.m,pc.p[0],pc.p[1])});if(saving)return;saving=true;btn.disabled=true;var st=$('.mf-status',mapfs),urls=tilesFor(DAYS[curDay][curSeg]),done=0,fail=0,i=0;
   caches.open(TCACHE).then(function(c){return c.keys().then(function(keys){var have={};keys.forEach(function(r){have[r.url]=1});urls=urls.filter(function(u){return !have[u]});
     var total=urls.length;if(!total){st.textContent='✓ Already saved for offline use.';saving=false;btn.disabled=false;return}
     function next(){if(i>=urls.length)return Promise.resolve();var u=urls[i++];return fetch(u,{mode:'cors'}).then(function(r){if(r.ok)return c.put(u,r);fail++}).catch(function(){fail++}).then(function(){done++;if(done%10===0||done===total)st.textContent='Saving map… '+done+' / '+total+(fail?' ('+fail+' failed)':'');return next()})}
