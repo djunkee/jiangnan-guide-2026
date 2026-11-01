@@ -145,3 +145,4 @@ details.shopd[open]{justify-self:stretch}
 .locbtn.follow{color:#fff;background:#2A7BF4}
 .locbtn.wait svg{animation:pulse 1s ease-in-out infinite alternate}
 @keyframes pulse{from{opacity:.3}to{opacity:1}}
+.legs .rd{font:600 12px/1.3 var(--f-mono);color:var(--jade);margin-top:3px}.legs .rd:empty{display:none}
