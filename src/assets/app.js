@@ -142,14 +142,14 @@ function initPreviews(){
     if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){make();io.disconnect()}})},{rootMargin:'300px'});io.observe(box)}else make();
   })}
 function buildMapFS(){mapfs=document.createElement('div');mapfs.className='mapfs';mapfs.hidden=true;
-  mapfs.innerHTML='<div class="mf-head"><div class="mf-top"><button class="mf-x" type="button" aria-label="Close map">✕</button><div class="ttl"></div></div><div class="mf-tabs"></div></div><div id="mf-map"></div><div class="mf-panel"><div class="mf-tools"><button type="button" data-a="me">📍 My position</button><button type="button" data-a="all">Fit day</button><button type="button" data-a="shops" class="on">🛍 Shops</button><button type="button" data-a="save" hidden>⬇ Save offline</button></div><div class="mf-status"></div><ol class="legs"></ol></div>';
+  mapfs.innerHTML='<div class="mf-head"><div class="mf-top"><button class="mf-x" type="button" aria-label="Close map">✕</button><div class="ttl"></div></div><div class="mf-tabs"></div></div><div id="mf-map"></div><div class="mf-panel"><div class="mf-tools"><button type="button" data-a="me">📍 My position</button><button type="button" data-a="all">Fit day</button><button type="button" data-a="shops" class="on">🛍 Shops</button><button type="button" data-a="transit">🚇 Transit lines</button><button type="button" data-a="save" hidden>⬇ Save offline</button></div><div class="mf-status"></div><ol class="legs"></ol></div>';
   document.body.appendChild(mapfs);$('.mf-x',mapfs).addEventListener('click',function(){closeMap()});
   $('.mf-tools',mapfs).addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var a=b.getAttribute('data-a');
-    if(a==='me')locate(true);if(a==='all')fitSeg();if(a==='shops'){showShops=!showShops;b.classList.toggle('on',showShops);drawSeg()}if(a==='save')saveOffline(b)});
+    if(a==='transit')toggleTransit(b);if(a==='me')locate(true);if(a==='all')fitSeg();if(a==='shops'){showShops=!showShops;b.classList.toggle('on',showShops);drawSeg()}if(a==='save')saveOffline(b)});
   if(canCache())$('[data-a="save"]',mapfs).hidden=false}
 function openMap(id,si){if(!hasL)return;curDay=id;curSeg=si||0;mapfs.hidden=false;document.documentElement.style.overflow='hidden';
   var segs=DAYS[id],tabs=$('.mf-tabs',mapfs);tabs.innerHTML='';if(segs.length>1)segs.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.textContent=s.tab||s.t;b.setAttribute('aria-pressed',i===curSeg);b.addEventListener('click',function(){curSeg=i;$$('button',tabs).forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});drawSeg();fitSeg(true)});tabs.appendChild(b)});
-  if(!fsMap){fsMap=L.map('mf-map',{zoomControl:true,zoomSnap:.5,tap:true});tl().addTo(fsMap);fsMap.attributionControl.setPrefix(false);addLocControl()}
+  if(!fsMap){fsMap=L.map('mf-map',{zoomControl:true,zoomSnap:.5,tap:true});fsBase=tl().addTo(fsMap);fsMap.attributionControl.setPrefix(false);addLocControl()}
   setTimeout(function(){fsMap.invalidateSize();drawSeg();fitSeg(true);var on=false;try{on=localStorage.getItem('jn-loc')==='1'}catch(e){}if(on)locate(false)},30);
   try{history.pushState({map:1},'');mapPushed=true}catch(e){}}
 function closeMap(fromPop){if(!mapfs||mapfs.hidden)return;mapfs.hidden=true;document.documentElement.style.overflow='';stopLocate();if(fromPop!==true&&mapPushed){mapPushed=false;try{history.back()}catch(e){}}else mapPushed=false}
@@ -160,7 +160,7 @@ function drawSeg(){var seg=DAYS[curDay][curSeg],col=resolveCol(dayCol(curDay));i
   for(var i=1;i<seg.pts.length;i++){var a=seg.pts[i-1],b=seg.pts[i],m=MODE[b.m]||MODE.walk;
     var q=encodeURIComponent(b.zh||b.name),am='https://uri.amap.com/search?keyword='+q+'&city='+encodeURIComponent(seg.city||'')+'&callnative=1&src=jiangnan-guide';
     var ap='https://maps.apple.com/?daddr='+encodeURIComponent((b.zh||b.name)+(seg.city?' '+seg.city:''))+'&dirflg='+(APPLEMODE[b.m]||'w');
-    h+='<li><span class="md" style="background:'+m.c+'">'+m.l+'</span><div><div class="who">'+(a.n?a.n+' ':'')+esc(a.name)+' → '+(b.n?b.n+' ':'')+esc(b.name)+'</div><div class="how">'+esc(b.d||'')+'</div><div class="rd" data-r="'+i+'"></div></div><div class="go2"><button type="button" data-z="'+i+'">Show</button><a href="'+am+'" target="_blank" rel="noopener">Amap</a><a href="'+ap+'" target="_blank" rel="noopener">Apple Maps</a></div></li>'}
+    h+='<li><span class="md" style="background:'+m.c+'">'+m.l+'</span><div><div class="who">'+(a.n?a.n+' ':'')+esc(a.name)+' → '+(b.n?b.n+' ':'')+esc(b.name)+'</div><div class="how">'+esc(b.d||'')+'</div><div class="rd" data-r="'+i+'"></div></div><div class="go2"><button type="button" data-z="'+i+'">Show</button><a href="'+am+'" target="_blank" rel="noopener">Amap</a><a href="'+('https://uri.amap.com/navigation?from='+a.ll[1]+','+a.ll[0]+','+encodeURIComponent(a.zh||a.name)+'&to='+b.ll[1]+','+b.ll[0]+','+encodeURIComponent(b.zh||b.name)+'&mode=bus&coordinate=wgs84&callnative=1&src=jiangnan-guide')+'" target="_blank" rel="noopener">🚇 Transit in Amap</a><a href="'+ap+'" target="_blank" rel="noopener">Apple Maps</a></div></li>'}
   var legs=$('.legs',mapfs);legs.innerHTML=h;
   $$('button[data-z]',legs).forEach(function(b){b.addEventListener('click',function(){var i=+b.getAttribute('data-z');fsMap.fitBounds(L.latLngBounds([seg.pts[i-1].ll,seg.pts[i].ll]),{padding:[50,50],maxZoom:17})})});
   seg.pts.forEach(function(b,i){if(!i)return;var a=seg.pts[i-1];var pcs=pieces(a,b),tot=0,n=0,want=0;
@@ -168,6 +168,15 @@ function drawSeg(){var seg=DAYS[curDay][curSeg],col=resolveCol(dayCol(curDay));i
       if(n===want&&tot){var el=$('.rd[data-r="'+i+'"]',legs);if(el)el.textContent=(b.m==='car'?'By road ≈ '+fmtD(tot):b.m==='metro'?'Walking to and from the stations ≈ '+fmtD(tot):'Walking route ≈ '+fmtD(tot)+', about '+Math.max(1,Math.round(tot/1000/4.5*60))+' min')}})})});
   fsMap.invalidateSize({pan:false});updSaveStatus()}
 function fitSeg(now){if(fsLayers)fsMap.fitBounds(fsLayers.getBounds(),{padding:[30,30],maxZoom:16,animate:!now})}
+
+/* transit view: public-transport map (bus, tram, metro lines) plus metro and rail lines on top; needs internet */
+var fsBase=null,trBase=null,trRail=null,transitOn=false;
+function toggleTransit(btn){transitOn=!transitOn;btn.classList.toggle('on',transitOn);var st=$('.mf-status',mapfs);
+  if(!trBase){trBase=L.tileLayer('https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',{maxZoom:18,attribution:'Transit map <a href="https://memomaps.de/">memomaps.de</a> CC-BY-SA, data © OpenStreetMap'});
+    trRail=L.tileLayer('https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',{subdomains:'abc',maxZoom:19,opacity:.8,attribution:'<a href="https://www.openrailwaymap.org/">OpenRailwayMap</a>'})}
+  if(transitOn){fsMap.removeLayer(fsBase);trBase.addTo(fsMap);trRail.addTo(fsMap);trBase.bringToBack();
+    st.textContent='🚇 Transit view: bus, tram and metro lines with stops (from OpenStreetMap; needs internet, not saved offline). Zoom in to see line numbers. For the best transit route, tap “Transit in Amap” on a leg.'}
+  else{fsMap.removeLayer(trBase);fsMap.removeLayer(trRail);fsBase.addTo(fsMap);fsBase.bringToBack();st.textContent='';updSaveStatus()}}
 /* your position: blue dot, accuracy circle, follow mode, distance to stops */
 var follow=false,meAcc=null,meLL=null,locBtn=null;
 var LOCSVG='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2 4.5 20.3l.7.7L12 18l6.8 3 .7-.7z" fill="currentColor" transform="rotate(45 12 12)"/></svg>';
@@ -224,6 +233,29 @@ function luca(){var mh=$('.masthead');if(mh&&JN.LUCA&&!$('.luca-mh',mh)){var b=d
     var lines=JN.BARKS||['汪汪! wāng wāng'],n=0;b.addEventListener('click',function(){$('.bub',b).textContent=lines[n++%lines.length];b.classList.add('bark');clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove('bark')},2600)})}
   try{if(!sessionStorage.getItem('jn-trot')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('jn-trot','1');setTimeout(function(){var t=document.createElement('div');t.className='trot';t.setAttribute('aria-hidden','true');t.innerHTML=JN.LUCA;document.body.appendChild(t);setTimeout(function(){t.remove()},9500)},3500)}}catch(e){}}
 
-function init(){buildSheet();decorate();if(hasL){buildMapFS();initPreviews()}luca();initNow()}
+
+/* ---------- weather: Open-Meteo forecast, fetched when online, kept for offline ---------- */
+var WXL={sh:{n:'Shanghai',ll:[31.23,121.47],radar:'https://www.nmc.cn/publish/radar/shang-hai/qing-pu.htm'},sz:{n:'Suzhou',ll:[31.30,120.62],radar:'https://www.nmc.cn/publish/radar/shang-hai/qing-pu.htm'},
+  hz:{n:'Hangzhou',ll:[30.25,120.16],radar:'https://www.nmc.cn/publish/radar/huadong.html'},tl:{n:'Tonglu (the park)',ll:[29.92,119.52],radar:'https://www.nmc.cn/publish/radar/huadong.html'}};
+var MOSAIC='https://www.nmc.cn/publish/radar/huadong.html';
+function wmo(c){return c==null?['',' ']:c===0?['☀️','Clear']:c<=2?['🌤️','Partly cloudy']:c===3?['☁️','Overcast']:c<=48?['🌫️','Fog']:c<=55?['🌦️','Drizzle']:c<=57?['🌧️','Freezing drizzle']:c<=65?['🌧️','Rain']:c<=67?['🌧️','Freezing rain']:c<=77?['🌨️','Snow']:c<=82?['🌦️','Showers']:c<=86?['🌨️','Snow showers']:['⛈️','Thunderstorm']}
+function wxGet(loc){var k='jn-wx2-'+loc,c=null;try{c=JSON.parse(localStorage.getItem(k)||'null')}catch(e){}
+  var fresh=c&&Date.now()-c.t<60*60000;if(fresh||navigator.onLine===false)return Promise.resolve(c);
+  var L0=WXL[loc].ll,u='https://api.open-meteo.com/v1/forecast?latitude='+L0[0]+'&longitude='+L0[1]+'&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,wind_speed_10m_max&hourly=temperature_2m,precipitation_probability,weather_code&timezone=Asia%2FShanghai&forecast_days=16';
+  return fetch(u).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d||!d.daily)return c;var o={t:Date.now(),d:d};try{localStorage.setItem(k,JSON.stringify(o))}catch(e){}return o}).catch(function(){return c})}
+function wxRender(){var today=iso(cn()),locs={};
+  $$('.wx').forEach(function(el){locs[el.getAttribute('data-loc')]=1});
+  Object.keys(locs).forEach(function(loc){wxGet(loc).then(function(c){
+    $$('.wx[data-loc="'+loc+'"]').forEach(function(el){var day=el.closest('.day'),date=day&&day.getAttribute('data-date'),W=WXL[loc];
+      var links='<a href="'+W.radar+'" target="_blank" rel="noopener">Rain radar</a>'+(W.radar!==MOSAIC?'<a href="'+MOSAIC+'" target="_blank" rel="noopener">East China radar</a>':'');
+      if(date<today){el.innerHTML='';el.hidden=true;return}
+      var D=c&&c.d&&c.d.daily,i=D?D.time.indexOf(date):-1;
+      if(i<0){el.innerHTML='<div class="wx-row"><span class="wx-t">'+(c?'Forecast not out yet for this day':'Weather loads when you are online')+' · '+esc(W.n)+'</span><span class="wx-l">'+links+'</span></div>';return}
+      var w=wmo(D.weather_code[i]),h='<div class="wx-row"><span class="wx-i" title="'+w[1]+'">'+w[0]+'</span><span class="wx-t"><b>'+Math.round(D.temperature_2m_min[i])+'–'+Math.round(D.temperature_2m_max[i])+' °C</b> '+w[1]+' · ☔ '+(D.precipitation_probability_max[i]==null?'–':D.precipitation_probability_max[i]+'%')+(D.precipitation_sum[i]>=0.2?' ('+D.precipitation_sum[i].toFixed(1)+' mm)':'')+' · 💨 '+Math.round(D.wind_speed_10m_max[i])+' km/h · '+esc(W.n)+'</span><span class="wx-l">'+links+'</span></div>';
+      if(date===today&&c.d.hourly){var H=c.d.hourly,now=cn(),hh=String(now.getHours()).padStart(2,'0'),start=H.time.indexOf(date+'T'+hh+':00');
+        if(start>=0){h+='<div class="wx-h">';for(var j=start;j<Math.min(start+14,H.time.length);j++){var hw=wmo(H.weather_code[j]);h+='<span><i>'+H.time[j].slice(11,13)+'</i>'+hw[0]+'<b>'+Math.round(H.temperature_2m[j])+'°</b><em>'+(H.precipitation_probability[j]||0)+'%</em></span>'}h+='</div>'}}
+      var age=Math.round((Date.now()-c.t)/60000);h+='<div class="wx-s">Open-Meteo forecast, updated '+(age<2?'just now':age<60?age+' min ago':Math.round(age/60)+' h ago')+(navigator.onLine===false?' (offline copy)':'')+'</div>';
+      el.innerHTML=h;el.hidden=false})})})}
+function init(){buildSheet();decorate();if(hasL){buildMapFS();initPreviews()}luca();initNow();wxRender();window.addEventListener('online',wxRender);setInterval(function(){if(!document.hidden)wxRender()},30*60000)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();

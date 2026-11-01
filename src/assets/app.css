@@ -146,3 +146,20 @@ details.shopd[open]{justify-self:stretch}
 .locbtn.wait svg{animation:pulse 1s ease-in-out infinite alternate}
 @keyframes pulse{from{opacity:.3}to{opacity:1}}
 .legs .rd{font:600 12px/1.3 var(--f-mono);color:var(--jade);margin-top:3px}.legs .rd:empty{display:none}
+
+/* weather */
+.wx{margin:10px 14px 0;padding:9px 11px;border-radius:10px;background:var(--paper);border:1px solid var(--line);display:grid;gap:7px;font-size:13.5px}
+.wx[hidden],.wx:empty{display:none}
+.wx-row{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.wx-i{font-size:24px;line-height:1}
+.wx-t{flex:1 1 180px;min-width:0;color:var(--muted)}
+.wx-t b{color:var(--ink);font-size:15px}
+.wx-l{display:flex;gap:6px;flex-wrap:wrap}
+.wx-l a{font:600 12.5px/1 var(--f-body);text-decoration:none;color:var(--cobalt);padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--surface)}
+.wx-h{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin:0 -2px}
+.wx-h::-webkit-scrollbar{display:none}
+.wx-h span{flex:none;display:grid;justify-items:center;gap:1px;min-width:40px;padding:4px 2px;border-radius:7px;background:var(--surface);font-size:15px}
+.wx-h i{font:600 10.5px/1 var(--f-mono);font-style:normal;color:var(--muted)}
+.wx-h b{font:700 12px/1.2 var(--f-mono)}
+.wx-h em{font:600 10px/1 var(--f-mono);font-style:normal;color:var(--cobalt)}
+.wx-s{font-size:11.5px;color:var(--muted)}
