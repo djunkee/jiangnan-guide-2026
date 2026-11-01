@@ -56,21 +56,22 @@ def seg(t, pts=None, note=None, tab=None, city=''):
     return dict(t=t, tab=tab, note=note, city=city, pts=[pt(*p) if isinstance(p, tuple) else pt(p) for p in pts])
 
 DAYS = {
- 'd1': [seg('Sun 1 Nov · Old Shanghai and the skyline', city='上海', pts=[
+ 'd1': [seg('Sun 1 Nov · Old Shanghai and the Bund', city='上海', pts=[
     'hotel_sh', ('yugarden', 'metro', 'Line 8 one stop to Laoximen, Line 10 one stop to Yuyuan Garden (exit 1). Or walk 20 min east.', ['m_dashijie','m_laoximen','m_yuyuan_garden']),
     ('bund', 'walk', 'Walk 15 min north-east to the riverfront.'),
     ('ferry', 'walk', 'Walk back south along the Bund to the Jinling East Road pier, about 10 min.'),
     ('pier_dongchang', 'ferry', 'Public ferry across the Huangpu, about 10 min, 2 RMB.'),
-    ('shtower', 'walk', 'Walk 15 min to the tower; tickets and entrance on B1–B2.'),
     ('nanjingrd', 'metro', 'Metro Line 2 from Lujiazui one stop to East Nanjing Road.', ['m_lujiazui','m_east_nanjing_rd']),
-    ('rivercruise', 'walk', 'Walk 15 min south along the Bund to Shiliupu Wharf (Exit 2), or Didi 5 min.'),
-    ('hotel_sh', 'car', 'Didi 10 min, or walk 25 min.')])],
- 'd2': [seg('Mon 2 Nov · French Concession, posters, Jing’an', city='上海', pts=[
+    ('hotel_sh', 'walk', 'Walk 20 min back to the hotel, or Didi 10 min.')])],
+ 'd2': [seg('Mon 2 Nov · French Concession, posters, tower and cruise', city='上海', pts=[
     'hotel_sh', ('frenchc', 'metro', 'Line 8 one stop to Laoximen, Line 10 west 4 stops to Jiaotong University, walk 5 min. Or Didi 20 min.', ['m_dashijie','m_laoximen','m_jiaotong_univ']),
     ('propaganda', 'car', 'Didi 10 min from Anfu Road. Floor 7, Room K, 726 Yan’an West Road.'),
     ('jingan', 'metro', 'Walk 15 min to Jiangsu Road, Line 2 one stop to Jing’an Temple. Or Didi 10 min.', ['m_jiangsu_rd','m_jingan_temple']),
-    ('zhihe', 'walk', 'The citywalk south: Julu Road, Fumin Road, Xinle Road, about 2.5 km with stops.'),
-    ('hotel_sh', 'metro', 'Walk 10 min to Shaanxi South Road, Line 1 two stops to People’s Square, walk 10 min. Or Didi 15 min.', ['m_shaanxi_s_rd','m_peoples_sq'])])],
+    ('shtower', 'metro', 'Metro Line 2 from Jing’an Temple to Lujiazui (about 15 min), exit 6, walk 10 min. Entrance on B1–B2.', ['m_jingan_temple','m_lujiazui']),
+    ('pier_dongchang', 'walk', 'After dinner, walk 15 min to the Dongchang Road ferry pier.'),
+    ('ferry', 'ferry', 'Public ferry back across the river, about 10 min, 2 RMB.'),
+    ('rivercruise', 'walk', 'Walk 10 min south along the Bund to Shiliupu Wharf (Exit 2).'),
+    ('hotel_sh', 'car', 'Didi 10 min, or walk 25 min.')])],
  'd3': [seg('Tue 3 Nov · Suzhou: gardens and the Pei museum', city='苏州', pts=[
     'rail_sz', ('hotel_sz', 'car', 'South exit (南出口), then Didi about 20 min. Drop the bags.'),
     ('humble', 'car', 'Didi about 20 min to the ticket office (拙政园售票处).'),
