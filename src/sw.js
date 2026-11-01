@@ -1,6 +1,6 @@
 // Offline cache for the Jiangnan Guide. Version changes whenever the guide changes.
 const CACHE='jiangnan-__VER__';
-const TILES='jn-tiles-v1';
+const TILES='jn-tiles-v2';
 const FILES=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));});
 // Keep the saved map pieces across updates; drop only old copies of the guide.
@@ -9,7 +9,7 @@ self.addEventListener('fetch',e=>{
   if(e.request.method!=='GET')return;
   const url=new URL(e.request.url);
   // Map pieces: saved copy first, otherwise fetch and keep it for next time.
-  if(url.hostname.endsWith('basemaps.cartocdn.com')){
+  if(url.hostname==='tile.openstreetmap.org'){
     e.respondWith(caches.match(e.request.url).then(hit=>hit||fetch(e.request.url,{mode:'cors'}).then(r=>{if(r.ok){const copy=r.clone();caches.open(TILES).then(c=>c.put(e.request.url,copy));}return r;}).catch(()=>fetch(e.request))));
     return;
   }
