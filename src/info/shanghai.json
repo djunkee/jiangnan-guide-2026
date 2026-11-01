@@ -1,0 +1,599 @@
+{
+  "places": {
+    "yugarden": {
+      "name": "Yu Garden and the Old City",
+      "zh": "豫园",
+      "pinyin": "Yùyuán",
+      "glance": "A walled Ming-dynasty private garden of rockeries, ponds and pavilions in the heart of Shanghai's old Chinese city. Around it sits the Yuyuan Bazaar, a busy maze of rebuilt shophouses, snack stalls and the City God Temple.",
+      "history": [
+        "Pan Yunduan, a Ming official, began the garden in 1559 as a gift for his elderly father, the minister Pan En. Work stalled for nearly twenty years and resumed in 1577. After the Pan family declined it passed through other owners; the eastern part was bought by local leaders in 1709, and the western part opened to the public in 1780.",
+        "The garden took hard knocks in the 19th and 20th centuries. In the First Opium War (1842) British troops used the Huxinting teahouse as a base for several days. During the Small Swords uprising (1853–1855) rebels made Dianchun Hall their headquarters, and by the time Qing troops retook it most original buildings were gone. Japanese forces damaged it again in 1942. The city restored it between 1956 and 1961, reopened it in 1961, and it was declared a national monument in 1982."
+      ],
+      "meaning": "The name says it all: 豫 (yù) means 'pleasing and satisfying to one's parents', so Yu Garden is literally a garden of filial piety, built by a son for his father. Like the Suzhou gardens, it squeezes mountains and lakes into 2 hectares: piled rock stands for mountains (yang, hard, still) and ponds for water (yin, soft, moving). Undulating 'dragon walls' with tiled ridges split it into separate areas so you never see everything at once; each gate frames a new scene. Halls carry poetic names on their boards, part of the experience for educated visitors.",
+      "highlights": [
+        {"name": "Nine-turn bridge and Huxinting teahouse", "zh": "九曲桥 · 湖心亭", "what": "The zigzag bridge outside the garden gate leads to the teahouse in the pond, built in 1855. Folk belief says the zigzags shake off evil spirits, which can only travel in straight lines."},
+        {"name": "Grand Rockery in Sansui Hall area", "zh": "大假山", "what": "A 12 m 'mountain' of yellow huangshi stone with peaks, caves and gorges. Climb the paths for a view over the rooftops."},
+        {"name": "Dragon walls", "zh": "龙墙", "what": "Grey tiled walls whose ridges ripple like a dragon's body, ending in a dragon head. Look up at the wall tops as you pass between sections."},
+        {"name": "Dianchun Hall", "zh": "点春堂", "what": "Built in 1820; the Small Swords Society ran their 1853–1855 uprising from here. A good stop for the garden's political history."},
+        {"name": "Exquisite Jade Rock", "zh": "玉玲珑", "what": "A porous boulder about 3.3 m tall and 5 tonnes, prized for its many holes, the classic ideal of a garden rock."},
+        {"name": "Inner Garden", "zh": "内园", "what": "A compact garden-within-the-garden near the exit, first laid out in 1709 and recreated in 1956, with rockeries, ponds and small towers."}
+      ],
+      "tips": [
+        "Metro Line 10/14 to Yuyuan Garden, Exit 1, then a short walk east into the bazaar.",
+        "Go right at opening or after 15:00; mid-morning on weekends the nine-turn bridge becomes a bottleneck.",
+        "Garden ticket about ¥40 (Apr–Nov); scan the QR code at the gate or book on Trip.com. Have your passport ready.",
+        "Nanxiang soup dumplings: the ground-floor takeaway window is quicker and cheaper than the upstairs dining room; go before 11:00 or after 14:00.",
+        "Politely ignore anyone inviting you to a 'tea ceremony' or an art-student exhibition around the bazaar."
+      ],
+      "facts": [["Built", "1559–1577 (Ming dynasty)"], ["Founder", "Pan Yunduan, for his father Pan En"], ["Area", "About 2 ha"], ["Restored", "1956–1961"], ["National monument", "1982"], ["Closed", "Usually Mondays (except public holidays)"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": {"score": 4.7, "of": 5, "count": "7,161 reviews", "site": "Trip.com", "url": "https://au.trip.com/guide/attraction/yu-garden.html", "checked": "2026-11-01"},
+        "verdict": {"stars": 4, "line": "Worth it: your first real Chinese garden and a good warm-up for Suzhou, but crowded on a Sunday, so go early and treat the bazaar as street theatre."}
+      },
+      "time": "1.5–2 h for the garden, plus time in the bazaar",
+      "best": "At opening (or after 15:00), before tour groups fill the bridges and rockery paths.",
+      "coord": [31.2272, 121.4921],
+      "coord_src": "approx",
+      "sources": [
+        ["Yu Garden – Wikipedia", "https://en.wikipedia.org/wiki/Yu_Garden"],
+        ["Yu Garden Tickets & Guide – Trip.com", "https://www.trip.com/guide/attraction/yu-garden-tickets.html"],
+        ["Yu Garden – Trip.com (ratings)", "https://au.trip.com/guide/attraction/yu-garden.html"],
+        ["Yuyuan Bazaar – Nomado", "https://www.nomadotravel.app/en/attractions/yuyuan-bazaar"]
+      ]
+    },
+    "bund": {
+      "name": "The Bund",
+      "zh": "外滩",
+      "pinyin": "Wàitān",
+      "glance": "Shanghai's riverfront promenade, lined with about 50 grand banks, hotels and trading houses from the treaty-port era. Across the river stand the towers of Lujiazui, so you see old and new Shanghai in one look.",
+      "history": [
+        "From the 1860s to the 1930s the Bund was the centre of the foreign settlements in Shanghai, a treaty port opened after the Opium War. The British and American settlements merged into the International Settlement in 1863. Around 1900 banks and trading firms began replacing older buildings with Beaux-Arts and Neoclassical headquarters, and by the 1940s most major financial institutions working in China were based here.",
+        "After 1949 many firms moved to Hong Kong and the buildings were turned over to state offices. From the late 1970s they gradually returned to banking and hotel use, and a flood wall was built after typhoon floods. In the 1990s Zhongshan Road was widened to ten lanes. Between 2008 and 2010 the traffic was moved underground and the waterfront rebuilt; the new promenade reopened on 28 March 2010, just before the World Expo. On New Year's Eve 2014 a crowd crush near Chen Yi Square killed 36 people."
+      ],
+      "meaning": "'Bund' is an Anglo-Indian word for an embankment. The Chinese name 外滩 (Wàitān) means 'outer bank', the stretch of river outside the old walled city. For Chinese visitors the Bund carries two stories at once: a reminder of the foreign concessions and lost sovereignty, and a symbol of Shanghai as China's most cosmopolitan, business-minded city. Facing Lujiazui across the water, it is where the city shows off its comeback, which is why it is the classic photo spot for wedding couples and families.",
+      "highlights": [
+        {"name": "Meteorological Signal Tower", "zh": "外滩信号台", "what": "Slim tower at the south end (Yan'an East Road), built 1907 to send weather signals to ships. A good starting point coming from Yu Garden."},
+        {"name": "HSBC Building, No. 12", "zh": "汇丰银行大楼", "what": "Domed bank completed in 1923, once called the most luxurious building between the Suez Canal and the Bering Strait. Now the Shanghai Pudong Development Bank; look up at the dome."},
+        {"name": "Customs House, No. 13", "zh": "海关大楼", "what": "Built 1927, with a clock tower whose clock and bell were made in England on the Big Ben model. It still chimes."},
+        {"name": "Peace Hotel, Nos. 19–20", "zh": "和平饭店", "what": "Sassoon House, with its green pyramid roof, built by Sir Victor Sassoon; famous for its old jazz band. The Art Deco lobby is worth a peek."},
+        {"name": "Bank of China, No. 23", "zh": "中国银行大楼", "what": "Next to the Peace Hotel, with a Chinese-style roof. Its slightly squat look is said to come from Sassoon insisting nothing on the Bund be taller than his building."},
+        {"name": "Chen Yi statue and Huangpu Park", "zh": "陈毅广场 · 黄浦公园", "what": "Bronze of Shanghai's first Communist mayor at the Nanjing Road junction; further north, Huangpu Park and the 1993 Monument to the People's Heroes."},
+        {"name": "Waibaidu Bridge", "zh": "外白渡桥", "what": "The steel bridge over Suzhou Creek at the north end, formerly Garden Bridge, over a century old and restored in 2008. A favourite photo spot looking back at Pudong."}
+      ],
+      "tips": [
+        "Walk it south to north on the raised river promenade (the building side is the street side; cross at the underpasses).",
+        "Come back after dark: the buildings and the Pudong towers are lit in the evening, and the cruise from Shiliupu passes right in front.",
+        "The best classic photo is from the promenade around Chen Yi Square looking across to the Oriental Pearl tower.",
+        "Most bank lobbies are working banks; you can sometimes step in quietly, but no photos of staff or counters.",
+        "Sunday evenings are packed; keep phones and bags in front."
+      ],
+      "facts": [["Length", "About 1.5–1.6 km along the Huangpu"], ["Historic buildings", "52 (Shanghai government count)"], ["Promenade reopened", "28 March 2010"], ["Signal Tower", "1907"], ["HSBC Building", "1923"], ["Customs House", "1927"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 5, "line": "Must-see, and free: do it twice if you can, once by day for the architecture and once at night for the lights."}
+      },
+      "time": "1–1.5 h on foot",
+      "best": "Late afternoon into dusk, so you see the buildings in daylight and then the lights come on.",
+      "coord": [31.2390, 121.4903],
+      "coord_src": "approx",
+      "sources": [
+        ["The Bund – Wikipedia", "https://en.wikipedia.org/wiki/The_Bund"],
+        ["The Bund – Shanghai government", "https://english.shanghai.gov.cn/en-ScenicSpots/20231205/584672cc6d044eabb5f7f6fc9049a19f.html"]
+      ]
+    },
+    "nanjingrd": {
+      "name": "Nanjing Road East pedestrian street",
+      "zh": "南京东路步行街",
+      "pinyin": "Nánjīng Dōnglù Bùxíngjiē",
+      "glance": "Shanghai's oldest and busiest shopping street, running from People's Square towards the Bund. Neon signs, old department stores and century-old food shops line a car-free promenade.",
+      "history": [
+        "The road began in 1845 as 'Park Lane', a short street running inland from the Bund in the British settlement. It was extended to Zhejiang Road in 1854 and to Xizang Road in 1862, when the Municipal Council named it Nanking Road. In the early 20th century eight large department stores opened along it, and it became China's best-known shopping street.",
+        "After the Second World War the road was renamed East Nanjing Road, and Bubbling Well Road further west became West Nanjing Road. In 2000 the stretch from Middle Henan Road to Middle Xizang Road was made a pedestrian street, about 1.2 km long and 28 m wide. In 2019–2020 the last section from Henan Road to the Bund was also closed to traffic, so you can now walk all the way to the river."
+      ],
+      "meaning": "For generations of Chinese visitors, Nanjing Road was the place to buy something 'from Shanghai', when that label meant the best and most modern goods in the country. Its neon signs and old shop names still carry that pride. Today it is less about luxury (that moved to West Nanjing Road) and more about atmosphere and old brands, especially food shops selling Shanghai-style pastries and snacks.",
+      "highlights": [
+        {"name": "Shanghai No.1 Food Store", "zh": "上海第一食品商店", "what": "In the 1926 Sun Sun department store building, mid-street. Teas, dried fruit, pastries and a White Rabbit candy corner just inside the entrance."},
+        {"name": "Fresh pork mooncakes", "zh": "鲜肉月饼", "what": "Hot, flaky, savoury mooncakes baked on griddles all day at Taikang Food and Zhen Laodafang; about ¥6–8 each."},
+        {"name": "Shen Da Cheng", "zh": "沈大成", "what": "Pastry shop founded 1875, at the corner of Zhejiang Middle Road. Try qingtuan (green mugwort rice balls) and other glutinous rice sweets."},
+        {"name": "Neon at night", "zh": "", "what": "The street is at its best after dark when the vertical signs light up; walk east and it opens onto the Bund near the Peace Hotel."}
+      ],
+      "tips": [
+        "Metro Line 2/10 to East Nanjing Road, or start at People's Square (Lines 1/2/8) and walk east towards the Bund.",
+        "Expect crowds; this is a stroll and a snack stop, not a place for serious shopping.",
+        "Steam glutinous pastries for 3–5 minutes to revive them if you keep them for later; they don't microwave well.",
+        "Ignore people offering 'massage', 'tea' or watches on the street."
+      ],
+      "facts": [["Started", "1845 (as Park Lane)"], ["Pedestrian street", "Since 2000; extended to the Bund 2019–2020"], ["Pedestrian length", "About 1.2 km"], ["Total road length", "About 5.5 km (East + West)"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 3, "line": "Worth a walk-through at night on your way to or from the Bund, mainly for the neon and the snacks."}
+      },
+      "time": "45 min–1 h",
+      "best": "After dark, when the neon signs are on.",
+      "coord": [31.2363, 121.4795],
+      "coord_src": "approx",
+      "sources": [
+        ["Nanjing Road – Wikipedia", "https://en.wikipedia.org/wiki/Nanjing_Road"],
+        ["Nanjing Road Food Guide – Wander in China", "https://www.wanderinchina.com/destinations/shanghai/nanjing-east-road/food/"]
+      ]
+    },
+    "ferry": {
+      "name": "Huangpu public ferry, Jinling East Road – Dongchang Road",
+      "zh": "金陵东路轮渡",
+      "pinyin": "Jīnlíng Dōnglù Lúndù",
+      "glance": "A local commuter ferry across the Huangpu River from the Bund side to Pudong. For ¥2 you get a few minutes on the water with the Bund behind you and Lujiazui ahead.",
+      "history": [
+        "Shanghai's public ferry service started on 5 January 1911, replacing private sampans that were small, slow and increasingly dangerous. Until the 1970s ferries were the only way across the Huangpu, and in the 1980s the service was one of the busiest in the world.",
+        "Bridges and tunnels built from the 1990s took away most passengers and some lines closed, but by 2011 there were still 18 lines and around 250,000 riders a day. New boats entered service in 2018. The Jinling East Road – Dongchang Road line (东金线) is the one closest to the Bund."
+      ],
+      "meaning": "This is how Shanghai people crossed the river for most of the 20th century, and it still feels like everyday city life rather than a tourist ride: commuters, scooters and shopping bags. It is the cheapest river view in town and a quick link from the Bund side to the Lujiazui skyscrapers.",
+      "highlights": [
+        {"name": "Bund view from the water", "zh": "", "what": "Stand at the back rail as you leave for a low-level view of the Bund's domes and clock towers."},
+        {"name": "Lujiazui skyline", "zh": "陆家嘴", "what": "Shanghai Tower, the 'bottle opener' World Financial Center, Jin Mao and the Oriental Pearl tower grow in front of you."},
+        {"name": "Dongchang Road pier", "zh": "东昌路轮渡站", "what": "On the Pudong side; from here walk north-east about 15–20 minutes to Shanghai Tower, or take Line 2 from Lujiazui."}
+      ],
+      "tips": [
+        "Fare ¥2; pay at the gate (Shanghai transport card accepted). Runs 07:00–22:00, roughly every 15 minutes.",
+        "The Puxi pier is on Zhongshan East 2nd Road at Jinling East Road, between Yu Garden and the Bund.",
+        "Good alternative to the metro for going from the Bund to Shanghai Tower; it takes only a few minutes on the water."
+      ],
+      "facts": [["Line", "Dongjin Line (东金线)"], ["Hours", "07:00–22:00"], ["Frequency", "About every 15 min"], ["Fare", "¥2"], ["Ferry service since", "1911"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it: cheap, quick and genuinely local, and the best way to cross to Lujiazui."}
+      },
+      "time": "15–20 min including waiting",
+      "best": "Late afternoon, crossing towards Pudong for the tower, with the Bund lit behind you on the way back.",
+      "coord": [31.2315, 121.4958],
+      "coord_src": "approx",
+      "sources": [
+        ["Shanghai Ferry – Wikipedia", "https://en.wikipedia.org/wiki/Shanghai_Ferry"]
+      ]
+    },
+    "shtower": {
+      "name": "Shanghai Tower and its observatory",
+      "zh": "上海中心大厦",
+      "pinyin": "Shànghǎi Zhōngxīn Dàshà",
+      "glance": "At 632 m, China's tallest building, a twisting glass spire in Lujiazui. The 118th-floor observatory (546 m) gives a 360-degree view over the whole city, including the Bund far below.",
+      "history": [
+        "Construction began in late 2008 next to two older supertall neighbours, Jin Mao Tower (1999) and the Shanghai World Financial Center (2008), making the world's first group of three adjacent supertall buildings. The design is by Gensler, with Jun Xia leading the design team. The structure topped out in August 2013 and the building opened in stages from 2015; the observation decks on levels 118 and 119 have been open since April 2017.",
+        "The tower has 128 floors above ground. Its glass skin twists 120 degrees from bottom to top, which cuts wind loads by about 24% and saved around a quarter of the structural steel. Behind the outer glass is a second glass wall; the gap holds nine tall 'sky lobby' gardens and helps reduce air-conditioning. Its shuttle elevators were among the world's fastest when installed, and near the top hangs a giant tuned mass damper to calm swaying in typhoon winds."
+      ],
+      "meaning": "Lujiazui was mostly farmland and warehouses until the 1990s. The three towers stand for Shanghai's leap into a global financial centre, and the Shanghai Tower completes the set. Its designer said it represents 'our past, our present, and China's boundless future'. The twist is practical (wind), but many see it as a dragon rising. From the top, the Bund looks like a toy town, a neat way to see how far the city has grown.",
+      "highlights": [
+        {"name": "The elevator ride", "zh": "", "what": "Up to 118F in under a minute at about 18 m/s. Swallow to clear your ears."},
+        {"name": "118F observatory", "zh": "上海之巅观光厅", "what": "The main 360-degree deck at 546 m. Look straight down on the Oriental Pearl and across to the Bund and Suzhou Creek."},
+        {"name": "119F", "zh": "", "what": "Reached by spiral stair from 118F; café and lounge level."},
+        {"name": "Tuned mass damper, 125/126F", "zh": "上海慧眼 阻尼器", "what": "Only with the combo ticket: the huge swinging damper that steadies the top, with a light show every two hours."},
+        {"name": "Jin Mao and SWFC next door", "zh": "金茂大厦 · 环球金融中心", "what": "From above, compare the pagoda-like Jin Mao and the 'bottle opener' World Financial Center."}
+      ],
+      "tips": [
+        "Check visibility before buying: in fog or low cloud you may see nothing. Don't book days ahead.",
+        "Arrive around 17:00 to see daylight, sunset and the city lights in one visit.",
+        "Tickets about ¥180 (with damper ¥268); bring your physical passport.",
+        "Entrance via the B1 hall (outdoor escalators from the plaza); from Lujiazui station an underground passage (Exit 9) leads to B2."
+      ],
+      "facts": [["Height", "632 m (tallest in China)"], ["Floors", "128 above ground"], ["Observatory", "Level 118, 546 m"], ["Construction", "2008–2015"], ["Architect", "Gensler (Jun Xia)"], ["Twist", "120°"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it on a clear evening for the 'whole city at your feet' moment; skip if the top is in cloud."}
+      },
+      "time": "1–1.5 h",
+      "best": "Around sunset on a clear day.",
+      "coord": [31.2355, 121.5010],
+      "coord_src": "approx",
+      "sources": [
+        ["Shanghai Tower – Wikipedia", "https://en.wikipedia.org/wiki/Shanghai_Tower"],
+        ["Shanghai Tower 2026 guide – Wander in China", "https://www.wanderinchina.com/destinations/shanghai/shanghai-tower/"]
+      ]
+    },
+    "rivercruise": {
+      "name": "Huangpu River night cruise from Shiliupu Wharf",
+      "zh": "黄浦江游览 十六铺码头",
+      "pinyin": "Huángpǔjiāng Yóulǎn, Shíliùpù Mǎtóu",
+      "glance": "A roughly 50-minute sightseeing boat from Shiliupu Wharf, just south of the Bund, up and down the Huangpu River. At night you glide between the floodlit Bund and the glowing Lujiazui towers.",
+      "history": [
+        "Shiliupu (十六铺) lies on the riverbank just east of the old walled city, Shanghai's historic port area before the foreign settlements grew along the Bund. Today the wharf at 531 Zhongshan East 2nd Road is the main boarding point for Huangpu sightseeing boats.",
+        "The classic cruise heads downstream past the Bund and Lujiazui towards Yangpu Bridge, then turns and returns along the opposite bank. Boats leave every 15–30 minutes from about 11:00 to 21:30; the 50-minute trip is the most popular, though longer and shorter options exist."
+      ],
+      "meaning": "The Huangpu is the river that made Shanghai: a trading port, then a treaty port, then a global city. On the water you see the two halves of that story facing each other. On the west bank (Puxi) stand the 1920s–30s banks of the colonial era; on the east bank (Pudong) the towers built since the 1990s. It is the easiest way to grasp the city's scale in one hour.",
+      "highlights": [
+        {"name": "The Bund (west bank)", "zh": "外滩", "what": "The Customs House clock tower, the HSBC dome and the green pyramid roof of the Peace Hotel, all floodlit in gold."},
+        {"name": "Oriental Pearl TV Tower (east bank)", "zh": "东方明珠", "what": "The pink-spheres TV tower at the river bend, Pudong's first landmark."},
+        {"name": "Lujiazui towers", "zh": "陆家嘴", "what": "Shanghai Tower, Jin Mao and the World Financial Center stacked behind the Pearl; facades often run LED displays."},
+        {"name": "Waibaidu Bridge and the People's Heroes monument", "zh": "外白渡桥 · 人民英雄纪念塔", "what": "At the north end of the Bund where Suzhou Creek joins the river."},
+        {"name": "Yangpu Bridge", "zh": "杨浦大桥", "what": "The big cable-stayed bridge near the turning point downstream."}
+      ],
+      "tips": [
+        "Tickets about ¥150 for the sightseeing-only boat; buy at the Shiliupu ticket office or online.",
+        "Stand on the open deck for photos; it gets cold and windy in November, bring a layer.",
+        "Go early in the evening (around 19:00–20:30) so the building lights are definitely on.",
+        "Boarding is at Shiliupu Wharf, Zhongshan East 2nd Road, near Exit 2; walkable from the south end of the Bund or from Yu Garden."
+      ],
+      "facts": [["Duration", "About 50 min (classic cruise)"], ["Departures", "About every 15–30 min, 11:00–21:30"], ["Price", "Around ¥150"], ["Wharf", "Shiliupu, Zhongshan East 2nd Rd"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it: the most relaxed way to see both skylines lit up, and a rest for tired feet."}
+      },
+      "time": "1–1.5 h including boarding",
+      "best": "Early evening after dark, before the lights go off later at night.",
+      "coord": [31.2290, 121.4975],
+      "coord_src": "approx",
+      "sources": [
+        ["Huangpu River Night Cruise – China Highlights", "https://www.chinahighlights.com/shanghai/attraction/huangpu-river-night-cruise.htm"]
+      ]
+    },
+    "museum": {
+      "name": "Shanghai Museum, People's Square",
+      "zh": "上海博物馆（人民广场馆）",
+      "pinyin": "Shànghǎi Bówùguǎn",
+      "glance": "One of China's great museums of ancient art, housed in a building shaped like a bronze cooking vessel on People's Square. Free entry, with superb bronzes, ceramics, paintings and jade.",
+      "history": [
+        "The Shanghai Museum was founded in 1952 and for decades occupied older buildings in the city centre. Its present home on People's Square, designed by the Shanghai architect Xing Tonghe, was begun in August 1993 and opened on 12 October 1996. The collection numbers over 120,000 objects, from Shang-dynasty ritual bronzes to Ming and Qing furniture.",
+        "The museum has since opened a large second site, Shanghai Museum East, in Pudong, and many permanent displays now rotate between the two buildings. The People's Square building stays open with permanent galleries of Chinese art and major special exhibitions. Since 1 September 2025 individual visitors no longer need to book ahead, except at peak times or for popular shows."
+      ],
+      "meaning": "The building is a statement in itself. It is shaped like a ding (鼎), the three- or four-legged bronze vessel that symbolised power and legitimacy in early China, reportedly modelled on the Da Ke ding in the collection. Its round top over a square base echoes the old saying 天圆地方, 'round heaven, square earth', the ancient Chinese picture of the cosmos. Inside, the bronzes show how ritual, writing and statecraft began, the roots of Chinese civilisation.",
+      "highlights": [
+        {"name": "Ancient Chinese bronzes", "zh": "青铜馆", "what": "Ritual wine and food vessels from the Shang and Zhou dynasties (about 1600–256 BC), many with inscriptions. Look for the taotie monster masks."},
+        {"name": "Ancient Chinese sculpture", "zh": "雕塑馆", "what": "Buddhist figures in stone and wood; a good primer before Hangzhou's Lingyin Temple."},
+        {"name": "Ceramics", "zh": "陶瓷馆", "what": "From Neolithic pottery to Song celadons and Ming blue-and-white; useful background for the Ru-style porcelain you'll see in shops."},
+        {"name": "Ming and Qing furniture", "zh": "明清家具馆", "what": "Elegant hardwood furniture, often shown in reconstructed rooms, like the halls you'll see in Suzhou gardens."},
+        {"name": "Special exhibitions", "zh": "特展", "what": "Recent shows here included Ming–Qing rhinoceros-horn carving (3F) and Chinese cloisonné enamel (4F). Check what is on at the entrance."}
+      ],
+      "tips": [
+        "Closed Mondays; open 09:00–17:00, last entry 16:00. Free; bring your passport.",
+        "Metro Lines 1/2/8 to People's Square; the museum is on the south side of the square (201 Renmin Avenue).",
+        "The gallery line-up is shifting between this site and Shanghai Museum East: pick up a floor plan and prioritise bronzes and ceramics.",
+        "Quietest right at opening on weekdays."
+      ],
+      "facts": [["Founded", "1952"], ["Current building", "Opened 12 October 1996"], ["Architect", "Xing Tonghe"], ["Collection", "Over 120,000 objects"], ["Admission", "Free (passport)"], ["Closed", "Mondays"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it if you like museums, which you do: two hours here make every garden, temple and porcelain shop afterwards more meaningful."}
+      },
+      "time": "1.5–2.5 h",
+      "best": "At 09:00 opening, Tuesday to Sunday.",
+      "coord": [31.230278, 121.470556],
+      "coord_src": "Wikipedia",
+      "sources": [
+        ["Shanghai Museum – Wikipedia", "https://en.wikipedia.org/wiki/Shanghai_Museum"],
+        ["A comprehensive guide to the Shanghai Museum – Shanghai government", "https://english.shanghai.gov.cn/en-EditorsPick-travelinshanghai/20250828/e77b240fab254a3db8fbadec14645a9d.html"],
+        ["Shanghai Museum drops reservations at People's Square – Shanghai government", "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250826/3a293fbf5c954b349fb1cd3ca790ca44.html"]
+      ]
+    },
+    "frenchc": {
+      "name": "Former French Concession walk: Wukang Mansion, Wukang Road, Anfu Road",
+      "zh": "武康大楼 · 武康路 · 安福路",
+      "pinyin": "Wǔkāng Dàlóu, Wǔkāng Lù, Ānfú Lù",
+      "glance": "A leafy walk through Shanghai's old French Concession, under plane trees past 1920s–30s villas and apartment blocks. It starts at the ship-shaped Wukang Mansion and ends on Anfu Road, the city's favourite street for cafés and small boutiques.",
+      "history": [
+        "Until the 1940s the French Concession was a separate, French-run district of Shanghai. Its quiet western part filled with villas and apartments for wealthy Chinese and foreign residents. Wukang Mansion, built in 1924 as the Normandie Apartments by the Hungarian-Slovak architect László Hudec, is a French Renaissance-style block of eight storeys on a wedge-shaped corner at the south end of Wukang Road (then Route Ferguson).",
+        "Famous film stars such as Zhao Dan, Wang Renmei and Sun Daolin lived in the Normandie; it was bought in 1942 by Kung Ling-wei, daughter of the banker H. H. Kung. It was renamed Wukang Mansion in 1953. During the Cultural Revolution it was given a political name, but locals grimly called it 'the Diving Board' because of suicides there. Xuhui District restored it in 2008, and it is a protected historic building."
+      ],
+      "meaning": "These streets are where Shanghai's 'haipai' (海派, Shanghai-style) mix of East and West feels most alive: European facades, Chinese families, plane trees planted by the French. The area is protected as a heritage district, and in recent years it has become a hugely popular 'citywalk' for young Chinese, who come to photograph Wukang Mansion and browse indie shops. It shows a gentler, everyday side of the city compared with the Bund.",
+      "highlights": [
+        {"name": "Wukang Mansion", "zh": "武康大楼", "what": "View the prow of the building from the crossing at Huaihai Middle Road. It is private housing: photograph from the pavement opposite and don't go into the lobby."},
+        {"name": "Wukang Road villas", "zh": "武康路", "what": "Walk north past garden villas and brick apartment houses; many have blue plaques explaining who lived there."},
+        {"name": "Wukang Road Tourist Information Center", "zh": "武康路旅游咨询中心", "what": "Around 393 Wukang Road, with maps and exhibits on the protected buildings."},
+        {"name": "Ferguson Lane", "zh": "武康庭", "what": "A landscaped courtyard of cafés and restaurants; good for a coffee break."},
+        {"name": "Anfu Road", "zh": "安福路", "what": "Turn east at the north end of Wukang Road: designer fashion, beauty, books and cafés, plus the Shanghai Dramatic Arts Centre."}
+      ],
+      "tips": [
+        "Metro Line 10/11 to Jiaotong University, then walk east along Huaihai Middle Road to Wukang Mansion (5–10 min).",
+        "About 3 km in total; 90 minutes without stops, 2–3 hours with browsing.",
+        "Weekday mornings before 10:00 are quiet; best light is about 14:00–17:00.",
+        "Small shops mostly take Alipay/WeChat Pay; carry a little cash in case."
+      ],
+      "facts": [["Wukang Mansion built", "1924"], ["Architect", "László Hudec"], ["Original name", "Normandie Apartments"], ["Renamed", "1953"], ["Walk length", "About 3 km"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it: a relaxed, beautiful walk that shows how Shanghai people live, with coffee and shopping built in."}
+      },
+      "time": "2–3 h with stops",
+      "best": "Weekday morning for quiet streets, or mid-afternoon for light through the plane trees.",
+      "coord": [31.2045, 121.4383],
+      "coord_src": "Wikipedia",
+      "sources": [
+        ["Wukang Mansion – Wikipedia", "https://en.wikipedia.org/wiki/Wukang_Mansion"],
+        ["Wukang Road and Anfu Road self-guided walk – Wander in China", "https://www.wanderinchina.com/destinations/shanghai/wukang-road-anfu-road-guide/"]
+      ]
+    },
+    "propaganda": {
+      "name": "Shanghai Propaganda Poster Art Centre",
+      "zh": "上海宣传画艺术中心",
+      "pinyin": "Shànghǎi Xuānchuánhuà Yìshù Zhōngxīn",
+      "glance": "A small private museum with thousands of original Chinese propaganda posters from the 1940s to the 1970s. It tells the story of the Mao era through its own images, with English captions.",
+      "history": [
+        "The collection belongs to Yang Pei Ming, who began collecting posters as a hobby in 1995, rescuing originals that were being thrown away. For many years it was a famously hard-to-find museum in the basement of an apartment block on Huashan Road.",
+        "In late 2019 it moved to the 7th floor of an office building at 726 Yan'an West Road (East Building, Huamin Empire Plaza). It now holds more than 6,000 original posters, mostly from the 1940s to the 1970s, including many from the Cultural Revolution, plus international posters on themes like Sino-Soviet friendship and the Vietnam War."
+      ],
+      "meaning": "Propaganda posters were everywhere in China for decades: in homes, schools and factories, telling people how to work, think and feel. Seen together, they show how the official message shifted, from idealised farmers and soldiers in the 1950s to the bold red, Mao-centred style of the Cultural Revolution. Few places in China show this period so openly, which makes the centre rare and thought-provoking.",
+      "highlights": [
+        {"name": "Early PRC posters", "zh": "", "what": "1950s images of happy harvests, new factories and education campaigns."},
+        {"name": "Cultural Revolution room", "zh": "文革宣传画", "what": "Bold red-and-black posters with Mao at the centre; notice how the style becomes more intense."},
+        {"name": "International posters", "zh": "", "what": "Posters on Sino-Soviet friendship, against the Vietnam War, and supporting anti-colonial movements."},
+        {"name": "Shop", "zh": "", "what": "Poster reproductions, postcards and books; original posters may also be for sale at collector prices."}
+      ],
+      "tips": [
+        "It has MOVED: no longer on Huashan Road. Go to 726 Yan'an West Road (延安西路726号 华敏帝豪大厦东楼7楼), take the lift to 7F.",
+        "Metro Line 2/11 to Jiangsu Road (Exit 4), then a short walk to Yan'an West Road.",
+        "Open 10:00–17:00, last entry 16:30; ticket ¥25.",
+        "Little signage outside; show the Chinese address to the building guard if unsure."
+      ],
+      "facts": [["Collection", "6,000+ original posters"], ["Period", "Mainly 1940s–1970s"], ["Moved", "Late 2019, to 726 Yan'an West Rd, 7F"], ["Ticket", "¥25"], ["Hours", "10:00–17:00"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it: an hour that explains modern Chinese history better than most big museums."}
+      },
+      "time": "1 h",
+      "best": "Late morning on a weekday; it is small and gets crowded with groups.",
+      "coord": [31.2163, 121.4323],
+      "coord_src": "approx",
+      "sources": [
+        ["Propaganda Poster Art Centre – Wikipedia", "https://en.wikipedia.org/wiki/Propaganda_Poster_Art_Centre"],
+        ["Shanghai Propaganda Poster Art Centre – Trip.com guide", "https://uk.trip.com/guide/china/shanghai-propaganda-poster-art-centre.html"]
+      ]
+    },
+    "jingan": {
+      "name": "Jing'an Temple and the Julu–Fumin–Xinle Road citywalk",
+      "zh": "静安寺 → 巨鹿路 · 富民路 · 新乐路",
+      "pinyin": "Jìng'ān Sì",
+      "glance": "A gold-roofed Buddhist temple among the shopping malls of West Nanjing Road, followed by a stroll south through quiet lanes of old villas, indie boutiques and a Russian Orthodox church. It ends at Zhihe Herbal Bar on Xiangyang North Road.",
+      "history": [
+        "Jing'an Temple traces its origins to 247 AD, in the Wu kingdom of the Three Kingdoms period, when it stood beside Suzhou Creek. It moved to its present site in 1216 under the Song dynasty. In the Cultural Revolution it was razed and the site became a plastic factory. It was returned to religious use and rebuilt from 1983; the pagoda was completed in 2010. It follows the esoteric Tangmi school of Buddhism, re-established here by Master Chisong in 1953.",
+        "South of the temple, Julu, Fumin and Xinle roads were part of the French Concession. At 675 Julu Road stands the 'Garden of Love', a mansion an industrialist built for his wife, now the Shanghai Writers' Association. At 55 Xinle Road is the former Russian Orthodox Cathedral of the 'Surety of Sinners' icon, completed in 1934 for Shanghai's large Russian émigré community. It was closed in the Cultural Revolution and used as a warehouse and later a bar, before restoration began in 2007."
+      ],
+      "meaning": "静安 (Jìng'ān) means 'peace and tranquillity', a name that also gave the whole district its name; the temple was long known in English as Bubbling Well Temple after a spring nearby. Its gold roofs against glass towers make it one of Shanghai's most striking contrasts. The lanes south of it show the city's layered past: Chinese writers, Russian émigrés and French planners, now refilled with young designers. The Orthodox church's onion-domed silhouette is a reminder that Shanghai was once home to a large Russian community.",
+      "highlights": [
+        {"name": "Jing'an Temple halls", "zh": "静安寺", "what": "Three southern-style halls with courtyards: the Heavenly Kings Hall, the main Daxiongbao Hall (with a 15-tonne silver Buddha) and the Guanyin Hall with a 6.2 m camphor-wood statue."},
+        {"name": "Jade Buddha", "zh": "玉佛", "what": "A 3.8 m seated jade Buddha, described as the largest in China. Also look for the 3.5-tonne Ming-dynasty bell."},
+        {"name": "Garden of Love, 675 Julu Road", "zh": "爱神花园（上海作家协会）", "what": "Elegant garden villa now home to the Writers' Association; next door is Author Bookstore (作家书店)."},
+        {"name": "JULU758", "zh": "巨鹿路758号", "what": "A 1960 instrument factory turned into cafés, bars and shops."},
+        {"name": "Fumin Road boutiques", "zh": "富民路", "what": "Independent fashion and ceramics shops in old houses, such as Labelhood at No. 184 (ring the bell)."},
+        {"name": "Orthodox cathedral, 55 Xinle Road", "zh": "新乐路55号 东正教堂", "what": "Blue onion domes above a quiet street, completed 1934; usually viewed from outside."},
+        {"name": "Zhihe Herbal Bar", "zh": "襄阳北路100号2楼", "what": "Your planned finish: herbal drinks on the 2nd floor of 100 Xiangyang North Road, a fitting TCM-themed end."}
+      ],
+      "tips": [
+        "Metro Line 2/7/14 to Jing'an Temple; the temple is right above the station. Open about 07:30–17:00; small entry fee.",
+        "Inside the halls, walk clockwise, don't point your feet at the statues, and no photos where signs say so.",
+        "From the temple, walk south-east via Changshu Road to Julu Road, then Fumin, Changle and Xinle roads: about 2–3 km of flat, shady streets.",
+        "Xiangyang North Road is 3 minutes from Xinle Road; Shaanxi South Road metro (Lines 1/10/12) is the nearest station afterwards."
+      ],
+      "facts": [["Temple founded", "247 AD; on this site since 1216"], ["Rebuilt", "From 1983; pagoda 2010"], ["School", "Tangmi (esoteric) Buddhism"], ["Jade Buddha", "3.8 m"], ["Orthodox cathedral", "Completed 1934"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it: a striking temple visit plus Shanghai's nicest afternoon stroll and shopping area."}
+      },
+      "time": "Temple 45 min; walk 2–3 h with shops",
+      "best": "Temple in the morning when incense is lit; the lanes in the afternoon and early evening.",
+      "coord": [31.223493, 121.445314],
+      "coord_src": "Wikipedia",
+      "sources": [
+        ["Jing'an Temple – Wikipedia", "https://en.wikipedia.org/wiki/Jing%27an_Temple"],
+        ["Capture the literary atmosphere of Julu Road – Shanghai government", "https://english.shanghai.gov.cn/en-Citywalk/20231210/50dcfc889070414b960e306f3374539f.html"],
+        ["Trendy city walk uncovers hidden gems in Jing'an – Shanghai government", "https://english.shanghai.gov.cn/en-citywalk/20240117/a723de7e1e8948429bfd5bb2fb58a457.html"],
+        ["Former Cathedral of the Surety of Sinners – Orthodox China", "https://orthodox.cn/contemporary/shanghai/cathedral_en.htm"]
+      ]
+    },
+    "era": {
+      "name": "ERA acrobatics show, Shanghai Circus World",
+      "zh": "时空之旅 · 上海马戏城",
+      "pinyin": "Shíkōng zhī Lǚ",
+      "glance": "Shanghai's signature acrobatics show, mixing Chinese acrobatics, martial arts and dance with lighting and multimedia effects. Staged nightly at the purpose-built Shanghai Circus World in the north of the city.",
+      "history": [
+        "Shanghai Circus World opened in 1999 at 2266 Gonghe New Road; its main acrobatics theatre seats 1,638. ERA – Intersection of Time debuted there in September 2005 and became one of the city's longest-running shows.",
+        "The show weaves acrobatic acts into a story of China from ancient inventions such as the compass and porcelain to modern feats like the Donghai Bridge, maglev train and Shenzhou 5 spacecraft. The current version is billed as ERA2 – Spirit of Shanghai, with aerial silks, contortion, plate-spinning, precision balancing and motorbikes inside a steel globe."
+      ],
+      "meaning": "Acrobatics is one of China's oldest performing arts, with roots in village fairs and imperial courts over 2,000 years ago. Shanghai's troupe is among the best known in the country, and ERA was designed to present that tradition with modern stagecraft, a showcase of national pride as much as entertainment.",
+      "highlights": [
+        {"name": "Aerial and contortion acts", "zh": "", "what": "Silks, hoops and human pyramids set to live-style music and LED backdrops."},
+        {"name": "Plate-spinning and balancing", "zh": "", "what": "Classic Chinese acrobatic skills, done at impossible scale."},
+        {"name": "Globe of motorbikes", "zh": "", "what": "The finale: several motorbikes racing inside a steel sphere at once."}
+      ],
+      "tips": [
+        "Metro Line 1 to Shanghai Circus World station, Exit 3, then about 3 minutes' walk. Arrive by 19:00.",
+        "Shows usually 19:30 Tuesday–Sunday (Mondays usually off), with 14:00 weekend matinees; latecomers wait until the first act ends.",
+        "Tickets roughly ¥280–880; A-section rows 3–7 are a good balance. Book on Trip.com.",
+        "After the show, the metro is often faster than a taxi in the evening rush."
+      ],
+      "facts": [["Venue opened", "1999"], ["Seats", "1,638"], ["Show debut", "September 2005"], ["Duration", "About 60–100 min"], ["Address", "2266 Gonghe New Road"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it for a fun, no-language-needed evening; a good contrast to gardens and museums."}
+      },
+      "time": "About 2.5 h including travel",
+      "best": "An evening when you are too tired to walk more.",
+      "coord": [31.2800072, 121.4469246],
+      "coord_src": "Wikipedia",
+      "sources": [
+        ["Shanghai Circus World – Wikipedia", "https://en.wikipedia.org/wiki/Shanghai_Circus_World"],
+        ["ERA Acrobatics Show – Nomado", "https://www.nomadotravel.app/en/attractions/era-acrobatics-show"]
+      ]
+    },
+    "westbund": {
+      "name": "West Bund riverside and museums",
+      "zh": "西岸滨江 · 龙美术馆 · 西岸美术馆",
+      "pinyin": "Xī'àn Bīnjiāng",
+      "glance": "A former industrial riverbank in Xuhui turned into a long promenade lined with art museums, cafés and old cranes. The Long Museum and the West Bund Museum are the anchors.",
+      "history": [
+        "The West Bund was once a working waterfront of coal wharves, factories and an airport. Under the West Bund masterplan, about 9 km² of former industrial land has been redeveloped, with an 8.5 km riverside promenade linking Xuhui to the historic Bund.",
+        "The Long Museum West Bund, founded by the collectors Liu Yiqian and Wang Wei, opened on 28 March 2014. It was designed by Liu Yichun of Atelier Deshaus on the site of a coal wharf, keeping a 1950s coal-hopper unloading bridge, about 110 m long, in front of the building. The West Bund Museum, designed by David Chipperfield Architects, opened to the public on 8 November 2019 with a five-year exhibition partnership with Paris's Centre Pompidou."
+      ],
+      "meaning": "The West Bund shows modern Shanghai reinventing its industrial past as culture and public space, much as cities like London did with Tate Modern. The Long Museum's raw concrete 'vault-umbrella' halls echo the old coal bridge outside, and both private and international art come together here. Locals use the promenade for jogging, cycling and weekend picnics.",
+      "highlights": [
+        {"name": "Long Museum West Bund", "zh": "龙美术馆（西岸馆）", "what": "Huge curved concrete halls at 3398 Longteng Avenue, with Chinese and contemporary art; look for the old coal-hopper bridge outside."},
+        {"name": "West Bund Museum", "zh": "西岸美术馆", "what": "Chipperfield's pale stone pavilions on the river, showing international modern and contemporary art."},
+        {"name": "Riverside promenade", "zh": "徐汇滨江", "what": "Wide paths, old cranes and rail tracks kept as landmarks; good for an easy riverside walk."}
+      ],
+      "tips": [
+        "Check the museums' current exhibitions and opening days before going; many Chinese museums close on Mondays.",
+        "Metro Line 11 (or Line 7) to Longhua Middle Road is the usual way in.",
+        "Combine the two museums with a walk along the promenade at sunset."
+      ],
+      "facts": [["Long Museum West Bund opened", "28 March 2014"], ["Architect (Long Museum)", "Liu Yichun, Atelier Deshaus"], ["West Bund Museum opened", "8 November 2019"], ["Promenade", "8.5 km"]],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 3, "line": "Worth it only if you have a spare half-day and like modern art and architecture; skip if time is short."}
+      },
+      "time": "2–3 h",
+      "best": "Late afternoon, ending with sunset on the promenade.",
+      "coord": [31.1738, 121.4612],
+      "coord_src": "approx",
+      "sources": [
+        ["Long Museum – Wikipedia", "https://en.wikipedia.org/wiki/Long_Museum"],
+        ["Long Museum West Bund / Atelier Deshaus – ArchEyes", "https://archeyes.com/long-museum-west-bund-atelier-deshaus/"],
+        ["West Bund Museum opens in Shanghai – David Chipperfield Architects", "https://davidchipperfield.com/news/2019/west-bund-museum-opens-in-shanghai"]
+      ]
+    }
+  },
+  "pois": {
+    "hotel_sh": {"name": "Metropolo Classiq YMCA hotel", "zh": "西藏南路123号", "kind": "hotel", "coord": [31.2290, 121.4810], "coord_src": "approx", "note": "123 Xizang Road South, Huangpu; Dashijie metro (Lines 8 and 14) is a short walk north, People's Square about 10 min."},
+    "m_dashijie": {"name": "Dashijie metro station", "zh": "大世界站", "kind": "metro", "coord": [31.2304, 121.4799], "coord_src": "approx", "note": "Lines 8 and 14 (closest station to the hotel)."},
+    "m_peoples_sq": {"name": "People's Square metro station", "zh": "人民广场站", "kind": "metro", "coord": [31.2330, 121.4757], "coord_src": "approx", "note": "Lines 1, 2, 8; for Shanghai Museum and the west end of Nanjing Road East."},
+    "m_east_nanjing_rd": {"name": "East Nanjing Road metro station", "zh": "南京东路站", "kind": "metro", "coord": [31.2384, 121.4846], "coord_src": "approx", "note": "Lines 2, 10; 5 min walk to the Bund."},
+    "m_lujiazui": {"name": "Lujiazui metro station", "zh": "陆家嘴站", "kind": "metro", "coord": [31.2384, 121.5023], "coord_src": "approx", "note": "Lines 2, 14. Our guide uses Exit 6; Exit 9 has an underground passage to Shanghai Tower B2."},
+    "m_laoximen": {"name": "Laoximen metro station", "zh": "老西门站", "kind": "metro", "coord": [31.2210, 121.4823], "coord_src": "approx", "note": "Lines 8, 10; west edge of the Old City, 10 min to Shanghai Old Street."},
+    "m_yuyuan_garden": {"name": "Yuyuan Garden metro station", "zh": "豫园站", "kind": "metro", "coord": [31.2283, 121.4865], "coord_src": "approx", "note": "Lines 10, 14. Exit 1 for Yu Garden and the bazaar."},
+    "m_jiaotong_univ": {"name": "Jiaotong University metro station", "zh": "交通大学站", "kind": "metro", "coord": [31.2008, 121.4341], "coord_src": "approx", "note": "Lines 10, 11; walk east along Huaihai Middle Road to Wukang Mansion."},
+    "m_jiangsu_rd": {"name": "Jiangsu Road metro station", "zh": "江苏路站", "kind": "metro", "coord": [31.2201, 121.4318], "coord_src": "approx", "note": "Lines 2, 11. Exit 4 for the Propaganda Poster Art Centre (726 Yan'an West Road)."},
+    "m_jingan_temple": {"name": "Jing'an Temple metro station", "zh": "静安寺站", "kind": "metro", "coord": [31.2236, 121.4455], "coord_src": "approx", "note": "Lines 2, 7, 14; the temple is directly above."},
+    "m_shaanxi_s_rd": {"name": "South Shaanxi Road metro station", "zh": "陕西南路站", "kind": "metro", "coord": [31.2155, 121.4593], "coord_src": "approx", "note": "Lines 1, 10, 12; nearest station after the Xinle Road / Xiangyang North Road walk."},
+    "pier_jinling": {"name": "Jinling East Road ferry pier", "zh": "金陵东路轮渡站", "kind": "pier", "coord": [31.2315, 121.4958], "coord_src": "approx", "note": "Puxi side, Zhongshan East 2nd Rd at Jinling East Rd. Ferry to Dongchang Road ¥2, 07:00–22:00, about every 15 min."},
+    "pier_dongchang": {"name": "Dongchang Road ferry pier", "zh": "东昌路轮渡站", "kind": "pier", "coord": [31.2335, 121.5005], "coord_src": "approx", "note": "Pudong side; walk north-east to Lujiazui and Shanghai Tower."},
+    "pier_shiliupu": {"name": "Shiliupu Wharf (river cruise boarding)", "zh": "十六铺码头", "kind": "pier", "coord": [31.2290, 121.4975], "coord_src": "approx", "note": "Zhongshan East 2nd Rd, Exit 2 area; Huangpu sightseeing cruises about every 15–30 min, 11:00–21:30."},
+    "rail_sh": {"name": "Shanghai Railway Station (south entrance)", "zh": "上海站 南广场", "kind": "rail", "coord": [31.2480, 121.4555], "coord_src": "approx", "note": "Use the south square for taxi drop-off; metro Lines 1, 3, 4 also serve the station."},
+    "wukang": {"name": "Wukang Mansion", "zh": "武康大楼", "kind": "other", "coord": [31.2045, 121.4383], "coord_src": "Wikipedia", "note": "Junction of Huaihai Middle Rd and Wukang Rd; photograph from the opposite corner."},
+    "zhihe": {"name": "Zhihe Herbal Bar", "zh": "襄阳北路100号2楼", "kind": "food", "coord": [31.2193, 121.4553], "coord_src": "approx", "note": "2F, 100 Xiangyang North Road; end of the Jing'an citywalk."},
+    "nanxiang": {"name": "Nanxiang Steamed Bun Restaurant", "zh": "南翔馒头店", "kind": "food", "coord": [31.2275, 121.4915], "coord_src": "approx", "note": "By the pond near the nine-turn bridge in Yuyuan Bazaar; ground-floor takeaway window is fastest."}
+  },
+  "shops": [
+    {
+      "name": "Yuyuan Bazaar and Shanghai Old Street",
+      "zh": "豫园商城 · 上海老街（方浜中路）",
+      "kind": "street",
+      "near": "yugarden",
+      "walk": "Right outside the garden; Old Street runs west from the bazaar, about 5 min",
+      "buy": "Fans, brushes, silk, embroidery, lacquerware and tea in the bazaar. Old Street (about 500 m, some 225 shops) has crafts, calligraphy, embroidery and antiques at the western end, plus Tong Han Chun (童涵春堂), a historic traditional Chinese medicine pharmacy, worth a look for TCM fans.",
+      "watch": "Quality varies and 'antiques' are mostly reproductions; agree prices first and bargain in the bazaar. Refuse tea-ceremony and 'art student' invitations.",
+      "hours": "Bazaar open all day; shops roughly 09:00–21:00",
+      "coord": [31.2257, 121.4895],
+      "coord_src": "approx",
+      "sources": [["Shanghai Old Street – Travel China Guide", "https://www.travelchinaguide.com/attraction/shanghai/old-street.htm"], ["Yuyuan Bazaar – Nomado", "https://www.nomadotravel.app/en/attractions/yuyuan-bazaar"]]
+    },
+    {
+      "name": "South Bund Fabric Market (tailoring)",
+      "zh": "南外滩轻纺面料市场",
+      "kind": "market",
+      "near": "yugarden",
+      "walk": "About 20 min walk south of Yu Garden (399 Lujiabang Road), or Metro Line 4 Nanpu Bridge, Exit 3",
+      "buy": "Made-to-measure qipao, suits, shirts, coats and Tang-style jackets from small tailor stalls. A suit costs roughly ¥2,000–4,000; normal turnaround 6–7 days, many stalls offer 2-day express.",
+      "watch": "You leave Shanghai soon: only order with an express deadline you can meet, and agree price, fabric and fitting time in writing. Bargain politely.",
+      "hours": "Daily 09:00–18:00",
+      "coord": [31.2150, 121.4970],
+      "coord_src": "approx",
+      "sources": [["Where visitors get clothes made: Inside Shanghai's South Bund market – Shanghai government", "https://english.shanghai.gov.cn/en-TrendyStores/20260105/5614f3027a1f4a7c9472e5b0650f2038.html"]]
+    },
+    {
+      "name": "Shanghai No.1 Food Store",
+      "zh": "上海第一食品商店",
+      "kind": "food",
+      "near": "nanjingrd",
+      "walk": "Middle of the pedestrian street, about 10 min east of People's Square",
+      "buy": "Packaged teas, dried fruit, traditional pastries, honey and cured meats; the White Rabbit candy corner (inside on the left) has gift tins and flavours like red bean and matcha. Easy edible gifts for Singapore.",
+      "watch": "Busy on weekend evenings; check weights and prices on loose goods.",
+      "hours": null,
+      "coord": [31.2359, 121.4779],
+      "coord_src": "approx",
+      "sources": [["Nanjing Road Food Guide – Wander in China", "https://www.wanderinchina.com/destinations/shanghai/nanjing-east-road/food/"]]
+    },
+    {
+      "name": "Old-brand snack shops on Nanjing Road East",
+      "zh": "沈大成 · 泰康食品 · 真老大房 · 邵万生",
+      "kind": "food",
+      "near": "nanjingrd",
+      "walk": "Around the Zhejiang Middle Road junction, on the walk towards the Bund",
+      "buy": "Shen Da Cheng (since 1875): qingtuan and sticky-rice pastries. Taikang and Zhen Laodafang: hot fresh pork mooncakes, about ¥6–8 each (try both and compare). Shao Wan Sheng (since 1852): wine-cured 'drunken' specialities and Jinhua ham.",
+      "watch": "Glutinous pastries are best eaten the same day; raw wine-cured seafood is an acquired taste.",
+      "hours": null,
+      "coord": [31.2358, 121.4805],
+      "coord_src": "approx",
+      "sources": [["Nanjing Road Food Guide – Wander in China", "https://www.wanderinchina.com/destinations/shanghai/nanjing-east-road/food/"]]
+    },
+    {
+      "name": "Anfu Road and Wukang Road boutiques",
+      "zh": "安福路 · 武康路",
+      "kind": "street",
+      "near": "frenchc",
+      "walk": "Along the walk; Anfu Road begins at the north end of Wukang Road",
+      "buy": "Chinese designer fashion, beauty and cosmetics brands, bookshops, food shops and independent design concept stores; Wukang Road has many first stores and pop-ups.",
+      "watch": "Shops change quickly and prices are boutique-level; compare before buying vintage.",
+      "hours": "Most shops roughly 10:00/11:00–21:00",
+      "coord": [31.2135, 121.4425],
+      "coord_src": "approx",
+      "sources": [["Wukang Road and Anfu Road self-guided walk – Wander in China", "https://www.wanderinchina.com/destinations/shanghai/wukang-road-anfu-road-guide/"], ["New openings line Wukang Road–Anfu Road area – Shanghai government", "https://english.shanghai.gov.cn/en-SpecialtyShoppingAreas/20250605/fc354fd4cdf2483593aaf26ffbc1e680.html"]]
+    },
+    {
+      "name": "Propaganda Poster Art Centre shop",
+      "zh": "上海宣传画艺术中心",
+      "kind": "shop",
+      "near": "propaganda",
+      "walk": "Inside the museum, 7F",
+      "buy": "Poster reproductions, postcards and books on Chinese poster art: unusual, flat, easy-to-pack souvenirs.",
+      "watch": "Original posters are collector items with collector prices; ask whether an item is original or a reprint.",
+      "hours": "10:00–17:00",
+      "coord": [31.2163, 121.4323],
+      "coord_src": "approx",
+      "sources": [["Shanghai Propaganda Poster Art Centre – Trip.com guide", "https://uk.trip.com/guide/china/shanghai-propaganda-poster-art-centre.html"]]
+    },
+    {
+      "name": "Yasi porcelain",
+      "zh": "巨鹿路808号",
+      "kind": "shop",
+      "near": "jingan",
+      "walk": "808 Julu Road, on the citywalk",
+      "buy": "Modern Ru-style porcelain inspired by Song-dynasty (960–1279) ceramics: tea cups, small vases and tea sets; the Julu Road shop was the brand's first. Popular for personalised souvenirs.",
+      "watch": "Pack porcelain in hand luggage; ask the shop to box and wrap it.",
+      "hours": null,
+      "coord": [31.2224, 121.4500],
+      "coord_src": "approx",
+      "sources": [["Trendy city walk uncovers hidden gems in Jing'an – Shanghai government", "https://english.shanghai.gov.cn/en-citywalk/20240117/a723de7e1e8948429bfd5bb2fb58a457.html"]]
+    },
+    {
+      "name": "Labelhood and the Fumin Road designer shops",
+      "zh": "LABELHOOD · 富民路184号",
+      "kind": "shop",
+      "near": "jingan",
+      "walk": "184 Fumin Road, 5 min south of Julu Road",
+      "buy": "Flagship of a Shanghai platform for independent Chinese designer labels, in a detached old house; nearby on Fumin and Changle roads: Hitable ceramics (241 Fumin Rd), Xifang new-Chinese-style clothing and bags (720 Changle Rd).",
+      "watch": "Designer prices; ring the doorbell to enter Labelhood.",
+      "hours": null,
+      "coord": [31.2213, 121.4517],
+      "coord_src": "approx",
+      "sources": [["Trendy city walk uncovers hidden gems in Jing'an – Shanghai government", "https://english.shanghai.gov.cn/en-citywalk/20240117/a723de7e1e8948429bfd5bb2fb58a457.html"]]
+    }
+  ]
+}

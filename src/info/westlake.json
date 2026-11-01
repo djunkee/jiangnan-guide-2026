@@ -1,0 +1,560 @@
+{
+  "places": {
+    "lakenorth": {
+      "name": "West Lake north shore: Broken Bridge and Bai Causeway",
+      "zh": "断桥 · 白堤",
+      "pinyin": "Duànqiáo · Báidī",
+      "glance": "The classic first walk at West Lake (西湖, Xīhú). It crosses the little Broken Bridge, where the Legend of the White Snake begins, then follows the willow-lined Bai Causeway about 1 km across the water to Gushan Island. The whole lake is a UNESCO World Heritage cultural landscape, and most of it is free.",
+      "history": [
+        "The Bai Causeway began as a natural sand bar, the 'White Sand Causeway', before the Tang dynasty. It was reinforced in 766–779, fell apart under the Yuan and was rebuilt in 1589. The poet Bai Juyi (772–846), prefect of Hangzhou from 822, dredged the lake and used the silt for a causeway of his own. That one later disappeared, so in the Qing the people gave his name to this one instead.",
+        "The Broken Bridge is a small three-arch stone bridge at the east end of the causeway. A bridge has stood here since the Tang. It was called Baoyou Bridge in the Song and Duanjia Bridge in the Yuan. Today's bridge dates from 1922. In 2002 the city took down the park walls around the lake and made most of it free, the first major Chinese sight to drop its fee. UNESCO inscribed the 'West Lake Cultural Landscape of Hangzhou' in 2011."
+      ],
+      "meaning": "The bridge is not broken. In winter the snow on its sunny side melts first, so from afar the arch seems to break in two. That image, 'Lingering Snow on Broken Bridge' (断桥残雪), is one of the Ten Scenes of West Lake. Every Chinese child knows the story set here: the white snake spirit Bai Suzhen (白素贞), in human form, meets the young scholar Xu Xian on this bridge in the rain, and they fall in love. The monk Fahai later traps her under Leifeng Pagoda across the lake. UNESCO calls the lake an exceptional testimony to the tradition of shaping landscape into poetic views, and says it influenced garden design across China, Japan and Korea for centuries.",
+      "highlights": [
+        {"name": "Broken Bridge", "zh": "断桥", "what": "Stand on the hump and look west along the causeway towards Gushan. Look for the stone stele with the scene name 断桥残雪 at the east end."},
+        {"name": "Bai Causeway", "zh": "白堤", "what": "About 1 km of willows and peach trees with water on both sides. The left (south) side is the open outer lake; the right is the quieter North Inner Lake."},
+        {"name": "Jindai Bridge", "zh": "锦带桥", "what": "The second, smaller bridge halfway along the causeway. A good spot for a photo back towards the Broken Bridge and the Baochu Pagoda on the hill behind."},
+        {"name": "Autumn Moon over the Calm Lake", "zh": "平湖秋月", "what": "Pavilion and terrace at the west end, where the causeway meets Gushan. One of the Ten Scenes; best in the late afternoon and on moonlit nights."},
+        {"name": "Baochu Pagoda view", "zh": "保俶塔", "what": "The slim pagoda on the hill above the north shore. It is the landmark you keep seeing from the causeway."}
+      ],
+      "tips": [
+        "From the hotel, walk to the lake at Hubin and follow the shore path north and west to the Broken Bridge (about 20–25 min), or take Metro Line 1 one stop to Longxiangqiao (龙翔桥).",
+        "Go early (before 08:30) or at dusk. By mid-morning the Broken Bridge is packed, especially at weekends.",
+        "Bicycles are banned on the causeways, so walk it. Allow 20 minutes for the causeway itself without stops.",
+        "Walk past anyone who invites you to a 'tea ceremony' near the lake. It is a known scam with bills of thousands of yuan.",
+        "Carry on to Gushan Island at the far end; the two make one easy half day."
+      ],
+      "facts": [
+        ["Bai Causeway rebuilt", "1589 (first reinforced 766–779)"],
+        ["Current Broken Bridge", "1922"],
+        ["Bai Causeway length", "about 1 km"],
+        ["UNESCO", "West Lake Cultural Landscape of Hangzhou, 2011"],
+        ["Lake size", "6.4 km², about 3.2 km north–south"],
+        ["Entry", "Free (park walls removed 2002)"]
+      ],
+      "ratings": {
+        "china_grade": "AAAAA",
+        "unesco": "West Lake Cultural Landscape of Hangzhou (2011)",
+        "visitor": null,
+        "verdict": {"stars": 5, "line": "Must-see: the free, easy, iconic walk that explains West Lake; go early to enjoy it without the crowds."}
+      },
+      "time": "1–1.5 h (bridge and causeway, with stops)",
+      "best": "Early morning for mist and empty paths, or late afternoon when the light turns gold over Gushan.",
+      "coord": [30.26082, 120.14697],
+      "coord_src": "OpenStreetMap",
+      "sources": [
+        ["West Lake (Wikipedia)", "https://en.wikipedia.org/wiki/West_Lake"],
+        ["Broken Bridge (Hangzhou) (Wikipedia)", "https://en.wikipedia.org/wiki/Broken_Bridge_(Hangzhou)"],
+        ["West Lake Cultural Landscape of Hangzhou (UNESCO)", "https://whc.unesco.org/fr/list/1334/"],
+        ["West Lake guide (China for Travelers)", "https://chinafortravelers.com/guides/west-lake-hangzhou/"],
+        ["Top 10 scenes of West Lake (China Highlights)", "https://www.chinahighlights.com/hangzhou/attraction/ten-scenes-of-west-lake.htm"],
+        ["Broken Bridge (Sygic Travel, OSM coordinates)", "https://travel.sygic.com/de/poi/broken-bridge-poi:23099"]
+      ]
+    },
+    "gushan": {
+      "name": "Gushan Island",
+      "zh": "孤山",
+      "pinyin": "Gūshān",
+      "glance": "Gushan, 'Solitary Hill', is the only natural island in West Lake: a wooded hill joined to the shore by the Bai Causeway and Xiling Bridge. It packs in an emperor's library, the free Zhejiang Provincial Museum, a hermit-poet's plum garden and the Xiling Seal Art Society, the home of Chinese seal carving.",
+      "history": [
+        "The poet Lin Bu (967–1028) lived here as a recluse for some twenty years in the Northern Song. In the Qing, Gushan was part of an imperial palace complex for the emperors' southern tours. In 1782–83 the Qianlong emperor built the Wenlan Pavilion (文澜阁) here to hold one of the seven hand-copied sets of the Siku Quanshu, the vast imperial encyclopedia. It collapsed when the Taiping army took Hangzhou in 1861 and was rebuilt in 1880; it is the only surviving library of the three southern sets.",
+        "In 1904 four young scholars (Ding Fuzhi, Wang Fu'an, Ye Weiming and Wu Yin) founded the Xiling Seal Art Society on the south slope. The painter Wu Changshuo became its first president in 1914. The Zhejiang Provincial Museum opened on the island in 1929. After 1911 the old palace grounds became Zhongshan Park, named after Sun Yat-sen."
+      ],
+      "meaning": "Gushan stands for the scholar's ideal of a quiet life. Lin Bu never married and is said to have called the plum blossom his wife and his cranes his sons (梅妻鹤子). His line about plum shadows on clear water is one of the most quoted in Chinese poetry. The Xiling Seal Art Society keeps alive the art of carving name seals (chops) in stone, used as signatures on paintings and documents; UNESCO listed it as Intangible Cultural Heritage in 2009. For Chinese visitors this is the lake's 'literary' corner.",
+      "highlights": [
+        {"name": "Autumn Moon over the Calm Lake", "zh": "平湖秋月", "what": "Lakeside terrace at the east tip where the Bai Causeway arrives. One of the Ten Scenes."},
+        {"name": "Zhejiang Provincial Museum (Gushan)", "zh": "浙江省博物馆 孤山馆区", "what": "Free museum at 25 Gushan Road. The province's collection includes Hemudu Neolithic finds and Liangzhu jades; check on the day which galleries are shown here, as the museum also has a large newer building in west Hangzhou."},
+        {"name": "Wenlan Pavilion", "zh": "文澜阁", "what": "Qianlong's imperial library and small garden, in the museum grounds. Look for the rockery and pond in front of the hall."},
+        {"name": "Xiling Seal Art Society", "zh": "西泠印社", "what": "Terraced garden climbing the hill at 31 Gushan Road, with pavilions, inscribed rocks and the Han dynasty Sanlao stele (汉三老碑), the oldest surviving stone inscription of its kind. A teahouse sits at the top (tea from about ¥20)."},
+        {"name": "Crane-Releasing Pavilion and Lin Bu's tomb", "zh": "放鹤亭", "what": "On the north side of the hill, among plum trees. Quiet even when the south shore is busy."},
+        {"name": "Louwailou restaurant", "zh": "楼外楼", "what": "Old lakeside restaurant on Gushan Road, well known for Longjing prawns (龙井虾仁), shrimp stir-fried with Dragon Well tea."}
+      ],
+      "tips": [
+        "Arrive along the Bai Causeway from the Broken Bridge, so you reach the east tip first and walk west along Gushan Road.",
+        "The Provincial Museum is free (09:00–17:00, last entry 16:30) and closed on Mondays except public holidays. Bring your passport.",
+        "Climb through the Xiling Seal Society garden to the top for the view over the lake; it is the best viewpoint on the island.",
+        "Go round to the north side for the plum garden and Lin Bu's pavilion when the south side is crowded.",
+        "Gushan has one of the four piers where the boats to Three Pools Mirroring the Moon land (Zhongshan pier, 中山)."
+      ],
+      "facts": [
+        ["Type", "Only natural island in West Lake"],
+        ["Wenlan Pavilion", "Built 1782–83, rebuilt 1880"],
+        ["Xiling Seal Art Society", "Founded 1904"],
+        ["Zhejiang Provincial Museum", "Founded 1929; free; closed Mon"],
+        ["UNESCO ICH", "Art of seal carving at the Xiling Seal Art Society (2009)"]
+      ],
+      "ratings": {
+        "china_grade": "AAAAA",
+        "unesco": "West Lake Cultural Landscape of Hangzhou (2011)",
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it: history, a free museum and the seal-carving garden in one small island; ideal for museum and garden lovers, and shady when it's warm."}
+      },
+      "time": "1.5–2.5 h",
+      "best": "Late morning on a weekday, after the Bai Causeway walk; avoid Mondays if you want the museum.",
+      "coord": [30.2522, 120.1392],
+      "coord_src": "approx",
+      "sources": [
+        ["West Lake (Wikipedia)", "https://en.wikipedia.org/wiki/West_Lake"],
+        ["Wenlan Pavilion (Wikipedia)", "https://en.wikipedia.org/wiki/Wenlan_Pavilion"],
+        ["Lin Bu (Wikipedia)", "https://en.wikipedia.org/wiki/Lin_Bu"],
+        ["Xiling Seal Art Society: Stamps on culture (eHangzhou)", "https://www.ehangzhou.gov.cn/2025-09/18/c_295041.htm"],
+        ["Zhejiang Provincial Museum (China Services Info)", "https://www.chinaservicesinfo.com/s/202305/22/WS646acd94498ea274927bb45d/zhejiang-provincial-museum.html"],
+        ["Seal Engravers Society (Lonely Planet)", "https://www.lonelyplanet.com/points-of-interest/seal-engravers-society/1096591"]
+      ]
+    },
+    "sucause": {
+      "name": "Su Causeway",
+      "zh": "苏堤",
+      "pinyin": "Sūdī",
+      "glance": "A 2.8 km tree-lined causeway that cuts across the western part of West Lake from north to south, with six arched stone bridges. It was built from lake mud in 1089 by the poet-governor Su Dongpo, and it is the longest and calmest walk on the lake.",
+      "history": [
+        "Su Shi (1037–1101), better known by his pen name Su Dongpo, was one of the great poets and officials of the Northern Song. As prefect of Hangzhou he had the silted-up lake dredged and used the mud to build this causeway in 1089. It runs from Quyuan on the north shore to Huagang on the south shore, and its six bridges let boats pass between the two halves of the lake.",
+        "Over the centuries the causeway was planted with willows and peach trees. From the Southern Song (13th century) painters and poets fixed ten famous viewpoints around the lake, the 'Ten Scenes of West Lake' (西湖十景). The first of them is 'Spring Dawn at Su Causeway' (苏堤春晓). The causeway is part of the UNESCO-listed West Lake Cultural Landscape (2011), which UNESCO says was largely created by dredging between the 9th and 12th centuries."
+      ],
+      "meaning": "The causeway is a piece of public engineering that became art: a flood-control and transport project that also made one of China's most painted views. Su Dongpo is a folk hero in Hangzhou for it. The Ten Scenes show the Chinese way of seeing a landscape through seasons and times of day: Spring Dawn at Su Causeway, Breeze-ruffled Lotus at Quyuan Garden, Autumn Moon over the Calm Lake, Lingering Snow on Broken Bridge, Leifeng Pagoda in Evening Glow, Three Ponds Mirroring the Moon, Orioles Singing in the Willows, Twin Peaks Piercing the Clouds, Viewing Fish at Flower Harbour, and Evening Bell at Nanping Hill.",
+      "highlights": [
+        {"name": "North end near Yue Fei Temple", "zh": "岳庙 · 曲院风荷", "what": "Start here, near the lotus garden of 'Breeze-ruffled Lotus at Quyuan' (曲院风荷). The Yue Fei Temple, shrine to a Song general and national hero, is a few minutes away."},
+        {"name": "The six bridges", "what": "Six humped stone bridges along the way. Each gives a slightly different view: Gushan and the north shore at the top, the hills and Leifeng Pagoda towards the south."},
+        {"name": "Views of Three Pools Mirroring the Moon", "zh": "三潭印月", "what": "From the middle section look east to see the island and, with luck, the three small stone pagodas standing in the water."},
+        {"name": "Spring Dawn stele", "zh": "苏堤春晓", "what": "The stone tablet marking the Ten Scenes viewpoint near the south end."},
+        {"name": "Viewing Fish at Flower Harbour", "zh": "花港观鱼", "what": "Park at the south end with big ponds of red carp. A good end point, and a boat pier for Three Pools."}
+      ],
+      "tips": [
+        "Bicycles are banned on the causeways, so this is a walk, not a bike ride. Allow about 45 minutes without stops.",
+        "Walk north to south so you end at Huagang (花港观鱼), from where Leifeng Pagoda is a 15–20 minute walk east.",
+        "Get to the north end by taxi or DiDi: ask for Yue Miao (岳庙), the Yue Fei Temple, on Beishan Road.",
+        "Weekday mornings are quietest. In November the willows are still green and the light is soft.",
+        "If you take the Three Pools boat instead, skip this walk that day; doing both is a lot."
+      ],
+      "facts": [
+        ["Built", "1089, under Su Shi (Su Dongpo)"],
+        ["Length", "about 2.8 km"],
+        ["Bridges", "6 stone arch bridges"],
+        ["Runs", "Quyuan (north) to Huagang (south)"],
+        ["Entry", "Free, open all day"]
+      ],
+      "ratings": {
+        "china_grade": "AAAAA",
+        "unesco": "West Lake Cultural Landscape of Hangzhou (2011)",
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it if you like a long, peaceful walk with lake views on both sides; skip it if tired and take the boat instead."}
+      },
+      "time": "1–1.5 h end to end",
+      "best": "Early morning (the 'Spring Dawn' idea works in any season), when joggers and tai chi groups have it to themselves.",
+      "coord": [30.2575, 120.1335],
+      "coord_src": "approx",
+      "sources": [
+        ["West Lake (Wikipedia)", "https://en.wikipedia.org/wiki/West_Lake"],
+        ["Top 10 scenes of West Lake (China Highlights)", "https://www.chinahighlights.com/hangzhou/attraction/ten-scenes-of-west-lake.htm"],
+        ["How a poet reshaped a lake nearly 1,000 years ago (eHangzhou)", "https://www.ehangzhou.gov.cn/2026-04/30/c_297483.htm"],
+        ["West Lake guide (China for Travelers)", "https://chinafortravelers.com/guides/west-lake-hangzhou/"],
+        ["West Lake Cultural Landscape of Hangzhou (UNESCO)", "https://whc.unesco.org/fr/list/1334/"]
+      ]
+    },
+    "leifeng": {
+      "name": "Leifeng Pagoda",
+      "zh": "雷峰塔",
+      "pinyin": "Léifēng Tǎ",
+      "glance": "The big pagoda on the south shore of West Lake, where legend says the White Snake was imprisoned. The original fell down in 1924; today's tower (2002) stands over the excavated ruins, with escalators, a lift and the best panorama of the lake from the top.",
+      "history": [
+        "King Qian Chu of the Wuyue kingdom built the pagoda in 975 on Sunset Hill, for his favourite consort, Huang; it was first called the Huangfei Pagoda. In the Ming dynasty Japanese pirates raiding Hangzhou burned its wooden galleries, leaving a bare brick core that stood for centuries.",
+        "People believed the bricks could cure illness or prevent miscarriage, and took them away to grind into powder. Weakened, the pagoda collapsed on 25 September 1924. During excavations in 2000–2001, archaeologists opened its sealed crypt and found a gilt silver stupa, Buddha statues, thousands of coins and a gold casket believed to hold a hair relic of the Buddha. Most finds are now in the Zhejiang Provincial Museum. The new pagoda, built of steel and copper over the old base, opened on 25 October 2002."
+      ],
+      "meaning": "In the Legend of the White Snake the monk Fahai traps the snake spirit Bai Suzhen under this pagoda to keep her from her human husband, Xu Xian. So when the tower fell in 1924, it felt like the end of an era. The writer Lu Xun wrote two essays 'On the Fall of Leifeng Pagoda', using it as a symbol of the old feudal order collapsing. 'Leifeng Pagoda in Evening Glow' (雷峰夕照) is one of the Ten Scenes: the tower dark against the sunset across the water.",
+      "highlights": [
+        {"name": "Escalators up the hill", "what": "Covered escalators take you from the entrance on Nanshan Road up to the pagoda base, so the visit is easy on the legs."},
+        {"name": "The old foundations", "zh": "雷峰塔遗址", "what": "On the ground floor and basement, glass panels show the original Song-era brick base and rubble from the 1924 collapse."},
+        {"name": "Relic hall", "what": "Displays about the crypt finds and the relics found in 2001."},
+        {"name": "White Snake story panels", "what": "Inside the tower, look for the artworks telling the legend floor by floor."},
+        {"name": "Top gallery", "what": "Lift to the upper galleries for a 360° view: the Su Causeway, Three Pools island, the city skyline at Hubin and the hills."}
+      ],
+      "tips": [
+        "Ticket ¥40, bought at the window; no booking needed. Pay by Alipay or WeChat Pay.",
+        "In November it opens 08:00–17:30 with last entry 17:00. Sunset is around 17:00, so arrive by 16:00 for late light from the top.",
+        "For the classic photo of the pagoda at sunset, go across the water to Changqiao Park (长桥公园), which is free.",
+        "Jingci Temple (净慈寺, ¥10, closes 17:00) is directly opposite across Nanshan Road and is a quiet add-on.",
+        "From Huagang at the south end of the Su Causeway it's a 15–20 min walk east; from Hubin, 25–35 min along the lake or a short taxi."
+      ],
+      "facts": [
+        ["Originally built", "975, Wuyue kingdom"],
+        ["Collapsed", "25 September 1924"],
+        ["Rebuilt pagoda opened", "25 October 2002"],
+        ["Height", "about 71.7 m including spire"],
+        ["Ticket", "¥40"],
+        ["Winter hours (1 Nov–15 Mar)", "08:00–17:30, last entry 17:00"]
+      ],
+      "ratings": {
+        "china_grade": "AAAAA",
+        "unesco": "West Lake Cultural Landscape of Hangzhou (2011)",
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it: the best view of the whole lake with no climbing, plus the ruins and the legend; time it for late afternoon."}
+      },
+      "time": "1–1.5 h",
+      "best": "Late afternoon, arriving by 16:00 in November, so you see the lake in low light before the 17:00 last entry.",
+      "coord": [30.233888, 120.145069],
+      "coord_src": "Wikipedia",
+      "sources": [
+        ["Leifeng Pagoda (Wikipedia)", "https://en.wikipedia.org/wiki/Leifeng_Pagoda"],
+        ["Leifeng Pagoda guide (China for Travelers)", "https://chinafortravelers.com/guides/leifeng-pagoda-hangzhou/"],
+        ["West Lake (Wikipedia)", "https://en.wikipedia.org/wiki/West_Lake"],
+        ["Leifeng Pagoda (Sygic Travel)", "https://travel.sygic.com/China/Hangzhou/Leifeng-Pagoda/"]
+      ]
+    },
+    "fountain": {
+      "name": "West Lake musical fountain at Hubin",
+      "zh": "湖滨音乐喷泉",
+      "pinyin": "Húbīn Yīnyuè Pēnquán",
+      "glance": "A free evening water-and-music show on the lake in front of Hubin No. 3 Park, a short walk from the hotel. It runs once a night at 19:30 for about 15–20 minutes.",
+      "history": [
+        "The fountain was first built in 2003 on the east shore, where the city meets the lake. Shows were suspended in January 2020, came back on trial in July 2023, and have run as a regular nightly show since March 2024. Each show has four songs, and big crowds gather along the shore."
+      ],
+      "meaning": "It is a modern, cheerful counterpoint to the classical lake: Hangzhou families come after dinner, and it is part of the Hubin evening scene along with the lakeside promenade and the in77 shopping streets. Light, music and water on West Lake are a city tradition; you may also see the outdoor 'Impression West Lake' show advertised.",
+      "highlights": [
+        {"name": "Hubin No. 3 Park waterfront", "zh": "湖滨三公园", "what": "The viewing area for the fountain, on the lake end of the Hubin streets."},
+        {"name": "Lakeside promenade", "zh": "湖滨步行街", "what": "Walk the shore before or after; good night views north towards the Baochu Pagoda and the lit Broken Bridge."}
+      ],
+      "tips": [
+        "Show at 19:30 every night, about 15–20 minutes. Bad weather can cancel it.",
+        "Arrive by 19:10 to get a spot by the railing; it gets several rows deep on weekends.",
+        "Nearest metro is Longxiangqiao (龙翔桥, Line 1), 5–10 minutes' walk. From the hotel it's an easy walk.",
+        "Combine with dinner at Hubin or in the in77 mall, which is right behind the lakefront."
+      ],
+      "facts": [
+        ["First built", "2003"],
+        ["Show time", "Nightly 19:30"],
+        ["Length", "15–20 min, four songs"],
+        ["Entry", "Free"]
+      ],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 3, "line": "Nice if you're nearby at 19:30 anyway; free and short, but not worth a special trip."}
+      },
+      "time": "30 min",
+      "best": "Weeknights at 19:30, when it's less crowded than weekends.",
+      "coord": [30.2558, 120.1608],
+      "coord_src": "approx",
+      "sources": [
+        ["West Lake musical fountain show resumes after 3-year hiatus (eHangzhou)", "https://www.ehangzhou.gov.cn/2023-07/28/c_285986.htm"],
+        ["West Lake musical fountain regains nighttime limelight (eHangzhou)", "https://www.ehangzhou.gov.cn/2024-03/15/c_289051.htm"],
+        ["eHangzhou, April 2026 (fountain nightly at 19:30)", "https://www.ehangzhou.gov.cn/2026-04/17/c_297613.htm"],
+        ["West Lake musical fountain (Kupi)", "https://kupi.com/en-ae/explore/china/hangzhou/west-lake-musical-fountain"]
+      ]
+    },
+    "lakeboat": {
+      "name": "Boat to Three Pools Mirroring the Moon",
+      "zh": "三潭印月 · 小瀛洲",
+      "pinyin": "Sān Tán Yìn Yuè · Xiǎo Yíngzhōu",
+      "glance": "A boat ride across West Lake to Xiaoyingzhou (Lesser Yingzhou Islet), the largest island in the lake, with three small stone pagodas standing in the water off its south side. This is the scene printed on the back of the 1-yuan note.",
+      "history": [
+        "Xiaoyingzhou was built up from dredged lake mud in the Ming and Qing dynasties. The island holds ponds of its own, crossed by zigzag bridges and pavilions, so you walk on water inside an island in a lake.",
+        "Just off its south shore stand three gourd-shaped stone pagodas, each about 2 m above the water, set in an equilateral triangle with 62 m sides. Each is hollow, with five small round holes. Tradition traces the pagodas back more than 800 years. On Mid-Autumn Festival nights people put a candle inside each one and cover the holes with thin paper, so that the lights reflect on the water like many small moons."
+      ],
+      "meaning": "'Three Pools Mirroring the Moon' (三潭印月) is one of the Ten Scenes of West Lake, and its picture is on the back of the current 1-yuan banknote; take one out of your wallet and compare. The name Yingzhou refers to one of the mythical islands of the immortals in the eastern sea, so the island is meant as a small earthly paradise.",
+      "highlights": [
+        {"name": "The boat ride", "what": "About 20 minutes across the open lake, with views of the Su Causeway, Leifeng Pagoda and the hills."},
+        {"name": "Nine-turn zigzag bridge", "zh": "九曲桥", "what": "Bridges and pavilions crossing the island's inner ponds; the turns are meant to slow you down and change the view at each corner."},
+        {"name": "The three stone pagodas", "zh": "三潭", "what": "Walk to the south shore of the island to see them in the water. This is the 1-yuan-note view."},
+        {"name": "Pavilions and lotus ponds", "what": "Small halls and lily ponds across the island; in November the lotus has died back but the reflections are clear."}
+      ],
+      "tips": [
+        "Official boats only: a plain boat is ¥55, a painted boat ¥70, including landing on the island. Sailings 08:00–17:00. Buy at the official dockside booth, not from touts.",
+        "You can return to a different pier: boats land at Hubin (湖滨), Zhongshan/Gushan (中山), Hangzhou Hotel (杭饭) and Huagang (花港). Choose at the ticket window; this lets you link the boat to Gushan or Leifeng.",
+        "Ignore people who say the boat is 'full' and offer a private VIP boat for ¥300–600.",
+        "A hand-rowed boat costs about ¥150–180 per hour for the whole boat (2–6 people), but it does not land on the island.",
+        "New for 2026: an evening sailing to the island (¥188, 18:40–20:40) sold at the east-shore piers on the day."
+      ],
+      "facts": [
+        ["Island built", "Ming and Qing dynasties, from dredged mud"],
+        ["Stone pagodas", "3, about 2 m high, 5 holes each"],
+        ["Pagoda triangle", "62 m per side"],
+        ["Boat fare (2026)", "¥55 plain / ¥70 painted, landing included"],
+        ["Banknote", "Back of the current 1-yuan note"]
+      ],
+      "ratings": {
+        "china_grade": "AAAAA",
+        "unesco": "West Lake Cultural Landscape of Hangzhou (2011)",
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it: the easiest way to see the lake from the water and a pretty island garden; good rest for tired legs."}
+      },
+      "time": "1.5–2 h including the boat",
+      "best": "Morning or late afternoon on a weekday, when the light is soft and the queues are short.",
+      "coord": [30.2385, 120.1455],
+      "coord_src": "approx",
+      "sources": [
+        ["West Lake (Wikipedia)", "https://en.wikipedia.org/wiki/West_Lake"],
+        ["Three Pools Mirroring the Moon (China Daily eZhejiang)", "https://regional.chinadaily.com.cn/ezhejiang/2016-08/03/c_54947.htm"],
+        ["Top 10 scenes of West Lake (China Highlights)", "https://www.chinahighlights.com/hangzhou/attraction/ten-scenes-of-west-lake.htm"],
+        ["West Lake guide (China for Travelers)", "https://chinafortravelers.com/guides/west-lake-hangzhou/"],
+        ["Hangzhou scam guide (tabiji)", "https://tabiji.ai/scams/hangzhou/"]
+      ]
+    },
+    "lingyin": {
+      "name": "Lingyin Temple and Feilai Feng",
+      "zh": "灵隐寺 · 飞来峰",
+      "pinyin": "Língyǐn Sì · Fēilái Fēng",
+      "glance": "One of China's oldest and largest Buddhist temples, the 'Temple of the Soul's Retreat', in a wooded valley west of the lake. On the way in you pass Feilai Feng, a limestone hill covered with over 470 Buddhist rock carvings from the 10th to 14th centuries. Entry has been free since December 2025, but you must book a slot in advance.",
+      "history": [
+        "An Indian monk, Huili, founded the temple in 328, in the Eastern Jin dynasty. Under the Wuyue kingdom (907–978) it had 72 halls, 18 pavilions, more than 1,300 rooms and over 3,000 monks. In the Southern Song it ranked among the ten great Chan (Zen) temples of the south. It has been destroyed and rebuilt at least sixteen times; most of today's buildings are late Qing or later.",
+        "The Kangxi emperor wrote a new name for it, 'Yunlin Chan Temple' (云林禅寺), still on the plaque over the Hall of the Heavenly Kings. In 1966 local people and Zhejiang University students stopped Red Guards from destroying it, and Premier Zhou Enlai later ordered it protected. The great Buddha in the main hall was carved in 1956. Huili's ashes are said to rest in the small Elder Li's Pagoda by Feilai Feng."
+      ],
+      "meaning": "Feilai Feng means 'the Peak that Flew Here': legend says Huili thought it looked like a holy mountain in India and asked how it had flown to China. The carvings mix Chinese and Tibetan styles, and the best loved is the fat, laughing Budai (Maitreya), the 'future Buddha' who brings happiness. In the temple, halls rise up the slope in a fixed order, from guardian kings at the gate to the historical Buddha at the centre. The hall of Ji Gong honours a scruffy, wine-drinking Song-dynasty monk from this temple who became a folk hero for helping the poor.",
+      "highlights": [
+        {"name": "Feilai Feng carvings", "zh": "飞来峰造像", "what": "Along the stream path after the main gate. Over 470 carvings in 153 niches, mostly Northern Song and Yuan. Look for the big laughing Budai (3.6 m high, 9.9 m long), the largest on the hill."},
+        {"name": "Hall of the Heavenly Kings", "zh": "天王殿", "what": "Four giant guardian kings, a laughing Buddha and an 800-year-old Song statue of the protector Weituo. The front door is often closed; use the side doors."},
+        {"name": "Mahavira Hall", "zh": "大雄宝殿", "what": "The main hall, 33.6 m tall. Its seated Shakyamuni Buddha, carved in 1956 from camphor wood, is 24.6 m with its throne, the largest wooden Buddhist statue in China."},
+        {"name": "Hall of the Medicine Buddha", "zh": "药师殿", "what": "The Buddha of healing, with the Bodhisattvas of Sunlight and Moonlight and twelve heavenly generals. Interesting given Chinese medicine traditions."},
+        {"name": "Hall of Ji Gong", "zh": "济公殿", "what": "East of the Medicine Buddha hall: a 2.3 m bronze of Ji Gong and 18 murals of his life."},
+        {"name": "Hall of the 500 Arhats", "zh": "五百罗汉堂", "what": "Modern hall of 500 bronze arhats (enlightened disciples) around a 12.6 m bronze canopy."},
+        {"name": "Yongfu Temple", "zh": "永福寺", "what": "600 m further up the valley, quiet and leafy, with a vegetarian dining hall. See it before you leave, as your booking admits you only once."}
+      ],
+      "tips": [
+        "Book first: free reservation in the WeChat or Alipay mini-program '杭州灵隐飞来峰'. Slots open 7 days ahead at 08:00; there is no same-day booking. Switch the ID type to passport and carry the passport.",
+        "Hours 07:30–17:30, last entry 17:00. Weekdays are calmer; avoid the 1st and 15th of the lunar month, when many worshippers come.",
+        "No metro. Bus 7 from Hubin ends at Lingyin (¥2, 40–55 min). A taxi from Hubin is about 30 min, roughly ¥32. On weekends and holidays (08:00–17:00) taxis can't drive in; take the ¥2 shuttle from the Xixi Road car parks.",
+        "Lunch: Shifangyuan (十方苑) inside serves temple vegetarian noodles for about ¥20; Yongfu Temple's dining hall ¥25–30 (go before 11:30).",
+        "Dress modestly and don't photograph monks or people praying up close."
+      ],
+      "facts": [
+        ["Founded", "328, by the monk Huili"],
+        ["Feilai Feng carvings", "470+ in 153 niches; mostly 10th–14th c."],
+        ["Main Buddha", "24.6 m with throne, camphor wood, 1956"],
+        ["Rebuilt", "At least 16 times"],
+        ["Entry", "Free since 1 Dec 2025; advance booking required"],
+        ["Hours", "07:30–17:30, last entry 17:00"]
+      ],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 5, "line": "Must-see: the carvings and the great Buddha are the strongest sight in Hangzhou after the lake itself; just remember to book the day before."}
+      },
+      "time": "2.5–3.5 h",
+      "best": "A weekday morning slot, arriving at 07:30–08:30 before tour groups and while incense smoke hangs in the valley.",
+      "coord": [30.2418, 120.1020],
+      "coord_src": "approx",
+      "sources": [
+        ["Lingyin Temple (Wikipedia)", "https://en.wikipedia.org/wiki/Lingyin_Temple"],
+        ["List of Major National Historical and Cultural Sites in Zhejiang (Wikipedia)", "https://en.wikipedia.org/wiki/List_of_Major_National_Historical_and_Cultural_Sites_in_Zhejiang"],
+        ["Hangzhou offers free entry to popular site (eHangzhou)", "https://www.ehangzhou.gov.cn/2025-11/21/c_295693.htm"],
+        ["Lingyin Temple guide (China for Travelers)", "https://chinafortravelers.com/guides/lingyin-temple-hangzhou/"]
+      ]
+    },
+    "longjing": {
+      "name": "Longjing tea village",
+      "zh": "龙井村",
+      "pinyin": "Lóngjǐng Cūn",
+      "glance": "The hill village that gave its name to Dragon Well tea (龙井茶), China's most famous green tea. Terraced tea bushes climb the slopes, families sell tea from their front rooms, and the '18 Imperial Tea Trees' honoured by the Qianlong emperor grow in a small garden below Lion Peak.",
+      "history": [
+        "Tea has grown in these hills for centuries. In the Qing dynasty Longjing became 'tribute tea' (贡茶) for the court; Wikipedia credits the Kangxi emperor, and a popular legend credits his grandson Qianlong. The story goes that Qianlong was served tea at Hu Gong Temple under Lion Peak (狮峰) and named 18 tea bushes there for imperial use. Their tea is still picked by hand and sold at auction for very high prices.",
+        "Since 1998 'West Lake Longjing' (西湖龙井) has been a protected name: only tea from a 168 km² zone around the lake can use it. Tradition ranks five peaks: Lion, Dragon, Cloud, Tiger and Plum (狮、龙、云、虎、梅), with Lion Peak tea the most prized. The leaves are pressed flat by hand in a hot wok for 12–15 minutes, which stops oxidation and gives the tea its flat blade shape."
+      ],
+      "meaning": "For Chinese tea drinkers this is holy ground: the name means 'Dragon Well', after a spring in the village said never to run dry. Spring tea picked before the Qingming festival (around 5 April), called Mingqian (明前), is the most valued; tea picked before Guyu (mid-April) is good value. Good Longjing is flat, smooth and tight, a light 'brown-rice' green with a yellow cast rather than bright emerald. It brews yellow-green and tastes sweet and mellow, with a roasted-chestnut note. The local dish Longjing prawns (龙井虾仁) is stir-fried river shrimp finished with the tea.",
+      "highlights": [
+        {"name": "18 Imperial Tea Trees", "zh": "十八棵御茶", "what": "The famous bushes in the Imperial Tea Garden at Lion Peak, inside small enclosures; ask staff where they are, as they are easy to miss. Entry about ¥10."},
+        {"name": "Old Dragon Well", "zh": "老龙井", "what": "The spring the tea is named after, near the imperial garden, with a stone dragon head dripping spring water."},
+        {"name": "Tea terraces walk", "what": "Paths climb the slopes above the village for views over the bushes; trails link to the other tea villages such as Meijiawu."},
+        {"name": "Longjing Temple area", "zh": "龙井寺", "what": "Quiet old temple about 500 m below the village, where the bus stops."},
+        {"name": "China National Tea Museum", "zh": "中国茶叶博物馆", "what": "Free museum on tea history and types, set among tea fields lower down the valley (Shuangfeng and Longjing branches; closed Tuesdays)."}
+      ],
+      "tips": [
+        "Get there: bus Y3 from West Lake (¥2, about 30 min), or bus 27 to the Tea Museum and walk 35 min uphill, or a short DiDi. Get off at Longjing Temple (龙井寺) stop.",
+        "Prices are per jin (斤 = 500 g). Ask for the price per jin, agree it before anything is weighed, and buy 50 g or 100 g. In 2026 testing, genuine West Lake Longjing averaged about ¥4,200/jin (≈ ¥420 per 50 g); ordinary Longjing about ¥1,000/jin.",
+        "Check the origin label: green = farmer's own tea from the zone, yellow = licensed company. Scratch the code, scan the QR and see how often it has been queried; a seller without a label is a warning sign.",
+        "Scams: say no to 'tea ceremonies' or 'plantation tours' offered by strangers, drivers or touts (tins at ¥1,500–4,000). Words like 'Hangzhou Longjing' or 'West Lake area' on a pack are not the protected name.",
+        "November tea is last spring's crop or cheaper autumn tea; brew it at 80–85 °C in a glass, about 3 g per glass, and top up two or three times."
+      ],
+      "facts": [
+        ["Protected zone", "168 km² ('West Lake Longjing', since 1998)"],
+        ["Five peaks", "Lion, Dragon, Cloud, Tiger, Plum"],
+        ["Grades", "Superior, then grades 1–5"],
+        ["Pan-firing", "12–15 min per batch, about 100 g"],
+        ["Imperial Tea Garden entry", "about ¥10"]
+      ],
+      "ratings": {
+        "china_grade": null,
+        "unesco": null,
+        "visitor": null,
+        "verdict": {"stars": 4, "line": "Worth it: green hills, a real tea village and a chance to taste the best Longjing; just go in knowing the prices and the scams."}
+      },
+      "time": "2–3 h (with tea tasting); half a day with the Tea Museum",
+      "best": "A weekday morning, combined with the Tea Museum (not Tuesday) and lunch of Longjing prawns.",
+      "coord": [30.2245, 120.1180],
+      "coord_src": "approx",
+      "sources": [
+        ["Longjing tea (Wikipedia)", "https://en.wikipedia.org/wiki/Longjing_tea"],
+        ["Longjing Dragon Well tea guide (China for Travelers)", "https://chinafortravelers.com/guides/longjing-dragon-well-tea/"],
+        ["Longjing Imperial Tea Garden (eHangzhou)", "https://www.ehangzhou.gov.cn/2018-08/15/c_262281.htm"],
+        ["How I explored Longjing Tea Village (Nick Kembel)", "https://www.nickkembel.com/longjing-tea-village/"],
+        ["Hangzhou scam guide (tabiji)", "https://tabiji.ai/scams/hangzhou/"],
+        ["Longjing prawns (Wikipedia)", "https://en.wikipedia.org/wiki/Longjing_prawns"]
+      ]
+    }
+  },
+  "pois": {
+    "hotel_hz": {
+      "name": "Yitel Collection Hotel (West Lake Intime in77)",
+      "zh": "和颐至尚酒店(杭州西湖风景区银泰in77店)",
+      "kind": "hotel",
+      "coord": [30.2482, 120.1660],
+      "coord_src": "approx",
+      "note": "Tower A, Yaojiang Guangsha (耀江广厦A座), 126 Yan'an Road (延安路126号). Ding'an Road metro (Line 1) is about 230–470 m away. Show taxis the Chinese name."
+    },
+    "m_dingan_rd": {
+      "name": "Ding'an Road station (Metro Line 1)",
+      "zh": "定安路站",
+      "kind": "metro",
+      "coord": [30.2472, 120.1682],
+      "coord_src": "approx",
+      "note": "Line 1, one stop south of Longxiangqiao (Hubin). Exit C is beside Xihu Avenue (西湖大道); exit B towards Kaiyuan Road. Nearest metro for Hefang Street too."
+    },
+    "hubin": {
+      "name": "Hubin lakefront and musical fountain (No. 3 Park)",
+      "zh": "湖滨三公园 · 音乐喷泉",
+      "kind": "other",
+      "coord": [30.2558, 120.1608],
+      "coord_src": "approx",
+      "note": "Fountain nightly 19:30. Hubin boat pier for Three Pools is on this shore. Nearest metro: Longxiangqiao (龙翔桥), 5–10 min walk."
+    },
+    "broken_bridge": {
+      "name": "Broken Bridge",
+      "zh": "断桥",
+      "kind": "other",
+      "coord": [30.26082, 120.14697],
+      "coord_src": "OpenStreetMap",
+      "note": "East end of the Bai Causeway, on Beishan Road (北山路)."
+    },
+    "bai_cause_w": {
+      "name": "Bai Causeway west end (Gushan, Autumn Moon over the Calm Lake)",
+      "zh": "白堤西端 · 平湖秋月",
+      "kind": "other",
+      "coord": [30.2522, 120.1392],
+      "coord_src": "approx",
+      "note": "Where the causeway reaches Gushan Island; walk west along Gushan Road (孤山路) for the museum and Xiling Seal Society."
+    },
+    "su_cause_n": {
+      "name": "Su Causeway north end (near Yue Fei Temple)",
+      "zh": "苏堤北口 · 岳庙",
+      "kind": "entrance",
+      "coord": [30.2575, 120.1335],
+      "coord_src": "approx",
+      "note": "Bus stop 'Yue Miao' (岳庙) on Beishan Road; Quyuan lotus garden (曲院风荷) next to it."
+    },
+    "su_cause_s": {
+      "name": "Su Causeway south end (Viewing Fish at Flower Harbour)",
+      "zh": "苏堤南口 · 花港观鱼",
+      "kind": "entrance",
+      "coord": [30.2335, 120.1400],
+      "coord_src": "approx",
+      "note": "On Nanshan Road (南山路); Huagang boat pier nearby; Leifeng Pagoda 15–20 min walk east."
+    },
+    "lingyin_gate": {
+      "name": "Lingyin–Feilai Feng scenic area main entrance",
+      "zh": "灵隐飞来峰景区 入口",
+      "kind": "entrance",
+      "coord": [30.2418, 120.1020],
+      "coord_src": "approx",
+      "note": "At the end of Lingyin Road (灵隐路); bus 7 terminus 'Lingyin' nearby. Booking required (WeChat/Alipay mini-program 杭州灵隐飞来峰). Temple itself about 1 km in, at 30.2428, 120.0967 (Wikipedia)."
+    },
+    "longjing_village": {
+      "name": "Longjing village centre",
+      "zh": "龙井村",
+      "kind": "other",
+      "coord": [30.2245, 120.1180],
+      "coord_src": "approx",
+      "note": "Bus Y3 or 27; stop 'Longjing Temple' (龙井寺) about 500 m below the village. Imperial Tea Garden (十八棵御茶) uphill."
+    },
+    "leifeng_entr": {
+      "name": "Leifeng Pagoda entrance",
+      "zh": "雷峰塔景区 入口",
+      "kind": "entrance",
+      "coord": [30.2346, 120.1462],
+      "coord_src": "approx",
+      "note": "15 Nanshan Road (南山路15号), opposite Jingci Temple. Escalators lead up to the pagoda. Ticket ¥40; Nov hours 08:00–17:30."
+    }
+  },
+  "shops": [
+    {
+      "name": "Xiling Seal Art Society, Gushan",
+      "zh": "西泠印社",
+      "kind": "shop",
+      "near": "gushan",
+      "walk": "On Gushan Road, 5–10 min west of the Bai Causeway end",
+      "buy": "The national home of seal carving: the place to look for a carved name seal (chop), red seal paste, rice paper and brushes. Ask whether they can carve your names in Chinese while you wait or for collection. No verified price list.",
+      "watch": "Not verified that the on-site outlet is open to visitors every day; prices for hand-carved stone seals vary hugely with the stone, so ask before they start.",
+      "hours": null,
+      "coord": [30.2535, 120.1340],
+      "coord_src": "approx",
+      "sources": [
+        ["Seal Engravers Society (Lonely Planet)", "https://www.lonelyplanet.com/points-of-interest/seal-engravers-society/1096591"],
+        ["Xiling Seal Art Society: Stamps on culture (eHangzhou)", "https://www.ehangzhou.gov.cn/2025-09/18/c_295041.htm"]
+      ]
+    },
+    {
+      "name": "Dujinsheng silk shop, Youdian Road",
+      "zh": "都锦生 (邮电路店)",
+      "kind": "shop",
+      "near": "fountain",
+      "walk": "About 5–10 min from the Hubin lakefront, in the streets behind in77",
+      "buy": "Hangzhou's time-honoured silk brand (老字号), famous for woven silk pictures; scarves, ties and silk gifts at fixed prices, no haggling. Check the sewn-in label says 100% 桑蚕丝 (mulberry silk).",
+      "watch": "Silk shops right on the lake and on Hefang Street are reported to sell imitation silk. '100% 真丝' on a label is the usual sign of a fake; real silk feels cool and creases softly.",
+      "hours": "09:00–21:00",
+      "coord": [30.2555, 120.1655],
+      "coord_src": "approx",
+      "sources": [
+        ["Hangzhou silk guide (China for Travelers)", "https://chinafortravelers.com/guides/hangzhou-silk/"]
+      ]
+    },
+    {
+      "name": "Hubin in77 (Intime) and Yan'an Road silk outlets",
+      "zh": "湖滨银泰in77 · 延安路",
+      "kind": "mall",
+      "near": "fountain",
+      "walk": "Right behind the Hubin lakefront; the hotel is in the same block",
+      "buy": "Open-air streets of shops and restaurants, the easy rain option. Two silk brands are on Yan'an Road nearby: Wensli (万事利) at 209-1 Yan'an Road (open 24 h) and Xidebao (喜得宝) at 398 Yan'an Road (open until 23:30), both fixed-price.",
+      "watch": "Big luxury and chain brands make up much of in77; for local goods go to the silk outlets or the tea and seal shops.",
+      "hours": null,
+      "coord": [30.2540, 120.1650],
+      "coord_src": "approx",
+      "sources": [
+        ["Where to stay in Hangzhou (China for Travelers)", "https://chinafortravelers.com/guides/where-to-stay-in-hangzhou/"],
+        ["Hangzhou silk guide (China for Travelers)", "https://chinafortravelers.com/guides/hangzhou-silk/"]
+      ]
+    },
+    {
+      "name": "China National Tea Museum tea room",
+      "zh": "中国茶叶博物馆",
+      "kind": "shop",
+      "near": "longjing",
+      "walk": "On the way to Longjing village: bus 27 stop, then 35 min uphill walk to the village",
+      "buy": "Lowest-risk place to buy Longjing in the hills: free museum with prices posted in the tea room. Expect real West Lake Longjing around ¥400 per 50 g (about S$75) at average 2026 prices; cheaper ordinary Longjing about ¥100 per 50 g.",
+      "watch": "Closed Tuesdays. Weekends may need a free advance booking (released 3 days ahead).",
+      "hours": "Shuangfeng branch 09:00–16:30; Longjing branch 09:30–16:00; closed Tue",
+      "coord": [30.2335, 120.1265],
+      "coord_src": "approx",
+      "sources": [
+        ["Longjing Dragon Well tea guide (China for Travelers)", "https://chinafortravelers.com/guides/longjing-dragon-well-tea/"],
+        ["Hangzhou museums (China for Travelers)", "https://chinafortravelers.com/guides/hangzhou-museums/"],
+        ["How I explored Longjing Tea Village (Nick Kembel)", "https://www.nickkembel.com/longjing-tea-village/"]
+      ]
+    },
+    {
+      "name": "Longjing village family tea houses",
+      "zh": "龙井村 茶农",
+      "kind": "market",
+      "near": "longjing",
+      "walk": "In the village lanes around the Imperial Tea Garden",
+      "buy": "Farm-gate Dragon Well tea, usually with a free tasting. A traveller in 2025–26 paid ¥350 (about S$65) for 50 g at ¥3,500/jin; village baskets ranged ¥1,500–6,800/jin depending on grade. Buy 50 g tins.",
+      "watch": "Agree the price per jin (500 g) before weighing, and do the maths. Ask for the green farmer label with a QR code. Check the payee name on QR payment codes; stickers have been swapped on fake codes.",
+      "hours": null,
+      "coord": [30.2245, 120.1180],
+      "coord_src": "approx",
+      "sources": [
+        ["How I explored Longjing Tea Village (Nick Kembel)", "https://www.nickkembel.com/longjing-tea-village/"],
+        ["Longjing Dragon Well tea guide (China for Travelers)", "https://chinafortravelers.com/guides/longjing-dragon-well-tea/"],
+        ["Hangzhou scam guide (tabiji)", "https://tabiji.ai/scams/hangzhou/"]
+      ]
+    }
+  ]
+}
