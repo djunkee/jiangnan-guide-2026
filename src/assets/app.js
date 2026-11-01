@@ -84,6 +84,9 @@ function markNow(scroll){
   var tgt=best||firstTimed;if(!tgt)return null;
   var seen=false;items.forEach(function(li){if(li===best){seen=true;return}if(best&&!seen&&li._m!=null)li.classList.add('past')});
   tgt.classList.add('now');$('.t',tgt).setAttribute('data-now',best?'Now':'Next');
+  var st={day:day.id,past:{},cur:null,next:null},stops=items.filter(function(li){return li.getAttribute('data-o')&&li._m!=null&&!li.classList.contains('skip')});
+  stops.forEach(function(li){var k=li.getAttribute('data-o');if(li._m>cur){if(!st.next)st.next=k}else if(li===best)st.cur=k;else st.past[k]=1});
+  if(st.cur)delete st.past[st.cur];NOWST=st;paintStops();
   if(nowBtn)nowBtn.hidden=false;
   if(scroll){var y=tgt.getBoundingClientRect().top+window.scrollY-((($('nav.days')||{}).offsetHeight)||60)-10;window.scrollTo(0,Math.max(0,y))}
   return tgt}
@@ -97,7 +100,7 @@ function initNow(){nowBtn=document.createElement('button');nowBtn.type='button';
 var hasL=typeof window.L!=='undefined',mapfs,fsMap,fsLayers,curDay,curSeg=0,meMarker,meWatch,showShops=true;
 function tl(){return L.tileLayer(TILE,{maxZoom:19,attribution:TILE_ATTR,crossOrigin:true})}
 function mk(p,small){var cls=p.n?'mk':'mk poi',txt=p.n||(p.kind==='hotel'?'🛏':p.kind==='rail'?'🚄':p.kind==='pier'?'⛴':p.kind==='metro'?'M':p.kind==='airport'?'✈':'•');
-  var s=p.n?(small?22:28):(small?18:24);return L.marker(p.ll,{icon:L.divIcon({className:'',html:'<div class="'+cls+'" style="width:'+s+'px;height:'+s+'px;'+(p.n?'background:'+(p.col||'#C1352A'):'')+'">'+txt+'</div>',iconSize:[s,s],iconAnchor:[s/2,s/2]}),keyboard:false,zIndexOffset:p.n?600:200})}
+  var s=p.n?(small?22:28):(small?18:24);return L.marker(p.ll,{icon:L.divIcon({className:'',html:'<div class="'+cls+'" data-k="'+p.k+'" style="width:'+s+'px;height:'+s+'px;'+(p.n?'--mc:'+(p.col||'#C1352A'):'')+'">'+txt+'</div>',iconSize:[s,s],iconAnchor:[s/2,s/2]}),keyboard:false,zIndexOffset:p.n?600:200})}
 /* street routes: walking and driving paths from OpenStreetMap routing (FOSSGIS OSRM), fetched once when online, then kept on the phone */
 var RT='https://routing.openstreetmap.de/routed-',PROF={walk:'foot',car:'car',bike:'bike'},rtMem={},rtQ=[],rtBusy=0;
 function rkey(m,a,b){return 'jn-rt1:'+m+':'+a[0].toFixed(5)+','+a[1].toFixed(5)+';'+b[0].toFixed(5)+','+b[1].toFixed(5)}
@@ -114,14 +117,15 @@ function pump(){while(rtBusy<2&&rtQ.length){var j=rtQ.shift();rtBusy++;(function
     try{localStorage.setItem(j.k,JSON.stringify(o))}catch(e){}j.res(o)}).catch(function(){j.res(null)}).then(function(){clearTimeout(to);rtBusy--;setTimeout(pump,250)})})(j)}}
 /* split a leg into pieces: metro legs walk to the station, ride between stations, walk from the station */
 function pieces(a,b){var m=b.m||'walk';if(m==='metro'&&b.via&&b.via.length){var v=b.via,out=[];
-    if(dist(a.ll,v[0].ll)>60)out.push({m:'walk',p:[a.ll,v[0].ll]});out.push({m:'metro',p:v.map(function(x){return x.ll})});
+    if(dist(a.ll,v[0].ll)>60)out.push({m:'walk',p:[a.ll,v[0].ll]});out.push({m:'metro',p:[v[0].ll,v[v.length-1].ll],via:v});
     if(dist(v[v.length-1].ll,b.ll)>60)out.push({m:'walk',p:[v[v.length-1].ll,b.ll]});return out}
   return [{m:m,p:[a.ll,b.ll]}]}
 function segLayers(seg,col,small){var g=L.featureGroup(),pts=seg.pts,stations={};
   for(var i=1;i<pts.length;i++)pieces(pts[i-1],pts[i]).forEach(function(pc){var m=MODE[pc.m]||MODE.walk,routed=!!PROF[pc.m];
     var line=L.polyline(pc.p,{color:m.c,weight:small?3:m.w,opacity:routed?.45:.85,dashArray:m.dash,lineCap:'round',lineJoin:'round'}).addTo(g);
+    if(pc.via&&!small)line.bindTooltip('Ⓜ Metro: '+pc.via.map(function(x){return x.name}).join(' → '),{className:'tl',sticky:true});
     if(routed&&dist(pc.p[0],pc.p[1])>80)getRoute(pc.m,pc.p[0],pc.p[1]).then(function(r){if(r&&r.c.length>1){line.setLatLngs(r.c);line.setStyle({opacity:.9,dashArray:pc.m==='walk'?(small?'1 5':'1 7'):null,weight:pc.m==='walk'?(small?3.5:5):(small?3:4.5)})}})});
-  pts.forEach(function(p){(p.via||[]).forEach(function(v){stations[v.k]=v})});
+  pts.forEach(function(p){var v=p.via||[];if(v.length){stations[v[0].k]=v[0];stations[v[v.length-1].k]=v[v.length-1]}});
   if(!small)Object.keys(stations).forEach(function(k){var v=stations[k];L.circleMarker(v.ll,{radius:5,color:'#fff',weight:2,fillColor:'#2443A0',fillOpacity:1}).bindTooltip('Ⓜ '+v.name,{className:'tl',direction:'top'}).addTo(g)});
   var seen={};pts.forEach(function(p){var key=p.k+'@'+p.ll.join();if(seen[key])return;seen[key]=1;p.col=col;var m=mk(p,small);if(!small)m.bindTooltip((p.n?p.n+' · ':'')+p.name,{className:'tl',direction:'top',offset:[0,-12]});m.addTo(g)});
   return g}
@@ -138,19 +142,19 @@ function initPreviews(){
     if(!hasL){$('.dm-map',box).innerHTML='<p class="muted" style="padding:12px">Map unavailable.</p>';return}
     var made=false,make=function(){if(made)return;made=true;var col=resolveCol(dayCol(id));
       var map=L.map($('.dm-map',box),{zoomControl:false,attributionControl:false,dragging:false,touchZoom:false,scrollWheelZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,tap:false,zoomSnap:.25});
-      tl().addTo(map);var all=L.featureGroup();segs.forEach(function(s){segLayers(s,col,true).addTo(all)});all.addTo(map);map.fitBounds(all.getBounds(),{padding:[18,18],maxZoom:16})};
+      tl().addTo(map);var all=L.featureGroup();segs.forEach(function(s){segLayers(s,col,true).addTo(all)});all.addTo(map);map.fitBounds(all.getBounds(),{padding:[18,18],maxZoom:16});paintStops()};
     if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){make();io.disconnect()}})},{rootMargin:'300px'});io.observe(box)}else make();
   })}
 function buildMapFS(){mapfs=document.createElement('div');mapfs.className='mapfs';mapfs.hidden=true;
-  mapfs.innerHTML='<div class="mf-head"><div class="mf-top"><button class="mf-x" type="button" aria-label="Close map">✕</button><div class="ttl"></div></div><div class="mf-tabs"></div></div><div id="mf-map"></div><div class="mf-panel"><div class="mf-tools"><button type="button" data-a="me">📍 My position</button><button type="button" data-a="all">Fit day</button><button type="button" data-a="shops" class="on">🛍 Shops</button><button type="button" data-a="transit">🚇 Transit lines</button><button type="button" data-a="save" hidden>⬇ Save offline</button></div><div class="mf-status"></div><ol class="legs"></ol></div>';
+  mapfs.innerHTML='<div class="mf-head"><div class="mf-top"><button class="mf-x" type="button" aria-label="Close map">✕</button><div class="ttl"></div></div><div class="mf-tabs"></div></div><div id="mf-map"></div><div class="mf-panel"><div class="mf-tools"><button type="button" data-a="me">📍 My position</button><button type="button" data-a="all">Fit day</button><button type="button" data-a="shops" class="on">🛍 Shops</button><button type="button" data-a="metro">Ⓜ Metro lines</button><button type="button" data-a="transit">🚌 Bus &amp; transit map</button><button type="button" data-a="save" hidden>⬇ Save offline</button></div><div class="mf-key" hidden><span><i style="background:#F05A1A"></i>Next stop</span><span><i style="background:#fff;box-shadow:0 0 0 2px #C1352A"></i>You are here (by the plan)</span><span><i style="background:#9AA3AE"></i>Done</span></div><div class="mf-status"></div><ol class="legs"></ol></div>';
   document.body.appendChild(mapfs);$('.mf-x',mapfs).addEventListener('click',function(){closeMap()});
   $('.mf-tools',mapfs).addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var a=b.getAttribute('data-a');
-    if(a==='transit')toggleTransit(b);if(a==='me')locate(true);if(a==='all')fitSeg();if(a==='shops'){showShops=!showShops;b.classList.toggle('on',showShops);drawSeg()}if(a==='save')saveOffline(b)});
+    if(a==='transit')toggleTransit(b);if(a==='metro')toggleMetro(b);if(a==='me')locate(true);if(a==='all')fitSeg();if(a==='shops'){showShops=!showShops;b.classList.toggle('on',showShops);drawSeg()}if(a==='save')saveOffline(b)});
   if(canCache())$('[data-a="save"]',mapfs).hidden=false}
 function openMap(id,si){if(!hasL)return;curDay=id;curSeg=si||0;mapfs.hidden=false;document.documentElement.style.overflow='hidden';
-  var segs=DAYS[id],tabs=$('.mf-tabs',mapfs);tabs.innerHTML='';if(segs.length>1)segs.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.textContent=s.tab||s.t;b.setAttribute('aria-pressed',i===curSeg);b.addEventListener('click',function(){curSeg=i;$$('button',tabs).forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});drawSeg();fitSeg(true)});tabs.appendChild(b)});
-  if(!fsMap){fsMap=L.map('mf-map',{zoomControl:true,zoomSnap:.5,tap:true});fsBase=tl().addTo(fsMap);fsMap.attributionControl.setPrefix(false);addLocControl()}
-  setTimeout(function(){fsMap.invalidateSize();drawSeg();fitSeg(true);var on=false;try{on=localStorage.getItem('jn-loc')==='1'}catch(e){}if(on)locate(false)},30);
+  var segs=DAYS[id],tabs=$('.mf-tabs',mapfs);tabs.innerHTML='';if(segs.length>1)segs.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.textContent=s.tab||s.t;b.setAttribute('aria-pressed',i===curSeg);b.addEventListener('click',function(){curSeg=i;$$('button',tabs).forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});drawSeg();fitSeg(true);paintStops()});tabs.appendChild(b)});
+  if(!fsMap){fsMap=L.map('mf-map',{zoomControl:true,zoomSnap:.5,tap:true});fsBase=tl().addTo(fsMap);fsMap.attributionControl.setPrefix(false);addLocControl();fsMap.on('moveend',paintStops)}
+  setTimeout(function(){fsMap.invalidateSize();drawSeg();fitSeg(true);paintStops();var on=false;try{on=localStorage.getItem('jn-loc')==='1'}catch(e){}if(on)locate(false)},30);
   try{history.pushState({map:1},'');mapPushed=true}catch(e){}}
 function closeMap(fromPop){if(!mapfs||mapfs.hidden)return;mapfs.hidden=true;document.documentElement.style.overflow='';stopLocate();if(fromPop!==true&&mapPushed){mapPushed=false;try{history.back()}catch(e){}}else mapPushed=false}
 window.addEventListener('popstate',function(){closeSheet(true);closeMap(true)});
@@ -166,17 +170,29 @@ function drawSeg(){var seg=DAYS[curDay][curSeg],col=resolveCol(dayCol(curDay));i
   seg.pts.forEach(function(b,i){if(!i)return;var a=seg.pts[i-1];var pcs=pieces(a,b),tot=0,n=0,want=0;
     pcs.forEach(function(pc){if(!PROF[pc.m]||dist(pc.p[0],pc.p[1])<=80)return;want++;getRoute(pc.m,pc.p[0],pc.p[1]).then(function(r){n++;if(r)tot+=r.d;
       if(n===want&&tot){var el=$('.rd[data-r="'+i+'"]',legs);if(el)el.textContent=(b.m==='car'?'By road ≈ '+fmtD(tot):b.m==='metro'?'Walking to and from the stations ≈ '+fmtD(tot):'Walking route ≈ '+fmtD(tot)+', about '+Math.max(1,Math.round(tot/1000/4.5*60))+' min')}})})});
-  fsMap.invalidateSize({pan:false});updSaveStatus()}
+  $('.mf-key',mapfs).hidden=!(NOWST&&NOWST.day===curDay);fsMap.invalidateSize({pan:false});updSaveStatus();paintStops()}
 function fitSeg(now){if(fsLayers)fsMap.fitBounds(fsLayers.getBounds(),{padding:[30,30],maxZoom:16,animate:!now})}
 
+
+/* colour today's stops on the maps: done = grey, here now = ring, next = orange and pulsing */
+var NOWST=null;
+function paintStops(){$$('.mk[data-k]').forEach(function(el){el.classList.remove('done','here','nxt')});
+  if(!NOWST)return;var d=document.getElementById(NOWST.day);
+  var scope=[];if(d)scope=$$('.dmap .mk[data-k]',d);if(mapfs&&!mapfs.hidden&&curDay===NOWST.day)scope=scope.concat($$('#mf-map .mk[data-k]'));
+  scope.forEach(function(el){var k=el.getAttribute('data-k');if(NOWST.past[k])el.classList.add('done');if(k===NOWST.cur)el.classList.add('here');if(k===NOWST.next)el.classList.add('nxt')})}
+/* metro overlay: metro and rail lines with stations, on top of the normal map (needs internet) */
+var metroOn=false,metroL=null;
+function toggleMetro(btn){metroOn=!metroOn;btn.classList.toggle('on',metroOn);var st=$('.mf-status',mapfs);
+  if(!metroL)metroL=L.tileLayer('https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',{subdomains:'abc',maxZoom:19,opacity:.9,attribution:'<a href="https://www.openrailwaymap.org/">OpenRailwayMap</a>'});
+  if(metroOn){metroL.addTo(fsMap);st.textContent='Ⓜ Metro overlay: metro and rail lines with station names (OpenRailwayMap; needs internet). Zoom in to read the station names.'}else{fsMap.removeLayer(metroL);st.textContent='';updSaveStatus()}}
 /* transit view: public-transport map (bus, tram, metro lines) plus metro and rail lines on top; needs internet */
 var fsBase=null,trBase=null,trRail=null,transitOn=false;
 function toggleTransit(btn){transitOn=!transitOn;btn.classList.toggle('on',transitOn);var st=$('.mf-status',mapfs);
   if(!trBase){trBase=L.tileLayer('https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png',{maxZoom:18,attribution:'Transit map <a href="https://memomaps.de/">memomaps.de</a> CC-BY-SA, data © OpenStreetMap'});
     trRail=L.tileLayer('https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png',{subdomains:'abc',maxZoom:19,opacity:.8,attribution:'<a href="https://www.openrailwaymap.org/">OpenRailwayMap</a>'})}
-  if(transitOn){fsMap.removeLayer(fsBase);trBase.addTo(fsMap);trRail.addTo(fsMap);trBase.bringToBack();
+  if(transitOn){fsMap.removeLayer(fsBase);trBase.addTo(fsMap);if(!metroOn)trRail.addTo(fsMap);trBase.bringToBack();
     st.textContent='🚇 Transit view: bus, tram and metro lines with stops (from OpenStreetMap; needs internet, not saved offline). Zoom in to see line numbers. For the best transit route, tap “Transit in Amap” on a leg.'}
-  else{fsMap.removeLayer(trBase);fsMap.removeLayer(trRail);fsBase.addTo(fsMap);fsBase.bringToBack();st.textContent='';updSaveStatus()}}
+  else{fsMap.removeLayer(trBase);if(fsMap.hasLayer(trRail))fsMap.removeLayer(trRail);fsBase.addTo(fsMap);fsBase.bringToBack();st.textContent='';updSaveStatus()}}
 /* your position: blue dot, accuracy circle, follow mode, distance to stops */
 var follow=false,meAcc=null,meLL=null,locBtn=null;
 var LOCSVG='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2 4.5 20.3l.7.7L12 18l6.8 3 .7-.7z" fill="currentColor" transform="rotate(45 12 12)"/></svg>';
