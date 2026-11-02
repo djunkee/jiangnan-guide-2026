@@ -66,8 +66,9 @@ DAYS = {
  'd2': [seg('Mon 2 Nov · French Concession, posters, tower and cruise', city='上海', pts=[
     'hotel_sh', ('lailai', 'walk', 'Walk 20 min north, or Metro Line 8 one stop to People’s Square (exit 19) and 7 min on foot. Didi 8 min.'),
     ('frenchc', 'metro', 'Walk 8 min to East Nanjing Road, Metro Line 10 straight to Jiaotong University (about 20 min), walk 5 min. Or Didi 20 min.', ['m_east_nanjing_rd','m_jiaotong_univ']),
-    ('propaganda', 'car', 'Didi 10 min from Anfu Road. Floor 7, Room K, 726 Yan’an West Road.'),
-    ('shtower', 'metro', 'Walk 10–15 min to Jiangsu Road, Metro Line 2 east to Lujiazui (about 25 min), exit 6, walk 10 min. Entrance on B1–B2. If you skip the posters: Line 7 from Changshu Road to Jing’an Temple, then Line 2, or Didi 30 min.', ['m_jiangsu_rd','m_lujiazui']),
+    ('ferry', 'car', 'Didi from near Wukang Mansion to the Jinling East Road ferry pier, about 30 min.'),
+    ('pier_dongchang', 'ferry', 'Public ferry across the Huangpu, about 10 min, 2 RMB.'),
+    ('shtower', 'walk', 'Walk about 15 min to the Shanghai Tower; tickets and entrance on B1–B2.'),
     ('pier_dongchang', 'walk', 'After dinner, walk 15 min to the Dongchang Road ferry pier.'),
     ('ferry', 'ferry', 'Public ferry back across the river, about 10 min, 2 RMB.'),
     ('rivercruise', 'walk', 'Walk 10 min south along the Bund to Shiliupu Wharf (Exit 2).'),
