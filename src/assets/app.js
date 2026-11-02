@@ -121,12 +121,12 @@ function pieces(a,b){var m=b.m||'walk';if(m==='metro'&&b.via&&b.via.length){var 
     if(dist(v[v.length-1].ll,b.ll)>60)out.push({m:'walk',p:[v[v.length-1].ll,b.ll]});return out}
   return [{m:m,p:[a.ll,b.ll]}]}
 function segLayers(seg,col,small){var g=L.featureGroup(),pts=seg.pts,stations={};
-  for(var i=1;i<pts.length;i++)pieces(pts[i-1],pts[i]).forEach(function(pc){var m=MODE[pc.m]||MODE.walk,routed=!!PROF[pc.m];
+  for(var i=1;i<pts.length;i++)pieces(pts[i-1],pts[i]).forEach(function(pc){if(pc.m==='metro'||pc.m==='train')return;var m=MODE[pc.m]||MODE.walk,routed=!!PROF[pc.m];
     var line=L.polyline(pc.p,{color:m.c,weight:small?3:m.w,opacity:routed?.45:.85,dashArray:m.dash,lineCap:'round',lineJoin:'round'}).addTo(g);
     if(pc.via&&!small)line.bindTooltip('Ⓜ Metro: '+pc.via.map(function(x){return x.name}).join(' → '),{className:'tl',sticky:true});
     if(routed&&dist(pc.p[0],pc.p[1])>80)getRoute(pc.m,pc.p[0],pc.p[1]).then(function(r){if(r&&r.c.length>1){line.setLatLngs(r.c);line.setStyle({opacity:.9,dashArray:pc.m==='walk'?(small?'1 5':'1 7'):null,weight:pc.m==='walk'?(small?3.5:5):(small?3:4.5)})}})});
   pts.forEach(function(p){var v=p.via||[];if(v.length){stations[v[0].k]=v[0];stations[v[v.length-1].k]=v[v.length-1]}});
-  if(!small)Object.keys(stations).forEach(function(k){var v=stations[k];L.circleMarker(v.ll,{radius:5,color:'#fff',weight:2,fillColor:'#2443A0',fillOpacity:1}).bindTooltip('Ⓜ '+v.name,{className:'tl',direction:'top'}).addTo(g)});
+  Object.keys(stations).forEach(function(k){var v=stations[k],sz=small?14:20;var mm=L.marker(v.ll,{icon:L.divIcon({className:'',html:'<div class="mk metro" style="width:'+sz+'px;height:'+sz+'px">M</div>',iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]}),keyboard:false,zIndexOffset:100});if(!small)mm.bindTooltip('Ⓜ '+v.name,{className:'tl',direction:'top',offset:[0,-8]});mm.addTo(g)});
   var seen={};pts.forEach(function(p){var key=p.k+'@'+p.ll.join();if(seen[key])return;seen[key]=1;p.col=col;var m=mk(p,small);if(!small)m.bindTooltip((p.n?p.n+' · ':'')+p.name,{className:'tl',direction:'top',offset:[0,-12]});m.addTo(g)});
   return g}
 function shopLayer(seg){var g=L.featureGroup(),ks={};seg.pts.forEach(function(p){ks[p.k]=1});
@@ -136,7 +136,7 @@ function dayCol(id){var d=document.getElementById(id);return d?(getComputedStyle
 function resolveCol(c){if(c.indexOf('var(')<0)return c;var t=document.createElement('span');t.style.color=c;document.body.appendChild(t);var v=getComputedStyle(t).color;t.remove();return v}
 function initPreviews(){
   $$('.dmap').forEach(function(box){var id=box.getAttribute('data-day'),segs=DAYS[id];if(!segs)return;
-    var lg='',used={};segs.forEach(function(s){s.pts.forEach(function(p,i){if(i&&!used[p.m]){used[p.m]=1;var m=MODE[p.m]||MODE.walk;lg+='<span><i style="border-color:'+m.c+';'+(m.dash?'border-top-style:dashed':'')+'"></i>'+m.l+'</span>'}})});
+    var lg='',used={};segs.forEach(function(s){s.pts.forEach(function(p,i){if(i&&!used[p.m]){used[p.m]=1;var m=MODE[p.m]||MODE.walk;if(p.m==='metro'){lg+='<span><b class="mlg">M</b>Metro station</span>';return}if(p.m==='train'){lg+='<span>🚄 Train (not drawn)</span>';return}lg+='<span><i style="border-color:'+m.c+';'+(m.dash?'border-top-style:dashed':'')+'"></i>'+m.l+'</span>'}})});
     box.innerHTML='<div class="dm-map"></div><button class="dm-tap" type="button" aria-label="Open the map of this day"></button><div class="dm-bar"><div class="lg">'+lg+'</div><button class="dm-open" type="button">Open map</button></div>'+(segs[0].note?'<div class="dm-note">'+esc(segs.map(function(s){return s.note}).filter(Boolean).join(' · '))+'</div>':'');
     var open=function(){openMap(id,0)};$('.dm-tap',box).addEventListener('click',open);$('.dm-open',box).addEventListener('click',open);
     if(!hasL){$('.dm-map',box).innerHTML='<p class="muted" style="padding:12px">Map unavailable.</p>';return}
@@ -160,7 +160,7 @@ function closeMap(fromPop){if(!mapfs||mapfs.hidden)return;mapfs.hidden=true;docu
 window.addEventListener('popstate',function(){closeSheet(true);closeMap(true)});
 function drawSeg(){var seg=DAYS[curDay][curSeg],col=resolveCol(dayCol(curDay));if(fsLayers)fsMap.removeLayer(fsLayers);fsLayers=L.featureGroup([segLayers(seg,col,false)]);if(showShops)fsLayers.addLayer(shopLayer(seg));fsLayers.addTo(fsMap);
   $('.ttl',mapfs).textContent=seg.t;
-  var h='<li><span class="nt">Dotted paths are walking routes along real streets (OpenStreetMap routing, loaded once when online, then kept on the phone). Pins are close but approximate, so for turn-by-turn directions tap Amap or Apple Maps.</span></li>';if(seg.note)h+='<li><span class="nt">'+esc(seg.note)+'</span></li>';
+  var h='<li><span class="nt">Dotted paths are walking routes along real streets; brown lines are Didi rides by road. Metro rides are shown only as the stations where you get on and off (blue M); tap Ⓜ Metro lines to see the lines themselves. Pins are close but approximate, so for turn-by-turn directions tap Amap or Apple Maps.</span></li>';if(seg.note)h+='<li><span class="nt">'+esc(seg.note)+'</span></li>';
   for(var i=1;i<seg.pts.length;i++){var a=seg.pts[i-1],b=seg.pts[i],m=MODE[b.m]||MODE.walk;
     var q=encodeURIComponent(b.zh||b.name),am='https://uri.amap.com/search?keyword='+q+'&city='+encodeURIComponent(seg.city||'')+'&callnative=1&src=jiangnan-guide';
     var ap='https://maps.apple.com/?daddr='+encodeURIComponent((b.zh||b.name)+(seg.city?' '+seg.city:''))+'&dirflg='+(APPLEMODE[b.m]||'w');
