@@ -34,7 +34,8 @@
    "tips": [
     "Queues are common around meal times; late morning is easier.",
     "Order and pay at the counter or by scanning the QR code with Alipay; Mastercard may not be accepted.",
-    "Let the dumplings cool for a minute: the soup is very hot."
+    "Let the dumplings cool for a minute: the soup is very hot.",
+    "Lailai has more than one outlet (there is also a Jing’an branch). This stop is the original one at 506 Tianjin Road, behind Nanjing Road East."
    ],
    "facts": [
     [
@@ -69,10 +70,10 @@
    "time": "45 min plus the queue",
    "best": "Late morning, before the lunch rush.",
    "coord": [
-    31.236185,
-    121.477313
+    31.238121,
+    121.472786
    ],
-   "coord_src": "Google Places",
+   "coord_src": "Google Places, converted from China map datum (GCJ-02) to GPS (WGS84)",
    "sources": [
     [
      "Amap: Lailai Xiaolong",
