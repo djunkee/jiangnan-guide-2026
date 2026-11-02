@@ -1,5 +1,86 @@
 {
- "places": {},
+ "places": {
+  "lailai": {
+   "name": "Lailai Xiaolong",
+   "zh": "莱莱小笼",
+   "pinyin": "Láilái Xiǎolóng",
+   "glance": "A small, busy soup-dumpling shop on a side street behind Nanjing Road East, popular with locals and visitors for crab xiaolongbao at everyday prices.",
+   "history": [
+    "Xiaolongbao, 'little basket buns', come from Nanxiang, a town north-west of Shanghai, where they were first sold in the 19th century. Shanghai’s version has a thin, pleated skin around pork filling and hot broth made from gelled pork stock that melts when steamed."
+   ],
+   "meaning": "Autumn is crab season in Shanghai, and crab-roe xiaolongbao (蟹粉小笼) are the seasonal treat: richer and more expensive than plain pork. Eat them the local way: lift one gently into the spoon, bite a small hole, sip the soup, then dip in black vinegar with ginger.",
+   "highlights": [
+    {
+     "name": "Crab xiaolongbao",
+     "zh": "蟹粉小笼",
+     "what": "The house favourite in reviews: thin skin, rich buttery broth."
+    },
+    {
+     "name": "Pork xiaolongbao",
+     "zh": "鲜肉小笼",
+     "what": "The classic, to compare."
+    },
+    {
+     "name": "Fried pork chop",
+     "zh": "炸猪排",
+     "what": "Crisp and not greasy, several reviewers say."
+    },
+    {
+     "name": "Shrimp and crab wonton soup",
+     "zh": "虾蟹馄饨",
+     "what": "A good extra if you are hungry."
+    }
+   ],
+   "tips": [
+    "Queues are common around meal times; late morning is easier.",
+    "Order and pay at the counter or by scanning the QR code with Alipay; Mastercard may not be accepted.",
+    "Let the dumplings cool for a minute: the soup is very hot."
+   ],
+   "facts": [
+    [
+     "Address",
+     "506 Tianjin Road (天津路506号), Huangpu"
+    ],
+    [
+     "Price",
+     "About 64 RMB (S$12) per person"
+    ],
+    [
+     "Open",
+     "08:00–21:30"
+    ]
+   ],
+   "ratings": {
+    "china_grade": null,
+    "unesco": null,
+    "visitor": {
+     "score": 4.4,
+     "of": 5,
+     "count": "530 reviews",
+     "site": "Google",
+     "url": "",
+     "checked": "2026-11-01"
+    },
+    "verdict": {
+     "stars": 4,
+     "line": "Worth it: proper Shanghai soup dumplings, cheap, a short walk from the hotel."
+    }
+   },
+   "time": "45 min plus the queue",
+   "best": "Late morning, before the lunch rush.",
+   "coord": [
+    31.236185,
+    121.477313
+   ],
+   "coord_src": "Google Places",
+   "sources": [
+    [
+     "Amap: Lailai Xiaolong",
+     "https://surl.amap.com/1147kEaV37n"
+    ]
+   ]
+  }
+ },
  "pois": {},
  "shops": [
   {
