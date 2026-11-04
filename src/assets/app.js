@@ -92,7 +92,12 @@ function markNow(scroll){
   return tgt}
 function initNow(){nowBtn=document.createElement('button');nowBtn.type='button';nowBtn.className='nowbtn';nowBtn.hidden=true;nowBtn.innerHTML=PAW.replace('class="paw"','')+'Now';
   nowBtn.addEventListener('click',function(){markNow(true)});document.body.appendChild(nowBtn);
-  var t=markNow(!location.hash);
+  /* the phone restores the old scroll position after load; take control and jump to now once everything has settled */
+  try{if('scrollRestoration' in history)history.scrollRestoration='manual'}catch(e){}
+  var jump=!location.hash||location.hash==='#top',moved=false;
+  ['touchstart','wheel','keydown'].forEach(function(ev){window.addEventListener(ev,function(){moved=true},{once:true,passive:true})});
+  var t=markNow(jump);
+  if(jump){window.addEventListener('load',function(){setTimeout(function(){if(!moved)markNow(true)},150)});[900,2000].forEach(function(ms){setTimeout(function(){if(!moved)markNow(true)},ms)})}
   document.addEventListener('visibilitychange',function(){if(document.hidden){hiddenAt=Date.now()}else{var away=Date.now()-hiddenAt;var open=(sheet&&!sheet.hidden)||(mapfs&&!mapfs.hidden);markNow(away>10*60000&&!open)}});
   setInterval(function(){if(!document.hidden)markNow(false)},60000)}
 
