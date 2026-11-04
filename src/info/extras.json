@@ -162,7 +162,7 @@
    "name": "Xiaohe Park",
    "zh": "小河公园",
    "pinyin": "Xiǎohé Gōngyuán",
-   "glance": "A former Sinopec oil depot on the Grand Canal, turned into a free public park by the Japanese architect Kengo Kuma. Its old oil tanks are pierced with over a thousand holes and glow like giant lanterns after dark. It sits right next to Xiaohe Street.",
+   "glance": "A former Sinopec oil depot on the Grand Canal, turned into a free public park by the Japanese architect Kengo Kuma. Its old oil tanks are pierced with over a thousand holes and glow like giant lanterns after dark. It is about 1 km west of Xiaohe Street, on Xiaohe Branch Road (小河支路).",
    "history": [
     "The Xiaohe Oil Depot (小河油库) was built here in the 1950s as Zhejiang’s first modern oil store, supplied by boat along the Grand Canal. At its peak in the 1980s it handled about 560,000 tonnes a year. It closed in June 2019.",
     "Instead of clearing the site, Hangzhou kept four old warehouses and seven oil tanks and asked Kengo Kuma & Associates to turn it into a park. It opened in stages from 2022, with a light, leaf-patterned canopy over terraces and sunken gardens, and exhibition space in the old red-brick warehouses."
@@ -188,7 +188,7 @@
    ],
    "tips": [
     "Go after dusk (about 17:30 onwards) for the lit tanks. If the lights are off, it is still a pleasant canal walk.",
-    "Combine it with Xiaohe Street: they are a few minutes’ walk apart across the little Xiaohe river.",
+    "Combine it with Xiaohe Street: about 1 km apart, 10–15 min on foot along the Xiaohe river (the close-up map shows the walking path).",
     "Didi about 15 min from the EBO Hotel (5 km). Tell the driver 小河公园."
    ],
    "facts": [
@@ -225,10 +225,10 @@
    "time": "30–45 min",
    "best": "After dark, when the tanks are lit",
    "coord": [
-    30.3093,
-    120.1384
+    30.30939,
+    120.13283
    ],
-   "coord_src": "approx",
+   "coord_src": "360 Maps (GCJ-02 converted to WGS84)",
    "sources": [
     [
      "Our China Story: Xiaohe Park",

@@ -99,8 +99,13 @@ DAYS = {
     ('huqingyu', 'metro', 'Metro Line 1 two stops to Ding’an Road, then 10 min on foot. Or Didi 10 min.', ['m_wulin_sq','m_dingan_rd']),
     ('hefang', 'walk', 'Right outside, then on to the lakeshore for sunset.'),
     ('xiaohe', 'car', 'Didi about 20 min north to Xiaohe Street on the Grand Canal (小河直街).'),
-    ('xiaohepark', 'walk', 'A few minutes on foot across the Xiaohe river to the lit-up oil tanks.'),
-    ('hotel_hz', 'car', 'Didi about 15 min back to the hotel.')], tab='Hangzhou evening', note='Train D3141 Suzhou → Hangzhou East, 12:37–14:24.')],
+    ('xiaohepark', 'walk', 'About 1 km west to the lit-up oil tanks, 10–15 min on foot (or a 5-min Didi to 小河公园).'),
+    ('hotel_hz', 'car', 'Didi about 15 min back to the hotel.')], tab='Hangzhou evening', note='Train D3141 Suzhou → Hangzhou East, 12:37–14:24.'),
+    seg('Xiaohe close-up: the old canal street and the oil-tank park', city='杭州', tab='Xiaohe close-up', pts=[
+    ('xiaohe', None, 'Xiaohe Street: lanterns, canal-side restaurants and cafés. Didi drop-off: say 小河直街.'),
+    ('xiaohepark', 'walk', 'Walk about 1 km west along the Xiaohe river to the park, 10–15 min. The oil tanks are lit after dark.'),
+    ('xiaohe', 'walk', 'Back the same way if you want a drink by the water, or call the Didi from the park (小河公园).')],
+    note='Pins are approximate. Save this map offline in the hotel, and use Amap for turn-by-turn walking directions.')],
  'd5': [seg('Thu 5 Nov · West Lake: bridges, causeways, island, pagoda', city='杭州', pts=[
     'hotel_hz', ('lakenorth', 'walk', 'Walk 25 min south-west to the Broken Bridge (断桥), or Didi 8 min.'),
     ('gushan', 'walk', 'Along the Bai Causeway to Gushan, about 15 min.'),
