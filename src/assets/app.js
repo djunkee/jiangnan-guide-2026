@@ -278,7 +278,11 @@ function wxRender(){var today=iso(cn()),locs={};
       var age=Math.round((Date.now()-c.t)/60000);h+='<div class="wx-s">Open-Meteo forecast, updated '+(age<2?'just now':age<60?age+' min ago':Math.round(age/60)+' h ago')+(navigator.onLine===false?' (offline copy)':'')+'</div>';
       el.innerHTML=h;el.hidden=false})})})}
 /* update notice: the app opens from the saved copy; when a newer guide has been downloaded, offer a one-tap reload */
-function updToast(){if($('.updtoast'))return;var b=document.createElement('button');b.type='button';b.className='updtoast';b.textContent='Updated guide ready · tap to reload';b.addEventListener('click',function(){location.reload()});document.body.appendChild(b)}
+var touched=false;['touchstart','wheel','keydown'].forEach(function(ev){window.addEventListener(ev,function(){touched=true},{once:true,passive:true})});
+function updToast(){
+  /* a newer guide has arrived: if you have just opened the app and not touched it yet, switch to it straight away (once) */
+  try{if(!touched&&Date.now()-loadedAt<15000&&!sessionStorage.getItem('jn-autoreload')){sessionStorage.setItem('jn-autoreload','1');location.reload();return}}catch(e){}
+  if($('.updtoast'))return;var b=document.createElement('button');b.type='button';b.className='updtoast';b.textContent='Updated guide ready · tap to reload';b.addEventListener('click',function(){location.reload()});document.body.appendChild(b)}
 if('serviceWorker' in navigator)navigator.serviceWorker.addEventListener('message',function(e){if(e.data&&e.data.type==='jn-updated')updToast()});
 var loadedAt=Date.now();function checkUpd(){if(!('caches' in window))return;caches.open('jn-meta').then(function(m){return m.match('updated')}).then(function(r){return r&&r.text()}).then(function(t){if(t&&+t>loadedAt-2000)updToast()}).catch(function(){})}
 [2000,5000,10000,20000].forEach(function(ms){setTimeout(checkUpd,ms)});
