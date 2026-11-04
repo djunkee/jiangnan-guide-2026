@@ -1003,7 +1003,7 @@ details.shopd[open]{justify-self:stretch}
 <div class="wrap masthead" id="top">
   <p class="k">Sat 31 Oct – Mon 9 Nov 2026 · Moritz &amp; Lisa</p>
   <h1>Shanghai <span class="ar">→</span> Suzhou <span class="ar">→</span> Hangzhou</h1>
-  <p class="stamp">Updated <time datetime="2026-11-04T11:55+08:00">Wed 4 Nov 2026, 11:55</time> (China / Singapore time)</p>
+  <p class="stamp">Updated <time datetime="2026-11-04T12:04+08:00">Wed 4 Nov 2026, 12:04</time> (China / Singapore time)</p>
   <div class="quick">
     <a href="#d0"><span>Fly in · Sat 31</span><b>9C 7678</b>SIN 17:40 → PVG 22:55</a>
     <a href="#d9"><span>Fly out · Mon 9</span><b>MF 8703</b>HGH T4 08:15 → SIN 13:40</a>
@@ -1863,7 +1863,7 @@ details.shopd[open]{justify-self:stretch}
       <p style="margin-top:10px"><button type="submit" class="btn">Save on this phone</button> <span id="pp-saved" class="muted" hidden>Saved</span></p>
     </form>
   </section>
-<footer><p>Jiangnan Guide · updated Wed 4 Nov 2026, 11:55 (China / Singapore time). Works offline; save it on your phone.</p><p>Prices, hours and booking rules were checked in late October 2026 and can change.</p></footer>
+<footer><p>Jiangnan Guide · updated Wed 4 Nov 2026, 12:04 (China / Singapore time). Works offline; save it on your phone.</p><p>Prices, hours and booking rules were checked in late October 2026 and can change.</p></footer>
 </main>
 <script>
 (function(){
@@ -2175,7 +2175,11 @@ function wxRender(){var today=iso(cn()),locs={};
       var age=Math.round((Date.now()-c.t)/60000);h+='<div class="wx-s">Open-Meteo forecast, updated '+(age<2?'just now':age<60?age+' min ago':Math.round(age/60)+' h ago')+(navigator.onLine===false?' (offline copy)':'')+'</div>';
       el.innerHTML=h;el.hidden=false})})})}
 /* update notice: the app opens from the saved copy; when a newer guide has been downloaded, offer a one-tap reload */
-function updToast(){if($('.updtoast'))return;var b=document.createElement('button');b.type='button';b.className='updtoast';b.textContent='Updated guide ready · tap to reload';b.addEventListener('click',function(){location.reload()});document.body.appendChild(b)}
+var touched=false;['touchstart','wheel','keydown'].forEach(function(ev){window.addEventListener(ev,function(){touched=true},{once:true,passive:true})});
+function updToast(){
+  /* a newer guide has arrived: if you have just opened the app and not touched it yet, switch to it straight away (once) */
+  try{if(!touched&&Date.now()-loadedAt<15000&&!sessionStorage.getItem('jn-autoreload')){sessionStorage.setItem('jn-autoreload','1');location.reload();return}}catch(e){}
+  if($('.updtoast'))return;var b=document.createElement('button');b.type='button';b.className='updtoast';b.textContent='Updated guide ready · tap to reload';b.addEventListener('click',function(){location.reload()});document.body.appendChild(b)}
 if('serviceWorker' in navigator)navigator.serviceWorker.addEventListener('message',function(e){if(e.data&&e.data.type==='jn-updated')updToast()});
 var loadedAt=Date.now();function checkUpd(){if(!('caches' in window))return;caches.open('jn-meta').then(function(m){return m.match('updated')}).then(function(r){return r&&r.text()}).then(function(t){if(t&&+t>loadedAt-2000)updToast()}).catch(function(){})}
 [2000,5000,10000,20000].forEach(function(ms){setTimeout(checkUpd,ms)});
