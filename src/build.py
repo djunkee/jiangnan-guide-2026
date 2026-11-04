@@ -94,12 +94,13 @@ DAYS = {
     'hotel_sz', ('nets', 'car', 'Didi 10–15 min.'), ('panmen', 'car', 'Didi 10 min.'),
     ('hotel_sz', 'walk', 'About 5 min walk back for breakfast and check-out.'),
     ('rail_sz', 'car', 'Didi 20–25 min to Suzhou Station.')], tab='Suzhou morning'),
-    seg('Wed 4 Nov · Hangzhou afternoon', city='杭州', pts=[
+    seg('Wed 4 Nov · Hangzhou: Hefang, then Xiaohe by night', city='杭州', pts=[
     'rail_hze', ('hotel_hz', 'metro', 'Metro Line 1 straight to Wulin Square (武林广场), about 25 min, then 4 min on foot. Drop the bags.', ['rail_hze','m_wulin_sq']),
     ('huqingyu', 'metro', 'Metro Line 1 two stops to Ding’an Road, then 10 min on foot. Or Didi 10 min.', ['m_wulin_sq','m_dingan_rd']),
     ('hefang', 'walk', 'Right outside, then on to the lakeshore for sunset.'),
-    ('lakenorth', 'walk', 'Along the lakeshore north to the Broken Bridge, 20–30 min.'),
-    ('hotel_hz', 'walk', 'Walk 20 min north to the hotel, or Didi 8 min.')], tab='Hangzhou afternoon', note='Train Suzhou → Hangzhou East around midday (still to book).')],
+    ('xiaohe', 'car', 'Didi about 20 min north to Xiaohe Street on the Grand Canal (小河直街).'),
+    ('xiaohepark', 'walk', 'A few minutes on foot across the Xiaohe river to the lit-up oil tanks.'),
+    ('hotel_hz', 'car', 'Didi about 15 min back to the hotel.')], tab='Hangzhou evening', note='Train D3141 Suzhou → Hangzhou East, 12:37–14:24.')],
  'd5': [seg('Thu 5 Nov · West Lake: bridges, causeways, island, pagoda', city='杭州', pts=[
     'hotel_hz', ('lakenorth', 'walk', 'Walk 25 min south-west to the Broken Bridge (断桥), or Didi 8 min.'),
     ('gushan', 'walk', 'Along the Bai Causeway to Gushan, about 15 min.'),
@@ -144,7 +145,6 @@ DAYS = {
  'd8': [seg('Sun 8 Nov · The Grand Canal', city='杭州', pts=[
     'hotel_hz', ('canalmuseum', 'car', 'Didi about 15 min north to the Grand Canal Museum.'),
     ('qiaoxi', 'walk', 'Across Gongchen Bridge, 5 min.'),
-    ('xiaohe', 'walk', 'Walk 20 min south along the canal.'),
     ('hotel_hz', 'car', 'Didi 20 min back for the bags.')], tab='Canal day'),
     seg('Sun 8 Nov · To the airport hotel', city='杭州', pts=[
     'hotel_hz', ('hotel_ap', 'car', 'Didi about 50 min to Terminal 4. The hotel is in the ground transport centre.')], tab='Airport hotel')],
@@ -232,8 +232,8 @@ TIPS = {
  'd1': 'Luca’s rule for soup dumplings: nibble, sip, then eat. Also: photos for Luca, please.',
  'd2': 'Luca walks 2.5 km on 10 cm legs without complaining. You can do the citywalk.',
  'd3': 'Zigzag bridges keep evil spirits out, because spirits only go in straight lines. Corgis zigzag on purpose.',
- 'd4': 'Luca asks whether Hu Qing Yu Tang has a herbal remedy for short legs. Please enquire.',
- 'd5': 'Xixi has ducks. Luca would like it on record that he would not chase them. (He would.)',
+ 'd4': 'Luca asks whether Hu Qing Yu Tang has a herbal remedy for short legs. Please enquire. He also approves of oil tanks: excellent things to bark at.',
+ 'd5': 'West Lake has ducks. Luca would like it on record that he would not chase them. (He would.)',
  'd6': 'The cliff swing is a firm no from Luca. He requests video evidence that you did it.',
  'd7': 'Longjing tea is best after a nap, says Luca, who naps professionally.',
  'd8': 'Last night! Luca’s checklist: passports, chargers, and a souvenir he can chew.',

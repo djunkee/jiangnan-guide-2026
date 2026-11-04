@@ -144,7 +144,7 @@ function initPreviews(){
   $$('.dmap').forEach(function(box){var id=box.getAttribute('data-day'),segs=DAYS[id];if(!segs)return;
     var lg='',used={};segs.forEach(function(s){if(s.atlas)return;s.pts.forEach(function(p,i){if(i&&!used[p.m]){used[p.m]=1;var m=MODE[p.m]||MODE.walk;if(p.m==='metro'){lg+='<span><b class="mlg">M</b>Metro station</span>';return}if(p.m==='train'){lg+='<span>🚄 Train (not drawn)</span>';return}lg+='<span><i style="border-color:'+m.c+';'+(m.dash?'border-top-style:dashed':'')+'"></i>'+m.l+'</span>'}})});
     box.innerHTML='<div class="dm-map"></div><button class="dm-tap" type="button" aria-label="Open the map of this day"></button><div class="dm-bar"><div class="lg">'+lg+'</div><button class="dm-open" type="button">Open map</button></div>'+(segs[0].note?'<div class="dm-note">'+esc(segs.map(function(s){return s.note}).filter(Boolean).join(' · '))+'</div>':'');
-    var open=function(){openMap(id,0)};$('.dm-tap',box).addEventListener('click',open);$('.dm-open',box).addEventListener('click',open);
+    var open=function(){openMap(id,nowSeg(id))};$('.dm-tap',box).addEventListener('click',open);$('.dm-open',box).addEventListener('click',open);
     if(!hasL){$('.dm-map',box).innerHTML='<p class="muted" style="padding:12px">Map unavailable.</p>';return}
     var made=false,make=function(){if(made)return;made=true;var col=resolveCol(dayCol(id));
       var map=L.map($('.dm-map',box),{zoomControl:false,attributionControl:false,dragging:false,touchZoom:false,scrollWheelZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,tap:false,zoomSnap:.25});
@@ -157,6 +157,9 @@ function buildMapFS(){mapfs=document.createElement('div');mapfs.className='mapfs
   $('.mf-tools',mapfs).addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var a=b.getAttribute('data-a');
     if(a==='transit')toggleTransit(b);if(a==='metro')toggleMetro(b);if(a==='me')locate(true);if(a==='all')fitSeg();if(a==='shops'){showShops=!showShops;b.classList.toggle('on',showShops);drawSeg()}if(a==='save')saveOffline(b)});
   if(canCache())$('[data-a="save"]',mapfs).hidden=false}
+// open the map on the tab that holds the current or next stop
+function nowSeg(id){var st=NOWST,segs=DAYS[id];if(!st||st.day!==id||!segs)return 0;var k=st.next||st.cur;if(!k)return 0;
+  for(var i=0;i<segs.length;i++){if(segs[i].atlas)continue;for(var j=1;j<segs[i].pts.length;j++)if(segs[i].pts[j].k===k)return i}return 0}
 function openMap(id,si){if(!hasL)return;curDay=id;curSeg=si||0;mapfs.hidden=false;document.documentElement.style.overflow='hidden';
   var segs=DAYS[id],tabs=$('.mf-tabs',mapfs);tabs.innerHTML='';if(segs.length>1)segs.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.textContent=s.tab||s.t;b.setAttribute('aria-pressed',i===curSeg);b.addEventListener('click',function(){curSeg=i;$$('button',tabs).forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});drawSeg();fitSeg(true);paintStops()});tabs.appendChild(b)});
   if(!fsMap){fsMap=L.map('mf-map',{zoomControl:true,zoomSnap:.5,tap:true});fsBase=tl().addTo(fsMap);fsMap.attributionControl.setPrefix(false);addLocControl();fsMap.on('moveend',paintStops)}

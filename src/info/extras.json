@@ -157,6 +157,88 @@
      "https://chinafortravelers.com/guides/hangzhou-museums/"
     ]
    ]
+  },
+  "xiaohepark": {
+   "name": "Xiaohe Park",
+   "zh": "小河公园",
+   "pinyin": "Xiǎohé Gōngyuán",
+   "glance": "A former Sinopec oil depot on the Grand Canal, turned into a free public park by the Japanese architect Kengo Kuma. Its old oil tanks are pierced with over a thousand holes and glow like giant lanterns after dark. It sits right next to Xiaohe Street.",
+   "history": [
+    "The Xiaohe Oil Depot (小河油库) was built here in the 1950s as Zhejiang’s first modern oil store, supplied by boat along the Grand Canal. At its peak in the 1980s it handled about 560,000 tonnes a year. It closed in June 2019.",
+    "Instead of clearing the site, Hangzhou kept four old warehouses and seven oil tanks and asked Kengo Kuma & Associates to turn it into a park. It opened in stages from 2022, with a light, leaf-patterned canopy over terraces and sunken gardens, and exhibition space in the old red-brick warehouses."
+   ],
+   "meaning": "Xiaohe Park is one of China’s best-known examples of turning industrial land into public space, the same idea as London’s Tate Modern or Duisburg’s Landschaftspark. For locals it is a favourite evening walk and photo spot; for the canal it shows the newest layer of a waterway that has been working for 1,400 years.",
+   "highlights": [
+    {
+     "name": "Oil-tank lanterns (油罐灯笼)",
+     "what": "The perforated tanks are lit from inside at night: the main photo."
+    },
+    {
+     "name": "The canopy and sunken garden",
+     "what": "Kengo Kuma’s web-like canopy over the terraces and a round sunken garden."
+    },
+    {
+     "name": "Old warehouses",
+     "what": "Red-brick depot buildings now used for exhibitions and cafés."
+    },
+    {
+     "name": "Canal wharf",
+     "what": "The old loading wharf on the Grand Canal, where three rivers meet."
+    }
+   ],
+   "tips": [
+    "Go after dusk (about 17:30 onwards) for the lit tanks. If the lights are off, it is still a pleasant canal walk.",
+    "Combine it with Xiaohe Street: they are a few minutes’ walk apart across the little Xiaohe river.",
+    "Didi about 15 min from the EBO Hotel (5 km). Tell the driver 小河公园."
+   ],
+   "facts": [
+    [
+     "Built",
+     "1950s oil depot"
+    ],
+    [
+     "Closed as a depot",
+     "June 2019"
+    ],
+    [
+     "Park designer",
+     "Kengo Kuma & Associates"
+    ],
+    [
+     "Size",
+     "about 51,000 m²"
+    ],
+    [
+     "Entry",
+     "Free"
+    ]
+   ],
+   "ratings": {
+    "china_grade": null,
+    "unesco": null,
+    "visitor": null,
+    "verdict": {
+     "stars": 4,
+     "line": "Unusual and very photogenic at night; 30–45 min with Xiaohe Street next door."
+    }
+   },
+   "time": "30–45 min",
+   "best": "After dark, when the tanks are lit",
+   "coord": [
+    30.3093,
+    120.1384
+   ],
+   "coord_src": "approx",
+   "sources": [
+    [
+     "Our China Story: Xiaohe Park",
+     "https://www.ourchinastory.com/cn/8204"
+    ],
+    [
+     "eHangzhou: Xiaohe Park",
+     "https://www.ehangzhou.gov.cn/2026-04/01/c_297122.htm"
+    ]
+   ]
   }
  },
  "pois": {},

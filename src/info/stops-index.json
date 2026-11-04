@@ -1,0 +1,443 @@
+{
+ "bund": {
+  "city": "sh",
+  "name": "The Bund, by day and by night",
+  "zh": "外滩",
+  "approx": [
+   31.2405,
+   121.4905
+  ]
+ },
+ "nanjingrd": {
+  "city": "sh",
+  "name": "Nanjing Road East",
+  "zh": "南京东路步行街",
+  "approx": [
+   31.2365,
+   121.4805
+  ]
+ },
+ "yugarden": {
+  "city": "sh",
+  "name": "Yu Garden and the Old City",
+  "zh": "豫园",
+  "approx": [
+   31.2272,
+   121.4921
+  ]
+ },
+ "shtower": {
+  "city": "sh",
+  "name": "Shanghai Tower observation deck",
+  "zh": "上海中心大厦 上海之巅观光厅",
+  "approx": [
+   31.2335,
+   121.5055
+  ]
+ },
+ "ferry": {
+  "city": "sh",
+  "name": "Huangpu public ferry",
+  "zh": "金陵东路轮渡站",
+  "approx": [
+   31.2318,
+   121.4955
+  ]
+ },
+ "rivercruise": {
+  "city": "sh",
+  "name": "Huangpu night river cruise",
+  "zh": "黄浦江游览 十六铺码头",
+  "approx": [
+   31.2287,
+   121.498
+  ]
+ },
+ "museum": {
+  "city": "sh",
+  "name": "Shanghai Museum, People’s Square",
+  "zh": "上海博物馆（人民广场馆）",
+  "approx": [
+   31.2286,
+   121.4733
+  ]
+ },
+ "frenchc": {
+  "city": "sh",
+  "name": "Former French Concession walk",
+  "zh": "武康大楼",
+  "approx": [
+   31.2063,
+   121.4375
+  ]
+ },
+ "propaganda": {
+  "city": "sh",
+  "name": "Propaganda Poster Art Centre",
+  "zh": "上海宣传画艺术中心",
+  "approx": [
+   31.219,
+   121.4352
+  ]
+ },
+ "jingan": {
+  "city": "sh",
+  "name": "Jing’an Temple to Xinle Road citywalk",
+  "zh": "静安寺 → 巨鹿路 · 富民路 · 新乐路",
+  "approx": [
+   31.22,
+   121.45
+  ]
+ },
+ "xintiandi": {
+  "city": "sh",
+  "name": "Xintiandi and the First Party Congress site",
+  "zh": "新天地 · 中共一大纪念馆",
+  "approx": [
+   31.219,
+   121.475
+  ]
+ },
+ "tianzifang": {
+  "city": "sh",
+  "name": "Tianzifang lanes",
+  "zh": "田子坊",
+  "approx": [
+   31.2096,
+   121.469
+  ]
+ },
+ "era": {
+  "city": "sh",
+  "name": "ERA acrobatics show",
+  "zh": "上海马戏城 时空之旅",
+  "approx": [
+   31.278,
+   121.451
+  ]
+ },
+ "westbund": {
+  "city": "sh",
+  "name": "West Bund riverside",
+  "zh": "西岸滨江",
+  "approx": [
+   31.178,
+   121.459
+  ]
+ },
+ "zhujiajiao": {
+  "city": "sh",
+  "name": "Zhujiajiao water town",
+  "zh": "朱家角古镇",
+  "approx": [
+   31.108,
+   121.056
+  ]
+ },
+ "humble": {
+  "city": "sz",
+  "name": "Humble Administrator’s Garden",
+  "zh": "拙政园",
+  "approx": [
+   31.3245,
+   120.6283
+  ]
+ },
+ "szmuseum": {
+  "city": "sz",
+  "name": "Suzhou Museum (I. M. Pei)",
+  "zh": "苏州博物馆",
+  "approx": [
+   31.3222,
+   120.6258
+  ]
+ },
+ "lion": {
+  "city": "sz",
+  "name": "Lion Grove Garden",
+  "zh": "狮子林",
+  "approx": [
+   31.323,
+   120.623
+  ]
+ },
+ "pingjiang": {
+  "city": "sz",
+  "name": "Pingjiang Road",
+  "zh": "平江路",
+  "approx": [
+   31.315,
+   120.6345
+  ]
+ },
+ "lingering": {
+  "city": "sz",
+  "name": "Lingering Garden",
+  "zh": "留园",
+  "approx": [
+   31.3172,
+   120.5895
+  ]
+ },
+ "nets": {
+  "city": "sz",
+  "name": "Master of the Nets Garden",
+  "zh": "网师园",
+  "approx": [
+   31.2995,
+   120.6315
+  ]
+ },
+ "panmen": {
+  "city": "sz",
+  "name": "Panmen Gate",
+  "zh": "盘门",
+  "approx": [
+   31.2918,
+   120.611
+  ]
+ },
+ "tigerhill": {
+  "city": "sz",
+  "name": "Tiger Hill",
+  "zh": "虎丘",
+  "approx": [
+   31.3375,
+   120.5795
+  ]
+ },
+ "shantang": {
+  "city": "sz",
+  "name": "Shantang Street",
+  "zh": "山塘街",
+  "approx": [
+   31.319,
+   120.603
+  ]
+ },
+ "moatboat": {
+  "city": "sz",
+  "name": "Night boat on the old city moat",
+  "zh": "古运河游船 新市桥码头",
+  "approx": [
+   31.2968,
+   120.6062
+  ]
+ },
+ "tongli": {
+  "city": "sz",
+  "name": "Tongli water town",
+  "zh": "同里古镇",
+  "approx": [
+   31.162,
+   120.718
+  ]
+ },
+ "lakenorth": {
+  "city": "hz",
+  "name": "West Lake north shore: Broken Bridge and Bai Causeway",
+  "zh": "断桥 · 白堤",
+  "approx": [
+   30.2605,
+   120.1515
+  ]
+ },
+ "gushan": {
+  "city": "hz",
+  "name": "Gushan Island",
+  "zh": "孤山",
+  "approx": [
+   30.256,
+   120.144
+  ]
+ },
+ "lakeboat": {
+  "city": "hz",
+  "name": "Boat to Three Pools Mirroring the Moon",
+  "zh": "三潭印月",
+  "approx": [
+   30.239,
+   120.1455
+  ]
+ },
+ "sucause": {
+  "city": "hz",
+  "name": "Su Causeway, on foot or by bike",
+  "zh": "苏堤",
+  "approx": [
+   30.2445,
+   120.1405
+  ]
+ },
+ "leifeng": {
+  "city": "hz",
+  "name": "Leifeng Pagoda",
+  "zh": "雷峰塔",
+  "approx": [
+   30.2315,
+   120.149
+  ]
+ },
+ "fountain": {
+  "city": "hz",
+  "name": "Musical fountain at Hubin",
+  "zh": "湖滨音乐喷泉",
+  "approx": [
+   30.2555,
+   120.164
+  ]
+ },
+ "hefang": {
+  "city": "hz",
+  "name": "Hefang Street and Qinghefang",
+  "zh": "河坊街",
+  "approx": [
+   30.2425,
+   120.169
+  ]
+ },
+ "lingyin": {
+  "city": "hz",
+  "name": "Lingyin Temple and Feilai Feng",
+  "zh": "灵隐寺 · 飞来峰",
+  "approx": [
+   30.241,
+   120.101
+  ]
+ },
+ "longjing": {
+  "city": "hz",
+  "name": "Longjing tea village",
+  "zh": "龙井村",
+  "approx": [
+   30.2235,
+   120.1225
+  ]
+ },
+ "xixi": {
+  "city": "hz",
+  "name": "Xixi Wetland",
+  "zh": "西溪国家湿地公园",
+  "approx": [
+   30.272,
+   120.065
+  ]
+ },
+ "huqingyu": {
+  "city": "hz",
+  "name": "Hu Qing Yu Tang: TCM museum and pharmacy",
+  "zh": "胡庆余堂中药博物馆",
+  "approx": [
+   30.2422,
+   120.1702
+  ]
+ },
+ "canalmuseum": {
+  "city": "hz",
+  "name": "Grand Canal Museum",
+  "zh": "中国京杭大运河博物馆",
+  "approx": [
+   30.3198,
+   120.1452
+  ]
+ },
+ "qiaoxi": {
+  "city": "hz",
+  "name": "Gongchen Bridge and the Qiaoxi craft museums",
+  "zh": "拱宸桥 · 桥西历史街区",
+  "approx": [
+   30.318,
+   120.1405
+  ]
+ },
+ "xiaohe": {
+  "city": "hz",
+  "name": "Xiaohe Street",
+  "zh": "小河直街",
+  "approx": [
+   30.3055,
+   120.142
+  ]
+ },
+ "nansong": {
+  "city": "hz",
+  "name": "Southern Song Imperial Street",
+  "zh": "南宋御街",
+  "approx": [
+   30.2445,
+   120.1715
+  ]
+ },
+ "wushan": {
+  "city": "hz",
+  "name": "Wushan Hill and Chenghuang Pavilion",
+  "zh": "吴山 · 城隍阁",
+  "approx": [
+   30.2395,
+   120.166
+  ]
+ },
+ "songcheng": {
+  "city": "hz",
+  "name": "Songcheng park and its big show",
+  "zh": "宋城 · 宋城千古情",
+  "approx": [
+   30.17,
+   120.115
+  ]
+ },
+ "wuzhen": {
+  "city": "hz",
+  "name": "Wuzhen water town (day trip)",
+  "zh": "乌镇西栅",
+  "approx": [
+   30.748,
+   120.479
+  ]
+ },
+ "omg": {
+  "city": "hz",
+  "name": "OMG Heartbeat Park",
+  "zh": "OMG心跳乐园",
+  "approx": [
+   29.915,
+   119.52
+  ]
+ },
+ "memorial": {
+  "city": "nj",
+  "name": "Nanjing Massacre Memorial Hall",
+  "zh": "侵华日军南京大屠杀遇难同胞纪念馆",
+  "approx": [
+   32.0345,
+   118.744
+  ]
+ },
+ "sunyatsen": {
+  "city": "nj",
+  "name": "Sun Yat-sen Mausoleum and Ming Xiaoling",
+  "zh": "中山陵 · 明孝陵",
+  "approx": [
+   32.0645,
+   118.8485
+  ]
+ },
+ "fuzimiao": {
+  "city": "nj",
+  "name": "Confucius Temple and a Qinhuai river boat",
+  "zh": "夫子庙 · 秦淮河",
+  "approx": [
+   32.0205,
+   118.7885
+  ]
+ },
+ "zhonghua": {
+  "city": "nj",
+  "name": "Zhonghua Gate and Laomendong",
+  "zh": "中华门 · 老门东",
+  "approx": [
+   32.01,
+   118.7775
+  ]
+ }
+}
