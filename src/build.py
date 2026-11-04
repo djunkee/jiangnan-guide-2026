@@ -19,6 +19,14 @@ for f in sorted(glob.glob('/home/claude/info/*.json')):
     except Exception as e: print('skip', f, e); continue
     P.update(d.get('places', {})); POIS.update(d.get('pois', {})); SHOPS += d.get('shops', [])
 FALLBACK = {  # rough WGS84, used only when research has no point
+ 'xiling': ('Xiling Seal Engravers’ Society', '西泠印社', 'other', [30.2527, 120.1382]),
+ 'louwailou': ('Louwailou restaurant', '楼外楼', 'food', [30.2528, 120.1418]),
+ 'pier_zhongshan': ('Zhongshan Park pier', '中山公园码头', 'pier', [30.2519, 120.1433]),
+ 'yuemiao': ('Yue Fei Temple', '岳庙', 'other', [30.2593, 120.1355]),
+ 'huagang': ('Flower Harbor (Huagang)', '花港观鱼', 'other', [30.2348, 120.1428]),
+ 'jingci': ('Jingci Temple', '净慈寺', 'other', [30.2312, 120.1470]),
+ 'changqiao': ('Changqiao Park', '长桥公园', 'other', [30.2384, 120.1570]),
+ 'm_longxiangqiao': ('Longxiangqiao station', '龙翔桥站', 'metro', [30.2588, 120.1653]),
  'hotel_sh': ('Metropolo YMCA hotel', '锦江都城经典酒店', 'hotel', [31.2277, 121.4797]),
  'rail_sh': ('Shanghai Station', '上海站', 'rail', [31.2496, 121.4555]),
  'pier_jinling': ('Jinling East Rd ferry pier', '金陵东路轮渡站', 'pier', [31.2347, 121.4930]),
@@ -52,8 +60,8 @@ def _pt(k, m=None, d=None):
         return dict(k=k, name=SHORT.get(k) or f[0], zh=f[1], kind=f[2], ll=f[3], m=m, d=d)
     raise SystemExit('no coords for ' + k)
 
-def seg(t, pts=None, note=None, tab=None, city=''):
-    return dict(t=t, tab=tab, note=note, city=city, pts=[pt(*p) if isinstance(p, tuple) else pt(p) for p in pts])
+def seg(t, pts=None, note=None, tab=None, city='', atlas=False):
+    return dict(t=t, tab=tab, note=note, city=city, atlas=atlas, pts=[pt(*p) if isinstance(p, tuple) else pt(p) for p in pts])
 
 DAYS = {
  'd1': [seg('Sun 1 Nov · Old Shanghai and the Bund', city='上海', pts=[
@@ -96,10 +104,28 @@ DAYS = {
     'hotel_hz', ('lakenorth', 'walk', 'Walk 25 min south-west to the Broken Bridge (断桥), or Didi 8 min.'),
     ('gushan', 'walk', 'Along the Bai Causeway to Gushan, about 15 min.'),
     ('lakeboat', 'boat', 'Boat from Zhongshan pier (中山码头) on Gushan to the island, about 15 min.'),
-    ('sucause', 'boat', 'Boat on to Huagang pier (花港), then walk the southern half of the Su Causeway.'),
-    ('leifeng', 'walk', 'From Huagang, walk 15–20 min east to the pagoda; be there by about 16:00.'),
-    ('fountain', 'car', 'Didi 10 min to Hubin for dinner and the 19:30 fountain.'),
-    ('hotel_hz', 'walk', 'Walk 15–20 min north, or Line 1 one stop from Longxiangqiao to Wulin Square.')])],
+    ('sucause', 'boat', 'Boat on to Huagang pier (花港). Flower Harbor’s fish pond is by the pier; then a short Su Causeway section, 15–20 min.'),
+    ('leifeng', 'walk', 'From Huagang, walk 15–20 min east to the pagoda; be there by about 15:30 (last entry 17:00).'),
+    ('changqiao', 'walk', 'Walk 10 min east along the shore to Changqiao Park for the sunset photo of the pagoda, about 17:05.'),
+    ('fountain', 'car', 'Didi 10 min to Hubin for dinner and the 19:30 fountain (or walk 35 min along the east shore).'),
+    ('hotel_hz', 'walk', 'Walk 15–20 min north, or Line 1 one stop from Longxiangqiao to Wulin Square.')], tab='Today’s route'),
+    seg('All of West Lake: the important places', city='杭州', tab='All of West Lake', atlas=True, pts=[
+    ('hotel_hz', None, 'Your hotel, 4 min from Wulin Square metro'),
+    ('lakenorth', None, 'Broken Bridge and the start of the Bai Causeway (“Lingering Snow on Broken Bridge”)'),
+    ('gushan', None, 'Solitary Hill island: pavilions, the free Zhejiang Museum branch (“Autumn Moon over the Calm Lake” at its east tip)'),
+    ('xiling', None, 'Seal engravers’ garden, founded 1904; the best viewpoint on Gushan'),
+    ('louwailou', None, 'Historic lakeside restaurant (since 1848), 30 Gushan Road'),
+    ('pier_zhongshan', None, 'Boats to Three Pools Mirroring the Moon (¥55–70)'),
+    ('lakeboat', None, 'The island on the 1-yuan note (“Three Pools Mirroring the Moon”)'),
+    ('yuemiao', None, 'Shrine to the Song-dynasty general Yue Fei; the Su Causeway starts nearby'),
+    ('sucause', None, 'Su Causeway, 2.8 km with six arched bridges (“Spring Dawn at Su Causeway”); no bikes'),
+    ('huagang', None, 'Red fish ponds and gardens (“Viewing Fish at Flower Harbor”); boats land here'),
+    ('leifeng', None, 'Pagoda with lifts and the old ruins inside (“Leifeng Pagoda in Evening Glow”); last entry 17:00'),
+    ('jingci', None, 'Buddhist temple opposite Leifeng (“Evening Bell at Nanping Hill”), ¥10, closes 17:00'),
+    ('changqiao', None, 'Lakeside park: the classic photo of the pagoda at sunset'),
+    ('fountain', None, 'Hubin lakefront, in77 malls, musical fountain at 19:30'),
+    ('m_longxiangqiao', None, 'Metro Line 1, nearest station to Hubin'),
+    ('hefang', None, 'Old shopping street and the TCM museum (Hu Qing Yu Tang)')])],
  'd6': [seg('Fri 6 Nov · OMG Heartbeat Park', city='杭州', pts=[
     'hotel_hz', ('rail_hze', 'metro', 'Metro Line 1 Wulin Square → Hangzhou East, about 25 min.', ['m_wulin_sq','rail_hze']),
     ('rail_tonglu', 'train', 'Train Hangzhou East → Tonglu, 30–40 min.'),
@@ -127,6 +153,9 @@ DAYS = {
 for day, segs in DAYS.items():
     n = 0; seen = {}
     for sg in segs:
+        if sg.get('atlas'):
+            for p in sg['pts']: p['n'] = seen.get(p['k'])
+            continue
         for p in sg['pts']:
             if p.get('stop'):
                 if p['k'] not in seen: n += 1; seen[p['k']] = n
@@ -135,6 +164,7 @@ for day, segs in DAYS.items():
 # ---------- HTML edits ----------
 # 1. tag stop items with their option key
 name2k = {v['name']: k for k, v in TD.items()}
+name2k['Flower Harbor and the Su Causeway'] = 'sucause'
 for k, v in P.items():
     name2k.setdefault(v.get('name'), k)
 def tag(m):

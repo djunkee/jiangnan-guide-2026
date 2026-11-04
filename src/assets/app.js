@@ -126,6 +126,7 @@ function pieces(a,b){var m=b.m||'walk';if(m==='metro'&&b.via&&b.via.length){var 
     if(dist(v[v.length-1].ll,b.ll)>60)out.push({m:'walk',p:[v[v.length-1].ll,b.ll]});return out}
   return [{m:m,p:[a.ll,b.ll]}]}
 function segLayers(seg,col,small){var g=L.featureGroup(),pts=seg.pts,stations={};
+  if(seg.atlas){pts.forEach(function(p){var m=mk(p,small);if(!small)m.bindTooltip(p.name,{className:'tl',direction:'top',offset:[0,-12],permanent:p.big===true});m.addTo(g)});return g}
   for(var i=1;i<pts.length;i++)pieces(pts[i-1],pts[i]).forEach(function(pc){if(pc.m==='metro'||pc.m==='train')return;var m=MODE[pc.m]||MODE.walk,routed=!!PROF[pc.m];
     var line=L.polyline(pc.p,{color:m.c,weight:small?3:m.w,opacity:routed?.45:.85,dashArray:m.dash,lineCap:'round',lineJoin:'round'}).addTo(g);
     if(pc.via&&!small)line.bindTooltip('Ⓜ Metro: '+pc.via.map(function(x){return x.name}).join(' → '),{className:'tl',sticky:true});
@@ -141,13 +142,13 @@ function dayCol(id){var d=document.getElementById(id);return d?(getComputedStyle
 function resolveCol(c){if(c.indexOf('var(')<0)return c;var t=document.createElement('span');t.style.color=c;document.body.appendChild(t);var v=getComputedStyle(t).color;t.remove();return v}
 function initPreviews(){
   $$('.dmap').forEach(function(box){var id=box.getAttribute('data-day'),segs=DAYS[id];if(!segs)return;
-    var lg='',used={};segs.forEach(function(s){s.pts.forEach(function(p,i){if(i&&!used[p.m]){used[p.m]=1;var m=MODE[p.m]||MODE.walk;if(p.m==='metro'){lg+='<span><b class="mlg">M</b>Metro station</span>';return}if(p.m==='train'){lg+='<span>🚄 Train (not drawn)</span>';return}lg+='<span><i style="border-color:'+m.c+';'+(m.dash?'border-top-style:dashed':'')+'"></i>'+m.l+'</span>'}})});
+    var lg='',used={};segs.forEach(function(s){if(s.atlas)return;s.pts.forEach(function(p,i){if(i&&!used[p.m]){used[p.m]=1;var m=MODE[p.m]||MODE.walk;if(p.m==='metro'){lg+='<span><b class="mlg">M</b>Metro station</span>';return}if(p.m==='train'){lg+='<span>🚄 Train (not drawn)</span>';return}lg+='<span><i style="border-color:'+m.c+';'+(m.dash?'border-top-style:dashed':'')+'"></i>'+m.l+'</span>'}})});
     box.innerHTML='<div class="dm-map"></div><button class="dm-tap" type="button" aria-label="Open the map of this day"></button><div class="dm-bar"><div class="lg">'+lg+'</div><button class="dm-open" type="button">Open map</button></div>'+(segs[0].note?'<div class="dm-note">'+esc(segs.map(function(s){return s.note}).filter(Boolean).join(' · '))+'</div>':'');
     var open=function(){openMap(id,0)};$('.dm-tap',box).addEventListener('click',open);$('.dm-open',box).addEventListener('click',open);
     if(!hasL){$('.dm-map',box).innerHTML='<p class="muted" style="padding:12px">Map unavailable.</p>';return}
     var made=false,make=function(){if(made)return;made=true;var col=resolveCol(dayCol(id));
       var map=L.map($('.dm-map',box),{zoomControl:false,attributionControl:false,dragging:false,touchZoom:false,scrollWheelZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,tap:false,zoomSnap:.25});
-      tl().addTo(map);var all=L.featureGroup();segs.forEach(function(s){segLayers(s,col,true).addTo(all)});all.addTo(map);map.fitBounds(all.getBounds(),{padding:[18,18],maxZoom:16});paintStops()};
+      tl().addTo(map);var all=L.featureGroup();segs.forEach(function(s){if(!s.atlas)segLayers(s,col,true).addTo(all)});all.addTo(map);map.fitBounds(all.getBounds(),{padding:[18,18],maxZoom:16});paintStops()};
     if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){make();io.disconnect()}})},{rootMargin:'80px'});io.observe(box)}else make();
   })}
 function buildMapFS(){mapfs=document.createElement('div');mapfs.className='mapfs';mapfs.hidden=true;
@@ -166,13 +167,16 @@ window.addEventListener('popstate',function(){closeSheet(true);closeMap(true)});
 function drawSeg(){var seg=DAYS[curDay][curSeg],col=resolveCol(dayCol(curDay));if(fsLayers)fsMap.removeLayer(fsLayers);fsLayers=L.featureGroup([segLayers(seg,col,false)]);if(showShops)fsLayers.addLayer(shopLayer(seg));fsLayers.addTo(fsMap);
   $('.ttl',mapfs).textContent=seg.t;
   var h='<li><span class="nt">Dotted paths are walking routes along real streets; brown lines are Didi rides by road. Metro rides are shown only as the stations where you get on and off (blue M); tap Ⓜ Metro lines to see the lines themselves. Pins are close but approximate, so for turn-by-turn directions tap Amap or Apple Maps.</span></li>';if(seg.note)h+='<li><span class="nt">'+esc(seg.note)+'</span></li>';
-  for(var i=1;i<seg.pts.length;i++){var a=seg.pts[i-1],b=seg.pts[i],m=MODE[b.m]||MODE.walk;
+  if(seg.atlas){seg.pts.forEach(function(b,i){var q=encodeURIComponent(b.zh||b.name),am='https://uri.amap.com/search?keyword='+q+'&city='+encodeURIComponent(seg.city||'')+'&callnative=1&src=jiangnan-guide',ap='https://maps.apple.com/?daddr='+encodeURIComponent((b.zh||b.name)+(seg.city?' '+seg.city:''));
+    h+='<li><span class="md" style="background:#6A4896">'+(b.n||'•')+'</span><div><div class="who">'+esc(b.name)+(b.zh?' <span style="font-weight:500;color:var(--muted)">'+esc(b.zh)+'</span>':'')+'</div><div class="how">'+esc(b.d||'')+'</div></div><div class="go2"><button type="button" data-p="'+i+'">Show</button><a href="'+am+'" target="_blank" rel="noopener">Amap</a><a href="'+ap+'" target="_blank" rel="noopener">Apple Maps</a></div></li>'})}
+  else for(var i=1;i<seg.pts.length;i++){var a=seg.pts[i-1],b=seg.pts[i],m=MODE[b.m]||MODE.walk;
     var q=encodeURIComponent(b.zh||b.name),am='https://uri.amap.com/search?keyword='+q+'&city='+encodeURIComponent(seg.city||'')+'&callnative=1&src=jiangnan-guide';
     var ap='https://maps.apple.com/?daddr='+encodeURIComponent((b.zh||b.name)+(seg.city?' '+seg.city:''))+'&dirflg='+(APPLEMODE[b.m]||'w');
     h+='<li><span class="md" style="background:'+m.c+'">'+m.l+'</span><div><div class="who">'+(a.n?a.n+' ':'')+esc(a.name)+' → '+(b.n?b.n+' ':'')+esc(b.name)+'</div><div class="how">'+esc(b.d||'')+'</div><div class="rd" data-r="'+i+'"></div></div><div class="go2"><button type="button" data-z="'+i+'">Show</button><a href="'+am+'" target="_blank" rel="noopener">Amap</a><a href="'+('https://uri.amap.com/navigation?from='+a.ll[1]+','+a.ll[0]+','+encodeURIComponent(a.zh||a.name)+'&to='+b.ll[1]+','+b.ll[0]+','+encodeURIComponent(b.zh||b.name)+'&mode=bus&coordinate=wgs84&callnative=1&src=jiangnan-guide')+'" target="_blank" rel="noopener">🚇 Transit in Amap</a><a href="'+ap+'" target="_blank" rel="noopener">Apple Maps</a></div></li>'}
   var legs=$('.legs',mapfs);legs.innerHTML=h;
   $$('button[data-z]',legs).forEach(function(b){b.addEventListener('click',function(){var i=+b.getAttribute('data-z');fsMap.fitBounds(L.latLngBounds([seg.pts[i-1].ll,seg.pts[i].ll]),{padding:[50,50],maxZoom:17})})});
-  seg.pts.forEach(function(b,i){if(!i)return;var a=seg.pts[i-1];var pcs=pieces(a,b),tot=0,n=0,want=0;
+  $$('button[data-p]',legs).forEach(function(bt){bt.addEventListener('click',function(){var p=seg.pts[+bt.getAttribute('data-p')];fsMap.setView(p.ll,17)})});
+  if(!seg.atlas)seg.pts.forEach(function(b,i){if(!i)return;var a=seg.pts[i-1];var pcs=pieces(a,b),tot=0,n=0,want=0;
     pcs.forEach(function(pc){if(!PROF[pc.m]||dist(pc.p[0],pc.p[1])<=80)return;want++;getRoute(pc.m,pc.p[0],pc.p[1]).then(function(r){n++;if(r)tot+=r.d;
       if(n===want&&tot){var el=$('.rd[data-r="'+i+'"]',legs);if(el)el.textContent=(b.m==='car'?'By road ≈ '+fmtD(tot):b.m==='metro'?'Walking to and from the stations ≈ '+fmtD(tot):'Walking route ≈ '+fmtD(tot)+', about '+Math.max(1,Math.round(tot/1000/4.5*60))+' min')}})})});
   $('.mf-key',mapfs).hidden=!(NOWST&&NOWST.day===curDay);fsMap.invalidateSize({pan:false});updSaveStatus();paintStops()}
@@ -293,3 +297,10 @@ function init(){buildSheet();decorate();luca();initNow();
   window.addEventListener('online',wxRender);setInterval(function(){if(!document.hidden)wxRender()},30*60000)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
+// full-size picture viewer (West Lake illustrated map): scroll to pan, pinch to zoom
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.wlimg');if(!b)return;
+  var src=b.querySelector('img').src,o=document.createElement('div');o.className='imgfs';
+  o.innerHTML='<button class="x" aria-label="Close">✕</button><img alt="West Lake map" src="'+src+'">';
+  document.body.appendChild(o);document.body.style.overflow='hidden';
+  var im=o.querySelector('img');im.onload=function(){o.scrollLeft=Math.max(0,(im.width-o.clientWidth)/2-200)};
+  o.querySelector('.x').onclick=function(){o.remove();document.body.style.overflow=''};});

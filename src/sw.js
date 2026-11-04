@@ -2,7 +2,7 @@
 // Opens instantly from the saved copy, then checks for a newer guide in the background.
 const CACHE='jiangnan-__VER__';
 const TILES='jn-tiles-v2';
-const FILES=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
+const FILES=["./", "index.html", "manifest.webmanifest", "westlake-map.webp", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));});
 // Keep the saved map pieces across updates; drop only old copies of the guide.
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE&&k!==TILES&&k!=='jn-meta').map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
