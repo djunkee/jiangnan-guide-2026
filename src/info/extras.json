@@ -80,6 +80,83 @@
      "https://surl.amap.com/1147kEaV37n"
     ]
    ]
+  },
+  "teamuseum": {
+   "name": "China National Tea Museum",
+   "zh": "中国茶叶博物馆",
+   "pinyin": "Zhōngguó Cháyè Bówùguǎn",
+   "glance": "China’s national museum of tea, set among tea terraces below Longjing village: free, indoor, and the best rainy-afternoon companion to the tea hills.",
+   "history": [
+    "Opened in 1991 in Shuangfeng village on the road up to Longjing, the museum tells the story of tea in China from wild leaves and imperial tribute tea to modern tea science. It sits among working tea gardens, so you see the bushes and the halls in one visit."
+   ],
+   "meaning": "Tea is one of China’s great contributions to the world, and Hangzhou’s Longjing (Dragon Well) is its most famous green tea. The museum explains the six tea families (green, white, yellow, oolong, black and dark), how each is made, and the culture around it, from tea houses to the tea ceremony.",
+   "highlights": [
+    {
+     "name": "Tea History Hall",
+     "what": "From the earliest tea records to the Tang dynasty ‘Classic of Tea’ by Lu Yu."
+    },
+    {
+     "name": "Tea Essence Hall",
+     "what": "Over 300 kinds of tea, including compressed bricks and cakes."
+    },
+    {
+     "name": "Tea Ware Hall",
+     "what": "Teapots and cups from the Neolithic to the Qing dynasty, including Yixing clay pots."
+    },
+    {
+     "name": "Tea Customs Hall",
+     "what": "How different regions and peoples drink tea, with reconstructed scenes."
+    },
+    {
+     "name": "Tea room",
+     "what": "Taste and buy tea at posted prices: the low-risk place to buy real Longjing."
+    }
+   ],
+   "tips": [
+    "Free entry; bring your passport. Weekends may need a free reservation in the museum’s WeChat/Alipay mini-program (中国茶叶博物馆), released a few days ahead.",
+    "Sources disagree on the closing day (Monday or Tuesday); Saturday is open.",
+    "The halls are spread over a hillside garden: umbrellas help in the rain, but most of the visit is indoors."
+   ],
+   "facts": [
+    [
+     "Address",
+     "88 Longjing Road, Shuangfeng village"
+    ],
+    [
+     "Open",
+     "09:00–16:30"
+    ],
+    [
+     "Entry",
+     "Free"
+    ]
+   ],
+   "ratings": {
+    "china_grade": null,
+    "unesco": null,
+    "visitor": null,
+    "verdict": {
+     "stars": 4,
+     "line": "Worth it, especially on a rainy afternoon after Lingyin and the tea village."
+    }
+   },
+   "time": "1.5–2 h",
+   "best": "Afternoon after Longjing village; good in rain.",
+   "coord": [
+    30.2335,
+    120.1265
+   ],
+   "coord_src": "approx",
+   "sources": [
+    [
+     "Chinatripedia: China Tea Museum",
+     "https://chinatripedia.com/?p=19768"
+    ],
+    [
+     "China for Travelers: Hangzhou museums",
+     "https://chinafortravelers.com/guides/hangzhou-museums/"
+    ]
+   ]
   }
  },
  "pois": {},

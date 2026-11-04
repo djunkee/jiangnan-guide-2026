@@ -92,11 +92,13 @@ DAYS = {
     ('hefang', 'walk', 'Right outside, then on to the lakeshore for sunset.'),
     ('lakenorth', 'walk', 'Along the lakeshore north to the Broken Bridge, 20–30 min.'),
     ('hotel_hz', 'walk', 'Walk 20 min north to the hotel, or Didi 8 min.')], tab='Hangzhou afternoon', note='Train Suzhou → Hangzhou East around midday (still to book).')],
- 'd5': [seg('Thu 5 Nov · Xixi Wetland and the lake', city='杭州', pts=[
-    'hotel_hz', ('xixi', 'car', 'Didi 30–50 min to the south gate, or Metro Line 3 to Xixi Wetland South.'),
-    ('gushan', 'car', 'Didi 25 min to Gushan (孤山).'),
-    ('lakenorth', 'walk', 'Along the Bai Causeway to the Broken Bridge for sunset.'),
-    ('fountain', 'walk', 'Walk 20 min along the shore to Hubin.'),
+ 'd5': [seg('Thu 5 Nov · West Lake: bridges, causeways, island, pagoda', city='杭州', pts=[
+    'hotel_hz', ('lakenorth', 'walk', 'Walk 25 min south-west to the Broken Bridge (断桥), or Didi 8 min.'),
+    ('gushan', 'walk', 'Along the Bai Causeway to Gushan, about 15 min.'),
+    ('lakeboat', 'boat', 'Boat from Zhongshan pier (中山码头) on Gushan to the island, about 15 min.'),
+    ('sucause', 'boat', 'Boat on to Huagang pier (花港), then walk the southern half of the Su Causeway.'),
+    ('leifeng', 'walk', 'From Huagang, walk 15–20 min east to the pagoda; be there by about 16:00.'),
+    ('fountain', 'car', 'Didi 10 min to Hubin for dinner and the 19:30 fountain.'),
     ('hotel_hz', 'walk', 'Walk 15–20 min north, or Line 1 one stop from Longxiangqiao to Wulin Square.')])],
  'd6': [seg('Fri 6 Nov · OMG Heartbeat Park', city='杭州', pts=[
     'hotel_hz', ('rail_hze', 'metro', 'Metro Line 1 Wulin Square → Hangzhou East, about 25 min.', ['m_wulin_sq','rail_hze']),
@@ -106,12 +108,11 @@ DAYS = {
     ('rail_hze', 'train', 'Train back to Hangzhou East.'),
     ('hotel_hz', 'metro', 'Metro Line 1 to Wulin Square.', ['rail_hze','m_wulin_sq']),
     ('hefang', 'car', 'Didi 10 min, or Line 1 two stops to Ding’an Road.')])],
- 'd7': [seg('Sat 7 Nov · Lingyin, tea, causeway, Leifeng', city='杭州', pts=[
+ 'd7': [seg('Sat 7 Nov · Lingyin, tea village and the Tea Museum', city='杭州', pts=[
     'hotel_hz', ('lingyin', 'car', 'Didi 20–25 min (灵隐寺), or bus 7 from Hubin.'),
     ('longjing', 'car', 'Didi 15 min, or bus 27.'),
-    ('sucause', 'car', 'Didi 15 min to the north end by Yue Fei Temple.'),
-    ('su_cause_s', 'walk', 'Walk the causeway south, about 2.8 km (no bikes allowed on it).'),
-    ('leifeng', 'walk', 'Walk 15 min east to the pagoda; be there by about 16:00 (last entry 17:00).'),
+    ('teamuseum', 'car', 'Didi 5–10 min down the hill, or bus 27 to Shuangfeng (双峰).'),
+    ('hotel_hz', 'car', 'Didi about 20 min back to the hotel for a rest.'),
     ('hefang', 'car', 'Didi 10 min to the Qinghefang lanes.'),
     ('hotel_hz', 'car', 'Didi 10 min back to the hotel.')])],
  'd8': [seg('Sun 8 Nov · The Grand Canal', city='杭州', pts=[
