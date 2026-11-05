@@ -133,13 +133,10 @@ DAYS = {
     ('m_longxiangqiao', None, 'Metro Line 1, nearest station to Hubin'),
     ('hefang', None, 'Old shopping street and the TCM museum (Hu Qing Yu Tang)')])],
  'd6': [seg('Fri 6 Nov · OMG Heartbeat Park', city='杭州', pts=[
-    'hotel_hz', ('rail_hze', 'metro', 'Metro Line 1 Wulin Square → Hangzhou East, about 25 min.', ['m_wulin_sq','rail_hze']),
-    ('rail_tonglu', 'train', 'Train Hangzhou East → Tonglu, 30–40 min.'),
-    ('omg', 'car', 'Taxi or Didi 30–40 min to the park in Yaolin.'),
-    ('rail_tonglu', 'car', 'Order the Didi back 15–20 min before leaving; taxis are scarce.'),
-    ('rail_hze', 'train', 'Train back to Hangzhou East.'),
-    ('hotel_hz', 'metro', 'Metro Line 1 to Wulin Square.', ['rail_hze','m_wulin_sq']),
-    ('hefang', 'car', 'Didi 10 min, or Line 1 two stops to Ding’an Road.')])],
+    'hotel_hz', ('omg', 'car', 'Didi door to door, about 90 km, 1 h 15 – 1 h 30. Destination: OMG心跳乐园.'),
+    ('hotel_hz', 'car', 'Didi back, 1 h 15 – 1 h 30. Order 20–30 min ahead or schedule it in the morning.'),
+    ('hefang', 'car', 'Didi 10 min, or Line 1 two stops to Ding’an Road.')],
+    note='Train alternative: Metro Line 1 to Hangzhou East, train to Tonglu (桐庐站) 30–40 min, then taxi 30–40 min to Yaolin.')],
  'd7': [seg('Sat 7 Nov · Lingyin, tea village and the Tea Museum', city='杭州', pts=[
     'hotel_hz', ('lingyin', 'car', 'Didi 20–25 min (灵隐寺), or bus 7 from Hubin.'),
     ('longjing', 'car', 'Didi 15 min, or bus 27.'),
