@@ -19,6 +19,7 @@ for f in sorted(glob.glob('/home/claude/info/*.json')):
     except Exception as e: print('skip', f, e); continue
     P.update(d.get('places', {})); POIS.update(d.get('pois', {})); SHOPS += d.get('shops', [])
 FALLBACK = {  # rough WGS84, used only when research has no point
+ 'wensan': ('Wensan Road tech street', '文三数字生活街区', 'shop', [30.2785, 120.14]),
  'xiling': ('Xiling Seal Engravers’ Society', '西泠印社', 'other', [30.2527, 120.1382]),
  'louwailou': ('Louwailou restaurant', '楼外楼', 'food', [30.2528, 120.1418]),
  'pier_zhongshan': ('Zhongshan Park pier', '中山公园码头', 'pier', [30.2519, 120.1433]),
@@ -137,17 +138,29 @@ DAYS = {
     ('hotel_hz', 'car', 'Didi back, 1 h 15 – 1 h 30. Order 20–30 min ahead or schedule it in the morning.'),
     ('hefang', 'car', 'Didi 10 min, or Line 1 two stops to Ding’an Road.')],
     note='Train alternative: Metro Line 1 to Hangzhou East, train to Tonglu (桐庐站) 30–40 min, then taxi 30–40 min to Yaolin.')],
- 'd7': [seg('Sat 7 Nov · Lingyin, tea village and the Tea Museum', city='杭州', pts=[
-    'hotel_hz', ('lingyin', 'car', 'Didi 20–25 min (灵隐寺), or bus 7 from Hubin.'),
-    ('longjing', 'car', 'Didi 15 min, or bus 27.'),
-    ('teamuseum', 'car', 'Didi 5–10 min down the hill, or bus 27 to Shuangfeng (双峰).'),
-    ('hotel_hz', 'car', 'Didi about 20 min back to the hotel for a rest.'),
-    ('hefang', 'car', 'Didi 10 min to the Qinghefang lanes.'),
-    ('hotel_hz', 'car', 'Didi 10 min back to the hotel.')])],
+ 'd7': [seg('Sat 7 Nov · Tea hills, Jiuxi streams, Leifeng at sunset', city='杭州', pts=[
+    'hotel_hz', ('teamuseum', 'car', 'Didi 20–25 min to the Tea Museum (中国茶叶博物馆双峰馆).'),
+    ('longjing', 'car', 'Didi 5 min up the hill, or walk 20–25 min through the tea terraces.'),
+    ('jiuxi', 'walk', 'Walk down the Jiuxi stream valley, 1–1½ h, mostly gently downhill.'),
+    ('leifeng', 'car', 'Didi about 20 min from 九溪烟树 to Leifeng Pagoda (booth closes 17:00).'),
+    ('changqiao', 'walk', 'Walk 10 min east along the shore for the sunset, about 17:05.'),
+    ('fountain', 'car', 'Didi 10 min to Hubin for dinner.'),
+    ('hotel_hz', 'walk', 'Walk 15–20 min north, or Didi 5 min.')], tab='Option A'),
+    seg('Options B and C: Wensan Road tech street, Lingyin Temple', city='杭州', tab='Options B–C', atlas=True, pts=[
+    ('hotel_hz', None, 'Your hotel'),
+    ('wensan', None, 'Wensan Digital Life District: Tech-Mall and the Future Technology Experience Center (book in 文三GO). Didi 10 min.'),
+    ('lingyin', None, 'Lingyin Temple and Feilai Feng: only with a reservation made a day ahead.'),
+    ('teamuseum', None, 'China National Tea Museum'),
+    ('longjing', None, 'Longjing tea village'),
+    ('jiuxi', None, 'Jiuxi Eighteen Streams'),
+    ('leifeng', None, 'Leifeng Pagoda')])],
  'd8': [seg('Sun 8 Nov · The Grand Canal', city='杭州', pts=[
     'hotel_hz', ('canalmuseum', 'car', 'Didi about 15 min north to the Grand Canal Museum.'),
     ('qiaoxi', 'walk', 'Across Gongchen Bridge, 5 min.'),
-    ('hotel_hz', 'car', 'Didi 20 min back for the bags.')], tab='Canal day'),
+    ('hotel_hz', 'car', 'Didi 20 min back for the bags.')], tab='Option A: canal'),
+    seg('Option B: Wensan Road tech street', city='杭州', tab='Option B', pts=[
+    'hotel_hz', ('wensan', 'car', 'Didi 10 min (文三路 数字生活街区).'),
+    ('hotel_hz', 'car', 'Didi 10 min back for the bags.')]),
     seg('Sun 8 Nov · To the airport hotel', city='杭州', pts=[
     'hotel_hz', ('hotel_ap', 'car', 'Didi about 50 min to Terminal 4. The hotel is in the ground transport centre.')], tab='Airport hotel')],
 }

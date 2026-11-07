@@ -182,3 +182,5 @@ details.shopd[open]{justify-self:stretch}
 .imgfs{position:fixed;inset:0;z-index:3000;background:#111;overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y pinch-zoom}
 .imgfs img{display:block;width:1536px;max-width:none;height:auto}
 .imgfs .x{position:fixed;top:calc(env(safe-area-inset-top) + 10px);right:12px;z-index:1;width:44px;height:44px;border-radius:22px;border:0;background:rgba(0,0,0,.65);color:#fff;font-size:1.4rem}
+
+.opts{margin:.6rem 0 .8rem;padding:.6rem .8rem;border:1px solid var(--line,#ddd);border-radius:12px;background:var(--card,rgba(0,0,0,.02))}.opts>h4{margin:.1rem 0 .4rem;font-size:.95rem}.opts details{margin:.35rem 0}.opts summary{cursor:pointer}.opts p{margin:.35rem 0}

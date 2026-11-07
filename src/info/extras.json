@@ -239,6 +239,73 @@
      "https://www.ehangzhou.gov.cn/2026-04/01/c_297122.htm"
     ]
    ]
+  },
+  "jiuxi": {
+   "name": "Jiuxi Eighteen Streams",
+   "zh": "九溪十八涧 · 九溪烟树",
+   "pinyin": "Jiǔxī Shíbā Jiàn",
+   "glance": "A Y-shaped stream valley south of Longjing village, about 5.5 km in all, with a stone path through tea fields and woods and stepping stones across the water. Free, always open, and much quieter than the lake.",
+   "history": [
+    "The valley has been a favourite walk since the Qing dynasty; the scholar Yu Yue wrote the famous lines 重重叠叠山，曲曲环环路，丁丁东东泉，高高下下树 (“layer on layer of hills, winding winding paths, tinkling springs, high and low trees”) about it.",
+    "“Nine Creeks in Misty Forest” (九溪烟树) became one of the New Ten Scenes of West Lake chosen in 1985."
+   ],
+   "meaning": "Jiuxi is where Hangzhou people go to escape the West Lake crowds: tea fields, running water and shade, a reminder that the tea hills are a working landscape as much as a view.",
+   "highlights": [
+    {
+     "name": "Stepping stones",
+     "what": "The path crosses the stream again and again on flat stones."
+    },
+    {
+     "name": "溪中溪 junction",
+     "what": "Where the two arms of the valley meet: a small waterfall (low in autumn) and the old Li’an Temple nearby."
+    },
+    {
+     "name": "九溪烟树 rock",
+     "what": "The carved stone at the bottom, with a pond and tea house."
+    }
+   ],
+   "tips": [
+    "From Longjing village the walk is flat-to-downhill on stone paths, the gentlest direction.",
+    "Little food along the way: bring water and a snack.",
+    "Villagers may invite you in to taste tea: it is a sales pitch; buy at the Tea Museum.",
+    "In autumn the stream is low; it is at its best after rain."
+   ],
+   "facts": [
+    [
+     "Length",
+     "about 5.5 km in all; Longjing to the bottom about 3 km"
+    ],
+    [
+     "Time",
+     "1–1½ h at an easy pace"
+    ],
+    [
+     "Entry",
+     "Free, always open"
+    ]
+   ],
+   "ratings": {
+    "china_grade": null,
+    "unesco": "Part of the West Lake World Heritage site",
+    "visitor": null,
+    "verdict": {
+     "stars": 4,
+     "line": "The best quiet walk in the tea hills; easy if you go downhill from Longjing."
+    }
+   },
+   "time": "1–1½ h",
+   "best": "Dry daylight, from the Longjing end",
+   "coord": [
+    30.2095,
+    120.1215
+   ],
+   "coord_src": "approx",
+   "sources": [
+    [
+     "Ctrip: 九溪烟树",
+     "https://you.ctrip.com/sight/hangzhou14/2024.html"
+    ]
+   ]
   }
  },
  "pois": {},
@@ -327,13 +394,13 @@
    ]
   },
   {
-   "name": "Wensan Road digital street",
-   "zh": "文三路数码街（颐高数码 · 西溪数码港）",
+   "name": "Wensan Road tech street",
+   "zh": "文三数字生活街区 · 文三Tech-Mall",
    "kind": "market",
-   "near": "xixi",
-   "walk": "Didi 15–20 min from Xixi on the way back to the lake",
-   "buy": "Hangzhou’s electronics street: several digital malls in a row (Yigao Digital Plaza, Xixi Digital Port and others) with stalls for PCs, parts, phones, cameras and accessories. Hangzhou’s old Electronics Market on Dengyun Road (登云路639号) is the place for components.",
-   "watch": "Our sources are from 2017; some malls may have shrunk or closed. Check Amap before going, and treat it as a look-around rather than a big shopping stop.",
+   "near": "wensan",
+   "walk": "Didi 10 min from the hotel",
+   "buy": "The old electronics street, rebuilt as the Wensan Digital Life District: the Wensan Tech-Mall sells Hangzhou-made gadgets (AI glasses, portable screens, smart-home kit, about 50 brands), and the Future Technology Experience Center lets you try robot dogs and robots (book in the WeChat mini-program 文三GO). Some of the old digital malls are still around.",
+   "watch": "Check opening hours in Amap before going.",
    "coord": [
     30.2785,
     120.14
